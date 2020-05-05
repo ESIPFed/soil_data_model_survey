@@ -1,0 +1,226 @@
+---
+title: "Inital soil data model summary"
+author: "L Heran, K Fredrickson, M Younger, K Todd-Brown (ktoddbrown@ufl.edu)"
+date: "5/1/2020"
+output: 
+  html_document: 
+    toc: yes
+bibliography: references.bib
+---
+
+
+```{r globalKnit, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE,
+                      message=FALSE,
+                      warning=FALSE)
+```
+
+```{r setup}
+
+
+library(datamodelr)
+library(DT)
+library(plyr)
+library(tidyverse)
+
+#read in the column information
+allDataModels <- read_csv(file ='../data/studyDescription.csv') %>%
+  filter(!is.na(study_name), !grepl("Holmqu", study_name)) %>%
+  select(study_name, table_name, column_name, long_description, unit)
+  
+
+#read in the thesorus
+commonVocab <- read_csv(file ='../data/comparitiveColumnNames.csv') %>%
+  select(`new name`, vanGestel, Crowther, CCRCN, ISCN3, ISRaD) %>%
+  filter(!is.na(`new name`), any(!(is.na(vanGestel) | is.na(Crowther) | is.na(CCRCN) |is.na(ISCN3) | is.na(ISRaD))))
+```
+
+```{r clean}
+dataModels_segments <- dlply(allDataModels, c('study_name'), function(xx){as.list(unique(sprintf('%s:%s', xx$study_name, xx$table_name)))})
+
+all_models <- allDataModels %>%
+  #filter(study_name %in% c('ISRaD', 'ISCN3', 'CCRCN', 'Crowther')) %>%
+  mutate(table = sprintf('%s:%s', study_name, table_name)) %>%
+  rename('column' = 'column_name') %>%
+  mutate(key = ((study_name %in% c('ISRaD', 'ISCN3')) & grepl('_name$', column)) |
+                        ((study_name %in% c('CCRCN')) & grepl('_id$', column)),
+         ref = case_when(study_name == 'ISRaD' & grepl('^entry_name$', column) ~ 'ISRaD:metadata',
+                         study_name == 'ISRaD' & grepl('^site_name$', column) ~ 'ISRaD:site',
+                         study_name == 'ISRaD' & grepl('^pro_name$', column) ~ 'ISRaD:profile',
+                         study_name == 'ISRaD' & grepl('^flx_name$', column) ~ 'ISRaD:flux',
+                         study_name == 'ISRaD' & grepl('^lyr_name$', column) ~ 'ISRaD:layer',
+                         study_name == 'ISRaD' & grepl('^ist_name$', column) ~ 'ISRaD:interstitial',
+                         study_name == 'ISRaD' & grepl('^frc_name$', column) ~ 'ISRaD:fraction',
+                         study_name == 'ISRaD' & grepl('^inc_name$', column) ~ 'ISRaD:incubation',
+                         #ISCN3
+                         study_name == 'ISCN3' & grepl('^site_name$', column) ~ 'ISCN3:site',
+                         study_name == 'ISCN3' & grepl('^profile_name$', column) ~ 'ISCN3:profile',
+                         study_name == 'ISCN3' & grepl('^layer_name$', column) ~ 'ISCN3:layer',
+                         study_name == 'ISCN3' & grepl('^fraction_name$', column) ~ 'ISCN3:fraction',
+                         #CCRCN
+                         study_name == 'CCRCN' & grepl('^study_id$', column) ~ 'CCRCN:Study Information',
+                         study_name == 'CCRCN' & grepl('^site_id$', column) ~ 'CCRCN:Site Level',
+                         study_name == 'CCRCN' & grepl('^core_id$', column) ~ 'CCRCN:Core Level',
+                         #Crowther
+                         study_name == 'Crowther' & grepl('^Study$', column) ~ 'Crowther:Summary',
+                         study_name == 'Crowther' & grepl('Row Labels', column) ~ 'Crowther:Summary',
+                         #VanGestel
+                         study_name == 'vanGestel' & grepl('site.id', column) ~ 'vanGestel:sites',
+                         TRUE ~ as.character(NA)),
+         ref_col = case_when(study_name == 'ISRaD' & grepl('^entry_name$', column) ~ 'entry_name',
+                             study_name == 'ISRaD' & grepl('^site_name$', column) ~ 'site_name',
+                         study_name == 'ISRaD' & grepl('^pro_name$', column) ~ 'pro_name',
+                         study_name == 'ISRaD' & grepl('^flx_name$', column) ~ 'flx_name',
+                         study_name == 'ISRaD' & grepl('^lyr_name$', column) ~ 'lyr_name',
+                         study_name == 'ISRaD' & grepl('^ist_name$', column) ~ 'ist_name',
+                         study_name == 'ISRaD' & grepl('^frc_name$', column) ~ 'frc_name',
+                         study_name == 'ISRaD' & grepl('^inc_name$', column) ~ 'inc_name',
+                         #ISCN3
+                         study_name == 'ISCN3' & grepl('^study_name$', column) ~ 'study_name',
+                         study_name == 'ISCN3' & grepl('^profile_name$', column) ~ 'profile_name',
+                         study_name == 'ISCN3' & grepl('^layer_name$', column) ~ 'layer_name',
+                         study_name == 'ISCN3' & grepl('^fraction_name$', column) ~ 'fraction_name',
+                         #CCRCN
+                         study_name == 'CCRCN' & grepl('^study_id$', column) ~ 'study_id',
+                         study_name == 'CCRCN' & grepl('^site_id$', column) ~ 'site_id',
+                         study_name == 'CCRCN' & grepl('^core_id$', column) ~ 'core_id',
+                         #Crowther
+                         study_name == 'Crowther' & grepl('^Study$', column) ~ 'Study',
+                         study_name == 'Crowther' & grepl('Row Labels', column) ~ 'Row Labels',
+                         #vanGestel
+                         study_name == 'vanGestel' & grepl('site.id', column) ~ 'site.id',
+                         TRUE ~ as.character(NA))) %>%
+  mutate(ref = if_else(table == ref, as.character(NA), ref))
+```
+
+
+
+# Introduction and goals
+
+The primary goal of this project was to servey the different data models used by soil carbon meta-analysis.
+We looked at 5 meta-analysis that looked at some aspect of soil carbon dynamics, and in the process discovered 3 additional efforts which we intend to add to our analysis later this summer. 
+Some of these studies were ongoing pre-publication (CCRCN, ISCN), ongoing with incramental publications (ISRaD:@Lawrence2020) and completed projects (Crowther:@Crowther2016, vanGestel:@vanGestel2018).
+
+# Individual PI studies were smaller.
+
+```{r tableCounts}
+allDataModels %>% select(study_name, table_name, column_name) %>%
+  unique() %>%
+  group_by(study_name) %>% summarize(`Table count` = length(unique(table_name)),
+                                     `Variable count` = length(unique(column_name))) %>%
+  rename('Study ID' = study_name) %>%
+  arrange(`Variable count`) %>%
+  mutate('Multi PI?' = case_when(`Study ID` %in% c("ISCN3", "ISRaD", "CCRCN") ~ 'Yes',
+                                 TRUE ~ 'No')) %>%
+  knitr::kable(caption = 'Table 1: The data products varied in the number of data tables that they each contained with vanGestel only containing 4 tables and the CCRCN product containing 12. There was a wider variation in the unique variables in each study, from 40 to 351.')
+```
+
+In general individual PI projects had smaller data models (see Table 1). 
+While Crowther techically had 8 data tables, most of the data was in two main data table (Figure 1).
+vanGestel in contrast had 4 data tables (the smallest number in the study) organized around measurement type and site characterization (Figure 2).
+In contrast, multi-PI projects had larger data tables with more complex key-ed references across them (Figure 3).
+This also held true for the number of variables in each study.
+The single PI studies have between 40 (Crowther) and 56 (vanGestel) unique variable names.
+Multi-PI studies in contrast had between 144 (CCRCN) and 351 (ISRaD).
+
+
+```{r CrowtherDM, fig.cap='Figure 1: Crawther data model.'}
+temp_dm <- as.data_model(all_models %>% filter(study_name == 'Crowther'))
+temp_dm2 <- dm_set_segment(temp_dm, dataModels_segments)
+graph <- dm_create_graph(temp_dm2, rankdir = "RL", col_attr = c('column'))
+dm_render_graph(graph)
+```
+
+```{r vanGestelDM, fig.cap='Figure 1: vanGestel data model.'}
+temp_dm <- as.data_model(all_models %>% filter(study_name == 'vanGestel'))
+temp_dm2 <- dm_set_segment(temp_dm, dataModels_segments)
+graph <- dm_create_graph(temp_dm2, rankdir = "RL", col_attr = c('column'))
+dm_render_graph(graph)
+```
+
+
+```{r allDM, fig.cap='Figure 3: Data models with id keys only.'}
+
+all_dm <- as.data_model(all_models)
+all_dm2 <- dm_set_segment(all_dm, dataModels_segments)
+
+graph <- dm_create_graph(all_dm2, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only')
+dm_render_graph(graph)
+```
+# Vocabulary across studies were not obviously harmonizable.
+
+Inital efforts to harmonize the vocabulary across studies showed over 580 unique variables out of 924 total variables across all data models.
+Only 5 variables were commonly shared across all data models. 
+These variables tended to focus on site location, climate, bulk density, and organic carbon precentage (see Table 2).
+
+```{r commonVariables}
+commonVocab %>%
+  mutate(study_count = as.numeric(!is.na(vanGestel))+ as.numeric(!is.na(Crowther)) + 
+           as.numeric(!is.na(CCRCN)) + as.numeric(!is.na(ISCN3)) + as.numeric(!is.na(ISRaD)) ) %>%
+  filter(study_count > 2) %>%
+  arrange(-study_count) %>% select(-study_count) %>%
+  knitr::kable(caption = 'Table 2: Common variables (>2 data models) across data models.')
+```
+
+# Study feature summary
+
+Below is a brief summary of the individual study features that were immediately apparent prior to PI interviews.
+
+## CCRCN
+
+  - Common features
+    + location, elevation, and observation time
+    + depth of core and layer
+    + bulk density
+    + vegitation
+    + carbon (?organic) percentage and loss on ignition
+    
+  - Unique features
+    + min/max latitude
+    + detailed author information
+    + 'one_liner' summary
+    + break out bulk density mass/volume
+    + many specific isotopes listed (Am241, C14, Cs137, Be7, Pb210, Ra226)
+    + X_class is free text or control vocabulary
+    + coastal specific vocabulary
+      * inundation/salinity
+    + anthropgenic impacts
+    + core-level vs site latitude/longitude and elevation
+
+## ISCN3
+
+  - Common features
+    + location, elevation, and observation time
+    + depth of core and layer
+    + bulk density
+    + vegitation
+    + carbon percentage and loss on ignition
+    
+  - Unique features
+    + disturbance table
+    + high level of site details
+      - frost free days, ponding, runoff
+    + higher then average number of layer-level info
+    + fraction table only shared with ISRaD
+
+## ISRaD
+
+## Crowther
+
+## vanGestel
+
+# Next steps
+
+All groups in this study have been contracted and most confirmed interest in particpating (communication with vanGestel is pending).
+We have draft the intial questions for the long format interviews below and plan to start conducting interviews in May.
+By the end of June we expect to have a more general community survey targeted more broaderly to the soil science community.
+
+## Interview questions
+
+  1) Why did you start this study?
+  2) Describe your workflow for ingesting data sets?
+  3) What decisions did you make to arrive at this workflow?
+  4) How would someone get a copy of the data in this study?
+  5) What would you do differently if you had to start again? What would be the same?
+
+# References
