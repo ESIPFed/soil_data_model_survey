@@ -206,6 +206,23 @@ Below is a brief summary of the individual study features that were immediately 
 ## ISRaD
 
 ## Crowther
+- Common features
+    + location, elevation, and observation time
+    + depth of core and layer
+    + bulk density
+    + vegitation
+    + carbon (?organic) percentage and loss on ignition
+    
+ - Unique features
+    + Author updated data (outside sources)
+      - Biome, % Clay, pH, 
+    + Detailed soil warming details
+      - planned temperatures, control temperatures, mean temperatures
+    + Cation exchange capasity reported
+    + % Nitrogen reported
+    + distinquised between total raw carbon and total carbon
+    + Difference between detailed_site_id(New Name) and site_id(Old Name)
+
 
 ## vanGestel
 
