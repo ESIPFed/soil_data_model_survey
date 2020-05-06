@@ -216,7 +216,7 @@ Below is a brief summary of the individual study features that were immediately 
  - Unique features
     + Author updated data (outside sources)
       - Biome, % Clay, pH, 
-    + Detailed soil warming details
+    + Detailed soil warming data
       - planned temperatures, control temperatures, mean temperatures
     + Cation exchange capasity reported
     + % Nitrogen reported
