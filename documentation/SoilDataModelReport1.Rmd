@@ -97,9 +97,9 @@ all_models <- allDataModels %>%
 
 # Introduction and goals
 
-The primary goal of this project was to servey the different data models used by soil carbon meta-analysis.
+The primary goal of this project was to survey the different data models used by soil carbon meta-analysis.
 We looked at 5 meta-analysis that looked at some aspect of soil carbon dynamics, and in the process discovered 3 additional efforts which we intend to add to our analysis later this summer. 
-Some of these studies were ongoing pre-publication (CCRCN, ISCN), ongoing with incramental publications (ISRaD:@Lawrence2020) and completed projects (Crowther:@Crowther2016, vanGestel:@vanGestel2018).
+Some of these studies were ongoing pre-publication (CCRCN, ISCN), ongoing with incremental publications (ISRaD:@Lawrence2020) and completed projects (Crowther:@Crowther2016, vanGestel:@vanGestel2018).
 
 # Individual PI studies were smaller.
 
@@ -116,7 +116,7 @@ allDataModels %>% select(study_name, table_name, column_name) %>%
 ```
 
 In general individual PI projects had smaller data models (see Table 1). 
-While Crowther techically had 8 data tables, most of the data was in two main data table (Figure 1).
+While Crowther techically had 8 data tables, most of the data was in two main data tables (Figure 1).
 vanGestel in contrast had 4 data tables (the smallest number in the study) organized around measurement type and site characterization (Figure 2).
 In contrast, multi-PI projects had larger data tables with more complex key-ed references across them (Figure 3).
 This also held true for the number of variables in each study.
@@ -151,7 +151,7 @@ dm_render_graph(graph)
 
 Inital efforts to harmonize the vocabulary across studies showed over 580 unique variables out of 924 total variables across all data models.
 Only 5 variables were commonly shared across all data models. 
-These variables tended to focus on site location, climate, bulk density, and organic carbon precentage (see Table 2).
+These variables tended to focus on site location, climate, bulk density, and organic carbon percentage (see Table 2).
 
 ```{r commonVariables}
 commonVocab %>%
@@ -254,9 +254,9 @@ Below is a brief summary of the individual study features that were immediately 
 
 # Next steps
 
-All groups in this study have been contracted and most confirmed interest in particpating (communication with vanGestel is pending).
+All groups in this study have been contacted and most confirmed interest in particpating (communication with vanGestel is pending).
 We have draft the intial questions for the long format interviews below and plan to start conducting interviews in May.
-By the end of June we expect to have a more general community survey targeted more broaderly to the soil science community.
+By the end of June we expect to have a more general community survey targeted more broadly to the soil science community.
 
 ## Interview questions
 
