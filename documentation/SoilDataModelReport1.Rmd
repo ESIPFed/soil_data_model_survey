@@ -204,20 +204,20 @@ Below is a brief summary of the individual study features that were immediately 
     + fraction table only shared with ISRaD
 
 ## ISRaD
--Common features
-    +location, elevation, amd observation time
-    +depth of layer
-    +bulk density
-    +vegetation notes
-    +organic carbon
+- Common features
+    + location, elevation, amd observation time
+    + depth of layer
+    + bulk density
+    + vegetation notes
+    + organic carbon
 
--Unique features
-    +interstitial table
-    +flux table
-    +incubation table
-    +fraction table only shared with ISCN3
-    +higher than average number of layer info
-      -mineral abundance, mass of element extracted
+- Unique features
+    + interstitial table
+    + flux table
+    + incubation table
+    + fraction table only shared with ISCN3
+    + higher than average number of layer info
+      - mineral abundance, mass of element extracted
 
 ## Crowther
 - Common features
