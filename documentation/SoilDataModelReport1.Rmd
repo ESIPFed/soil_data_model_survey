@@ -1,6 +1,6 @@
 ---
 title: "Inital soil data model summary"
-author: "L Heran, K Fredrickson, M Younger, K Todd-Brown (ktoddbrown@ufl.edu)"
+author: "L Heran, K Frederick, M Younger, K Todd-Brown (ktoddbrown@ufl.edu)"
 date: "5/1/2020"
 output: 
   html_document: 
@@ -239,6 +239,18 @@ Below is a brief summary of the individual study features that were immediately 
 
 
 ## vanGestel
+
+- Common features
+    + location, elevation, and observation time
+    + pH
+    + bulk density
+
+  - Unique features
+    + mean depth instead of depth of core and layer
+    + carbon, nitrogen, and phosphorus pools above and below ground
+    + treatments and information about treatments (mean, standard error, size)
+    + 'input' variable
+    + soil horizon and percent soil organic matter
 
 # Next steps
 
