@@ -16,8 +16,6 @@ knitr::opts_chunk$set(echo=FALSE,
 ```
 
 ```{r setup}
-
-
 library(datamodelr)
 library(DT)
 library(plyr)
@@ -100,6 +98,19 @@ all_models <- allDataModels %>%
 The primary goal of this project was to survey the different data models used by soil carbon meta-analysis.
 We looked at 5 meta-analysis that looked at some aspect of soil carbon dynamics, and in the process discovered 3 additional efforts which we intend to add to our analysis later this summer. 
 Some of these studies were ongoing pre-publication (CCRCN, ISCN), ongoing with incremental publications (ISRaD:@Lawrence2020) and completed projects (Crowther:@Crowther2016, vanGestel:@vanGestel2018).
+
+# The Ecosytem Ontology most relevant. 
+
+In general The Ecosytem Ontology (http://bioportal.bioontology.org/ontologies/ECSO) was the most relevant ontology to this study. However the control vocabulary was not as method specific as many of the larger data products examined here. We searched http://bioportal.bioontology.org/ for ontologies with four common terms across the studies:  *'soil bulk density'*, *'soil organic carbon'*, *'soil pH'*, and *'soil depth'*. None of the data products considered in this study used a formal, community ontology and instead choose to develope their own or adapt and extend previous data products. We would encourage the adaptation and extention of The Ecosystem Ontology in future studies.
+
+*'soil bulk density'* returned 39 ontology matches (search date: 19 May 2020) many of these were entries for generalized 'density' or 'bulk density'. The Ecosystem Ontology was the only ontlogy with a complete match (http://purl.dataone.org/odo/ECSO_00001110), however the definition of this entry was ambiguous. It did not specify if the bulk density was sieved or dry soil making this challenging to use in a soil study without further specifications.
+
+*'soil organic carbon'* returned 26 ontology matches (search date: 19 May 2020) many of these refered to soil or carbon independently of soil, two entries were specific to soil organic carbon.
+Interlinking Ontology for Biological Concepts had a complet match to 'soil organic carbon' (http://purl.jp/bio/4/id/200906061124670034), no units were specified making it ambigous whether this was a mass fraction or density quantification. The Ecosystem Ontology also had a complete match under 'organic carbon percentage in soil' (http://purl.dataone.org/odo/ECSO_00000648) but also had 'total organic carbon percentage' (http://purl.dataone.org/odo/ECSO_00002149), while the units in this case were well defined, the method of measurement, simular to bulk density, needed more specificisity to make the label broadly applicable.
+
+*'soil pH'* returned 43 ontology matches (search data: 19 May 2020), these hits were dominated by either 'soil' or 'pH' hits. Only two ontologies had specific soil pH entries. The Ecosystem Ontology 'soil pH' (http://purl.dataone.org/odo/ECSO_00001646) without an extration method specified. Interlinking Ontology for Biological Concepts 'soil acidity' (http://purl.jp/bio/4/id/200906080708260606), also without an extraction method specified.
+
+*'soil depth'* returned 33 ontology matches (search date: 19 May 2020), only two of this hits specifically refered to depth of soil. The Ecosystem Ontology 'Soil Depth' (http://purl.dataone.org/odo/ECSO_00001207) specifically mentioned soil depth in the context of layers. Interlinking Ontology for Biological Concepts 'soil depth' (http://purl.jp/bio/4/id/201006028017141570), seemed to refer more to the total depth of the soil. 
 
 # Individual PI studies were smaller.
 
