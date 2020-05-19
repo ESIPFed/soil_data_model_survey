@@ -41,3 +41,6 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Mac folder organization
+.DS_Store
