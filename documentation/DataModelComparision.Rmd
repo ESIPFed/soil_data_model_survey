@@ -2,8 +2,10 @@
 title: "Review of current soil data models"
 author: "L Heran, K Frederick, M Younger, K Todd-Brown (ktoddbrown@ufl.edu)"
 date: "5/1/2020"
-output: 
-  html_document: 
+output:
+  html_document:
+    toc: yes
+  word_document:
     toc: yes
 bibliography: references.bib
 ---
