@@ -32,16 +32,6 @@ dataModelDescription <- read_csv(file = '../data/DatasetVariableTable.csv') %>%
   select(Dataset_ID, Table, Info_type, Info, Variable, Type)  %>%
   mutate(long_table_name = sprintf('%s:%s', Dataset_ID, Table))
 
-##read in the column information
-allDataModels <- read_csv(file ='../data/studyDescription.csv') %>%
-  filter(!is.na(study_name), !grepl("Holmqu", study_name)) %>%
-  select(study_name, table_name, column_name, long_description, unit)
-  
-
-##read in the thesorus
-#commonVocab <- read_csv(file ='../data/comparitiveColumnNames.csv') %>%
-#  select(`new name`, vanGestel, Crowther, CCRCN, ISCN3, ISRaD) %>%
-#  filter(!is.na(`new name`), any(!(is.na(vanGestel) | is.na(Crowther) | is.na(CCRCN) |is.na(ISCN3) | is.na(ISRaD))))
 ```
 
 ```{r clean}
