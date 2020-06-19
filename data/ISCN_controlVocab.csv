@@ -1,0 +1,964 @@
+"","vocabulary_family","vocabulary","vocabulary_description"
+"1","2d_position","backslope",NA
+"2","2d_position","base slope",NA
+"3","2d_position","center third - mountainflank",NA
+"4","2d_position","crest",NA
+"5","2d_position","dip",NA
+"6","2d_position","footslope",NA
+"7","2d_position","free face",NA
+"8","2d_position","head slope",NA
+"9","2d_position","interfluve",NA
+"10","2d_position","lower third - mountainflank",NA
+"11","2d_position","mountainbase",NA
+"12","2d_position","mountainflank",NA
+"13","2d_position","mountaintop",NA
+"14","2d_position","none",NA
+"15","2d_position","nose slope",NA
+"16","2d_position","other",NA
+"17","2d_position","rise",NA
+"18","2d_position","riser",NA
+"19","2d_position","shoulder",NA
+"20","2d_position","side slope",NA
+"21","2d_position","summit",NA
+"22","2d_position","talf",NA
+"23","2d_position","toeslope",NA
+"24","2d_position","tread",NA
+"25","2d_position","upper third - mountainflank",NA
+"26","ccon_type","min","mineral"
+"27","ccon_type","org","organic"
+"28","ccon_type","whole","whole soil"
+"29","country","Afghanistan",NA
+"30","country","Albania",NA
+"31","country","Antarctica",NA
+"32","country","Argentina",NA
+"33","country","Australia",NA
+"34","country","Azores",NA
+"35","country","Belgium",NA
+"36","country","Belize",NA
+"37","country","Bolivia",NA
+"38","country","Botswana",NA
+"39","country","Brazil",NA
+"40","country","Bulgaria",NA
+"41","country","Burundi",NA
+"42","country","Cameroon",NA
+"43","country","Canada",NA
+"44","country","Canary Islands",NA
+"45","country","Chile",NA
+"46","country","China",NA
+"47","country","Colombia",NA
+"48","country","Congo (Democratic Republic of the)",NA
+"49","country","Costa Rica",NA
+"50","country","Cuba",NA
+"51","country","Dahomey",NA
+"52","country","Denmark",NA
+"53","country","Ecuador",NA
+"54","country","Egypt",NA
+"55","country","El Salvador",NA
+"56","country","Estonia",NA
+"57","country","Federated States of Micronesia",NA
+"58","country","Finland",NA
+"59","country","France",NA
+"60","country","Gambia",NA
+"61","country","Georgia",NA
+"62","country","Germany",NA
+"63","country","Ghana",NA
+"64","country","Greece",NA
+"65","country","Greenland",NA
+"66","country","Guatemala",NA
+"67","country","Guinea",NA
+"68","country","Guyana",NA
+"69","country","Haiti",NA
+"70","country","Honduras",NA
+"71","country","Hungary",NA
+"72","country","Iceland",NA
+"73","country","India",NA
+"74","country","Indonesia",NA
+"75","country","Iran",NA
+"76","country","Iraq",NA
+"77","country","Ireland",NA
+"78","country","Italy",NA
+"79","country","Ivory Coast",NA
+"80","country","Japan",NA
+"81","country","Jordan",NA
+"82","country","Kenya",NA
+"83","country","Korea, Democratic People's",NA
+"84","country","Republic of",NA
+"85","country","Korea, Republic of",NA
+"86","country","Laos",NA
+"87","country","Latvia",NA
+"88","country","Lebanon",NA
+"89","country","Lesotho",NA
+"90","country","Lithuania",NA
+"91","country","Malawi",NA
+"92","country","Malaysia",NA
+"93","country","Mali",NA
+"94","country","Mauritania",NA
+"95","country","Mexico",NA
+"96","country","Mongolia",NA
+"97","country","Morocco",NA
+"98","country","Nepal",NA
+"99","country","Netherlands",NA
+"100","country","New Zealand",NA
+"101","country","Nicaragua",NA
+"102","country","Niger",NA
+"103","country","Nigeria",NA
+"104","country","Norway",NA
+"105","country","Oman",NA
+"106","country","Pakistan",NA
+"107","country","Palau",NA
+"108","country","Panama",NA
+"109","country","Papua New Guinea",NA
+"110","country","Peru",NA
+"111","country","Philippines",NA
+"112","country","Poland",NA
+"113","country","Portugal",NA
+"114","country","Portuguese Guinea",NA
+"115","country","Puerto Rico",NA
+"116","country","Russia",NA
+"117","country","Rwanda",NA
+"118","country","Samoa",NA
+"119","country","Senegal",NA
+"120","country","Sierra Leone",NA
+"121","country","Solomon Islands",NA
+"122","country","Somalia",NA
+"123","country","South Africa",NA
+"124","country","Spain",NA
+"125","country","Sri Lanka",NA
+"126","country","Sudan",NA
+"127","country","Sweden",NA
+"128","country","Switzerland",NA
+"129","country","Syria",NA
+"130","country","Taiwan",NA
+"131","country","Tanzania",NA
+"132","country","Tasmania",NA
+"133","country","Thailand",NA
+"134","country","Togo",NA
+"135","country","Tunisia",NA
+"136","country","Turkey",NA
+"137","country","Uganda",NA
+"138","country","United Arab Emirates",NA
+"139","country","United States",NA
+"140","country","Uruguay",NA
+"141","country","Vanuatu",NA
+"142","country","Venezuela",NA
+"143","country","Vietnam",NA
+"144","country","Yemen",NA
+"145","country","Yugoslavia",NA
+"146","country","Zambia",NA
+"147","country","Zimbabwe",NA
+"148","datum","NAD27",NA
+"149","datum","NAD83",NA
+"150","datum","WGS84",NA
+"151","direction","east",NA
+"152","direction","level","no slope"
+"153","direction","north",NA
+"154","direction","north-east",NA
+"155","direction","north-west",NA
+"156","direction","south",NA
+"157","direction","south-east",NA
+"158","direction","south-west",NA
+"159","direction","west",NA
+"160","dm_agriculture","Crop residue management",NA
+"161","dm_agriculture","Harvest",NA
+"162","dm_agriculture","Other",NA
+"163","dm_encroach","Invasive species",NA
+"164","dm_encroach","Other",NA
+"165","dm_encroach","Urban encroachment",NA
+"166","dm_encroach","Woody encroachment",NA
+"167","dm_ext_weather","Drought",NA
+"168","dm_ext_weather","Flood",NA
+"169","dm_ext_weather","Freeze",NA
+"170","dm_ext_weather","Heatwave",NA
+"171","dm_ext_weather","Hurricane",NA
+"172","dm_ext_weather","Other",NA
+"173","dm_ext_weather","Storm",NA
+"174","dm_ext_weather","Tornado",NA
+"175","dm_fert_m","K",NA
+"176","dm_fert_m","Lime",NA
+"177","dm_fert_m","N",NA
+"178","dm_fert_m","Other",NA
+"179","dm_fert_m","P",NA
+"180","dm_fert_o","Compost",NA
+"181","dm_fert_o","Liquid manure",NA
+"182","dm_fert_o","Other",NA
+"183","dm_fert_o","Poultry",NA
+"184","dm_fert_o","Solid manure",NA
+"185","dm_fire","Accidental human induced burn",NA
+"186","dm_fire","Accidental human induced underburn",NA
+"187","dm_fire","Nature induced burn",NA
+"188","dm_fire","Nature induced underburn",NA
+"189","dm_fire","Other",NA
+"190","dm_fire","Prescribed human induced burn",NA
+"191","dm_fire","Prescribed human induced underburn",NA
+"192","dm_forestry","Clearcutting",NA
+"193","dm_forestry","Fallen wood removal",NA
+"194","dm_forestry","Other",NA
+"195","dm_forestry","Thinning/pruning",NA
+"196","dm_general","Other",NA
+"197","dm_general","Undisturbed",NA
+"198","dm_graze","Cattle",NA
+"199","dm_graze","Goat",NA
+"200","dm_graze","Other",NA
+"201","dm_graze","Sheep",NA
+"202","dm_ins_path","Disease",NA
+"203","dm_ins_path","Insect",NA
+"204","dm_ins_path","Other",NA
+"205","dm_ins_path","Pathogen",NA
+"206","dm_pesticide","Bactericide",NA
+"207","dm_pesticide","Fungicide",NA
+"208","dm_pesticide","Herbicide",NA
+"209","dm_pesticide","Insecticide",NA
+"210","dm_pesticide","Other",NA
+"211","dm_planting","Other",NA
+"212","dm_planting","Planting live crops",NA
+"213","dm_planting","Planting live grasses",NA
+"214","dm_planting","Planting live shrubs",NA
+"215","dm_planting","Planting live trees",NA
+"216","dm_planting","Planting other live plants",NA
+"217","dm_planting","Sowing crop seeds",NA
+"218","dm_planting","Sowing grass seeds",NA
+"219","dm_planting","Sowing other seeds",NA
+"220","dm_planting","Sowing shrub trees",NA
+"221","dm_planting","Sowing tree seeds",NA
+"222","dm_till","Conservation",NA
+"223","dm_till","Conventional",NA
+"224","dm_till","Other",NA
+"225","dm_till","Ridge till",NA
+"226","dm_till","Scarification",NA
+"227","dm_till","Stripe till",NA
+"228","dm_water","Drainage",NA
+"229","dm_water","Human induced flooding",NA
+"230","dm_water","Irrigation",NA
+"231","dm_water","Other",NA
+"232","drainage","excessively",NA
+"233","drainage","moderately well",NA
+"234","drainage","other",NA
+"235","drainage","poorly",NA
+"236","drainage","somewhat excessively",NA
+"237","drainage","somewhat poorly",NA
+"238","drainage","very poorly",NA
+"239","drainage","well",NA
+"240","extract_units","cmol H+ kg-1","centimoles of charge per kilogram oven-dry soil"
+"241","extract_units","meq 100g-1","millequivalents per 100g oven-dry soil"
+"242","extract_units","mg kg-1","milligrams of analyte per kilogram oven-dry soil (equivalent to ppm)"
+"243","extract_units","percent_mass","analtye as per cent of soil dry mass"
+"244","extract_units","percent_ret","precent retention (NZ P)"
+"245","extract_units","percent_sat","percent saturation of bases"
+"246","flood_freq","common",NA
+"247","flood_freq","frequent",NA
+"248","flood_freq","none",NA
+"249","flood_freq","occasional",NA
+"250","flood_freq","rare",NA
+"251","flood_freq","very frequent",NA
+"252","flood_freq","very rare",NA
+"253","inc_exc","exclude","Excluded"
+"254","inc_exc","include","Included"
+"255","landform","aa lava flow",NA
+"256","landform","alas",NA
+"257","landform","alluvial cone",NA
+"258","landform","alluvial fan",NA
+"259","landform","alluvial flat",NA
+"260","landform","alpine glacier",NA
+"261","landform","anticline",NA
+"262","landform","arete",NA
+"263","landform","arroyo",NA
+"264","landform","ash field",NA
+"265","landform","ash flow",NA
+"266","landform","atoll",NA
+"267","landform","avalanche chute",NA
+"268","landform","axial stream",NA
+"269","landform","back-barrier beach",NA
+"270","landform","back-barrier flat",NA
+"271","landform","backshore",NA
+"272","landform","backswamp",NA
+"273","landform","bajada",NA
+"274","landform","ballena",NA
+"275","landform","ballon",NA
+"276","landform","bar",NA
+"277","landform","barchan dune",NA
+"278","landform","barrier beach",NA
+"279","landform","barrier beach (relict)",NA
+"280","landform","barrier cove",NA
+"281","landform","barrier flat",NA
+"282","landform","barrier island",NA
+"283","landform","basin floor",NA
+"284","landform","basin-floor remnant",NA
+"285","landform","bay (coast)",NA
+"286","landform","bay (geom.)",NA
+"287","landform","bay bottom",NA
+"288","landform","bayou",NA
+"289","landform","beach",NA
+"290","landform","beach plain",NA
+"291","landform","beach ridge",NA
+"292","landform","beach terrace",NA
+"293","landform","berm",NA
+"294","landform","beveled base",NA
+"295","landform","blind valley",NA
+"296","landform","block field",NA
+"297","landform","block glide",NA
+"298","landform","block lava flow",NA
+"299","landform","block stream",NA
+"300","landform","blowout",NA
+"301","landform","bluff",NA
+"302","landform","bog",NA
+"303","landform","box canyon",NA
+"304","landform","braided stream",NA
+"305","landform","breached anticline",NA
+"306","landform","breaks",NA
+"307","landform","broad interstream divide",NA
+"308","landform","butte",NA
+"309","landform","caldera",NA
+"310","landform","canyon",NA
+"311","landform","canyon bench",NA
+"312","landform","canyon wall",NA
+"313","landform","Carolina Bay",NA
+"314","landform","channel",NA
+"315","landform","chenier",NA
+"316","landform","chenier plain",NA
+"317","landform","cinder cone",NA
+"318","landform","cirque",NA
+"319","landform","cirque floor",NA
+"320","landform","cirque headwall",NA
+"321","landform","cirque platform",NA
+"322","landform","cliff",NA
+"323","landform","climbing dune",NA
+"324","landform","closed depression",NA
+"325","landform","coastal plain",NA
+"326","landform","cockpit",NA
+"327","landform","col",NA
+"328","landform","collapse sinkhole",NA
+"329","landform","collapsed ice-floored lakebed",NA
+"330","landform","collapsed ice-walled lakebed",NA
+"331","landform","collapsed lake plain",NA
+"332","landform","collapsed outwash plain",NA
+"333","landform","colluvial apron",NA
+"334","landform","complex landslide",NA
+"335","landform","coral island",NA
+"336","landform","coulee",NA
+"337","landform","cove",NA
+"338","landform","cove (water)",NA
+"339","landform","crag and tail",NA
+"340","landform","creep",NA
+"341","landform","crevasse filling",NA
+"342","landform","cuesta",NA
+"343","landform","cuesta valley",NA
+"344","landform","cutoff",NA
+"345","landform","debris avalanche",NA
+"346","landform","debris fall",NA
+"347","landform","debris flow",NA
+"348","landform","debris slide",NA
+"349","landform","debris spread",NA
+"350","landform","debris topple",NA
+"351","landform","deflation basin",NA
+"352","landform","deflation flat",NA
+"353","landform","delta",NA
+"354","landform","delta plain",NA
+"355","landform","depression",NA
+"356","landform","diapir",NA
+"357","landform","diatreme",NA
+"358","landform","dike",NA
+"359","landform","dip slope",NA
+"360","landform","disintegration moraine",NA
+"361","landform","distributary",NA
+"362","landform","divide",NA
+"363","landform","dome",NA
+"364","landform","drainageway",NA
+"365","landform","drainhead complex",NA
+"366","landform","draw",NA
+"367","landform","drumlin",NA
+"368","landform","drumlinoid ridge",NA
+"369","landform","dune",NA
+"370","landform","dune field",NA
+"371","landform","dune lake",NA
+"372","landform","dune slack",NA
+"373","landform","earth spread",NA
+"374","landform","earth topple",NA
+"375","landform","earthflow",NA
+"376","landform","end moraine",NA
+"377","landform","ephemeral stream",NA
+"378","landform","eroded fan remnant",NA
+"379","landform","eroded fan-remnant sideslope",NA
+"380","landform","erosion remnant",NA
+"381","landform","escarpment",NA
+"382","landform","esker",NA
+"383","landform","estuary",NA
+"384","landform","faceted spur",NA
+"385","landform","fall",NA
+"386","landform","falling dune",NA
+"387","landform","fan",NA
+"388","landform","fan apron",NA
+"389","landform","fan collar",NA
+"390","landform","fan piedmont",NA
+"391","landform","fan remnant",NA
+"392","landform","fan skirt",NA
+"393","landform","fanhead trench",NA
+"394","landform","fault block",NA
+"395","landform","fault zone",NA
+"396","landform","fault-line scarp",NA
+"397","landform","fen",NA
+"398","landform","fissure vent",NA
+"399","landform","fjord",NA
+"400","landform","flat",NA
+"401","landform","flatwoods",NA
+"402","landform","flood plain",NA
+"403","landform","flood-plain playa",NA
+"404","landform","flood-plain splay",NA
+"405","landform","flood-plain step",NA
+"406","landform","flood-tidal delta",NA
+"407","landform","flood-tidal delta flat",NA
+"408","landform","flood-tidal delta slope",NA
+"409","landform","flow",NA
+"410","landform","flute",NA
+"411","landform","fluviomarine bottom",NA
+"412","landform","fluviomarine terrace",NA
+"413","landform","fold",NA
+"414","landform","foredune",NA
+"415","landform","fosse",NA
+"416","landform","free face",NA
+"417","landform","fringe-tidal marsh",NA
+"418","landform","gap",NA
+"419","landform","geyser",NA
+"420","landform","geyser basin",NA
+"421","landform","geyser cone",NA
+"422","landform","giant ripple",NA
+"423","landform","glacial drainage channel",NA
+"424","landform","glacial lake",NA
+"425","landform","glacial lake (relict)",NA
+"426","landform","glacial-valley floor",NA
+"427","landform","glacial-valley wall",NA
+"428","landform","glacier",NA
+"429","landform","gorge",NA
+"430","landform","graben",NA
+"431","landform","ground moraine",NA
+"432","landform","gulch",NA
+"433","landform","gulf",NA
+"434","landform","gut (channel)",NA
+"435","landform","gut (valley)",NA
+"436","landform","half graben",NA
+"437","landform","hanging valley",NA
+"438","landform","headland",NA
+"439","landform","head-of-outwash",NA
+"440","landform","headwall",NA
+"441","landform","high hill",NA
+"442","landform","highmoor bog",NA
+"443","landform","hill",NA
+"444","landform","hillslope",NA
+"445","landform","hogback",NA
+"446","landform","homoclinal ridge",NA
+"447","landform","homocline",NA
+"448","landform","horn",NA
+"449","landform","horst",NA
+"450","landform","hot spring",NA
+"451","landform","ice pressure ridge",NA
+"452","landform","ice-contact slope",NA
+"453","landform","ice-marginal stream",NA
+"454","landform","ice-pushed ridge",NA
+"455","landform","inlet",NA
+"456","landform","inselberg",NA
+"457","landform","inset fan",NA
+"458","landform","interdrumlin",NA
+"459","landform","interdune",NA
+"460","landform","interfluve",NA
+"461","landform","interior valley",NA
+"462","landform","intermittent stream",NA
+"463","landform","intermontane basin",NA
+"464","landform","island",NA
+"465","landform","kame",NA
+"466","landform","kame moraine",NA
+"467","landform","kame terrace",NA
+"468","landform","karst cone",NA
+"469","landform","karst lake",NA
+"470","landform","karst tower",NA
+"471","landform","karst valley",NA
+"472","landform","karstic marine terrace",NA
+"473","landform","kettle",NA
+"474","landform","kipuka",NA
+"475","landform","knob",NA
+"476","landform","knoll",NA
+"477","landform","lagoon",NA
+"478","landform","lagoon (relict)",NA
+"479","landform","lagoon bottom",NA
+"480","landform","lagoon channel",NA
+"481","landform","lahar",NA
+"482","landform","lake",NA
+"483","landform","lake plain",NA
+"484","landform","lake terrace",NA
+"485","landform","lakebed",NA
+"486","landform","lakebed (relict)",NA
+"487","landform","lakeshore",NA
+"488","landform","landslide",NA
+"489","landform","lateral moraine",NA
+"490","landform","lateral spread",NA
+"491","landform","lava dome",NA
+"492","landform","lava field",NA
+"493","landform","lava flow",NA
+"494","landform","lava flow unit",NA
+"495","landform","lava plain",NA
+"496","landform","lava plateau",NA
+"497","landform","lava trench",NA
+"498","landform","lava tube",NA
+"499","landform","ledge",NA
+"500","landform","levee",NA
+"501","landform","loess bluff",NA
+"502","landform","loess hill",NA
+"503","landform","longitudinal dune",NA
+"504","landform","longshore bar",NA
+"505","landform","longshore bar (relict)",NA
+"506","landform","louderback",NA
+"507","landform","low hill",NA
+"508","landform","lowmoor bog",NA
+"509","landform","maar",NA
+"510","landform","main scarp",NA
+"511","landform","mainland cove",NA
+"512","landform","mangrove swamp",NA
+"513","landform","marine lake",NA
+"514","landform","marine terrace",NA
+"515","landform","marsh",NA
+"516","landform","mawae",NA
+"517","landform","meander",NA
+"518","landform","meander scar",NA
+"519","landform","meander scroll",NA
+"520","landform","meandering channel",NA
+"521","landform","medial moraine",NA
+"522","landform","mesa",NA
+"523","landform","meteorite crater",NA
+"524","landform","mogote",NA
+"525","landform","monadnock",NA
+"526","landform","monocline",NA
+"527","landform","moraine",NA
+"528","landform","mountain",NA
+"529","landform","mountain slope",NA
+"530","landform","mountain valley",NA
+"531","landform","mud pot",NA
+"532","landform","mudflow",NA
+"533","landform","muskeg",NA
+"534","landform","natural levee",NA
+"535","landform","nearshore zone",NA
+"536","landform","nearshore zone (relict)",NA
+"537","landform","notch",NA
+"538","landform","nunatak",NA
+"539","landform","open depression",NA
+"540","landform","other",NA
+"541","landform","outwash delta",NA
+"542","landform","outwash fan",NA
+"543","landform","outwash plain",NA
+"544","landform","outwash terrace",NA
+"545","landform","overflow stream channel",NA
+"546","landform","oxbow",NA
+"547","landform","oxbow lake",NA
+"548","landform","paha",NA
+"549","landform","pahoehoe lava flow",NA
+"550","landform","paleoterrace",NA
+"551","landform","parabolic dune",NA
+"552","landform","parna dune",NA
+"553","landform","partial ballena",NA
+"554","landform","patterned ground",NA
+"555","landform","pavement karst",NA
+"556","landform","peak",NA
+"557","landform","peat plateau",NA
+"558","landform","pediment",NA
+"559","landform","perennial stream",NA
+"560","landform","pillow lava flow",NA
+"561","landform","pingo",NA
+"562","landform","pinnacle",NA
+"563","landform","pitted outwash plain",NA
+"564","landform","pitted outwash terrace",NA
+"565","landform","plain",NA
+"566","landform","plateau",NA
+"567","landform","playa",NA
+"568","landform","playa dune",NA
+"569","landform","playa floor",NA
+"570","landform","playa lake",NA
+"571","landform","playa rim",NA
+"572","landform","playa slope",NA
+"573","landform","playa step",NA
+"574","landform","plug dome",NA
+"575","landform","pluvial lake",NA
+"576","landform","pluvial lake (relict)",NA
+"577","landform","pocosin",NA
+"578","landform","point bar",NA
+"579","landform","point bar (coastal)",NA
+"580","landform","pothole",NA
+"581","landform","pothole lake",NA
+"582","landform","proglacial lake",NA
+"583","landform","proglacial lake (relict)",NA
+"584","landform","pyroclastic flow",NA
+"585","landform","pyroclastic surge",NA
+"586","landform","raised beach",NA
+"587","landform","raised bog",NA
+"588","landform","ravine",NA
+"589","landform","recessional moraine",NA
+"590","landform","reef",NA
+"591","landform","ribbed fen",NA
+"592","landform","ridge",NA
+"593","landform","rim",NA
+"594","landform","rise",NA
+"595","landform","river",NA
+"596","landform","river valley",NA
+"597","landform","roche moutonnée",NA
+"598","landform","rock glacier",NA
+"599","landform","rock pediment",NA
+"600","landform","rock spread",NA
+"601","landform","rock topple",NA
+"602","landform","rockfall",NA
+"603","landform","rockfall avalanche",NA
+"604","landform","rotational debris slide",NA
+"605","landform","rotational earth slide",NA
+"606","landform","rotational rock slide",NA
+"607","landform","rotational slide",NA
+"608","landform","sabkha",NA
+"609","landform","saddle",NA
+"610","landform","sag",NA
+"611","landform","sag pond",NA
+"612","landform","salt marsh",NA
+"613","landform","salt pond",NA
+"614","landform","sand flow",NA
+"615","landform","sand ramp",NA
+"616","landform","sand sheet",NA
+"617","landform","scarp",NA
+"618","landform","scarp slope",NA
+"619","landform","scree slope",NA
+"620","landform","sea",NA
+"621","landform","sea cliff",NA
+"622","landform","seep",NA
+"623","landform","seif dune",NA
+"624","landform","semi-open depression",NA
+"625","landform","shield volcano",NA
+"626","landform","shoal",NA
+"627","landform","shoal (relict)",NA
+"628","landform","shore",NA
+"629","landform","shore complex",NA
+"630","landform","sill",NA
+"631","landform","sinkhole",NA
+"632","landform","slackwater",NA
+"633","landform","slickrock",NA
+"634","landform","slide",NA
+"635","landform","slot canyon",NA
+"636","landform","slough",NA
+"637","landform","slump block",NA
+"638","landform","snowfield",NA
+"639","landform","soil fall",NA
+"640","landform","solution platform",NA
+"641","landform","solution sinkhole",NA
+"642","landform","sound",NA
+"643","landform","spit",NA
+"644","landform","spur",NA
+"645","landform","stack (coast)",NA
+"646","landform","stack (geom.)",NA
+"647","landform","star dune",NA
+"648","landform","steptoe",NA
+"649","landform","stock",NA
+"650","landform","stoss and lee",NA
+"651","landform","strait",NA
+"652","landform","strand plain",NA
+"653","landform","strath terrace",NA
+"654","landform","stratovolcano",NA
+"655","landform","stream",NA
+"656","landform","stream terrace",NA
+"657","landform","strike valley",NA
+"658","landform","string bog",NA
+"659","landform","structural bench",NA
+"660","landform","submerged back-barrier beach",NA
+"661","landform","submerged mainland beach",NA
+"662","landform","submerged point bar (coast)",NA
+"663","landform","submerged wave-built terrace",NA
+"664","landform","submerged wave-cut platform",NA
+"665","landform","submerged–upland tidal marsh",NA
+"666","landform","swale",NA
+"667","landform","swallow hole",NA
+"668","landform","swamp",NA
+"669","landform","syncline",NA
+"670","landform","talus cone",NA
+"671","landform","talus slope",NA
+"672","landform","tarn",NA
+"673","landform","terminal moraine",NA
+"674","landform","terrace",NA
+"675","landform","terrace remnant",NA
+"676","landform","thermokarst depression",NA
+"677","landform","thermokarst lake",NA
+"678","landform","tidal flat",NA
+"679","landform","tidal inlet",NA
+"680","landform","tidal inlet (relict)",NA
+"681","landform","tidal marsh",NA
+"682","landform","till plain",NA
+"683","landform","till-floored lake plain",NA
+"684","landform","toe",NA
+"685","landform","tombolo",NA
+"686","landform","topple",NA
+"687","landform","tor",NA
+"688","landform","Toreva block",NA
+"689","landform","translational debris slide",NA
+"690","landform","translational earth slide",NA
+"691","landform","translational rock slide",NA
+"692","landform","translational slide",NA
+"693","landform","transverse dune",NA
+"694","landform","trough",NA
+"695","landform","tunnel valley",NA
+"696","landform","tunnel-valley lake",NA
+"697","landform","underfit stream",NA
+"698","landform","U-shaped valley",NA
+"699","landform","valley",NA
+"700","landform","valley flat",NA
+"701","landform","valley floor",NA
+"702","landform","valley side",NA
+"703","landform","valley train",NA
+"704","landform","valley-border surfaces",NA
+"705","landform","valley-floor remnant",NA
+"706","landform","volcanic cone",NA
+"707","landform","volcanic crater",NA
+"708","landform","volcanic dome",NA
+"709","landform","volcanic field",NA
+"710","landform","volcanic neck",NA
+"711","landform","volcanic pressure ridge",NA
+"712","landform","volcano",NA
+"713","landform","V-shaped valley",NA
+"714","landform","wash",NA
+"715","landform","washover fan",NA
+"716","landform","washover-fan flat",NA
+"717","landform","washover-fan slope",NA
+"718","landform","water-lain moraine",NA
+"719","landform","wave-built terrace",NA
+"720","landform","wave-cut platform",NA
+"721","landform","wave-worked till plain",NA
+"722","landform","wind gap",NA
+"723","landform","window",NA
+"724","landform","wind-tidal flat",NA
+"725","landform","yardang",NA
+"726","landform","yardang trough",NA
+"727","landsat","Barren Land (Rock/Sand/Clay)","areas of bedrock, desert pavement, scarps, talus, slides,"
+"728","landsat","Cultivated Crops","areas used for the production of annual crops, such as"
+"729","landsat","Deciduous Forest","areas dominated by trees generally greater than 5 meters"
+"730","landsat","Developed High Intensity","highly developed areas where people reside or work in"
+"731","landsat","Developed, Low Intensity","areas with a mixture of constructed materials and"
+"732","landsat","Developed, Medium Intensity","areas with a mixture of constructed materials and"
+"733","landsat","Developed, Open Space","areas with a mixture of some constructed materials, but"
+"734","landsat","Dwarf Scrub","Alaska only areas dominated by shrubs less than 20"
+"735","landsat","Emergent Herbaceous Wetlands","areas where perennial herbaceous vegetation accounts"
+"736","landsat","Evergreen Forest","areas dominated by trees generally greater than 5 meters"
+"737","landsat","Grassland/Herbaceous","areas dominated by gramanoid or herbaceous"
+"738","landsat","Lichens","Alaska only areas dominated by fruticose or foliose"
+"739","landsat","Mixed Forest","areas dominated by trees generally greater than 5 meters"
+"740","landsat","Moss","Alaska only areas dominated by mosses, generally"
+"741","landsat","Open Water","areas of open water, generally with less than 25% cover"
+"742","landsat","Pasture/Hay","areas of grasses, legumes, or grass-legume mixtures"
+"743","landsat","Perennial Ice/Snow","areas characterized by a perennial cover of ice and/or"
+"744","landsat","Sedge/Herbaceous","Alaska only areas dominated by sedges and forbs,"
+"745","landsat","Shrub/Scrub","areas dominated by shrubs; less than 5 meters tall with"
+"746","landsat","Woody Wetlands","areas where forest or shrubland vegetation accounts for"
+"747","landscape","alluvial plain",NA
+"748","landscape","alluvial plain remnant",NA
+"749","landscape","badlands",NA
+"750","landscape","bajada",NA
+"751","landscape","barrier island",NA
+"752","landscape","basin",NA
+"753","landscape","basin floor",NA
+"754","landscape","batholith",NA
+"755","landscape","bay (coast)",NA
+"756","landscape","bolson",NA
+"757","landscape","breached anticline",NA
+"758","landscape","breaklands",NA
+"759","landscape","breaks",NA
+"760","landscape","caldera",NA
+"761","landscape","canyonlands",NA
+"762","landscape","coastal plain",NA
+"763","landscape","cockpit karst",NA
+"764","landscape","cone karst",NA
+"765","landscape","continental glacier",NA
+"766","landscape","delta plain",NA
+"767","landscape","dissected breaklands",NA
+"768","landscape","dissected plateau",NA
+"769","landscape","drumlin field",NA
+"770","landscape","dune field",NA
+"771","landscape","estuary",NA
+"772","landscape","everglades",NA
+"773","landscape","fan piedmont",NA
+"774","landscape","fault-block mountains",NA
+"775","landscape","fluviokarst",NA
+"776","landscape","fluviomarine terrace",NA
+"777","landscape","fold-thrust hills",NA
+"778","landscape","foothills",NA
+"779","landscape","glaciokarst",NA
+"780","landscape","gulf",NA
+"781","landscape","hills",NA
+"782","landscape","ice-margin complex",NA
+"783","landscape","intermontane basin",NA
+"784","landscape","island",NA
+"785","landscape","karst",NA
+"786","landscape","kegel karst",NA
+"787","landscape","lagoon",NA
+"788","landscape","lake plain",NA
+"789","landscape","lava field",NA
+"790","landscape","lava plain",NA
+"791","landscape","lava plateau",NA
+"792","landscape","lowland",NA
+"793","landscape","marine terrace",NA
+"794","landscape","meander belt",NA
+"795","landscape","mountain range",NA
+"796","landscape","mountain system",NA
+"797","landscape","mountains",NA
+"798","landscape","ocean",NA
+"799","landscape","outwash plain",NA
+"800","landscape","peninsula",NA
+"801","landscape","piedmont",NA
+"802","landscape","piedmont slope",NA
+"803","landscape","plain",NA
+"804","landscape","plateau",NA
+"805","landscape","rift valley",NA
+"806","landscape","river valley",NA
+"807","landscape","sand plain",NA
+"808","landscape","sandhills",NA
+"809","landscape","scabland",NA
+"810","landscape","sea",NA
+"811","landscape","semi-bolson",NA
+"812","landscape","shield volcano",NA
+"813","landscape","shore complex",NA
+"814","landscape","sinkhole karst",NA
+"815","landscape","sound",NA
+"816","landscape","strait",NA
+"817","landscape","tableland",NA
+"818","landscape","thermokarst",NA
+"819","landscape","till plain",NA
+"820","landscape","tower karst",NA
+"821","landscape","upland",NA
+"822","landscape","valley",NA
+"823","landscape","volcanic field",NA
+"824","pond_freq","common",NA
+"825","pond_freq","frequent",NA
+"826","pond_freq","none",NA
+"827","pond_freq","occasional",NA
+"828","pond_freq","rare",NA
+"829","profile_zero_ref","Other",NA
+"830","profile_zero_ref","Top of mineral soil","Top of mineral soil not including organic layers"
+"831","profile_zero_ref","Top of surface","On top of all organic layers"
+"832","runoff","high",NA
+"833","runoff","low",NA
+"834","runoff","medium",NA
+"835","runoff","negligible",NA
+"836","runoff","ponded",NA
+"837","runoff","very high",NA
+"838","runoff","very low",NA
+"839","site_perm","impermeable",NA
+"840","site_perm","moderate",NA
+"841","site_perm","moderately rapid",NA
+"842","site_perm","moderately slow",NA
+"843","site_perm","rapid",NA
+"844","site_perm","slow",NA
+"845","site_perm","very rapid",NA
+"846","site_perm","very slow",NA
+"847","site_perm","even-age, aggrading",NA
+"848","site_perm","mature",NA
+"849","site_perm","mature, even-age",NA
+"850","site_perm","mature, uneven-age",NA
+"851","site_perm","not applicable",NA
+"852","site_perm","oldgrowth, all-age",NA
+"853","site_perm","transition, breakup",NA
+"854","site_perm","uneven-age",NA
+"855","site_perm","young, regenerative",NA
+"856","state_province","Abu Zaby","United Arab Emirates"
+"857","state_province","Ajman",NA
+"858","state_province","Alabama",NA
+"859","state_province","Alajuela","Costa Rica"
+"860","state_province","Alaska",NA
+"861","state_province","Alberta","Canada"
+"862","state_province","American Samoa","American Samoa (included with Pacific Basin)"
+"863","state_province","Arizona",NA
+"864","state_province","Arkansas",NA
+"865","state_province","British Columbia","Canada"
+"866","state_province","California",NA
+"867","state_province","Campeche","Mexico"
+"868","state_province","Caprivi","Nigeria"
+"869","state_province","Cartago","Costa Rica"
+"870","state_province","Cataluna",NA
+"871","state_province","Chiapas","Mexico"
+"872","state_province","Chuuk","Federated States of Micronesia"
+"873","state_province","Colorado",NA
+"874","state_province","Connecticut",NA
+"875","state_province","Czestochowa",NA
+"876","state_province","Delaware",NA
+"877","state_province","District of Columbia",NA
+"878","state_province","Erongo","China, Poland"
+"879","state_province","Farah","Afghanistan"
+"880","state_province","Federated States of Micronesia",NA
+"881","state_province","Florida",NA
+"882","state_province","Georgia",NA
+"883","state_province","Guam","Guam (included with Pacific Basin)"
+"884","state_province","Guanacaste","Costa Rica"
+"885","state_province","Guanajuato","Mexico"
+"886","state_province","Guerrero","Mexico"
+"887","state_province","Hawaii",NA
+"888","state_province","Ibb","China"
+"889","state_province","Idaho",NA
+"890","state_province","Illinois",NA
+"891","state_province","Indiana",NA
+"892","state_province","Iowa",NA
+"893","state_province","Jalisco","Mexico"
+"894","state_province","Kansas",NA
+"895","state_province","Kentucky",NA
+"896","state_province","Konar","Afghanistan"
+"897","state_province","Kosrae","Federated States of Micronesia"
+"898","state_province","Labrador","Canada"
+"899","state_province","Louisiana",NA
+"900","state_province","Maine",NA
+"901","state_province","Manicaland","Albania, Antarctica, Mali, Turkey"
+"902","state_province","Manitoba","Canada"
+"903","state_province","Maryland",NA
+"904","state_province","Mashonaland East","Ghana"
+"905","state_province","Mashonaland West","Ghana"
+"906","state_province","Massachusetts",NA
+"907","state_province","Masvingo","Ghana"
+"908","state_province","Matabeleland North","China"
+"909","state_province","Michigan",NA
+"910","state_province","Michoacan de Ocampo","Mexico"
+"911","state_province","Midlands","Federated States of Micronesia, Ghana"
+"912","state_province","Minnesota",NA
+"913","state_province","Mississippi",NA
+"914","state_province","Missouri",NA
+"915","state_province","Montana",NA
+"916","state_province","Morelos","Mexico"
+"917","state_province","National Lab","(NRCS only)"
+"918","state_province","Nebraska",NA
+"919","state_province","Nevada",NA
+"920","state_province","New Brunswick","Canada"
+"921","state_province","New Hampshire",NA
+"922","state_province","New Jersey",NA
+"923","state_province","New Mexico",NA
+"924","state_province","New York",NA
+"925","state_province","Newfoundland","Canada"
+"926","state_province","North Carolina",NA
+"927","state_province","North Dakota",NA
+"928","state_province","Northern Mariana Islands","Northern Mariana Islands (included with Pacific Basin)"
+"929","state_province","Northwest Territories","Canada"
+"930","state_province","Nova Scotia","Canada"
+"931","state_province","Nunavut","Canada"
+"932","state_province","Ohio",NA
+"933","state_province","Okavango","Nigeria"
+"934","state_province","Oklahoma",NA
+"935","state_province","Ontario","Canada"
+"936","state_province","Oregon",NA
+"937","state_province","Palau",NA
+"938","state_province","Pennsylvania",NA
+"939","state_province","Pohnpei","Federated States of Micronesia"
+"940","state_province","Prince Edward Island","Canada"
+"941","state_province","Puerto Rico",NA
+"942","state_province","Quebec","Canada"
+"943","state_province","Rhode Island",NA
+"944","state_province","San Jose","Costa Rica"
+"945","state_province","Saskatchewan","Canada"
+"946","state_province","South Carolina",NA
+"947","state_province","South Dakota",NA
+"948","state_province","Tabasco","Mexico"
+"949","state_province","Tennessee",NA
+"950","state_province","Texas",NA
+"951","state_province","Tsumeb","Hungary"
+"952","state_province","Utah",NA
+"953","state_province","Vermont",NA
+"954","state_province","Virgin Islands",NA
+"955","state_province","Virginia",NA
+"956","state_province","Washington",NA
+"957","state_province","West Virginia",NA
+"958","state_province","Wisconsin",NA
+"959","state_province","Wyoming",NA
+"960","state_province","Yap","Federated States of Micronesia"
+"961","state_province","Yucatan","Mexico"
+"962","state_province","Yukon","Canada"
+"963","yes_blank","yes","indicator present"

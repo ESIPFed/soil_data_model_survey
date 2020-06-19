@@ -1,0 +1,197 @@
+---
+title: "ISCN record"
+author: "L Nave, L Heran,  K Frederick, K Todd-Brown (ktoddbrown@ufl.edu)"
+date: "`r format(Sys.Date(), format='%d %B %Y')`"
+output:
+  word_document:
+    toc: yes
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+---
+
+```{r preSetup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning=FALSE,
+                      message=FALSE)
+```
+
+
+```{r setup}
+#devtools::install_github("bergant/datamodelr")
+library(datamodelr)
+library(readxl) #change to readr when we export the study description
+library(plyr)
+library(tidyverse)
+library(DT)
+
+##Working copy
+#readxl::excel_sheets(path='../data/DatasetVariableTable_v3 - Editable.xlsx')
+columnDescription <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='Thesaurus') %>%
+  filter(grepl('ISCN', data_product))
+datasetMeta <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='meta') %>%
+  filter(grepl('ISCN', data_product))
+
+```
+
+# June interview
+
+These are notes from a 4 June 2020 interview with Luke Nave.
+
+1) Why did you start this study/project?
+    - The study was motivated by the desire to draw together scattered data into a common place with a common format so that users could apply it to answer outstanding questions in the carbon cycle.
+    - These scientific questions at the time, 10 years ago, included:
+        + How much soil carbon is there and where is it?
+        + Given that we have stocks of X, how are these stocks changing with land use change, climate change, and management?
+    - There were also operational/methodical questions to be answered:
+        + Can improved coverage of carbon stock data result in better model representation of where carbon soil is?
+        + Can data on soil fractions and turn over times improve process representation in models?
+2) Describe your workflow for ingesting data sets?
+    - Researchers identified which variables in the desired source dataset cross-walked with which variables in the ISCN template as well as identified where new variables needed to be added. Data providers then filled out an Excel template that was then ingested into the ISCN database using SQL commands.
+    - The greatest efforts were focused on the largest datasets.
+    - The threshold for adding a new variable to the template was high ~90% of the final variables were in the original.
+        + Tried to be expansive then so they would not have to add more variables later in order to incorporate relatively common variables
+        + However, adding new variables was on a case to case basis. For example, carbon and bulk density variables were more likely to be added with new methods, versus cation exchange capacity because carbon stock variables were what the dataset focused on.
+    - The templates evolved with each version but changed less than the data product.
+        + Started with < 40,000 profiles and ending with > 71,000
+    - The documentation got better with each version.
+3) What decisions did you make to arrive at this workflow?
+    - Combined two existing data structures from the flux community (Ameriflux) and the soil community (NRCS), because these were the two largest contributors to the data infrastructure.
+    - There was extensive work (a series of workshops, beginning with an Alaska-focused project) with the soil, carbon cycle, and biochemistry research communities to make sure that the structure worked for single investigator driven soil datasets. 
+4) How would someone get a copy of the data in this study?
+    - Go to the ISCN website and download a static excel file.
+    - There is a quick-start, intermediate, and advanced user guide. 
+5) What would you do differently if you had to start again?
+    - Develop products in parallel with the database itself. The interviewee's great disappointment was overemphasizing consolidating the data for their own sake but not spending enough time turning the data into publications. This could have shown what can be done with the synthesis to spark interests and show what is possible.
+    - Have a small group of people (5 or 6) executing a common set of standard gap fills and decision trees for bulk density, carbon concentrations, and stock computations. They would set rules and create commonly agreed upon couple of scripts that could do some gap filling. This would save time for future users by just getting that done first.
+      + ISCN3 has a complex gapfilling methods that we used to generate soil organic carbon stock estimates and flagged this under a relatively cryptic headers; these were the product of only 2 people and much of the decision making is only documented in a mess of old emails.
+    - Put all the code that handles the data that turns it from data into product in a common format and allow people who are interested to get it and edit it. This would make it open access which was not a part of ISCN (the Scientific Steering Group specifically desired to control and document access, in order that data contributors received credit and citations). The current codebase used to generate ISCN3 is cryptic to the point of being black boxed after the retirement of the original programmer.
+    - Create a functional way to harvest information about treatments and disturbances, so that the dataset can be used to study treatment effects. The disturbance table was prototyped but never satisfactorily implemented, much less refined through implementation.
+    - Change latitude and longitude to profile level rather than site level attributes to create high resolution data.
+    - Have better documentation about how to cite your data contributors and how to make sense of the data products. 
+6) What would be the same?
+    - The capability of incorporating a lot of different kinds of data.
+    - The templates were generally adequate for most data needs we encountered.
+    - In terms of interfacing with the broader science community, listening and having workshops were helpful in that they resulted in positive changes to the templates.
+    - Allow for map based data retrieval to increase usability by allowing the user to filter by place and by variables. The user would no longer have to deal with large excel tables where most of the columns are empty anyways. 
+
+# ISCN 3 and template specific
+    
+## Festure summary
+
+  - Common features
+    + location, elevation, and observation time
+    + depth of sample and layer
+    + bulk density
+    + vegetation
+    + carbon percentage and loss on ignition
+    
+  - Unique features
+    + disturbance table
+    + high level of site details
+      - frost free days, ponding, runoff
+    + higher then average number of layer-level info
+    + fraction table only shared with ISRaD
+    
+
+## Data model
+
+```{r iscn_dm}
+
+ISCN3_table <- columnDescription %>%
+  filter(data_product == 'ISCN3') %>%
+  mutate(key = data_type == 'id',
+         ref = case_when(
+                         grepl('^dataset_name$', data_column) ~ 'dataset',
+                         grepl('^profile_name$', data_column) ~ 'profile',
+                         grepl('^layer_name$', data_column) ~ 'layer',
+                         grepl('^site_name$', data_column) ~ 'layer',
+                         TRUE ~ as.character(NA)),
+         ref_col = case_when(grepl('^dataset_name$', data_column) ~ 'dataset_name',
+                         grepl('^profile_name$', data_column) ~ 'profile_name',
+                         grepl('^layer_name$', data_column) ~ 'layer_name',
+                         grepl('^site_name$', data_column) ~ 'site_name',
+                         TRUE ~ as.character(NA))) %>%
+    mutate(ref = if_else(data_table == ref, as.character(NA), ref))%>%
+   rename('table'='data_table',  'column'='data_column' )
+
+ISCNTemplate_table <- columnDescription %>%
+  filter(data_product == 'ISCNTemplate') %>%
+  mutate(key = data_type == 'id',
+         ref = case_when(grepl('^dataset_name$', data_column) ~ 'metadata',
+                         grepl('^site_name$', data_column) ~ 'site',
+                         grepl('^cluster_name$', data_column) ~ 'cluster',
+                         grepl('^profile_name$', data_column) ~ 'profile',
+                         grepl('^layer_name$', data_column) ~ 'layer',
+                         grepl('^fraction_name$', data_column) ~ 'fraction',
+                         grepl('^gas_name$', data_column) ~ 'gas',
+                         grepl('^other_name$', data_column) ~ 'other',
+                         TRUE ~ as.character(NA)),
+         ref_col = case_when(grepl('^dataset_name$', data_column) ~ 'dataset_name',
+                         grepl('^site_name$', data_column) ~ 'site_name',
+                         grepl('^cluster_name$', data_column) ~ 'cluster_name',
+                         grepl('^profile_name$', data_column) ~ 'profile_name',
+                         grepl('^layer_name$', data_column) ~ 'layer_name',
+                         grepl('^fraction_name$', data_column) ~ 'fraction_name',
+                         grepl('^gas_name$', data_column) ~ 'gas_name',
+                         grepl('^other_name$', data_column) ~ 'other_name',
+                         TRUE ~ as.character(NA))) %>%
+    mutate(ref = if_else(data_table == ref, as.character(NA), ref))%>%
+   rename('table'='data_table',  'column'='data_column' )
+
+ISCNTemplate_dm <- as.data_model(ISCNTemplate_table)
+ISCN3_dm <- as.data_model(ISCN3_table)
+
+```
+
+### ISCN3
+
+```{r}
+
+dm_render_graph(dm_create_graph(ISCN3_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only', graph_name='ISCN3 data model'))
+```
+
+### ISCN-Template
+```{r}
+dm_render_graph(dm_create_graph(ISCNTemplate_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only', graph_name='ISCN-template data model'))
+```
+
+```{r ISCN_columnDetails, echo=FALSE}
+
+write.csv(columnDescription, file = 'temp/ISCN_description.csv')
+datatable(columnDescription)
+write.csv(datasetMeta, file = 'temp/ISCN_meta.csv')
+datatable(datasetMeta)
+```
+
+Here is a sample of the data description and meta-data table for both ISCN3 and the ISCN Template. The full data table can be found `ISCN_description.csv` and `ISCN_meta.csv`.
+
+### Control Vocabulary
+
+```{r ISCN_controlVocabulary, echo=FALSE, message=FALSE}
+ISCN3_controlVocab <- readxl::read_excel(path= '../data/ISCNTranscribed_TemplateCVs.xlsx') %>%
+  tidyr::fill(Vocabulary) %>%
+  mutate(vocabulary_family = regmatches(m=regexpr('\\S+', Vocabulary), x = Vocabulary),
+         data_column = gsub('.*used\\sby\\s?:?\\s?', '', Vocabulary),
+         vocabulary=`Parsing Token`, 
+         vocabulary_description=Description) %>%
+  select(data_column, vocabulary_family, vocabulary, vocabulary_description) %>%
+  filter(!is.na(vocabulary))
+
+variableLinks <- ISCN3_controlVocab %>% 
+  filter(!is.na(data_column) & !grepl('^\\s*$', data_column)) %>% 
+  select(data_column, vocabulary_family) %>% unique %>%
+  group_by(vocabulary_family) %>%
+  mutate(variable = strsplit(data_column, split = ', ')) %>% 
+  unnest(variable) %>%
+  select(variable, vocabulary_family)
+
+ISCN3_controlVocab <- ISCN3_controlVocab %>%
+  select(-data_column)
+
+write.csv(ISCN3_controlVocab, file = 'temp/ISCN_controlVocab.csv')
+datatable(ISCN3_controlVocab)
+```
+
+Here is a sample of the control vocabulary for ISCN3. THe fill data table can be found in `ISCN_controlVocab.csv`
