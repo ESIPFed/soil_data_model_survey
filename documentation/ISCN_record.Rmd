@@ -3,11 +3,9 @@ title: "ISCN record"
 author: "L Nave, L Heran,  K Frederick, K Todd-Brown (ktoddbrown@ufl.edu)"
 date: "`r format(Sys.Date(), format='%d %B %Y')`"
 output:
-  word_document:
+  html_document:
     toc: yes
   pdf_document:
-    toc: yes
-  html_document:
     toc: yes
 ---
 
@@ -28,11 +26,20 @@ library(DT)
 
 ##Working copy
 #readxl::excel_sheets(path='../data/DatasetVariableTable_v3 - Editable.xlsx')
-columnDescription <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='Thesaurus') %>%
-  filter(grepl('ISCN', data_product))
-datasetMeta <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='meta') %>%
+#columnDescription <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='Thesaurus') %>%
+#  filter(grepl('ISCN', data_product))
+#datasetMeta <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='meta') %>%
+#  filter(grepl('ISCN', data_product))
+
+
+columnDescription <- readr::read_csv(file='../data/data_description.csv') %>%
   filter(grepl('ISCN', data_product))
 
+datasetMeta <-  readr::read_csv(file='../data/data_meta.csv') %>%
+  filter(grepl('ISCN', data_product))
+
+controlVocab <- readr::read_csv(file='../data/data_description.csv') %>%
+  filter(grepl('ISCN', data_product))
 ```
 
 # June interview
@@ -157,41 +164,19 @@ dm_render_graph(dm_create_graph(ISCN3_dm, rankdir = "BT", col_attr = c('column')
 dm_render_graph(dm_create_graph(ISCNTemplate_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only', graph_name='ISCN-template data model'))
 ```
 
-```{r ISCN_columnDetails, echo=FALSE}
+```{r ISCN_columnDetails}
 
-write.csv(columnDescription, file = 'temp/ISCN_description.csv')
+
 datatable(columnDescription)
-write.csv(datasetMeta, file = 'temp/ISCN_meta.csv')
 datatable(datasetMeta)
 ```
 
-Here is a sample of the data description and meta-data table for both ISCN3 and the ISCN Template. The full data table can be found `ISCN_description.csv` and `ISCN_meta.csv`.
+Here is a sample of the data description and meta-data table for both ISCN3 and the ISCN Template. The full data table can be found `data_description.csv` and `data_meta.csv`.
 
 ### Control Vocabulary
 
-```{r ISCN_controlVocabulary, echo=FALSE, message=FALSE}
-ISCN3_controlVocab <- readxl::read_excel(path= '../data/ISCNTranscribed_TemplateCVs.xlsx') %>%
-  tidyr::fill(Vocabulary) %>%
-  mutate(vocabulary_family = regmatches(m=regexpr('\\S+', Vocabulary), x = Vocabulary),
-         data_column = gsub('.*used\\sby\\s?:?\\s?', '', Vocabulary),
-         vocabulary=`Parsing Token`, 
-         vocabulary_description=Description) %>%
-  select(data_column, vocabulary_family, vocabulary, vocabulary_description) %>%
-  filter(!is.na(vocabulary))
-
-variableLinks <- ISCN3_controlVocab %>% 
-  filter(!is.na(data_column) & !grepl('^\\s*$', data_column)) %>% 
-  select(data_column, vocabulary_family) %>% unique %>%
-  group_by(vocabulary_family) %>%
-  mutate(variable = strsplit(data_column, split = ', ')) %>% 
-  unnest(variable) %>%
-  select(variable, vocabulary_family)
-
-ISCN3_controlVocab <- ISCN3_controlVocab %>%
-  select(-data_column)
-
-write.csv(ISCN3_controlVocab, file = 'temp/ISCN_controlVocab.csv')
-datatable(ISCN3_controlVocab)
+```{r ISCN_controlVocabulary}
+datatable(controlVocab)
 ```
 
-Here is a sample of the control vocabulary for ISCN3. THe fill data table can be found in `ISCN_controlVocab.csv`
+Here is a sample of the control vocabulary for ISCN3. THe fill data table can be found in `data_controlVocab.csv`
