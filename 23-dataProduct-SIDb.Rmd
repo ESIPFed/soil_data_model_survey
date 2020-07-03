@@ -1,0 +1,460 @@
+
+# SIDb record
+```{r}
+tableDescription <- dataDescription.ls$structure %>%
+  filter(data_product == 'SIDb')
+```
+
+## June interview notes
+
+These are notes from a 4 June 2020 interview with Carlos Sierra and Christina Scheadel.
+
+1) Why did you start this study?
+    - There is this huge potential to use new innovations with soil incubation data, but people were using it in many different ways, making it hard to demonstrate it's value. Time series incubations are an important aspect of soil incubation that have been under utilized, in contrast to total respired fraction. In particular time series incubation data can tell you about the carbon stock rate and the dynamics. The fact that the environment in these incubations is so tightly contolled is a feature, not a bug, removing confounding variables (in other words, sensitivity functions) from the results. 
+    - This database is a merger of two projects by Carlos and Christina. These two projects were started roughly 5 years ago; once they both became aware of the other's projects, they merged efforts. A week-long workshop in Jena, Germany during March of 2019 accelerated work.
+2) Describe your workflow for ingesting data sets.
+    - There are three main elements of a data contribution: the time series, initial conditions, and metadata.
+    - The templates have evolved over time, especially in the March-2019 workshop. A complete template is essential to enable consistent information capture from the original manuscripts.
+    - Time series are captured from graphs in original manuscripts, and occasionally direct data from the original PIs. 
+    - Data was generally not directly contributed from PI unless the PI was directly involved in the data product.
+    - SIDb is NOT a repository and instead a dynamic data product. Data should ideally be archived in a repository seperately.
+Follow up question: How successful were you in getting PIs to give you data?
+    - Within the group, there were people with data, so they got data from them instead of contacting PIs for them. Did not ask for data from PIs. the dataset is not complete at all. They were setting up the infrastructure for people to upload their own data. No outside contributions yet. Some people have expressed interest. 
+    - Dynamic database, not a repository. Contribution to a product. You are expected to archive your own data.
+    - Current data product
+        + There are 31 studies so far.
+        + 684 total time-series
+        + The longest time series is 800 to 1,000 days.
+3) What decisions did you make to arrive at this workflow?
+    - Driven by research questions, design is mostly trial and error.
+    - Reevaluate structure and workflow as they worked, or as needed. 
+    - Going forward, when incorporating additional columns, their thoughts are that it needs to evolve based on the needs of that specific entry.
+4) How would someone get a copy of the data in this study?
+    - `git clone` a GitHub repository and then interact with it through the associated R-package. 
+    - R package reads the data, use simple plotting, and model fitting via the FME R-package that can use both classical gradient and MCMC methods.
+5) What would you do differently if you had to start again? What would be the same?
+    - Having the project be reserach question driven worked well even if it was a bit slow.
+    - Would have been good to collaborate sooner. That might have moved the project along faster.
+    - Excellent group dynamics 
+        + >“If you have a group that you feel comfortable with and where everyone is well-coordinated, ideas will flow much better in a good direction.” 
+        + Christina said the group talked every other week and that everyone was very responsive, making the group great. 
+        + Common research goals united the entire group.
+        + Small workshop worked exceptionally well (less than 5 people)
+            * More or less a goal in mind than a structure.  
+            * Goal: Have a paper somewhat completed
+            * Had a whiteboard
+    - There is a lot of disconnect between the informatics researchers and domain scientists. It feels like there should be more cross talk between the two then there currently is.  
+
+## SIDb feature summary
+
+  - Common features
+    + location, elevation, observation time
+    + depth
+    + vegetation
+    
+  - Unique features
+    + anaerobic/aerobic
+    + gasMeasured
+    + samplePreparation
+    + more detailed for permafrost
+    + initial conditions
+    + time series
+    + experimental information is captured in the column names of the time series
+
+### Data model
+
+
+```{r eval=FALSE}
+##Check from orginal data
+load('../data-raw/SIDb/DataModel/sidb.RData')
+
+testMineNames <- list(dataTable1 = list(study_name='test case1', incubations = data.frame(time=1:10, value=11:20)))
+
+mineNames <- function(xx){
+  ans <- tibble()
+  if(class(xx) == 'list'){
+    for(listName in names(xx)){
+      if(!is.null(names(xx[[listName]]))){
+        ans <- bind_rows(ans,
+                         tibble(parent = listName, child = names(xx[[listName]])),
+                         mineNames(xx[[listName]]))
+      }
+    }
+    
+  }
+  return(ans)
+}
+
+#mineNames(testMineNames)
+```
+
+
+
+```{r eval=FALSE}
+#Construction of data tables from tree
+allPaths <- function(parent='', dirTree){
+  ans <- NULL
+  if(is.list(dirTree)){
+    for(listName in names(dirTree)){
+      child <- paste(parent, listName, sep='/')
+      
+      if(!is.null(names(dirTree[[listName]]))){
+
+        ans <- c(ans,
+                 paste(allPaths(parent = child, dirTree[[listName]]), sep='/'))
+      }else{
+         ans <- c(ans, 
+                  paste(class(dirTree[[listName]]), length(dirTree[[listName]]), 
+                        child, sep=':'))
+      }
+    }
+    
+  }else{
+    ans <- paste(class(dirTree), parent, sep='')
+  }
+  return(ans)
+}
+#allPaths(dirTree=testMineNames[[1]])
+
+SIDB_structure <- tibble(fullPath = allPaths(dirTree=sidb)) %>%
+  tidyr::separate(col=fullPath, into=c('type', 'count', 'level0', 'level1', 'level2', 'level3', 'level4'), 
+                  sep='[:/(:/)]', remove=FALSE, fill='right') %>%
+  select(-level0)
+
+generalTree <- SIDB_structure %>%
+  filter(type != 'NULL') %>%
+  select(level2, level3, level4) %>%
+  #filter(! level2 %in% c('variables', 'timeSeries')) %>%
+  unique()
+  
+```
+
+The soil incubation data base has a unique tree structure instead of a relational database that, in it's native form, is represented as follows.
+The data base is a list of studies. 
+Each study has a single root with the following struction.
+
+```{r eval=FALSE}
+
+
+myNode.df <- tibble(label = c('root', generalTree$level2, generalTree$level3, generalTree$level4)) %>% 
+  mutate(type = c('level1', rep('level2', nrow(generalTree)), rep('level3', nrow(generalTree)), rep('level4', nrow(generalTree)))) %>%
+  filter(!is.na(label)) %>%
+  unique() %>% mutate(id = 1:nrow(.)) %>%
+  select(id, type, label) %>%
+  mutate(color = case_when(type == 'level1' ~ 'white',
+                           type == 'level2' ~ 'yellow',
+                           type == 'level3' ~ 'green',
+                           type == 'level4' ~ 'aqua',
+                           TRUE ~ 'red'))
+
+myEdges_root_level2.df <- generalTree %>% select(level2) %>% unique() %>%
+  left_join(myNode.df %>% filter(type == 'level2') %>% select(-type), by = c('level2' = 'label')) %>% 
+  rename('to'='id')  %>% select(-level2) %>%
+  mutate(from = 1)
+
+myEdges_level2_level3.df <- generalTree %>% filter(!is.na(level3)) %>% select(level2, level3) %>% unique() %>%
+  left_join(myNode.df %>% filter(type == 'level2') %>% select(-type), by = c('level2' = 'label')) %>% 
+  rename('from'='id')  %>% select(-level2) %>%
+  left_join(myNode.df %>% filter(type == 'level3') %>% select(-type), by = c('level3' = 'label')) %>% 
+  rename('to'='id')  %>% select(-level3) 
+
+myEdges_level3_level4.df <- generalTree %>% filter(!is.na(level4)) %>% select(level3, level4) %>% unique() %>%
+  left_join(myNode.df %>% filter(type == 'level3') %>% select(-type), by = c('level3' = 'label')) %>% 
+  rename('from'='id')  %>% select(-level3) %>%
+  left_join(myNode.df %>% filter(type == 'level4') %>% select(-type), by = c('level4' = 'label')) %>% 
+  rename('to'='id')  %>% select(-level4) 
+
+
+myGraph <- create_graph(
+    nodes_df = as.data.frame(myNode.df),
+    edges_df = bind_rows(myEdges_root_level2.df, myEdges_level2_level3.df, myEdges_level3_level4.df) %>%
+      mutate(id=1:nrow(.), rel="leading_to" ) %>%
+      select(id, from, to, rel),
+    display_msgs = TRUE)
+
+render_graph(myGraph)
+
+```
+
+For the sake of comparison we deconstructed this tree structure and describe the SIDb data product downloaded June-2020 with the following set of relational data tables.
+This is currently pending work.
+
+```{r eval=FALSE}
+
+SIDb.ls <- list()
+
+study <- SIDB_structure %>%
+  filter(is.na(level3)) %>%
+  select(level1, level2, fullPath) %>%
+  pivot_wider(names_from=level2, values_from = fullPath)
+
+SIDb.ls$study <- plyr::ldply(sidb, function(xx){
+  plyr::ldply(xx, function(yy){
+    if(!is.list(yy)){
+      return(data.frame(value=yy, stringsAsFactors = FALSE))
+    }else{
+      return(NULL)
+    }
+  }, .id = 'level2') %>% 
+     pivot_wider(names_from=level2, values_from = value)
+}, .id = 'level1')
+
+# #Check the level3 sub-tables
+# SIDB_structure %>%
+#   filter(is.na(level4) & !is.na(level3)) %>%
+#   select(level2) %>% unique
+# # returns: siteInfo, incubationInfo, timeSeries, initConditions
+
+siteInfo <- SIDB_structure %>%
+  filter(is.na(level4) & !is.na(level3)) %>%
+  filter(level2 == 'siteInfo') %>%
+  select(level1, level3, fullPath) %>%
+  pivot_wider(names_from=level3, values_from=fullPath)
+#siteInfo2
+siteInfo2 <- SIDB_structure %>%
+  filter(!is.na(level4), level2 == 'siteInfo') %>% 
+  #select(level3, level4) %>% unique
+  mutate(level3_4 = paste(level3, level4, sep='_'))%>%
+  select(level1, level3_4, fullPath) %>%
+  pivot_wider(names_from=level3_4, values_from=fullPath)
+
+
+SIDb.ls$siteInfo <- plyr::ldply(sidb, function(xx){
+  plyr::ldply(xx$siteInfo, function(zz){
+    if(is.null(zz)){
+      return(NULL)
+    }else if(!is.list(zz)){
+      if(is.numeric(zz)){
+        return(data.frame(value_num=zz,
+                          siteIndex=1:length(zz),
+                          stringsAsFactors = FALSE))
+      }else{
+        return(data.frame(value_str=zz,
+                          siteIndex=1:length(zz),
+                          stringsAsFactors = FALSE))
+      }
+    }else if(is.list(zz)){
+      return(
+        plyr::ldply(zz, function(aa){
+          if(is.null(aa)){
+            return(NULL)
+          }else if(is.numeric(aa)){
+            return(data.frame(value_num=unlist(aa),
+                              siteIndex=1:length(unlist(aa)),
+                              stringsAsFactors = FALSE))
+          }else{
+            return(data.frame(value_str=unlist(aa),
+                              siteIndex=1:length(unlist(aa)),
+                              stringsAsFactors = FALSE))
+          }
+        }, .id = 'level4')
+      )
+    }#end if zz is list
+  }, .id = 'level3')
+}, .id = 'level1') %>%
+  group_by(level1, level3) %>%
+  mutate(siteIndex = if_else(level1 == 'Haddix2011' & level3 == 'MAP', 1:length(level3), siteIndex)) %>% #fix bad formatting
+  mutate(siteIndex = if_else(level1 == 'Haddix2011' & level3 == 'MAP', 1:length(level3), siteIndex)) %>% #fix bad formatting
+  ungroup() %>% group_by(level1, siteIndex)
+
+temp_num <- SIDb.ls$siteInfo %>%
+  ungroup() %>%
+  mutate(level1 = as.character(level1)) %>%
+  filter(is.finite(value_num)) %>%
+  mutate(name = if_else(is.na(level4), as.character(level3), paste(level3, level4, sep='_'))) %>%
+  select(level1, name, siteIndex, value_num) %>%
+  pivot_wider(names_from = name, values_from = value_num)
+
+temp_str <- SIDb.ls$siteInfo %>%
+  ungroup() %>%
+  mutate(level1 = as.character(level1)) %>%
+  filter(!is.na(value_str)) %>%
+  mutate(name = if_else(is.na(level4), as.character(level3), paste(level3, level4, sep='_'))) %>%
+  select(level1, name, siteIndex, value_str) %>%
+  pivot_wider(names_from = name, values_from = value_str)
+
+SIDb.ls$siteInfo <- full_join(temp_num, temp_str, by=c('level1', 'siteIndex'), suffix=c('_numeric', '_character'))
+
+
+incubationInfo1 <- SIDB_structure %>%
+  filter(is.na(level4) & !is.na(level3)) %>%
+  filter(level2 == 'incubationInfo') %>%
+  select(level1, level3, fullPath) %>%
+  pivot_wider(names_from=level3, values_from=fullPath)
+
+#incubationInfo2
+incubationInfo2 <- SIDB_structure %>%
+  filter(!is.na(level4), level2 == 'incubationInfo') %>% 
+  mutate(level3_4 = paste(level3, level4, sep='_'))%>%
+  #select(level3, level4) %>% unique %>% ##Everything has a value-unit on level 4 here
+  #mutate(filler=TRUE) %>% pivot_wider(names_from=level4, values_from=filler)
+  select(level1, level3_4, fullPath) %>%
+  pivot_wider(names_from=level3_4, values_from=fullPath)
+
+
+incubationInfo <- full_join(incubationInfo1, incubationInfo2, by='level1')
+
+incubationInfo_long <- plyr::ldply(sidb, function(xx){
+  plyr::ldply(xx$incubationInfo, function(zz){
+    if(is.null(zz)){
+      return(NULL)
+    }else if(!is.list(zz)){
+      if(is.numeric(zz)){
+        return(data.frame(value_num=zz,
+                          stringsAsFactors = FALSE))
+      }else if(is.logical(zz)){
+        return(data.frame(value_log=zz,
+                          stringsAsFactors = FALSE))
+      }else{
+        return(data.frame(value_str=zz,
+                          stringsAsFactors = FALSE))
+      }
+    }else if(is.list(zz)){
+      return(
+        plyr::ldply(zz, function(aa){
+          if(is.null(aa)){
+            return(NULL)
+          }else if(is.numeric(aa)){
+            return(data.frame(value_num=unlist(aa),
+                              stringsAsFactors = FALSE))
+          }else if(is.logical(aa)){
+            return(data.frame(value_log=aa,
+                              stringsAsFactors = FALSE))
+          }else{
+            return(data.frame(value_str=unlist(aa),
+                              stringsAsFactors = FALSE))
+          }
+        }, .id = 'level4')
+      )
+    }#end if zz is list
+  }, .id = 'level3')
+}, .id = 'level1') %>%
+  mutate(name= if_else(is.na(level4), as.character(level3), paste(level3, level4, sep='_'))) %>%
+  select(level1, name, starts_with('value'))
+
+SIDb.ls$incubationInfo <- full_join(incubationInfo_long %>% select(level1, name, value_log) %>% filter(!is.na(value_log)) %>% pivot_wider(values_from = value_log),
+incubationInfo_long %>% select(level1, name, value_str) %>% filter(!is.na(value_str)) %>% pivot_wider(values_from = value_str),
+by = c('level1'), suffix=c('.logical', '.string')) %>%
+  full_join(
+incubationInfo_long %>% select(level1, name, value_num) %>% filter(!is.na(value_num)) %>% pivot_wider(values_from = value_num),
+by = c('level1'), suffix=c('', '.num'))
+
+
+initalConditions <- SIDB_structure %>%
+  filter(is.na(level4) & !is.na(level3)) %>%
+  filter(level2 == 'initConditions') %>%
+  select(level1, level3, fullPath) %>%
+  pivot_wider(names_from=level3, values_from=fullPath)
+
+SIDb.ls$initConditions <- plyr::ldply(sidb, function(xx){
+  xx$initConditions
+}, .id = 'level1')
+
+timeSeries <- SIDB_structure %>%
+  filter(is.na(level4) & !is.na(level3)) %>%
+  filter(level2 == 'timeSeries') %>%
+  select(level1, level3, fullPath) #%>%
+  #pivot_wider(names_from=level3, values_from=fullPath)
+
+SIDb.ls$timeSeries <- plyr::ldply(sidb, function(xx){
+  ##Wide format with rename option
+  #name.ls <- unlist(lapply(xx$variables, function(yy){yy$name}))
+  #ans <- xx$timeSeries
+  #names(ans) <- name.ls
+  ##Long format
+  ans <- xx$timeSeries %>%
+    mutate(timeSeriesIndex = 1:nrow(.)) %>%
+    pivot_longer(cols=-timeSeriesIndex, names_to = 'column_name', values_to = 'value')
+  return(ans)
+}, .id = 'level1')
+
+# #Check the level4 sub-tables
+# SIDB_structure %>%
+#   filter(!is.na(level4)) %>%
+#   select(level2) %>% unique
+# 
+# #returns: siteInfo, incubationInfo, variables
+
+#variables
+variables <- SIDB_structure %>%
+  filter(!is.na(level4), level2 == 'variables') %>%
+  #mutate(level3_4 = paste(level3, level4, sep='_'))%>%
+  #select(level3, level4) %>% unique
+  select(level1, level2, level3, level4, fullPath) %>%
+  pivot_wider(names_from=level4, values_from=fullPath)
+
+temp <- plyr::ldply(sidb, function(xx){
+  plyr::ldply(xx$variables, function(zz){
+    if(is.null(zz)){
+      return(NULL)
+    }else if(!is.list(zz)){
+      if(is.numeric(zz)){
+        return(data.frame(value_num=zz,
+                          stringsAsFactors = FALSE))
+      }else if(is.logical(zz)){
+        return(data.frame(value_log=zz,
+                          stringsAsFactors = FALSE))
+      }else{
+        return(data.frame(value_str=zz,
+                          stringsAsFactors = FALSE))
+      }
+    }else if(is.list(zz)){
+      return(
+        plyr::ldply(zz, function(aa){
+          if(is.null(aa)){
+            return(NULL)
+          }else if(is.numeric(aa)){
+            return(data.frame(value_num=unlist(aa),
+                              stringsAsFactors = FALSE))
+          }else if(is.logical(aa)){
+            return(data.frame(value_log=aa,
+                              stringsAsFactors = FALSE))
+          }else{
+            return(data.frame(value_str=unlist(aa),
+                              stringsAsFactors = FALSE))
+          }
+        }, .id = 'level4')
+      )
+    }#end if zz is list
+  }, .id = 'level3')
+}, .id = 'level1') %>%
+  rename('column_name' = 'level3', 'name' = 'level4')
+
+SIDb.ls$variables <- full_join(temp %>% select(-value_str) %>% filter(!is.na(value_num)) %>% pivot_wider(names_from='name', values_from = 'value_num'),
+                               temp %>% select(-value_num) %>% filter(!is.na(value_str)) %>% pivot_wider(names_from='name', values_from = 'value_str'),  
+                               by = c("level1", "column_name"))
+
+
+```
+
+
+```{r sidb_dm, eval=FALSE, fig.height=10}
+
+columnDescription <- plyr::ldply(SIDb.ls, function(xx){tibble(column = names(xx))}, .id = 'table')
+
+SIDb_table <- columnDescription %>%
+  mutate(key = column %in% c('level1', 'time', 'variable_name', 'column_name', 'siteIndex'),
+         ref = case_when(grepl('^level1$', column) ~ 'study',
+                         grepl('^siteIndex$', column) ~ 'siteInfo',
+                         grepl('timeSeriesIndex', column) ~ 'timeSeries',
+                         grepl('^column_name$', column) ~ 'variables',
+                         grepl('^time$', column) ~ 'timeSeries',
+                         TRUE ~ as.character(NA)),
+         ref_col = case_when(grepl('^level1$', column) ~ 'level1',
+                         grepl('^siteIndex$', column) ~ 'siteIndex',
+                         grepl('^variable_name$', column) ~ 'variables',
+                         grepl('^column_name$', column) ~ 'variables',
+                         grepl('^time$', column) ~ 'time',
+                         TRUE ~ as.character(NA))) %>%
+  mutate(ref = if_else(table == ref, as.character(NA), ref))
+
+SIDb_dm <- as.data_model(SIDb_table)
+
+dm_render_graph(dm_create_graph(SIDb_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only'))
+
+```
+
+## Acknowledgements
+
+Special thanks to Drs Christina Scheadel (Northern Arizona University) and Carlos Sierra (Max Planck Institute for Biogeochemistry) for making the meta data for making themselves available for interview.
+
