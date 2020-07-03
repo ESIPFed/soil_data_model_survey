@@ -161,4 +161,4 @@ Here is a sample of the control vocabulary for ISCN3. THe fill data table can be
 
 ## Acknowledgements
 
-Special thanks to Dr Luke Nave for his help with the interpertation of ISCN.
+Special thanks to Dr Luke Nave (University of Michigan) for his help with the interpertation of ISCN.
