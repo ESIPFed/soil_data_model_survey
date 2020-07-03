@@ -1,0 +1,41 @@
+--- 
+title: 'Soil Data Models: a review'
+author: "K Todd-Brown (ktoddbrown@ufl.edu), L Heran, K Frederick, M Younger, L Nave"
+date: "`r format(Sys.Date(), '%Y %B %d')`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [references.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis"
+---
+
+# Introduction
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo=FALSE,
+                      message=FALSE,
+                      warning=FALSE,
+                      eval=TRUE)
+```
+
+
+
+```{r}
+#devtools::install_github("bergant/datamodelr")
+library(datamodelr)
+library(DT)
+library(plyr)
+library(tidyverse)
+library(bookdown)
+
+data.dir <- 'data'
+```
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

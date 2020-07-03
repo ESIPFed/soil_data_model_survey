@@ -1,29 +1,7 @@
----
-title: "ISCN record"
-author: "L Nave, L Heran,  K Frederick, K Todd-Brown (ktoddbrown@ufl.edu)"
-date: "`r format(Sys.Date(), format='%d %B %Y')`"
-output:
-  html_document:
-    toc: yes
-  pdf_document:
-    toc: yes
----
 
-```{r preSetup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
-                      warning=FALSE,
-                      message=FALSE)
-```
+# ISCN record
 
-
-```{r setup}
-#devtools::install_github("bergant/datamodelr")
-library(datamodelr)
-library(readxl) #change to readr when we export the study description
-library(plyr)
-library(tidyverse)
-library(DT)
-
+```{r}
 ##Working copy
 #readxl::excel_sheets(path='../data/DatasetVariableTable_v3 - Editable.xlsx')
 #columnDescription <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='Thesaurus') %>%
@@ -32,17 +10,17 @@ library(DT)
 #  filter(grepl('ISCN', data_product))
 
 
-columnDescription <- readr::read_csv(file='../data/data_description.csv') %>%
+columnDescription <- readr::read_csv(file=file.path(data.dir, 'data_description.csv')) %>%
   filter(grepl('ISCN', data_product))
 
-datasetMeta <-  readr::read_csv(file='../data/data_meta.csv') %>%
+datasetMeta <-  readr::read_csv(file=file.path(data.dir,'data_meta.csv')) %>%
   filter(grepl('ISCN', data_product))
 
-controlVocab <- readr::read_csv(file='../data/data_description.csv') %>%
+controlVocab <- readr::read_csv(file=file.path(data.dir, 'data_description.csv')) %>%
   filter(grepl('ISCN', data_product))
 ```
 
-# June interview
+## June interview
 
 These are notes from a 4 June 2020 interview with Luke Nave.
 
@@ -83,9 +61,9 @@ These are notes from a 4 June 2020 interview with Luke Nave.
     - In terms of interfacing with the broader science community, listening and having workshops were helpful in that they resulted in positive changes to the templates.
     - Allow for map based data retrieval to increase usability by allowing the user to filter by place and by variables. The user would no longer have to deal with large excel tables where most of the columns are empty anyways. 
 
-# ISCN 3 and template specific
+## ISCN 3 and template specific
     
-## Festure summary
+### Festure summary
 
   - Common features
     + location, elevation, and observation time
@@ -102,9 +80,9 @@ These are notes from a 4 June 2020 interview with Luke Nave.
     + fraction table only shared with ISRaD
     
 
-## Data model
+### Data model
 
-```{r iscn_dm}
+```{r}
 
 ISCN3_table <- columnDescription %>%
   filter(data_product == 'ISCN3') %>%
@@ -152,19 +130,19 @@ ISCN3_dm <- as.data_model(ISCN3_table)
 
 ```
 
-### ISCN3
+#### ISCN3
 
 ```{r}
 
 dm_render_graph(dm_create_graph(ISCN3_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only', graph_name='ISCN3 data model'))
 ```
 
-### ISCN-Template
+#### ISCN-Template
 ```{r}
 dm_render_graph(dm_create_graph(ISCNTemplate_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only', graph_name='ISCN-template data model'))
 ```
 
-```{r ISCN_columnDetails}
+```{r}
 
 
 datatable(columnDescription)
@@ -173,10 +151,14 @@ datatable(datasetMeta)
 
 Here is a sample of the data description and meta-data table for both ISCN3 and the ISCN Template. The full data table can be found `data_description.csv` and `data_meta.csv`.
 
-### Control Vocabulary
+#### Control Vocabulary
 
-```{r ISCN_controlVocabulary}
+```{r}
 datatable(controlVocab)
 ```
 
 Here is a sample of the control vocabulary for ISCN3. THe fill data table can be found in `data_controlVocab.csv`
+
+## Acknowledgements
+
+Special thanks to Dr Luke Nave for his help with the interpertation of ISCN.

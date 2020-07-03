@@ -1,40 +1,15 @@
----
-title: "Review of current soil data models"
-author: "L Heran, K Frederick, M Younger, K Todd-Brown (ktoddbrown@ufl.edu)"
-date: "5/1/2020"
-output:
-  pdf_document:
-    toc: yes
-  html_document:
-    toc: yes
-  word_document:
-    toc: yes
-bibliography: references.bib
----
 
+# Comparision of data model structures
 
-```{r globalKnit, include=FALSE}
-knitr::opts_chunk$set(echo=FALSE,
-                      message=FALSE,
-                      warning=FALSE)
-```
-
-```{r setup}
-library(datamodelr)
-library(DT)
-library(plyr)
-library(tidyverse)
-```
-
-```{r readInData}
-dataModelDescription <- read_csv(file = '../data/DatasetVariableTable.csv') %>%
+```{r}
+dataModelDescription <- read_csv(file = file.path(data.dir, 'DatasetVariableTable.csv')) %>%
   filter(Dataset_ID %in% c("ISCN3", "CCRCN", "Crowther", "vanGestel", "ISRaD" )) %>%
   select(Dataset_ID, Table, Info_type, Info, Variable, Type)  %>%
   mutate(long_table_name = sprintf('%s:%s', Dataset_ID, Table))
 
 ```
 
-```{r clean}
+```{r}
 dataModels_segments <- dlply(dataModelDescription, c('Dataset_ID'),
                              function(xx){as.list(unique(xx$long_table_name))})
 
@@ -81,20 +56,20 @@ all_models <- dataModelDescription %>%
 # dm_render_graph(graph)
 ```
 
-# Introduction and goals
+## Introduction and goals
 
 The overall goal of the project is to develop, implement, and test best practices for compiling transparent, reproducible, harmonized, and extendable data collections for meta-analysis. For this first portion, we will examine five current meta-analysis efforts in the soil community and compare the ontologies used in these studies to existing ontologies. Subsequent sections focus on identifying the strengths and weaknesses of the approaches used by the individual projects through one-on-one interviews with the PIs and developers as well as a broader community survey. We will suggest best practices based on the findings from these interviews. After that, we will use best practices to prioritize ongoing development of the Soil Organic Carbon Data Rescue and Harmonization (SOC-DRaH), an open community project started by the International Soil Carbon Network (ISCN). The results from this project would provide a solid basis for seeking future funding to benchmark soil carbon dynamics in Earth system models, generate soil maps, and gap-fill missing data using machine learning algorithms.
 
 We considered five data products in this section, selected for their relevance to research driven soil carbon data products: International Soil Carbon Network vs 3 (ISCN), Coastal Carbon Research Coordination Network (CCRCN), International Soil Radiocarbon Database (ISRaD), and two soil warming meta-analyses conducted by Crowther (@Crowther2016) and vanGestel (@vanGestel2018). These studies include ongoing studies (CCRCN, ISCN), ongoing with incremental publications (ISRaD:@Lawrence2020), and completed projects (Crowther:@Crowther2016, vanGestel:@vanGestel2018).
 
-# Individual PI studies were smaller.
+## Individual PI studies were smaller.
 
 In general individual PI projects had smaller data models (see Table 1 and Figure 1).
 Multi-PI studies tended to have multiple columns describing the same variable. These extra columns describe methods, units, standard deviations, and other quantities related to said variable. While Crowther technically had 8 data tables, most of the data was in three main data tables  (Figure 2).
 In contrast, multi-PI projects had larger data tables with more complex key-ed references across them (Figure 3).
 This also held true for the number of variables in each study. The single PI studies had between 40 (Crowther: Figure 1) and 56 (vanGestel) unique variable names. Multi-PI studies however had between 144 (CCRCN) and 351 (ISRaD: Figure 2).
 
-```{r tableCounts}
+```{r}
 dataModelDescription %>% select(Dataset_ID, Table, Type, Info, Info_type, Variable) %>%
   filter(Info_type == 'column') %>%
   unique() %>%
@@ -108,7 +83,7 @@ dataModelDescription %>% select(Dataset_ID, Table, Type, Info, Info_type, Variab
   knitr::kable(caption = 'Table 1:  Increasing the number of researchers involved with a study increased the complexity of the data model. The studies varied in the number of data tables that they each contained, with the single PI study by Crowther only containing 3 tables and the multi-PI study CCRCN containing 12. There was a wider variation in the unique variables in each study, from 28 to 221. These were associated with columns that contained data values, units, and other methods notes.')
 ```
 
-```{r allDM, fig.cap='Figure 1: Data models with id keys only.'}
+```{r fig.cap='Figure 1: Data models with id keys only.'}
 all_dm <- as.data_model(all_models)
 all_dm2 <- dm_set_segment(all_dm, dataModels_segments)
 
@@ -116,14 +91,14 @@ graph <- dm_create_graph(all_dm2, rankdir = "RL", col_attr = c('column'), view_t
 dm_render_graph(graph)
 ```
 
-```{r CrowtherDM, fig.cap='Figure 2: Crawther data model. An example of a less complex, single PI data model.'}
+```{r fig.cap='Figure 2: Crawther data model. An example of a less complex, single PI data model.'}
 temp_dm <- as.data_model(all_models %>% filter(grepl('Crowther', table)))
 temp_dm2 <- dm_set_segment(temp_dm, dataModels_segments)
 graph <- dm_create_graph(temp_dm2, rankdir = "RL", col_attr = c('column'))
 dm_render_graph(graph)
 ```
 
-```{r vanGestelDM, fig.width=8, fig.height=24, fig.cap='Figure 3: ISRaD data model. An example of a complex, multiPI data model.'}
+```{r fig.width=8, fig.height=24, fig.cap='Figure 3: ISRaD data model. An example of a complex, multiPI data model.'}
 temp_dm <- as.data_model(all_models %>% filter(grepl('ISRaD', table)))
 temp_dm2 <- dm_set_segment(temp_dm, dataModels_segments)
 graph <- dm_create_graph(temp_dm2, rankdir = "TB", col_attr = c('column'))
@@ -132,14 +107,14 @@ dm_render_graph(graph)
 
 
 
-# Vocabulary across studies were not obviously harmonizable.
+## Vocabulary across studies were not obviously harmonizable.
 
 Initial efforts to harmonize the vocabulary across studies showed over 580 unique variables out of 924 total variables across all data models. 
 Only 5 variables were commonly shared across all data models. 
 These variables tended to focus on study information, site location, climate, bulk density, organic carbon percentage, sand/silt/clay fractions, pH and cation exchange capasity (see Table 2).
 
 
-```{r commonVariables}
+```{r}
 dataModelDescription %>% select(Dataset_ID, Variable) %>%
   unique() %>% group_by(Variable) %>%
   tally(name = 'study_count') %>%
@@ -148,14 +123,14 @@ dataModelDescription %>% select(Dataset_ID, Variable) %>%
   knitr::kable(caption = 'Table 2: Common variables (>2 data models) across data models. Total variable count is 21.')
 ```
 
-# Study feature summary
+## Study feature summary
 
 Common across most models are location (latitude-longitude-elevation), observation time, mean annual temperature, and mean annual precipitation, all of which describe site level characteristics. 
 Depth of core or layer paired with bulk density, organic carbon percentage, sand, silt, clay, pH, soil texture class, cation_exchange_capacity, and 14C describe soil level characteristics.
 Columns for vegetation class notes were common, but not directly comparable across the studies.
 Bulk density was typically broken into several categories depending on the measurement method used.
 
-## Unique features
+### Unique features
     
   - CCRCN
     + min/max latitude
@@ -197,7 +172,7 @@ Bulk density was typically broken into several categories depending on the measu
     + 'input' variable
     + soil horizon and percent soil organic matter
 
-# Inital ontology search for relevant control vocabulary. 
+## Inital ontology search for relevant control vocabulary. 
 
 In general, The Ecosystem Ontology (http://bioportal.bioontology.org/ontologies/ECSO) was the most relevant ontology to this study. However, the control vocabulary was not as method specific as many of the larger data products examined here. We searched http://bioportal.bioontology.org/ for ontologies with four common terms across the studies: ‘soil bulk density’, ‘soil organic carbon’, ‘soil pH’, and ‘soil depth’. None of the data products considered in this study refered to a formalized ontology and instead chose to develop their own or adapt-extend vocabulary from previous data products. We report an inital set of search results for some common terms in the data products considered.
 
@@ -209,7 +184,7 @@ The search term *‘soil pH’* returned 43 ontology matches (search data: 19 Ma
 
 The search term *‘soil depth’* returned 33 ontology matches (search date: 19 May 2020). Only two of these hits specifically referred to depth of soil. The Ecosystem Ontology had a match for ‘Soil Depth’ (http://purl.dataone.org/odo/ECSO_00001207), specifically mentioning soil depth in the context of layers. Interlinking Ontology for Biological Concepts had a match for ‘soil depth’ (http://purl.jp/bio/4/id/201006028017141570), which seemed to refer more to the total depth of the soil. 
 
-# Next steps
+## Next steps
 
 All groups in this study have been contacted and confirmed interest in particpating.
 We are currently expanding the data products being considered to include the Soil Incubation Database, WoSIS, ISCN-2016-template, the LTER soil organic matter working group, and the Soil Heath Database.
@@ -217,7 +192,7 @@ We have draft the intial questions for the long format interviews below and plan
 By the end of July we expect to have a more general community survey targeted more broadly to the soil science community.
 We will continue to explore the developed ontologies.
 
-## Interview questions
+### Interview questions
 
   1) Why did you start this study?
   2) Describe your workflow for ingesting data sets?
@@ -225,4 +200,3 @@ We will continue to explore the developed ontologies.
   4) How would someone get a copy of the data in this study?
   5) What would you do differently if you had to start again? What would be the same?
 
-# References
