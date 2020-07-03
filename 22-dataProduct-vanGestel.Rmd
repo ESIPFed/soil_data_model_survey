@@ -1,0 +1,108 @@
+
+# van Gestel record
+```{r}
+columnDescription <- dataDescription.ls$structure %>%
+  filter(grepl('vanGestel', data_product))
+datasetMeta <- dataDescription.ls$meta %>%
+  filter(grepl('vanGestel', data_product))
+controlVocab <- dataDescription.ls$control_vocabulary %>%
+  filter(grepl('vanGestel', data_product))
+
+```
+
+## June Interview
+
+These are notes from the June 2020 interview with Dr Natasja van Gestel.
+
+1) Why did you start this study?
+    - There was a DOE funded project during van Gestel's postdoc where it became obvious the modeling project would benifit form a more robust data set for parameterization. This became an ongoing project over the past 5 years.
+2) Describe your workflow for ingesting data sets?
+    - Data is extract from the published litterature, generally though transcription of points recovered from figures or published tables.
+    - Studies are selected based on availabilty of soil carbon, and an attempt is made to capture all the data associated with these studies.
+    - This data is then entered into an Excel spreadsheet, fed through a series of scripts to automate gap-filling, and then generate data products relevant to modeling studies.
+    - van Gestel and her lab were responsible for everything from the intial design of the spreadsheets, to data recovery and post-processing. 
+    - There are currently over 100 studies in the database.
+3) What decisions did you make to arrive at this workflow?
+    - In general the design of the spreadsheet has not changed significantly over the years. To design the spreadsheet van Gestel tried to think mechanistically about the processes that control carbon cycling in soils and create an exhaustive list of variables to capture from the literature. This exhaustive template was then pruned to create more restricted data products as needed.
+    - Expanded on factors originally related mostly to carbon as represented by soil carbon models (ie carbon stocks, fluxes, experimental treatments for temperature, nutrients, and moisture). 
+    - Simplicity was a core value in developing the data model. 
+    - Tried to preseve as much information from the origial data source as possible.
+      + Needed to record orginal units and then harmonize units in processing scripts.
+      + Key to determine how bulk density was treated in the study
+        * Sometimes there were no bulk density values, some studies only used 1 value for bulk density or a proscribed standard bulk density.
+        * Bulk density was frequently gap-filled in the generated data products using imputed bulk density to organic carbon relationships
+4) How would someone get a copy of the data in this study?
+    - Contact van Gestel directly, publication is pending.
+5) What would you do differently if you had to start again? What would be the same?
+    - Happy with the outcome of the meta analysis and would not change much.  Current template and data product pipeline has proven effective. 
+    - Currently using powerpoint to extract data from figures, so using a different type of software could make the process more efficient.  
+    - Considering focusing more on collecting data from repositories in the future.
+
+## vanGestel specific
+
+  - Common features
+    + location, elevation, and observation time
+    + pH
+    + bulk density
+
+  - Unique features
+    + mean depth instead of depth of core and layer
+    + carbon, nitrogen, and phosphorus pools above and below ground
+    + treatments and information about treatments (mean, standard error, size)
+    + 'input' variable
+    + soil horizon and percent soil organic matter
+    
+### Data model
+
+```{r eval=FALSE}
+
+# Check column names
+tableNames <- excel_sheets(path = '../data-raw/vanGestel/20200613_data/Metadata_wExamples.xlsx')[-1]
+given_metadata <- read_excel(path = '../data-raw/vanGestel/20200613_data/Metadata_wExamples.xlsx', sheet = tableNames[1])
+given_columns <- plyr::ddply(tibble(table = tableNames[-1]), 'table', function(xx){
+  return(tibble(columns = names(read_excel(path = '../data-raw/vanGestel/20200613_data/Metadata_wExamples.xlsx', sheet = xx$table))))
+})
+
+anti_join(given_metadata, given_columns, by=c("Spreadsheet"='table', 'column name'='columns'))
+anti_join(given_columns, given_metadata, by=c('table'="Spreadsheet", 'columns'= 'column name'))
+anti_join(columnDescription %>% filter(data_product == 'vanGestel'), 
+          given_metadata, by=c('data_table'="Spreadsheet", 'data_column'= 'column name'))
+anti_join(given_metadata, columnDescription %>% filter(data_product == 'vanGestel'), 
+          by=c("Spreadsheet"='data_table', 'column name'='data_column'))
+```
+
+```{r}
+
+vanGestel_table <- columnDescription %>%
+  rename('table' = 'data_table', 'column' = 'data_column') %>%
+  mutate(key = data_type == 'id',
+          ref = case_when(grepl('site.id', column) & data_product == 'vanGestel2017' ~ 'sites',
+                          grepl('site.id', column) & data_product == 'vanGestel' ~ 'site info',
+                          grepl('site', column) & data_product == 'vanGestel' & table == 'correlation BD-OM' ~ 'site info',
+                          TRUE ~ as.character(NA)),
+          ref_col = case_when(grepl('site.id', column) ~ 'site.id',
+                         TRUE ~ as.character(NA))) %>%
+   mutate(ref = if_else(table == ref, as.character(NA), ref))
+
+vanGestel_dm <- as.data_model(vanGestel_table %>% filter(data_product == 'vanGestel'))
+vanGestel2017_dm <- as.data_model(vanGestel_table %>% filter(data_product == 'vanGestel2017'))
+
+```
+
+#### vs2017
+
+```{r}
+
+dm_render_graph(dm_create_graph(vanGestel2017_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only'))
+```
+
+#### Current version
+
+```{r fig.height=4}
+dm_render_graph(dm_create_graph(vanGestel_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only'))
+
+```
+
+## Acknowledgements
+
+Special thanks to Dr Natasja van Gestel (Texas Tech University) for making the meta data for this data product avaible for analysis and making herself available for interview.
