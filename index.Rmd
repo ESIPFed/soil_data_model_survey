@@ -12,6 +12,8 @@ description: "This is the compiled report out of the ESIP Labs (2020) project: S
 
 # Introduction
 
+The overall goal of the project is to develop, implement, and test best practices for compiling transparent, reproducible, harmonized, and extendable data collections for meta-analysis. For this first portion, we will examine five current meta-analysis efforts in the soil community and compare the ontologies used in these studies to existing ontologies. Subsequent sections focus on identifying the strengths and weaknesses of the approaches used by the individual projects through one-on-one interviews with the PIs and developers as well as a broader community survey. We will suggest best practices based on the findings from these interviews. After that, we will use best practices to prioritize ongoing development of the Soil Organic Carbon Data Rescue and Harmonization (SOC-DRaH), an open community project started by the International Soil Carbon Network (ISCN). The results from this project would provide a solid basis for seeking future funding to benchmark soil carbon dynamics in Earth system models, generate soil maps, and gap-fill missing data using machine learning algorithms.
+
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo=FALSE,
                       message=FALSE,
