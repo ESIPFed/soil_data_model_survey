@@ -32,6 +32,12 @@ library(tidyverse)
 library(bookdown)
 
 data.dir <- 'data'
+
+dataDescription.ls <- list(structure = read_csv(file.path(data.dir, 'data_structure.csv')),
+                           meta = read_csv(file.path(data.dir, 'data_meta.csv')),
+                           thesaurus = read_csv(file.path(data.dir, 'thesaurus.csv')),
+                           control_vocabulary = read_csv(file.path(data.dir, 'control_vocabulary.csv')))
+
 ```
 
 

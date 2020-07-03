@@ -1,0 +1,247 @@
+data_product,vocabulary_family,vocabulary,vocabulary_description
+ISCN3,landsat,Developed High Intensity,highly developed areas where people reside or work in
+ISCN3,landsat,"Developed, Low Intensity",areas with a mixture of constructed materials and
+ISCN3,landsat,"Developed, Medium Intensity",areas with a mixture of constructed materials and
+ISCN3,landsat,"Developed, Open Space","areas with a mixture of some constructed materials, but"
+ISCN3,landsat,Dwarf Scrub,Alaska only areas dominated by shrubs less than 20
+ISCN3,landsat,Emergent Herbaceous Wetlands,areas where perennial herbaceous vegetation accounts
+ISCN3,landsat,Evergreen Forest,areas dominated by trees generally greater than 5 meters
+ISCN3,landsat,Grassland/Herbaceous,areas dominated by gramanoid or herbaceous
+ISCN3,landsat,Lichens,Alaska only areas dominated by fruticose or foliose
+ISCN3,landsat,Mixed Forest,areas dominated by trees generally greater than 5 meters
+ISCN3,landsat,Moss,"Alaska only areas dominated by mosses, generally"
+ISCN3,landsat,Open Water,"areas of open water, generally with less than 25% cover"
+ISCN3,landsat,Pasture/Hay,"areas of grasses, legumes, or grass-legume mixtures"
+ISCN3,landsat,Perennial Ice/Snow,areas characterized by a perennial cover of ice and/or
+ISCN3,landsat,Sedge/Herbaceous,"Alaska only areas dominated by sedges and forbs,"
+ISCN3,landsat,Shrub/Scrub,areas dominated by shrubs; less than 5 meters tall with
+ISCN3,landsat,Woody Wetlands,areas where forest or shrubland vegetation accounts for
+ISCN3,landscape,alluvial plain,"NA"
+ISCN3,landscape,alluvial plain remnant,"NA"
+ISCN3,landscape,badlands,"NA"
+ISCN3,landscape,bajada,"NA"
+ISCN3,landscape,barrier island,"NA"
+ISCN3,landscape,basin,"NA"
+ISCN3,landscape,basin floor,"NA"
+ISCN3,landscape,batholith,"NA"
+ISCN3,landscape,bay (coast),"NA"
+ISCN3,landscape,bolson,"NA"
+ISCN3,landscape,breached anticline,"NA"
+ISCN3,landscape,breaklands,"NA"
+ISCN3,landscape,breaks,"NA"
+ISCN3,landscape,caldera,"NA"
+ISCN3,landscape,canyonlands,"NA"
+ISCN3,landscape,coastal plain,"NA"
+ISCN3,landscape,cockpit karst,"NA"
+ISCN3,landscape,cone karst,"NA"
+ISCN3,landscape,continental glacier,"NA"
+ISCN3,landscape,delta plain,"NA"
+ISCN3,landscape,dissected breaklands,"NA"
+ISCN3,landscape,dissected plateau,"NA"
+ISCN3,landscape,drumlin field,"NA"
+ISCN3,landscape,dune field,"NA"
+ISCN3,landscape,estuary,"NA"
+ISCN3,landscape,everglades,"NA"
+ISCN3,landscape,fan piedmont,"NA"
+ISCN3,landscape,fault-block mountains,"NA"
+ISCN3,landscape,fluviokarst,"NA"
+ISCN3,landscape,fluviomarine terrace,"NA"
+ISCN3,landscape,fold-thrust hills,"NA"
+ISCN3,landscape,foothills,"NA"
+ISCN3,landscape,glaciokarst,"NA"
+ISCN3,landscape,gulf,"NA"
+ISCN3,landscape,hills,"NA"
+ISCN3,landscape,ice-margin complex,"NA"
+ISCN3,landscape,intermontane basin,"NA"
+ISCN3,landscape,island,"NA"
+ISCN3,landscape,karst,"NA"
+ISCN3,landscape,kegel karst,"NA"
+ISCN3,landscape,lagoon,"NA"
+ISCN3,landscape,lake plain,"NA"
+ISCN3,landscape,lava field,"NA"
+ISCN3,landscape,lava plain,"NA"
+ISCN3,landscape,lava plateau,"NA"
+ISCN3,landscape,lowland,"NA"
+ISCN3,landscape,marine terrace,"NA"
+ISCN3,landscape,meander belt,"NA"
+ISCN3,landscape,mountain range,"NA"
+ISCN3,landscape,mountain system,"NA"
+ISCN3,landscape,mountains,"NA"
+ISCN3,landscape,ocean,"NA"
+ISCN3,landscape,outwash plain,"NA"
+ISCN3,landscape,peninsula,"NA"
+ISCN3,landscape,piedmont,"NA"
+ISCN3,landscape,piedmont slope,"NA"
+ISCN3,landscape,plain,"NA"
+ISCN3,landscape,plateau,"NA"
+ISCN3,landscape,rift valley,"NA"
+ISCN3,landscape,river valley,"NA"
+ISCN3,landscape,sand plain,"NA"
+ISCN3,landscape,sandhills,"NA"
+ISCN3,landscape,scabland,"NA"
+ISCN3,landscape,sea,"NA"
+ISCN3,landscape,semi-bolson,"NA"
+ISCN3,landscape,shield volcano,"NA"
+ISCN3,landscape,shore complex,"NA"
+ISCN3,landscape,sinkhole karst,"NA"
+ISCN3,landscape,sound,"NA"
+ISCN3,landscape,strait,"NA"
+ISCN3,landscape,tableland,"NA"
+ISCN3,landscape,thermokarst,"NA"
+ISCN3,landscape,till plain,"NA"
+ISCN3,landscape,tower karst,"NA"
+ISCN3,landscape,upland,"NA"
+ISCN3,landscape,valley,"NA"
+ISCN3,landscape,volcanic field,"NA"
+ISCN3,pond_freq,common,"NA"
+ISCN3,pond_freq,frequent,"NA"
+ISCN3,pond_freq,none,"NA"
+ISCN3,pond_freq,occasional,"NA"
+ISCN3,pond_freq,rare,"NA"
+ISCN3,profile_zero_ref,Other,"NA"
+ISCN3,profile_zero_ref,Top of mineral soil,Top of mineral soil not including organic layers
+ISCN3,profile_zero_ref,Top of surface,On top of all organic layers
+ISCN3,runoff,high,"NA"
+ISCN3,runoff,low,"NA"
+ISCN3,runoff,medium,"NA"
+ISCN3,runoff,negligible,"NA"
+ISCN3,runoff,ponded,"NA"
+ISCN3,runoff,very high,"NA"
+ISCN3,runoff,very low,"NA"
+ISCN3,site_perm,impermeable,"NA"
+ISCN3,site_perm,moderate,"NA"
+ISCN3,site_perm,moderately rapid,"NA"
+ISCN3,site_perm,moderately slow,"NA"
+ISCN3,site_perm,rapid,"NA"
+ISCN3,site_perm,slow,"NA"
+ISCN3,site_perm,very rapid,"NA"
+ISCN3,site_perm,very slow,"NA"
+ISCN3,site_perm,"even-age, aggrading","NA"
+ISCN3,site_perm,mature,"NA"
+ISCN3,site_perm,"mature, even-age","NA"
+ISCN3,site_perm,"mature, uneven-age","NA"
+ISCN3,site_perm,not applicable,"NA"
+ISCN3,site_perm,"oldgrowth, all-age","NA"
+ISCN3,site_perm,"transition, breakup","NA"
+ISCN3,site_perm,uneven-age,"NA"
+ISCN3,site_perm,"young, regenerative","NA"
+ISCN3,state_province,Abu Zaby,United Arab Emirates
+ISCN3,state_province,Ajman,"NA"
+ISCN3,state_province,Alabama,"NA"
+ISCN3,state_province,Alajuela,Costa Rica
+ISCN3,state_province,Alaska,"NA"
+ISCN3,state_province,Alberta,Canada
+ISCN3,state_province,American Samoa,American Samoa (included with Pacific Basin)
+ISCN3,state_province,Arizona,"NA"
+ISCN3,state_province,Arkansas,"NA"
+ISCN3,state_province,British Columbia,Canada
+ISCN3,state_province,California,"NA"
+ISCN3,state_province,Campeche,Mexico
+ISCN3,state_province,Caprivi,Nigeria
+ISCN3,state_province,Cartago,Costa Rica
+ISCN3,state_province,Cataluna,"NA"
+ISCN3,state_province,Chiapas,Mexico
+ISCN3,state_province,Chuuk,Federated States of Micronesia
+ISCN3,state_province,Colorado,"NA"
+ISCN3,state_province,Connecticut,"NA"
+ISCN3,state_province,Czestochowa,"NA"
+ISCN3,state_province,Delaware,"NA"
+ISCN3,state_province,District of Columbia,"NA"
+ISCN3,state_province,Erongo,"China, Poland"
+ISCN3,state_province,Farah,Afghanistan
+ISCN3,state_province,Federated States of Micronesia,"NA"
+ISCN3,state_province,Florida,"NA"
+ISCN3,state_province,Georgia,"NA"
+ISCN3,state_province,Guam,Guam (included with Pacific Basin)
+ISCN3,state_province,Guanacaste,Costa Rica
+ISCN3,state_province,Guanajuato,Mexico
+ISCN3,state_province,Guerrero,Mexico
+ISCN3,state_province,Hawaii,"NA"
+ISCN3,state_province,Ibb,China
+ISCN3,state_province,Idaho,"NA"
+ISCN3,state_province,Illinois,"NA"
+ISCN3,state_province,Indiana,"NA"
+ISCN3,state_province,Iowa,"NA"
+ISCN3,state_province,Jalisco,Mexico
+ISCN3,state_province,Kansas,"NA"
+ISCN3,state_province,Kentucky,"NA"
+ISCN3,state_province,Konar,Afghanistan
+ISCN3,state_province,Kosrae,Federated States of Micronesia
+ISCN3,state_province,Labrador,Canada
+ISCN3,state_province,Louisiana,"NA"
+ISCN3,state_province,Maine,"NA"
+ISCN3,state_province,Manicaland,"Albania, Antarctica, Mali, Turkey"
+ISCN3,state_province,Manitoba,Canada
+ISCN3,state_province,Maryland,"NA"
+ISCN3,state_province,Mashonaland East,Ghana
+ISCN3,state_province,Mashonaland West,Ghana
+ISCN3,state_province,Massachusetts,"NA"
+ISCN3,state_province,Masvingo,Ghana
+ISCN3,state_province,Matabeleland North,China
+ISCN3,state_province,Michigan,"NA"
+ISCN3,state_province,Michoacan de Ocampo,Mexico
+ISCN3,state_province,Midlands,"Federated States of Micronesia, Ghana"
+ISCN3,state_province,Minnesota,"NA"
+ISCN3,state_province,Mississippi,"NA"
+ISCN3,state_province,Missouri,"NA"
+ISCN3,state_province,Montana,"NA"
+ISCN3,state_province,Morelos,Mexico
+ISCN3,state_province,National Lab,(NRCS only)
+ISCN3,state_province,Nebraska,"NA"
+ISCN3,state_province,Nevada,"NA"
+ISCN3,state_province,New Brunswick,Canada
+ISCN3,state_province,New Hampshire,"NA"
+ISCN3,state_province,New Jersey,"NA"
+ISCN3,state_province,New Mexico,"NA"
+ISCN3,state_province,New York,"NA"
+ISCN3,state_province,Newfoundland,Canada
+ISCN3,state_province,North Carolina,"NA"
+ISCN3,state_province,North Dakota,"NA"
+ISCN3,state_province,Northern Mariana Islands,Northern Mariana Islands (included with Pacific Basin)
+ISCN3,state_province,Northwest Territories,Canada
+ISCN3,state_province,Nova Scotia,Canada
+ISCN3,state_province,Nunavut,Canada
+ISCN3,state_province,Ohio,"NA"
+ISCN3,state_province,Okavango,Nigeria
+ISCN3,state_province,Oklahoma,"NA"
+ISCN3,state_province,Ontario,Canada
+ISCN3,state_province,Oregon,"NA"
+ISCN3,state_province,Palau,"NA"
+ISCN3,state_province,Pennsylvania,"NA"
+ISCN3,state_province,Pohnpei,Federated States of Micronesia
+ISCN3,state_province,Prince Edward Island,Canada
+ISCN3,state_province,Puerto Rico,"NA"
+ISCN3,state_province,Quebec,Canada
+ISCN3,state_province,Rhode Island,"NA"
+ISCN3,state_province,San Jose,Costa Rica
+ISCN3,state_province,Saskatchewan,Canada
+ISCN3,state_province,South Carolina,"NA"
+ISCN3,state_province,South Dakota,"NA"
+ISCN3,state_province,Tabasco,Mexico
+ISCN3,state_province,Tennessee,"NA"
+ISCN3,state_province,Texas,"NA"
+ISCN3,state_province,Tsumeb,Hungary
+ISCN3,state_province,Utah,"NA"
+ISCN3,state_province,Vermont,"NA"
+ISCN3,state_province,Virgin Islands,"NA"
+ISCN3,state_province,Virginia,"NA"
+ISCN3,state_province,Washington,"NA"
+ISCN3,state_province,West Virginia,"NA"
+ISCN3,state_province,Wisconsin,"NA"
+ISCN3,state_province,Wyoming,"NA"
+ISCN3,state_province,Yap,Federated States of Micronesia
+ISCN3,state_province,Yucatan,Mexico
+ISCN3,state_province,Yukon,Canada
+ISCN3,yes_blank,yes,indicator present
+vanGestel2017,treatments,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)",NA
+vanGestel2017,soil.texture.class,"loamy, sandy, sandy clay loam etc.",NA
+vanGestel2017,trt,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)",NA
+vanGestel2017,remove,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values).",NA
+vanGestel2017,multi.year,"Yes or blank. If yes, the data extracted from a paper were data pooled across years.",NA
+vanGestel2017,plant,"Plant biomass. Options are related to aboveground (a), belowground (b), or whole plant (w)",NA
+vanGestel,trt,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)",NA
+vanGestel,remove,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values).",NA
+vanGestel,multi.year,"Yes or blank. If yes, the data extracted from a paper were data pooled across years.",NA
+vanGestel,input,"Plant biomass. Options are related to aboveground (a), belowground (b), or whole plant (w)",NA
+vanGestel,treatments,The applied treatments (in a multifactorial study it was indicated by the highest level: e.g. T x H2O x N (fertilization),NA
+vanGestel,soil.texture.class,"Yes or blank. If yes, the data extracted from a paper were data pooled across years.",NA

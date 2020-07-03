@@ -2,49 +2,48 @@
 # Comparision of data model structures
 
 ```{r}
-dataModelDescription <- read_csv(file = file.path(data.dir, 'DatasetVariableTable.csv')) %>%
-  filter(Dataset_ID %in% c("ISCN3", "CCRCN", "Crowther", "vanGestel", "ISRaD" )) %>%
-  select(Dataset_ID, Table, Info_type, Info, Variable, Type)  %>%
-  mutate(long_table_name = sprintf('%s:%s', Dataset_ID, Table))
+dataModelDescription <- dataDescription.ls$structure %>%
+  filter(data_product %in% c("ISCN3", "CCRCN", "Crowther", "vanGestel", "ISRaD" )) %>%
+  select(data_product, data_table, data_column, data_type)  %>%
+  mutate(long_table_name = sprintf('%s:%s', data_product, data_table))
 
 ```
 
 ```{r}
-dataModels_segments <- dlply(dataModelDescription, c('Dataset_ID'),
+dataModels_segments <- dlply(dataModelDescription, c('data_product'),
                              function(xx){as.list(unique(xx$long_table_name))})
 
 all_models <- dataModelDescription %>%
-  filter(Info_type == 'column') %>%
-  filter(Dataset_ID %in% c('ISRaD', 'ISCN3', 'CCRCN', 'Crowther', 'vanGestel')) %>%
-  #mutate(Type = if_else(Dataset_ID == 'ISRaD' & grepl('_name$', Info), 'id', 
+  filter(data_product %in% c('ISRaD', 'ISCN3', 'CCRCN', 'Crowther', 'vanGestel')) %>%
+  #mutate(Type = if_else(data_product == 'ISRaD' & grepl('_name$', data_type), 'id', 
   #                      Type)) %>%
-  mutate(ref = case_when(Dataset_ID == 'ISRaD' & grepl('^entry_name$', Info) ~ 'ISRaD:metadata',
-                         Dataset_ID == 'ISRaD' & grepl('^site_name$', Info) ~ 'ISRaD:site',
-                         Dataset_ID == 'ISRaD' & grepl('^pro_name$', Info) ~ 'ISRaD:profile',
-                         Dataset_ID == 'ISRaD' & grepl('^flx_name$', Info) ~ 'ISRaD:flux',
-                         Dataset_ID == 'ISRaD' & grepl('^lyr_name$', Info) ~ 'ISRaD:layer',
-                         Dataset_ID == 'ISRaD' & grepl('^ist_name$', Info) ~ 'ISRaD:interstitial',
-                         Dataset_ID == 'ISRaD' & grepl('^frc_name$', Info) ~ 'ISRaD:fraction',
-                         Dataset_ID == 'ISRaD' & grepl('^inc_name$', Info) ~ 'ISRaD:incubation',
+  mutate(ref = case_when(data_product == 'ISRaD' & grepl('^entry_name$', data_column) ~ 'ISRaD:metadata',
+                         data_product == 'ISRaD' & grepl('^site_name$', data_column) ~ 'ISRaD:site',
+                         data_product == 'ISRaD' & grepl('^pro_name$', data_column) ~ 'ISRaD:profile',
+                         data_product == 'ISRaD' & grepl('^flx_name$', data_column) ~ 'ISRaD:flux',
+                         data_product == 'ISRaD' & grepl('^lyr_name$', data_column) ~ 'ISRaD:layer',
+                         data_product == 'ISRaD' & grepl('^ist_name$', data_column) ~ 'ISRaD:interstitial',
+                         data_product == 'ISRaD' & grepl('^frc_name$', data_column) ~ 'ISRaD:fraction',
+                         data_product == 'ISRaD' & grepl('^inc_name$', data_column) ~ 'ISRaD:incubation',
                          #ISCN3
-                         #Dataset_ID == 'ISCN3' & grepl('^site_name$', Info) ~ 'ISCN3:site',
-                         Dataset_ID == 'ISCN3' & grepl('^profile_name$', Info) ~ 'ISCN3:profile',
-                         Dataset_ID == 'ISCN3' & grepl('^layer_name$', Info) ~ 'ISCN3:layer',
-                         #Dataset_ID == 'ISCN3' & grepl('^fraction_name$', Info) ~ 'ISCN3:fraction',
+                         #data_product == 'ISCN3' & grepl('^site_name$', data_column) ~ 'ISCN3:site',
+                         data_product == 'ISCN3' & grepl('^profile_name$', data_column) ~ 'ISCN3:profile',
+                         data_product == 'ISCN3' & grepl('^layer_name$', data_column) ~ 'ISCN3:layer',
+                         #data_product == 'ISCN3' & grepl('^fraction_name$', data_column) ~ 'ISCN3:fraction',
                          #CCRCN
-                         Dataset_ID == 'CCRCN' & grepl('^study_id$', Info) ~ 'CCRCN:Study Information',
-                         Dataset_ID == 'CCRCN' & grepl('^site_id$', Info) ~ 'CCRCN:Site Level',
-                         Dataset_ID == 'CCRCN' & grepl('^core_id$', Info) ~ 'CCRCN:Core Level',
+                         data_product == 'CCRCN' & grepl('^study_id$', data_column) ~ 'CCRCN:Study Information',
+                         data_product == 'CCRCN' & grepl('^site_id$', data_column) ~ 'CCRCN:Site Level',
+                         data_product == 'CCRCN' & grepl('^core_id$', data_column) ~ 'CCRCN:Core Level',
                          #Crowther
-                         Dataset_ID == 'Crowther' & grepl('^Study$', Info) ~ 'Crowther:Summary',
-                         Dataset_ID == 'Crowther' & grepl('Row Labels', Info) ~ 'Crowther:Summary',
+                         data_product == 'Crowther' & grepl('^Study$', data_column) ~ 'Crowther:Summary',
+                         data_product == 'Crowther' & grepl('Row Labels', data_column) ~ 'Crowther:Summary',
                          #VanGestel
-                         Dataset_ID == 'vanGestel' & grepl('site.id', Info) ~ 'vanGestel:sites',
+                         data_product == 'vanGestel' & grepl('site.id', data_column) ~ 'vanGestel:sites',
                          TRUE ~ as.character(NA))) %>%
-  mutate( key = !is.na(ref) & Type == 'id') %>%
-  mutate(ref_col = case_when(Type == 'id' & (!is.na(ref)) ~ Info,
+  mutate( key = !is.na(ref) & data_type == 'id') %>%
+  mutate(ref_col = case_when(data_type == 'id' & (!is.na(ref)) ~ data_column,
                              TRUE ~ as.character(NA))) %>%
-  rename('column' = 'Info' , 'table' = 'long_table_name' ) %>%
+  rename('column' = 'data_column' , 'table' = 'long_table_name' ) %>%
   select(table, column, key, ref, ref_col) %>%
   mutate(ref = if_else(table == ref, as.character(NA), ref),
          ref_col = if_else(is.na(ref), ref, ref_col))
@@ -68,13 +67,14 @@ In contrast, multi-PI projects had larger data tables with more complex key-ed r
 This also held true for the number of variables in each study. The single PI studies had between 40 (Crowther: Figure 1) and 56 (vanGestel) unique variable names. Multi-PI studies however had between 144 (CCRCN) and 351 (ISRaD: Figure 2).
 
 ```{r}
-dataModelDescription %>% select(Dataset_ID, Table, Type, Info, Info_type, Variable) %>%
-  filter(Info_type == 'column') %>%
+dataDescription.ls$thesaurus %>%
+  filter(data_product %in% c("ISCN3", "CCRCN", "Crowther", "vanGestel", "ISRaD" )) %>%
+  select(data_product, data_table, data_column, variable) %>%
   unique() %>%
-  group_by(Dataset_ID) %>% summarize(`Table count` = length(unique(Table)),
-                                     `Variable count` =  length(unique(Variable)),
-                                     `Column count` = length(unique(Info))) %>%
-  rename('Study ID' = Dataset_ID) %>%
+  group_by(data_product) %>% summarize(`Table count` = length(unique(data_table)),
+                                     `Variable count` =  length(unique(variable)),
+                                     `Column count` = length(unique(data_column))) %>%
+  rename('Study ID' = data_product) %>%
   arrange(`Column count`) %>%
   mutate('Multi PI?' = case_when(`Study ID` %in% c("ISCN3", "ISRaD", "CCRCN") ~ 'Yes',
                                  TRUE ~ 'No')) %>%
@@ -113,8 +113,8 @@ These variables tended to focus on study information, site location, climate, bu
 
 
 ```{r}
-dataModelDescription %>% select(Dataset_ID, Variable) %>%
-  unique() %>% group_by(Variable) %>%
+dataDescription.ls$thesaurus %>% select(data_product, variable) %>%
+  unique() %>% group_by(variable) %>%
   tally(name = 'study_count') %>%
   filter(study_count > 2) %>%
   arrange(-study_count) %>% select(-study_count) %>%

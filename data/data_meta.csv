@@ -1,202 +1,1181 @@
-"","data_product","data_table","data_column","data_type","entry","questions"
-"1","ISCN3","layer","13c (‰)","unit","permille","NA"
-"2","ISCN3","layer","14c (‰)","unit","permille","NA"
-"3","ISCN3","layer","14c_sigma (‰)","unit","permille","NA"
-"4","ISCN3","layer","14c_age (BP)","method","14C age model",NA
-"5","ISCN3","layer","14c_age (BP)","unit","BP","NA"
-"6","ISCN3","layer","15n (‰)","unit","permille","NA"
-"7","ISCN3","layer","al_dith (specified by al_fe_units)","method","Oxalate Extractable Al","NA"
-"8","ISCN3","layer","al_other (specified by al_fe_units)","method","Other Extractable Al","NA"
-"9","ISCN3","layer","al_ox (specified by al_fe_units)","method","Oxalate Extractable Al","NA"
-"10","ISCN3","profile","aspect_deg","unit","degree","NA"
-"11","ISCN3","layer","bs (percent)","unit","percent","NA"
-"12","ISCN3","layer","bs_sum (percent)","unit","percent","NA"
-"13","ISCN3","layer","bd_other (g cm-3)","description","Bulk Density Other","NA"
-"14","ISCN3","layer","bd_other (g cm-3)","unit","g cm-3","NA"
-"15","ISCN3","layer","bd_samp (g cm-3)","description","Bulk Density, Coarse Fragments Removed","NA"
-"16","ISCN3","layer","bd_samp (g cm-3)","unit","g cm-3","NA"
-"17","ISCN3","layer","bd_tot (g cm-3)","description","Bulk Density With Coarse Fragments","NA"
-"18","ISCN3","layer","bd_tot (g cm-3)","unit","g cm-3","NA"
-"19","ISCN3","layer","bd_whole (g cm-3)","description","Bulk Density Minus Estimated Coarse Fragments","NA"
-"20","ISCN3","layer","bd_whole (g cm-3)","unit","g cm-3","NA"
-"21","ISCN3","layer","bdNRCS_prep_code","control_vocabulary","[[reference NRCS Soil lab manual]]","??reference NRCS soil lab manual"
-"22","ISCN3","layer","c_to_n (mass ratio)","unit","mass ratio","NA"
-"23","ISCN3","layer","cNRCS_prep_code","control_vocabulary","[[reference NRCS Soil lab manual]]","??reference NRCS soil lab manual"
-"24","ISCN3","layer","c_tot (percent)","unit","percent","NA"
-"25","ISCN3","layer","caco3 (percent)","unit","percent","NA"
-"26","ISCN3","layer","cat_exch (cmol H+ kg-1)","unit","cmol H+ kg-1","NA"
-"27","ISCN3","layer","clay_tot_psa (percent)","unit","percent","NA"
-"28","ISCN3","profile","dataset_name_sub","description","Submition database",NA
-"29","ISCN3","layer","dataset_name_sub","description","Submition database",NA
-"30","ISCN3","profile","dataset_name_soc","description","SOC data source",NA
-"31","ISCN3","layer","datum (datum)","unit","datum","NA"
-"32","ISCN3","profile","elevation (m)","unit","m","NA"
-"33","ISCN3","layer","fe_dith (specified by al_fe_units)","method","Dithionite Extractable Fe",NA
-"34","ISCN3","layer","fe_other (specified by al_fe_units)","method","Other Extractable Fe",NA
-"35","ISCN3","layer","fe_ox (specified by al_fe_units)","method","Oxalate Extractable Fe",NA
-"36","ISCN3","profile","landscape (landscape)","vocabulary_family","landscape",NA
-"37","ISCN3","profile","landuse (landsat)","vocabulary_family","landsat",NA
-"38","ISCN3","profile","lat (dec. deg)","unit","degrees","NA"
-"39","ISCN3","layer","lat (dec. deg)","unit","degrees","NA"
-"40","ISCN3","layer","layer_bot (cm)","unit","cm","NA"
-"41","ISCN3","layer","layer_top (cm)","unit","cm","NA"
-"42","ISCN3","layer","layer_bot (cm)","description","Bottom bound","NA"
-"43","ISCN3","layer","layer_top (cm)","description","Upper bound","NA"
-"44","ISCN3","layer","loi (percent)","unit","percent","NA"
-"45","ISCN3","layer","loi (percent)","description","Loss on ignition",NA
-"46","ISCN3","profile","long (dec. deg)","unit","degrees","NA"
-"47","ISCN3","layer","long (dec. deg)","unit","degrees","NA"
-"48","ISCN3","profile","locator_alias","description","location alias for reconstruction",NA
-"49","ISCN3","profile","locator_parent_alias","description","reference to parent location alias",NA
-"50","ISCN3","layer","locator_parent_alias","description","reference to parent location alias",NA
-"51","ISCN3","profile","map (mm)","unit","mm","NA"
-"52","ISCN3","profile","mat (°C)","unit","degree C","NA"
-"53","ISCN3","citation","modification_date (YYYY-MM-DD)","unit","YYYY-MM-DD","NA"
-"54","ISCN3","dataset","modification_date (YYYY-MM-DD)","unit","YYYY-MM-DD","NA"
-"55","ISCN3","layer","mn_dith (specified by al_fe_units)","method","Dithionite Extractable Mn",NA
-"56","ISCN3","layer","mn_other (specified by al_fe_units)","method","Other Extractable Mn",NA
-"57","ISCN3","layer","mn_ox (specified by al_fe_units)","method","Oxalate Extractable Mn",NA
-"58","ISCN3","layer","n_tot (percent)","unit","percent","NA"
-"59","ISCN3","layer","oc (percent)","unit","percent","NA"
-"60","ISCN3","layer","p_bray (specified by p_units)","method","Bray extraction of P",NA
-"61","ISCN3","layer","p_meh (specified by p_units)","method","Meh extraction of P",NA
-"62","ISCN3","layer","p_other (specified by p_units)","method","Other extraction of P",NA
-"63","ISCN3","layer","p_ox (specified by p_units)","method","Ox extraction of P",NA
-"64","ISCN3","layer","ph_cacl","method","CaCl extracted pH",NA
-"65","ISCN3","layer","ph_h2o","method","H2O extracted pH",NA
-"66","ISCN3","layer","ph_other","method","Other extracted pH",NA
-"67","ISCN3","profile","layer_bot (cm)","unit","cm","NA"
-"68","ISCN3","profile","soc (g cm-2)","unit","g cm-2","NA"
-"69","ISCN3","profile","soc_depth (cm)","unit","cm","NA"
-"70","ISCN3","profile","layer_top (cm)","unit","cm","NA"
-"71","ISCN3","layer","root_weight (g)","unit","g","NA"
-"72","ISCN3","profile","runoff (runoff)","control_vocabulary","runoff",NA
-"73","ISCN3","layer","sand_tot_psa (percent)","unit","percent","NA"
-"74","ISCN3","layer","silt_tot_psa (percent)","unit","percent","NA"
-"75","ISCN3","profile","slope (percent)","unit","percent","NA"
-"76","ISCN3","layer","soc (g cm-2)","unit","g cm-2","NA"
-"77","ISCN3","profile","thaw_depth_profile (cm)","unit","cm","NA"
-"78","ISCN3","layer","wpg2 (percent)","unit","percent","NA"
-"79","ISCN3","NA","version","NA","ISCN 1-1 (2015-12-10)","NA"
-"80","ISCNTemplate","site","lat","unit","degrees","NA"
-"81","ISCNTemplate","site","long","unit","degrees","NA"
-"82","ISCNTemplate","site","location_acc","unit","m","NA"
-"83","ISCNTemplate","site","elevation","unit","m","NA"
-"84","ISCNTemplate","site","aspect_deg","unit","degree","NA"
-"85","ISCNTemplate","site","slope","unit","percent","NA"
-"86","ISCNTemplate","site","stand_age","unit","years","NA"
-"87","ISCNTemplate","site","depth_water","unit","cm","NA"
-"88","ISCNTemplate","site","thaw_depth_site","unit","cm","NA"
-"89","ISCNTemplate","site","bedrock_depth","unit","cm","NA"
-"90","ISCNTemplate","site","ffdays","unit","days","NA"
-"91","ISCNTemplate","site","map","unit","mm","NA"
-"92","ISCNTemplate","site","mat","unit","degrees C","NA"
-"93","ISCNTemplate","site","mast","unit","degrees C","NA"
-"94","ISCNTemplate","site","water_table_duration","unit","days","NA"
-"95","ISCNTemplate","site","soc","unit","g cm-2","NA"
-"96","ISCNTemplate","site","soc_sigma","unit","g cm-2","NA"
-"97","ISCNTemplate","site","soc_method","unit","g cm-2","NA"
-"98","ISCNTemplate","site","2d_position","controled_vocabulary","2d_position",NA
-"99","ISCNTemplate","site","soc_depth","unit","cm","NA"
-"100","ISCNTemplate","profile","transect_flag","controled_vocabulary","yes_blank","NA"
-"101","ISCNTemplate","profile","add_taxon_flag","controled_vocabulary","yes_blank","NA"
-"102","ISCNTemplate","profile","thaw_depth_profile","unit","cm","NA"
-"103","ISCNTemplate","profile","soc","unit","g cm-2","NA"
-"104","ISCNTemplate","profile","soc_sigma","unit","g cm-2","NA"
-"105","ISCNTemplate","profile","soc_depth","unit","cm","NA"
-"106","ISCNTemplate","layer","layer_top","unit","cm","NA"
-"107","ISCNTemplate","layer","layer_bot","unit","cm","NA"
-"108","ISCNTemplate","layer","bd_samp","method","Bulk Density, Coarse Fragments Removed","NA"
-"109","ISCNTemplate","layer","bd_samp","unit","g cm-3","NA"
-"110","ISCNTemplate","layer","bd_tot","method","Bulk Density With Coarse Fragments","NA"
-"111","ISCNTemplate","layer","bd_tot","unit","g cm-3","NA"
-"112","ISCNTemplate","layer","bd_whole","method","Bulk Density Minus Estimated Coarse Fragments","NA"
-"113","ISCNTemplate","layer","bd_whole","unit","g cm-3","NA"
-"114","ISCNTemplate","layer","bd_other","method","Bulk Density Other","NA"
-"115","ISCNTemplate","layer","bd_other","unit","g cm-3","NA"
-"116","ISCNTemplate","layer","caco3","unit","percent","NA"
-"117","ISCNTemplate","layer","sand_tot_psa","unit","percent","NA"
-"118","ISCNTemplate","layer","silt_tot_psa","unit","percent","NA"
-"119","ISCNTemplate","layer","clay_tot_psa","unit","percent","NA"
-"120","ISCNTemplate","layer","wpg2","unit","percent","NA"
-"121","ISCNTemplate","layer","cat_exch","unit","cmol H+ kg-1","NA"
-"122","ISCNTemplate","layer","gwc","unit","percent","NA"
-"123","ISCNTemplate","layer","vwc","unit","percent","NA"
-"124","ISCNTemplate","layer","soc","unit","g cm-2","NA"
-"125","ISCNTemplate","layer","soc_sigma","unit","g cm-2","NA"
-"126","ISCNTemplate","layer","c_tot","unit","percent","NA"
-"127","ISCNTemplate","layer","oc","unit","percent","NA"
-"128","ISCNTemplate","layer","n_tot","unit","percent","NA"
-"129","ISCNTemplate","layer","c_to_n","unit","mass mass-1","NA"
-"130","ISCNTemplate","layer","loi","unit","percent","NA"
-"131","ISCNTemplate","layer","root_weight","unit","g","NA"
-"132","ISCNTemplate","layer","15n","unit","permille","NA"
-"133","ISCNTemplate","layer","13c","unit","permille","NA"
-"134","ISCNTemplate","layer","14c","unit","permille","NA"
-"135","ISCNTemplate","layer","14c_sigma","unit","permille","NA"
-"136","ISCNTemplate","layer","14c_age","method","Age model from 14C","NA"
-"137","ISCNTemplate","layer","14c_age","unit","years",NA
-"138","ISCNTemplate","layer","14c_age_sigma","unit","years","NA"
-"139","ISCNTemplate","fraction","fraction_c_perc","unit","percent","NA"
-"140","ISCNTemplate","fraction","fraction_mass_perc","unit","percent","NA"
-"141","ISCNTemplate","fraction","oc","unit","percent","NA"
-"142","ISCNTemplate","fraction","c_tot","unit","percent","NA"
-"143","ISCNTemplate","fraction","n_tot","unit","percent","NA"
-"144","ISCNTemplate","fraction","c_to_n","unit","mass mass-1","NA"
-"145","ISCNTemplate","fraction","loi","unit","percent","NA"
-"146","ISCNTemplate","fraction","15n","unit","permille","NA"
-"147","ISCNTemplate","fraction","13c","unit","permille","NA"
-"148","ISCNTemplate","fraction","rc_year","unit","YYYY","NA"
-"149","ISCNTemplate","fraction","14c","unit","permille","NA"
-"150","ISCNTemplate","fraction","14c_sigma","unit","permille","NA"
-"151","ISCNTemplate","fraction","14c_age","unit","years","NA"
-"152","ISCNTemplate","fraction","14c_age_sigma","unit","years","NA"
-"153","ISCNTemplate","gas","15n","unit","permille","NA"
-"154","ISCNTemplate","gas","c_conc_CO2","unit","ppm","NA"
-"155","ISCNTemplate","gas","14c_CO2","unit","permille","NA"
-"156","ISCNTemplate","gas","14c_CO2_sigma","unit","permille","NA"
-"157","ISCNTemplate","gas","14c_age_CO2","unit","years","?"
-"158","ISCNTemplate","gas","14c_age_CO2_sigma","unit","years","?"
-"159","ISCNTemplate","gas","c_conc_CH4","unit","ppm","NA"
-"160","ISCNTemplate","gas","13c_CH4","unit","permille","NA"
-"161","ISCNTemplate","gas","14c_CH4","unit","permille","NA"
-"162","ISCNTemplate","gas","14c_CH4_sigma","unit","permille","NA"
-"163","ISCNTemplate","gas","14c_age_CH4","unit","years","NA"
-"164","ISCNTemplate","gas","14c_age_CH4_sigma","unit","years","NA"
-"165","ISCNTemplate","other","oc","unit","percent","NA"
-"166","ISCNTemplate","other","c_tot","unit","percent","NA"
-"167","ISCNTemplate","other","n_tot","unit","percent","NA"
-"168","ISCNTemplate","other","c_to_n","unit","ratio","NA"
-"169","ISCNTemplate","other","15n","unit","permille","NA"
-"170","ISCNTemplate","other","13c","unit","permille","NA"
-"171","ISCNTemplate","other","rc_year","unit","years","NA"
-"172","ISCNTemplate","other","14c","unit","permille","NA"
-"173","ISCNTemplate","other","14c_sigma","unit","permille","NA"
-"174","ISCNTemplate","other","14c_age","unit","BP","NA"
-"175","ISCNTemplate","other","14c_age_sigma","unit","BP","NA"
-"176","ISCNTemplate","disturbance","dist_clearcut_removal_perc","unit","percent","NA"
-"177","ISCNTemplate","disturbance","dist_crop_residue_perc","unit","percent","NA"
-"178","ISCNTemplate","disturbance","dist_fwd_removal_perc","unit","percent","NA"
-"179","ISCNTemplate","disturbance","dist_grazed_stocking","unit","?","NA"
-"180","ISCNTemplate","disturbance","dist_grazed_live_weight","unit","?","NA"
-"181","ISCNTemplate","disturbance","dist_grazed_onplot","unit","days month-1","NA"
-"182","ISCNTemplate","disturbance","dist_harvest_residue_perc","unit","percent","NA"
-"183","ISCNTemplate","disturbance","dist_herbicide_kgha","unit","Kg ha-1","NA"
-"184","ISCNTemplate","disturbance","dist_irrigation_water","unit","mm","NA"
-"185","ISCNTemplate","disturbance","dist_irrigation_drain_depth","unit","m","NA"
-"186","ISCNTemplate","disturbance","dist_liming_kgha","unit","Kg ha-1","NA"
-"187","ISCNTemplate","disturbance","dist_m_fertilization_kgha","unit","Kg ha-1","NA"
-"188","ISCNTemplate","disturbance","dist_o_fertilization_kgha","unit","Kg ha-1","NA"
-"189","ISCNTemplate","disturbance","dist_o_fertilization_c","unit","percent","NA"
-"190","ISCNTemplate","disturbance","dist_o_fertilization_n","unit","percent","NA"
-"191","ISCNTemplate","disturbance","dist_pesticide_kgha","unit","Kg ha-1","NA"
-"192","ISCNTemplate","disturbance","dist_planting_seed","unit","N ha-1","NA"
-"193","ISCNTemplate","disturbance","dist_thinning_perc","unit","percent","NA"
-"194","ISCNTemplate","disturbance","dist_tillage_depth","unit","m","NA"
-"195","ISCNTemplate","disturbance","dist_ungrazed_duration","unit","months","NA"
-"196","ISCNTemplate","disturbance","dist_underburn_perc","unit","percent","NA"
-"197","ISCNTemplate","disturbance","dist_windthrow_perc","unit","percent","NA"
-"198","ISCNTemplate","cluster","soc","unit","g cm-2","NA"
-"199","ISCNTemplate","cluster","soc_type","unit","ccon_type","NA"
-"200","ISCNTemplate","cluster","soc_depth","unit","cm","NA"
-"201","ISCNTemplate","cluster","soc_sigma","unit","g cm-2","NA"
+data_product,data_table,data_column,data_type,entry
+ISCN3,layer,13c (‰),unit,permille
+ISCN3,layer,14c (‰),unit,permille
+ISCN3,layer,14c_sigma (‰),unit,permille
+ISCN3,layer,14c_age (BP),method,14C age model
+ISCN3,layer,14c_age (BP),unit,BP
+ISCN3,layer,15n (‰),unit,permille
+ISCN3,layer,al_dith (specified by al_fe_units),method,Oxalate Extractable Al
+ISCN3,layer,al_other (specified by al_fe_units),method,Other Extractable Al
+ISCN3,layer,al_ox (specified by al_fe_units),method,Oxalate Extractable Al
+ISCN3,profile,aspect_deg,unit,degree
+ISCN3,layer,bs (percent),unit,percent
+ISCN3,layer,bs_sum (percent),unit,percent
+ISCN3,layer,bd_other (g cm-3),description,Bulk Density Other
+ISCN3,layer,bd_other (g cm-3),unit,g cm-3
+ISCN3,layer,bd_samp (g cm-3),description,"Bulk Density, Coarse Fragments Removed"
+ISCN3,layer,bd_samp (g cm-3),unit,g cm-3
+ISCN3,layer,bd_tot (g cm-3),description,Bulk Density With Coarse Fragments
+ISCN3,layer,bd_tot (g cm-3),unit,g cm-3
+ISCN3,layer,bd_whole (g cm-3),description,Bulk Density Minus Estimated Coarse Fragments
+ISCN3,layer,bd_whole (g cm-3),unit,g cm-3
+ISCN3,layer,bdNRCS_prep_code,control_vocabulary,[[reference NRCS Soil lab manual]]
+ISCN3,layer,c_to_n (mass ratio),unit,mass ratio
+ISCN3,layer,cNRCS_prep_code,control_vocabulary,[[reference NRCS Soil lab manual]]
+ISCN3,layer,c_tot (percent),unit,percent
+ISCN3,layer,caco3 (percent),unit,percent
+ISCN3,layer,cat_exch (cmol H+ kg-1),unit,cmol H+ kg-1
+ISCN3,layer,clay_tot_psa (percent),unit,percent
+ISCN3,profile,dataset_name_sub,description,Submition database
+ISCN3,layer,dataset_name_sub,description,Submition database
+ISCN3,profile,dataset_name_soc,description,SOC data source
+ISCN3,layer,datum (datum),unit,datum
+ISCN3,profile,elevation (m),unit,m
+ISCN3,layer,fe_dith (specified by al_fe_units),method,Dithionite Extractable Fe
+ISCN3,layer,fe_other (specified by al_fe_units),method,Other Extractable Fe
+ISCN3,layer,fe_ox (specified by al_fe_units),method,Oxalate Extractable Fe
+ISCN3,profile,landscape (landscape),vocabulary_family,landscape
+ISCN3,profile,landuse (landsat),vocabulary_family,landsat
+ISCN3,profile,lat (dec. deg),unit,degrees
+ISCN3,layer,lat (dec. deg),unit,degrees
+ISCN3,layer,layer_bot (cm),unit,cm
+ISCN3,layer,layer_top (cm),unit,cm
+ISCN3,layer,layer_bot (cm),description,Bottom bound
+ISCN3,layer,layer_top (cm),description,Upper bound
+ISCN3,layer,loi (percent),unit,percent
+ISCN3,layer,loi (percent),description,Loss on ignition
+ISCN3,profile,long (dec. deg),unit,degrees
+ISCN3,layer,long (dec. deg),unit,degrees
+ISCN3,profile,locator_alias,description,location alias for reconstruction
+ISCN3,profile,locator_parent_alias,description,reference to parent location alias
+ISCN3,layer,locator_parent_alias,description,reference to parent location alias
+ISCN3,profile,map (mm),unit,mm
+ISCN3,profile,mat (°C),unit,°C
+ISCN3,citation,modification_date (YYYY-MM-DD),unit,YYYY-MM-DD
+ISCN3,dataset,modification_date (YYYY-MM-DD),unit,YYYY-MM-DD
+ISCN3,layer,mn_dith (specified by al_fe_units),method,Dithionite Extractable Mn
+ISCN3,layer,mn_other (specified by al_fe_units),method,Other Extractable Mn
+ISCN3,layer,mn_ox (specified by al_fe_units),method,Oxalate Extractable Mn
+ISCN3,layer,n_tot (percent),unit,percent
+ISCN3,layer,oc (percent),unit,percent
+ISCN3,layer,p_bray (specified by p_units),method,Bray extraction of P
+ISCN3,layer,p_meh (specified by p_units),method,Meh extraction of P
+ISCN3,layer,p_other (specified by p_units),method,Other extraction of P
+ISCN3,layer,p_ox (specified by p_units),method,Ox extraction of P
+ISCN3,layer,ph_cacl,method,CaCl extracted pH
+ISCN3,layer,ph_h2o,method,H2O extracted pH
+ISCN3,layer,ph_other,method,Other extracted pH
+ISCN3,profile,layer_bot (cm),unit,cm
+ISCN3,profile,soc (g cm-2),unit,g cm-2
+ISCN3,profile,soc_depth (cm),unit,cm
+ISCN3,profile,layer_top (cm),unit,cm
+ISCN3,layer,root_weight (g),unit,g
+ISCN3,profile,runoff (runoff),control_vocabulary,runoff
+ISCN3,layer,sand_tot_psa (percent),unit,percent
+ISCN3,layer,silt_tot_psa (percent),unit,percent
+ISCN3,profile,slope (percent),unit,percent
+ISCN3,layer,soc (g cm-2),unit,g cm-2
+ISCN3,profile,thaw_depth_profile (cm),unit,cm
+ISCN3,layer,wpg2 (percent),unit,percent
+ISCN3,"NA",version,"NA",ISCN 1-1 (2015-12-10)
+CCRCN,Associated Publications,year,unit,YYYY
+CCRCN,Associated Publications,month,unit,MM
+CCRCN,Materials and Methods,sediment_sieve_size,unit,mm
+CCRCN,Materials and Methods,dry_bulk_density_temperature,unit,degree-C
+CCRCN,Materials and Methods,dry_bulk_density_time,unit,hour
+CCRCN,Materials and Methods,dry_bulk_density_sample_volume,unit,cm3
+CCRCN,Materials and Methods,dry_bulk_density_sample_mass,unit,g
+CCRCN,Materials and Methods,loss_on_ignition_temperature,unit,degree-C
+CCRCN,Materials and Methods,loss_on_ignition_time,unit,hour
+CCRCN,Materials and Methods,loss_on_ignition_sample_volume,unit,cm3
+CCRCN,Materials and Methods,loss_on_ignition_sample_mass,unit,g
+CCRCN,Site Level,site_latitude_max,unit,degrees
+CCRCN,Site Level,site_latitude_min,unit,degrees
+CCRCN,Site Level,site_longitude_max,unit,degrees
+CCRCN,Site Level,site_longitude_min,unit,degrees
+CCRCN,Core Level,core_date,unit,YYYY-MM-DD
+CCRCN,Core Level,core_latitude,unit,degrees
+CCRCN,Core Level,core_longitude,unit,degrees
+CCRCN,Core Level,core_position_accuracy,unit,m
+CCRCN,Core Level,core_elevation,unit,m
+CCRCN,Core Level,core_elevation_accuracy,unit,m
+CCRCN,Soil Depth Series,depth_min,unit,cm
+CCRCN,Soil Depth Series,depth_max,unit,cm
+CCRCN,Soil Depth Series,dry_bulk_density,unit,g cm-3
+CCRCN,Soil Depth Series,cs137_activity,unit,kg-1 s-1
+CCRCN,Soil Depth Series,cs137_activity_sd,unit,kg-1 s-1
+CCRCN,Soil Depth Series,total_pb210_activity,unit,kg-1 s-1
+CCRCN,Soil Depth Series,total_pb210_activity_sd,unit,kg-1 s-1
+CCRCN,Soil Depth Series,ra226_activity,unit,kg-1 s-1
+CCRCN,Soil Depth Series,ra226_activity_sd,unit,kg-1 s-1
+CCRCN,Soil Depth Series,excess_pb210_activity_sd,unit,kg-1 s-1
+CCRCN,Soil Depth Series,c14_age,unit,radiocarbonYear
+CCRCN,Soil Depth Series,c14_age_sd,unit,radiocarbonYear
+CCRCN,Soil Depth Series,delta_c13,unit,ppm
+CCRCN,Soil Depth Series,be7_activity,unit,kg-1 s-1
+CCRCN,Soil Depth Series,be7_activity_sd,unit,kg-1 s-1
+CCRCN,Soil Depth Series,am241_activity,unit,kg-1 s-1
+CCRCN,Soil Depth Series,am241_activity_sd,unit,kg-1 s-1
+CCRCN,Soil Depth Series,marker_date,unit,YYYY-MM-DD
+CCRCN,Soil Depth Series,age,unit,year
+CCRCN,Soil Depth Series,age_min,unit,year
+CCRCN,Soil Depth Series,age_max,unit,year
+CCRCN,Soil Depth Series,age_sd,unit,year
+Crowther,Summary,%C,unit,percent
+Crowther,Summary,Avg. C Control,unit,degree-C
+Crowther,Summary,Avg. C Warming,unit,degree-C
+Crowther,Summary,C Difference (Warming-Control),unit,degree-C
+Crowther,Summary,Length of Study (years),unit,year
+Crowther,Summary,Mean delta T,unit,degree-C
+Crowther,Summary,Precipitation (avg. annual mm),unit,mm yr-1
+Crowther,Summary,Temperature (avg. annual degrees C),unit,average annual °C
+Crowther,Summary,% silt,unit,percent
+Crowther,Summary,% sand,unit,percent
+Crowther,Summary,% clay,unit,percent
+Crowther,Summary,Author Updated % clay,unit,percent
+Crowther,Summary,CEC (cmol/kg),unit,cmol H+ kg-1
+Crowther,Raw,LAT,unit,degrees
+Crowther,Raw,LONG,unit,degrees
+Crowther,Raw,Planned Warming,unit,degree-C
+Crowther,Raw,Mean delta T,unit,degree-C
+Crowther,Raw,Lengths of Study,unit,years
+Crowther,Raw,%C,unit,percent
+Crowther,Raw,Bulk density,unit,g cm-3
+Crowther,Raw,Bulk Density Avg.,unit,g cm-3
+Crowther,Raw,total C,unit,g cm-3
+Crowther,Raw,total raw C,unit,g cm-3
+Crowther,Raw,%N,unit,percent
+vanGestel2017,sites,lat,unit,degrees
+vanGestel2017,sites,lon,unit,degrees
+vanGestel2017,sites,elevation,unit,m
+vanGestel2017,sites,mat,unit,degree-C
+vanGestel2017,sites,map,unit,mm
+vanGestel2017,sites,treatments,control_vocabulary,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel2017,sites,soil.texture.class,control_vocabulary,"loamy, sandy, sandy clay loam etc."
+vanGestel2017,sites,perc.sand,unit,percent
+vanGestel2017,sites,perc.silt,unit,percent
+vanGestel2017,sites,perc.clay,unit,percent
+vanGestel2017,sites,C.pool.abg,unit,g m-2
+vanGestel2017,sites,C.pool.bwg,unit,g m-2
+vanGestel2017,sites,N.pool.abg,unit,g m-2
+vanGestel2017,sites,N.pool.bwg,unit,g m-2
+vanGestel2017,sites,P.pool.bwg,unit,g m-2
+vanGestel2017,sites,soil.depth.pool,unit,cm
+vanGestel2017,sites,Ndep.rate,unit,g N m-2 y-1
+vanGestel2017,sites,bulk.density,unit,g mL-1
+vanGestel2017,sites,percent.om,unit,percent
+vanGestel2017,soc,duration,unit,months
+vanGestel2017,soc,trt,control_vocabulary,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel2017,soc,soil.horizon,unit,"NA"
+vanGestel2017,soc,bulk.density,unit,g mL-1
+vanGestel2017,bd_calculation,percent.som,unit,percent
+vanGestel2017,bd_calculation,bd,unit,g mL-1
+vanGestel2017,bd_calculation,soil.horizon,unit,"NA"
+vanGestel2017,plant,soilT.depth,unit,cm
+vanGestel2017,plant,duration,unit,months
+vanGestel2017,plant,soil.horizon,unit,"NA"
+vanGestel2017,plant,remove,control_vocabulary,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values)."
+vanGestel2017,plant,multi.year,control_vocabulary,"Yes or blank. If yes, the data extracted from a paper were data pooled across years."
+vanGestel2017,plant,input,control_vocabulary,"Plant biomass. Options are related to aboveground (a), belowground (b), or whole plant (w)"
+ISRaD,interstitial,ist_obs_date_y,unit,YYYY
+ISRaD,interstitial,ist_obs_date_m,unit,YYYY
+ISRaD,interstitial,ist_obs_date_d,unit,YYYY
+ISRaD,interstitial,ist_depth,unit,cm
+ISRaD,interstitial,ist_time_dur,unit,days
+ISRaD,interstitial,ist_temp,unit,°C
+ISRaD,interstitial,ist_source_O2,unit,percent
+ISRaD,interstitial,ist_source_H2O,unit,percent
+ISRaD,interstitial,"NA",unit,ist_concentration_units
+ISRaD,interstitial,ist_13c,unit,permille
+ISRaD,interstitial,ist_13c_sd,unit,permille
+ISRaD,interstitial,ist_18o,unit,permille
+ISRaD,interstitial,ist_2h,unit,permille
+ISRaD,interstitial,ist_rc_year,unit,year
+ISRaD,interstitial,ist_14c,unit,permille
+ISRaD,interstitial,ist_14c_sigma,unit,permille
+ISRaD,interstitial,ist_14c_sd,unit,permille
+ISRaD,metadata,modification_date_y,unit,YYYY
+ISRaD,metadata,modification_date_m,unit,MM
+ISRaD,metadata,modification_date_y,unit,DD
+ISRaD,metadata,contact_orcid_id,unit,ORCID #
+ISRaD,metadata,template_version,unit,YYYYMMDDHH
+ISRaD,site,site_lat,unit,degrees
+ISRaD,site,site_long,unit,degrees
+ISRaD,site,site_elevation,unit,m
+ISRaD,profile,pro_lat,unit,degrees
+ISRaD,profile,pro_long,unit,degrees
+ISRaD,profile,pro_elevation,unit,m
+ISRaD,profile,pro_reps,unit,positive integer
+ISRaD,profile,pro_MAT,unit,°C
+ISRaD,profile,pro_MAP,unit,mm yr-1
+ISRaD,profile,pro_soil_age,unit,Ky
+ISRaD,profile,pro_MAST,unit,°C
+ISRaD,profile,pro_MASWC,unit,percent
+ISRaD,profile,pro_NPP,unit,g C m-2 yr-1
+ISRaD,profile,pro_bedrock_depth,unit,cm
+ISRaD,profile,pro_depth_water,unit,cm
+ISRaD,profile,pro_thaw_depth,unit,cm
+ISRaD,profile,pro_aspect,unit,direction
+ISRaD,profile,pro_aspect_deg,unit,degree
+ISRaD,profile,pro_slope,unit,percent
+ISRaD,profile,pro_soc,unit,g cm-2
+ISRaD,profile,pro_soc_sigma,unit,g cm-2
+ISRaD,profile,pro_soc_depth,unit,cm
+ISRaD,profile,pro_catchment_area,unit,km2
+ISRaD,profile,pro_deforested,unit,percent
+ISRaD,flux,flx_lat,unit,degrees
+ISRaD,flux,flx_long,unit,degrees
+ISRaD,flux,flx_obs_date_y,unit,YYYY
+ISRaD,flux,flx_obs_date_m,unit,MM
+ISRaD,flux,flx_obs_date_d,unit,DD
+ISRaD,flux,flx_duration,unit,numeric
+ISRaD,flux,"NA",value_string,flx_duration_units
+ISRaD,flux,flx_source_temp,unit,°C
+ISRaD,flux,flx_source_O2,unit,percent
+ISRaD,flux,flx_source_H2O,unit,percent
+ISRaD,flux,flx_rate,unit,numeric
+ISRaD,flux,flx_rate_sd,unit,numeric
+ISRaD,flux,flx_analyte_conc,unit,mgC L-1
+ISRaD,flux,flx_discharge_rate,unit,m3 s-1
+ISRaD,flux,flx_aquatic_cond,unit,microS cm-1
+ISRaD,flux,flx_13c,unit,permille
+ISRaD,flux,flx_13c_sd,unit,permille
+ISRaD,flux,flx_18o,unit,permille
+ISRaD,flux,flx_2h,unit,permille
+ISRaD,flux,flx_rc_year,unit,YYYY
+ISRaD,flux,flx_14c,unit,permille
+ISRaD,flux,flx_14c_sigma,unit,permille
+ISRaD,flux,flx_14c_sd,unit,permille
+ISRaD,layer,lyr_obs_date_y,unit,YYYY
+ISRaD,layer,lyr_obs_date_m,unit,MM
+ISRaD,layer,lyr_obs_date_d,unit,DD
+ISRaD,layer,lyr_top,unit,cm
+ISRaD,layer,lyr_bot,unit,cm
+ISRaD,layer,lyr_igsn,unit,numeric
+ISRaD,layer,lyr_bd_samp,unit,g cm-3
+ISRaD,layer,lyr_bd_tot,unit,g cm-3
+ISRaD,layer,lyr_sand_tot_psa,unit,percent
+ISRaD,layer,lyr_silt_tot_psa,unit,percent
+ISRaD,layer,lyr_clay_tot_psa,unit,percent
+ISRaD,layer,lyr_coarse_tot,unit,percent
+ISRaD,layer,lyr_coarse_size_thresh,unit,mm
+ISRaD,layer,lyr_coarse_density,unit,g cm-3
+ISRaD,layer,lyr_bet_surface_area,unit,m2 g-1
+ISRaD,layer,lyr_cat_exch,unit,cmol H+ kg-1
+ISRaD,layer,lyr_base_sum,unit,meq 100g-1
+ISRaD,layer,lyr_cec_sum,unit,meq 100g-1
+ISRaD,layer,lyr_ca_exch,unit,meq 100g-1
+ISRaD,layer,lyr_na_exch,unit,meq 100g-1
+ISRaD,layer,lyr_mg_exch,unit,meq 100g-1
+ISRaD,layer,lyr_k_exch,unit,meq 100g-1
+ISRaD,layer,lyr_ecec,unit,meq 100g-1
+ISRaD,layer,lyr_bs,unit,percent
+ISRaD,layer,lyr_c_inorg,unit,percent
+ISRaD,layer,lyr_c_org,unit,percent
+ISRaD,layer,lyr_c_tot,unit,percent
+ISRaD,layer,lyr_soc,unit,g cm-2
+ISRaD,layer,lyr_soc_sigma,unit,g cm-2
+ISRaD,layer,lyr_n_tot,unit,percent
+ISRaD,layer,lyr_son,unit,g cm-2
+ISRaD,layer,lyr_loi,unit,percent
+ISRaD,layer,lyr_15n,unit,permille
+ISRaD,layer,lyr_13c,unit,permille
+ISRaD,layer,lyr_rc_year,unit,YYYY
+ISRaD,layer,lyr_14c,unit,permille
+ISRaD,layer,lyr_14c_sigma,unit,permille
+ISRaD,layer,lyr_14c_sd,unit,permille
+ISRaD,layer,lyr_raw_mbc,unit,mgC g-1
+ISRaD,layer,lyr_reported_mbc,unit,mgC g-1
+ISRaD,layer,lyr_p_tot,unit,mg g-1
+ISRaD,layer,lyr_p_stock,unit,g cm-2
+ISRaD,layer,lyr_fe_py,unit,mg g-1
+ISRaD,layer,lyr_al_py,unit,mg g-1
+ISRaD,layer,lyr_fe_al_py,unit,mg g-1
+ISRaD,layer,lyr_si_py,unit,mg g-1
+ISRaD,layer,lyr_c_py,unit,mg g-1
+ISRaD,layer,lyr_fe_ox,unit,mg g-1
+ISRaD,layer,lyr_al_ox,unit,mg g-1
+ISRaD,layer,lyr_si_ox,unit,mg g-1
+ISRaD,layer,lyr_c_ox,unit,mg g-1
+ISRaD,layer,lyr_noncrystalline_ox,unit,mg g-1
+ISRaD,layer,lyr_fe_hy,unit,mg g-1
+ISRaD,layer,lyr_al_hy,unit,mg g-1
+ISRaD,layer,lyr_si_hy,unit,mg g-1
+ISRaD,layer,lyr_c_hy,unit,mg g-1
+ISRaD,layer,lyr_fe_dith,unit,mg g-1
+ISRaD,layer,lyr_al_dith,unit,mg g-1
+ISRaD,layer,lyr_si_dith,unit,mg g-1
+ISRaD,layer,lyr_quartz,unit,percent
+ISRaD,layer,lyr_alkali_feldspar,unit,percent
+ISRaD,layer,lyr_plag_feldspar,unit,percent
+ISRaD,layer,lyr_mica_chlorite,unit,percent
+ISRaD,layer,lyr_amphibole,unit,percent
+ISRaD,layer,lyr_pyroxine,unit,percent
+ISRaD,layer,lyr_olivine,unit,percent
+ISRaD,layer,lyr_volc_glass,unit,percent
+ISRaD,layer,lyr_kaol_halloy,unit,percent
+ISRaD,layer,lyr_smect_vermic,unit,percent
+ISRaD,layer,lyr_gibbsite,unit,percent
+ISRaD,layer,lyr_fe_oxides,unit,percent
+ISRaD,layer,lyr_imog_alloph,unit,percent
+ISRaD,layer,lyr_ferrihydrite,unit,percent
+ISRaD,layer,lyr_calcite_dolomite,unit,percent
+ISRaD,layer,lyr_zeolite,unit,percent
+ISRaD,layer,lyr_bd_samp_fill_extra,unit,g cm-3
+ISRaD,layer,lyr_c_org_fill_extra,unit,percent
+ISRaD,layer,lyr_soc_fill_extra,unit,g cm-2
+ISRaD,layer,lyr_14c_fill_extra,unit,percent
+ISRaD,fraction,frc_scheme_conc,unit,mol L-1
+ISRaD,fraction,frc_mass_perc,unit,percent
+ISRaD,fraction,frc_obs_date_y,unit,YYYY
+ISRaD,fraction,frc_obs_date_m,unit,MM
+ISRaD,fraction,frc_obs_date_d,unit,DD
+ISRaD,fraction,frc_bet_surface_area,unit,m2 g-1
+ISRaD,fraction,frc_c_perc,unit,percent
+ISRaD,fraction,frc_c_tot,unit,percent
+ISRaD,fraction,frc_c_org,unit,percent
+ISRaD,fraction,frc_c_inorg,unit,percent
+ISRaD,fraction,frc_n_tot,unit,percent
+ISRaD,fraction,frc_15n,unit,permille
+ISRaD,fraction,frc_13c,unit,permille
+ISRaD,fraction,frc_rc_year,unit,YYYY
+ISRaD,fraction,frc_14c,unit,permille
+ISRaD,fraction,frc_14c_sigma,unit,permille
+ISRaD,fraction,frc_14c_sd,unit,permille
+ISRaD,fraction,frc_raw_mbc,unit,mgC g-1
+ISRaD,fraction,frc_reported_mbc,unit,mgC g-1
+ISRaD,fraction,frc_fe_py,unit,mg g-1
+ISRaD,fraction,frc_al_py,unit,mg g-1
+ISRaD,fraction,frc_fe_al_py,unit,mg g-1
+ISRaD,fraction,frc_si_py,unit,mg g-1
+ISRaD,fraction,frc_c_py,unit,mg g-1
+ISRaD,fraction,frc_fe_ox,unit,mg g-1
+ISRaD,fraction,frc_al_ox,unit,mg g-1
+ISRaD,fraction,frc_si_ox,unit,mg g-1
+ISRaD,fraction,frc_c_ox,unit,mg g-1
+ISRaD,fraction,frc_noncrystalline_ox,unit,mg g-1
+ISRaD,fraction,frc_fe_hy,unit,mg g-1
+ISRaD,fraction,frc_al_hy,unit,mg g-1
+ISRaD,fraction,frc_si_hy,unit,mg g-1
+ISRaD,fraction,frc_c_hy,unit,mg g-1
+ISRaD,fraction,frc_fe_dith,unit,mg g-1
+ISRaD,fraction,frc_al_dith,unit,mg g-1
+ISRaD,fraction,frc_si_dith,unit,mg g-1
+ISRaD,fraction,frc_quartz,unit,percent
+ISRaD,fraction,frc_alkali_feldspar,unit,percent
+ISRaD,fraction,frc_plag_feldspar,unit,percent
+ISRaD,fraction,frc_mica_chlorite,unit,percent
+ISRaD,fraction,frc_amphibole,unit,percent
+ISRaD,fraction,frc_pyroxine,unit,percent
+ISRaD,fraction,frc_olivine,unit,percent
+ISRaD,fraction,frc_volc_glass,unit,percent
+ISRaD,fraction,frc_kaol_halloy,unit,percent
+ISRaD,fraction,frc_smect_vermic,unit,percent
+ISRaD,fraction,frc_gibbsite,unit,percent
+ISRaD,fraction,frc_fe_oxides,unit,percent
+ISRaD,fraction,frc_imog_alloph,unit,percent
+ISRaD,fraction,frc_ferrihydrite,unit,percent
+ISRaD,fraction,frc_zeolite,unit,percent
+ISRaD,incubation,inc_obs_date_y,unit,YYYY
+ISRaD,incubation,inc_obs_date_m,unit,MM
+ISRaD,incubation,inc_obs_date_d,unit,DD
+ISRaD,incubation,inc_duration,unit,days
+ISRaD,incubation,inc_temp,unit,°C
+ISRaD,incubation,inc_C_respired,unit,percent
+ISRaD,incubation,inc_13c,unit,permille
+ISRaD,incubation,inc_13c_sd,unit,permille
+ISRaD,incubation,inc_rc_year,unit,YYYY
+ISRaD,incubation,inc_14c,unit,permille
+ISRaD,incubation,inc_14c_sigma,unit,permille
+ISRaD,incubation,inc_14c_sd,unit,permille
+ISCNTemplate,site,lat,unit,degrees
+ISCNTemplate,site,long,unit,degrees
+ISCNTemplate,site,location_acc,unit,m
+ISCNTemplate,site,elevation,unit,m
+ISCNTemplate,site,aspect_deg,unit,degree
+ISCNTemplate,site,slope,unit,percent
+ISCNTemplate,site,stand_age,unit,years
+ISCNTemplate,site,depth_water,unit,cm
+ISCNTemplate,site,thaw_depth_site,unit,cm
+ISCNTemplate,site,bedrock_depth,unit,cm
+ISCNTemplate,site,ffdays,unit,days
+ISCNTemplate,site,map,unit,mm
+ISCNTemplate,site,mat,unit,degrees C
+ISCNTemplate,site,mast,unit,degrees C
+ISCNTemplate,site,water_table_duration,unit,days
+ISCNTemplate,site,soc,unit,g cm-2
+ISCNTemplate,site,soc_sigma,unit,g cm-2
+ISCNTemplate,site,soc_method,unit,g cm-2
+ISCNTemplate,site,2d_position,controled_vocabulary,2d_position
+ISCNTemplate,site,soc_depth,unit,cm
+ISCNTemplate,profile,transect_flag,controled_vocabulary,yes_blank
+ISCNTemplate,profile,add_taxon_flag,controled_vocabulary,yes_blank
+ISCNTemplate,profile,thaw_depth_profile,unit,cm
+ISCNTemplate,profile,soc,unit,g cm-2
+ISCNTemplate,profile,soc_sigma,unit,g cm-2
+ISCNTemplate,profile,soc_depth,unit,cm
+ISCNTemplate,layer,layer_top,unit,cm
+ISCNTemplate,layer,layer_bot,unit,cm
+ISCNTemplate,layer,bd_samp,method,"Bulk Density, Coarse Fragments Removed"
+ISCNTemplate,layer,bd_samp,unit,g cm-3
+ISCNTemplate,layer,bd_tot,method,Bulk Density With Coarse Fragments
+ISCNTemplate,layer,bd_tot,unit,g cm-3
+ISCNTemplate,layer,bd_whole,method,Bulk Density Minus Estimated Coarse Fragments
+ISCNTemplate,layer,bd_whole,unit,g cm-3
+ISCNTemplate,layer,bd_other,method,Bulk Density Other
+ISCNTemplate,layer,bd_other,unit,g cm-3
+ISCNTemplate,layer,caco3,unit,percent
+ISCNTemplate,layer,sand_tot_psa,unit,percent
+ISCNTemplate,layer,silt_tot_psa,unit,percent
+ISCNTemplate,layer,clay_tot_psa,unit,percent
+ISCNTemplate,layer,wpg2,unit,percent
+ISCNTemplate,layer,cat_exch,unit,cmol H+ kg-1
+ISCNTemplate,layer,gwc,unit,percent
+ISCNTemplate,layer,vwc,unit,percent
+ISCNTemplate,layer,soc,unit,g cm-2
+ISCNTemplate,layer,soc_sigma,unit,g cm-2
+ISCNTemplate,layer,c_tot,unit,percent
+ISCNTemplate,layer,oc,unit,percent
+ISCNTemplate,layer,n_tot,unit,percent
+ISCNTemplate,layer,c_to_n,unit,mass mass-1
+ISCNTemplate,layer,loi,unit,percent
+ISCNTemplate,layer,root_weight,unit,g
+ISCNTemplate,layer,15n,unit,permille
+ISCNTemplate,layer,13c,unit,permille
+ISCNTemplate,layer,14c,unit,permille
+ISCNTemplate,layer,14c_sigma,unit,permille
+ISCNTemplate,layer,14c_age,method,Age model from 14C
+ISCNTemplate,layer,14c_age,unit,years
+ISCNTemplate,layer,14c_age_sigma,unit,years
+ISCNTemplate,fraction,fraction_c_perc,unit,percent
+ISCNTemplate,fraction,fraction_mass_perc,unit,percent
+ISCNTemplate,fraction,oc,unit,percent
+ISCNTemplate,fraction,c_tot,unit,percent
+ISCNTemplate,fraction,n_tot,unit,percent
+ISCNTemplate,fraction,c_to_n,unit,mass mass-1
+ISCNTemplate,fraction,loi,unit,percent
+ISCNTemplate,fraction,15n,unit,permille
+ISCNTemplate,fraction,13c,unit,permille
+ISCNTemplate,fraction,rc_year,unit,YYYY
+ISCNTemplate,fraction,14c,unit,permille
+ISCNTemplate,fraction,14c_sigma,unit,permille
+ISCNTemplate,fraction,14c_age,unit,years
+ISCNTemplate,fraction,14c_age_sigma,unit,years
+ISCNTemplate,gas,15n,unit,permille
+ISCNTemplate,gas,c_conc_CO2,unit,ppm
+ISCNTemplate,gas,14c_CO2,unit,permille
+ISCNTemplate,gas,14c_CO2_sigma,unit,permille
+ISCNTemplate,gas,14c_age_CO2,unit,years
+ISCNTemplate,gas,14c_age_CO2_sigma,unit,years
+ISCNTemplate,gas,c_conc_CH4,unit,ppm
+ISCNTemplate,gas,13c_CH4,unit,permille
+ISCNTemplate,gas,14c_CH4,unit,permille
+ISCNTemplate,gas,14c_CH4_sigma,unit,permille
+ISCNTemplate,gas,14c_age_CH4,unit,years
+ISCNTemplate,gas,14c_age_CH4_sigma,unit,years
+ISCNTemplate,other,oc,unit,percent
+ISCNTemplate,other,c_tot,unit,percent
+ISCNTemplate,other,n_tot,unit,percent
+ISCNTemplate,other,c_to_n,unit,ratio
+ISCNTemplate,other,15n,unit,permille
+ISCNTemplate,other,13c,unit,permille
+ISCNTemplate,other,rc_year,unit,years
+ISCNTemplate,other,14c,unit,permille
+ISCNTemplate,other,14c_sigma,unit,permille
+ISCNTemplate,other,14c_age,unit,BP
+ISCNTemplate,other,14c_age_sigma,unit,BP
+ISCNTemplate,disturbance,dist_clearcut_removal_perc,unit,percent
+ISCNTemplate,disturbance,dist_crop_residue_perc,unit,percent
+ISCNTemplate,disturbance,dist_fwd_removal_perc,unit,percent
+ISCNTemplate,disturbance,dist_grazed_stocking,unit,?
+ISCNTemplate,disturbance,dist_grazed_live_weight,unit,?
+ISCNTemplate,disturbance,dist_grazed_onplot,unit,days month-1
+ISCNTemplate,disturbance,dist_harvest_residue_perc,unit,percent
+ISCNTemplate,disturbance,dist_herbicide_kgha,unit,Kg ha-1
+ISCNTemplate,disturbance,dist_irrigation_water,unit,mm
+ISCNTemplate,disturbance,dist_irrigation_drain_depth,unit,m
+ISCNTemplate,disturbance,dist_liming_kgha,unit,Kg ha-1
+ISCNTemplate,disturbance,dist_m_fertilization_kgha,unit,Kg ha-1
+ISCNTemplate,disturbance,dist_o_fertilization_kgha,unit,Kg ha-1
+ISCNTemplate,disturbance,dist_o_fertilization_c,unit,percent
+ISCNTemplate,disturbance,dist_o_fertilization_n,unit,percent
+ISCNTemplate,disturbance,dist_pesticide_kgha,unit,Kg ha-1
+ISCNTemplate,disturbance,dist_planting_seed,unit,N ha-1
+ISCNTemplate,disturbance,dist_thinning_perc,unit,percent
+ISCNTemplate,disturbance,dist_tillage_depth,unit,m
+ISCNTemplate,disturbance,dist_ungrazed_duration,unit,months
+ISCNTemplate,disturbance,dist_underburn_perc,unit,percent
+ISCNTemplate,disturbance,dist_windthrow_perc,unit,percent
+ISCNTemplate,cluster,soc,unit,g cm-2
+ISCNTemplate,cluster,soc_type,unit,ccon_type
+ISCNTemplate,cluster,soc_depth,unit,cm
+ISCNTemplate,cluster,soc_sigma,unit,g cm-2
+SIDb,Andrews2000SBB,temperature,unit,°C
+SIDb,Andrews2000SBB,top,unit,cm
+SIDb,Andrews2000SBB,bottom,unit,cm
+SIDb,Andrews2000SBB,midDepth,unit,cm
+SIDb,Andrews2000SBB,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Andrews2000SBB,replicates.type,control_vocabulary,field or lab
+SIDb,Andrews2000SBB,elevatedCO2,control_vocabulary,control or elevated
+SIDb,Andrews2000SBB,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Andrews2000SBB,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Andrews2000SBB,incubationTime,unit,days
+SIDb,Andrews2000SBB,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Andrews2000SBB,latitude,unit,degrees
+SIDb,Andrews2000SBB,longitude,unit,degrees
+SIDb,Andrews2000SBB,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Arevalo2012,temperature,unit,°C
+SIDb,Arevalo2012,top,unit,cm
+SIDb,Arevalo2012,bottom,unit,cm
+SIDb,Arevalo2012,midDepth,unit,cm
+SIDb,Arevalo2013,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Arevalo2012,incubationTime,unit,days
+SIDb,Arevalo2012,latitude,unit,degrees
+SIDb,Arevalo2012,replicates.type,control_vocabulary,field or lab
+SIDb,Arevalo2012,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Arevalo2012,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Arevalo2012,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Arevalo2012,mosture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,Arevalo2012,longitude,unit,degrees
+SIDb,Barrett2006,temperature,unit,°C
+SIDb,Barrett2006,top,unit,cm
+SIDb,Barrett2006,bottom,unit,cm
+SIDb,Barrett2006,midDepth,unit,cm
+SIDb,Barrett2006,mosture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,Barrett2006,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Barrett2006,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Barrett2006,incubationTime,unit,days
+SIDb,Barrett2006,elevation,unit,m
+SIDb,Barrett2006,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Barrett2006,latitude,unit,degrees
+SIDb,Barrett2006,longitude,unit,degrees
+SIDb,Barrett2006,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Bracho2016SBB,midDepth,unit,cm
+SIDb,Bracho2016SBB,temperature,unit,°C
+SIDb,Bracho2016SBB,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,Bracho2016SBB,atmospheric_interface,control_vocabulary,zero or yes
+SIDb,Bracho2016SBB,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,Bracho2016SBB,replicates.type,control_vocabulary,field or lab
+SIDb,Bracho2016SBB,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Bracho2016SBB,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Bracho2016SBB,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Bracho2016SBB,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Bracho2016SBB,incubationTime,unit,days
+SIDb,Bracho2016SBB,fieldWarming,control_vocabulary,control or warming
+SIDb,Bracho2016SBB,MAT,unit,°C
+SIDb,Bracho2016SBB,MAP,unit,mm
+SIDb,Bracho2016SBB,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Bracho2016SBB,latitude,unit,degrees
+SIDb,Bracho2016SBB,longitude,unit,degrees
+SIDb,Bracho2016SBB,activeLayer,unit,m
+SIDb,BradleyCook2016,midDepth,unit,cm
+SIDb,Bracho2016SBB,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Bracho2016SBB,permafrostExist,control_vocabulary,"Yes or blank if no (if yes, permafrost must exist at the site)"
+SIDb,BradleyCook2016,temperature,unit,°C
+SIDb,BradleyCook2016,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,BradleyCook2016,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,BradleyCook2016,replicates.type,control_vocabulary,field or lab
+SIDb,BradleyCook2016,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,BradleyCook2016,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,BradleyCook2016,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,BradleyCook2016,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,BradleyCook2016,incubationTime,unit,days
+SIDb,BradleyCook2016,MAT,unit,°C
+SIDb,BradleyCook2016,MAP,unit,mm
+SIDb,BradleyCook2016,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,BradleyCook2016,latitude,unit,degrees
+SIDb,BradleyCook2016,longitude,unit,degrees
+SIDb,BradleyCook2016,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,BradleyCook2016,permafrostExist,control_vocabulary,"Yes or blank if no (if yes, permafrost must exist at the site)"
+SIDb,Conant2008,temperature,unit,°C
+SIDb,Conant2008,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Conant2008,incubationTime,unit,days
+SIDb,Conant2008,replicates.type,control_vocabulary,field or lab
+SIDb,Conant2008,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Conant2008,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Conant2008,MAT,unit,°C
+SIDb,Conant2008,MAP,unit,mm
+SIDb,Conant2008,latitude,unit,degrees
+SIDb,Conant2008,longitude,unit,degrees
+SIDb,Craine2010NatGeo,top,unit,cm
+SIDb,Craine2010NatGeo,bottom,unit,cm
+SIDb,Craine2010NatGeo,midDepth,unit,cm
+SIDb,Craine2010NatGeo,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,Craine2010NatGeo,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Craine2010NatGeo,replicates.type,control_vocabulary,field or lab
+SIDb,Craine2010NatGeo,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Craine2010NatGeo,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Craine2010NatGeo,temperature,unit,°C
+SIDb,Craine2010NatGeo,incubationTime,unit,days
+SIDb,Craine2010NatGeo,preincubationTime,unit,days
+SIDb,Craine2010NatGeo,MAT,unit,°C
+SIDb,Craine2010NatGeo,MAP,unit,mm
+SIDb,Craine2010NatGeo,latitude,unit,degrees
+SIDb,Craine2010NatGeo,longitude,unit,degrees
+SIDb,Crow2019a,top,unit,cm
+SIDb,Crow2019a,bottom,unit,cm
+SIDb,Crow2019a,midDepth,unit,cm
+SIDb,Crow2019a,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Crow2019a,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Crow2019a,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Crow2019a,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Crow2019a,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Crow2019a,temperature,unit,°C
+SIDb,Crow2019a,incubationTime,unit,days
+SIDb,Crow2019a,preincubationTime,unit,days
+SIDb,Crow2019a,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Crow2019a,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Crow2019a,MAT,unit,°C
+SIDb,Crow2019a,MAP,unit,mm
+SIDb,Crow2019a,latitude,unit,degrees
+SIDb,Crow2019a,longitude,unit,degrees
+SIDb,Crow2019b,temperature,unit,°C
+SIDb,Crow2019b,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,Crow2019b,midDepth,unit,cm
+SIDb,Crow2019b,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Crow2019b,replicates.type,control_vocabulary,field or lab
+SIDb,Crow2019b,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Crow2019b,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Crow2019b,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Crow2019b,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Crow2019b,incubationTime,unit,days
+SIDb,Crow2019b,preincubationTime,unit,days
+SIDb,Crow2019b,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Crow2019b,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Crow2019b,permafrostExist,control_vocabulary,"Yes or blank if no (if yes, permafrost must exist at the site)"
+SIDb,Crow2019b,MAT,unit,°C
+SIDb,Crow2019b,MAP,unit,mm
+SIDb,Crow2019b,elevation,unit,m
+SIDb,Crow2019b,latitude,unit,degrees
+SIDb,Crow2019b,longitude,unit,degrees
+SIDb,Dalias2001,temperature,unit,°C
+SIDb,Dalias2001,replicates.type,control_vocabulary,field or lab
+SIDb,Dalias2001,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Dalias2001,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Dalias2001,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Dalias2001,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Dalias2001,incubationTime,unit,days
+SIDb,Dalias2001,MAT,unit,°C
+SIDb,Dalias2001,MAP,unit,mm
+SIDb,Dalias2001,latitude,unit,degrees
+SIDb,Dalias2001,longitude,unit,degrees
+SIDb,Dalias2001,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Dalias2001,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Doetterl2015,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,Doetterl2015,top,unit,cm
+SIDb,Doetterl2015,bottom,unit,cm
+SIDb,Doetterl2015,midDepth,unit,cm
+SIDb,Doetterl2015,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Doetterl2015,replicates.type,control_vocabulary,field or lab
+SIDb,Doetterl2015,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Doetterl2015,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Doetterl2015,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Doetterl2015,temperature,unit,°C
+SIDb,Doetterl2015,incubationTime,unit,days
+SIDb,Doetterl2015,preincubationTime,unit,days
+SIDb,Doetterl2015,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Doetterl2015,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Doetterl2015,MAT,unit,°C
+SIDb,Doetterl2015,MAP,unit,mm
+SIDb,Doetterl2015,elevation,unit,m
+SIDb,Doetterl2015,latitude,unit,degrees
+SIDb,Doetterl2015,longitude,unit,degrees
+SIDb,Fontaine2007,top,unit,cm
+SIDb,Fontaine2007,bottom,unit,cm
+SIDb,Fontaine2007,midDepth,unit,cm
+SIDb,Fontaine2007,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Fontaine2007,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Fontaine2007,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Fontaine2007,temperature,unit,°C
+SIDb,Fontaine2007,incubationTime,unit,days
+SIDb,Fontaine2007,preincubationTime,unit,days
+SIDb,Fontaine2007,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Fontaine2007,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Fontaine2007,latitude,unit,degrees
+SIDb,Fontaine2007,longitude,unit,degrees
+SIDb,Gillabel2010,temperature,unit,°C
+SIDb,Gillabel2010,midDepth,unit,cm
+SIDb,Gillabel2010,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Gillabel2010,replicates.type,control_vocabulary,field or lab
+SIDb,Gillabel2010,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Gillabel2010,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Gillabel2010,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Gillabel2010,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Gillabel2010,incubationTime,unit,days
+SIDb,Gillabel2010,preincubationTime,unit,days
+SIDb,Gillabel2010,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Gillabel2010,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Gillabel2010,MAT,unit,°C
+SIDb,Gillabel2010,MAP,unit,mm
+SIDb,Gillabel2010,latitude,unit,degrees
+SIDb,Gillabel2010,longitude,unit,degrees
+SIDb,Haddix2011,temperature,unit,°C
+SIDb,Haddix2011,top,unit,cm
+SIDb,Haddix2011,bottom,unit,cm
+SIDb,Haddix2011,midDepth,unit,cm
+SIDb,Haddix2011,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Haddix2011,replicates.type,control_vocabulary,field or lab
+SIDb,Haddix2011,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Haddix2011,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Haddix2011,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Haddix2011,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Haddix2011,incubationTime,unit,days
+SIDb,Haddix2011,MAT,unit,°C
+SIDb,Haddix2011,MAP.421,unit,mm
+SIDb,Haddix2011,MAP.402,unit,mm
+SIDb,Haddix2011,MAP.420,unit,mm
+SIDb,Haddix2011,MAP.665,unit,mm
+SIDb,Haddix2011,MAP..NA.,unit,mm
+SIDb,Haddix2011,MAP.2200,unit,mm
+SIDb,Haddix2011,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Haddix2011,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Haddix2011,latitude,unit,degrees
+SIDb,Haddix2011,longitude,unit,degrees
+SIDb,Hopkins2006,top,unit,cm
+SIDb,Hopkins2006,bottom,unit,cm
+SIDb,Hopkins2006,midDepth,unit,cm
+SIDb,Hopkins2006,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Hopkins2006,replicates.type,control_vocabulary,field or lab
+SIDb,Hopkins2006,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Hopkins2006,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Hopkins2006,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Hopkins2006,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Hopkins2006,temperature,unit,°C
+SIDb,Hopkins2006,incubationTime,unit,days
+SIDb,Hopkins2006,preincubationTime,unit,days
+SIDb,Hopkins2006,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Hopkins2006,latitude,unit,degrees
+SIDb,Hopkins2006,longitude,unit,degrees
+SIDb,Karhu2010,midDepth,unit,cm
+SIDb,Karhu2010,temperature,unit,°C
+SIDb,Karhu2010,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,Karhu2010,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpac"
+SIDb,Karhu2010,replicates.type,control_vocabulary,field or lab
+SIDb,Karhu2010,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Karhu2010,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Karhu2010,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Karhu2010,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Karhu2010,incubationTime,unit,days
+SIDb,Karhu2010,MAT,unit,°C
+SIDb,Karhu2010,MAP,unit,mm
+SIDb,Karhu2010,elevation,unit,m
+SIDb,Karhu2010,latitude,unit,degrees
+SIDb,Karhu2010,longitude,unit,degrees
+SIDb,Karhu2010,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Lavoie2011JGR,temperature,unit,°C
+SIDb,Lavoie2011JGR,surfaceAtm,control_vocabulary,zero or yes
+SIDb,Lavoie2011JGR,replicates.type,control_vocabulary,field or lab
+SIDb,Lavoie2011JGR,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Lavoie2011JGR,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Lavoie2011JGR,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Lavoie2011JGR,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Lavoie2011JGR,incubationTime,unit,days
+SIDb,Lavoie2011JGR,MAP,unit,mm
+SIDb,Lavoie2011JGR,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Lavoie2011JGR,latitude,unit,degrees
+SIDb,Lavoie2011JGR,longitude,unit,degrees
+SIDb,Lavoie2011JGR,burn,control_vocabulary,burned or unburned
+SIDb,Lavoie2011JGR,acidic,control_vocabulary,acidic or nonacidic
+SIDb,Lavoie2011JGR,minOrg,control_vocabulary,mineral or organic
+SIDb,Lavoie2011JGR,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,NeffHooper2002,temperature,unit,°C
+SIDb,NeffHooper2002,top,unit,cm
+SIDb,NeffHooper2002,bottom,unit,cm
+SIDb,NeffHooper2002,midDepth,unit,cm
+SIDb,NeffHooper2002,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,NeffHooper2002,replicates.type,control_vocabulary,field or lab
+SIDb,NeffHooper2002,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,NeffHooper2002,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,NeffHooper2002,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,NeffHooper2002,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,NeffHooper2002,incubationTime,unit,days
+SIDb,NeffHooper2002,MAT,unit,°C
+SIDb,NeffHooper2002,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,NeffHooper2002,latitude,unit,degrees
+SIDb,NeffHooper2002,longitude,unit,degrees
+SIDb,NeffHooper2002,permafrostExist,control_vocabulary,"Yes or blank if no (if yes, permafrost must exist at the site)"
+SIDb,NeffHooper2002,activeLayer,unit,m
+SIDb,Niklinska1999,temperature,unit,°C
+SIDb,Niklinska1999,top,unit,cm
+SIDb,Niklinska1999,bottom,unit,cm
+SIDb,Niklinska1999,midDepth,unit,cm
+SIDb,Niklinska1999,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,Niklinska1999,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Niklinska1999,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Niklinska1999,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Niklinska1999,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Niklinska1999,incubationTime,unit,days
+SIDb,Niklinska1999,MAT,unit,°C
+SIDb,Niklinska1999,MAP,unit,mm
+SIDb,Niklinska1999,elevation,unit,m
+SIDb,Niklinska1999,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Niklinska1999,latitude,unit,degrees
+SIDb,Niklinska1999,longitude,unit,degrees
+SIDb,Reichstein2000,temperature,unit,°C
+SIDb,Reichstein2000,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,Reichstein2000,replicates.type,control_vocabulary,field or lab
+SIDb,Reichstein2000,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Reichstein2000,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Reichstein2000,incubationTime,unit,days
+SIDb,Reichstein2000,MAT,unit,°C
+SIDb,Reichstein2000,MAP,unit,mm
+SIDb,Reichstein2000,elevation,unit,m
+SIDb,Reichstein2000,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Reichstein2000,latitude,unit,degrees
+SIDb,Reichstein2000,longitude,unit,degrees
+SIDb,Rey2008,midDepth,unit,cm
+SIDb,Rey2008,top,unit,cm
+SIDb,Rey2008,bottom,unit,cm
+SIDb,Rey2008,gasMeasured,control_vocabulary,"Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section"
+SIDb,Rey2008,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,Rey2008,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,Rey2008,replicates.type,control_vocabulary,field or lab
+SIDb,Rey2008,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Rey2008,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Rey2008,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Rey2008,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Rey2008,temperature,unit,°C
+SIDb,Rey2008,incubationTime,unit,days
+SIDb,Rey2008,MAT,unit,°C
+SIDb,Rey2008,MAP,unit,mm
+SIDb,Rey2008,elevation,unit,m
+SIDb,Rey2008,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Rey2008,latitude,unit,degrees
+SIDb,Rey2008,longitude,unit,degrees
+SIDb,Rey2008,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Salome2010,gasMeasured,control_vocabulary,"Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc"
+SIDb,Salome2010,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,Salome2010,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,Salome2010,replicates.type,control_vocabulary,field or lab
+SIDb,Salome2010,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Salome2010,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Salome2010,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Salome2010,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Salome2010,temperature,unit,°C
+SIDb,Salome2010,incubationTime,unit,days
+SIDb,Salome2010,preincubationTime,unit,days
+SIDb,Salome2010,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Salome2010,latitude,unit,degrees
+SIDb,Salome2010,longitude,unit,degrees
+SIDb,Salome2010,disturbance,control_vocabulary,undisturbed or sieved
+SIDb,Salome2010,oxygen,unit,precent
+SIDb,Salome2010,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Salome2010,permafrostExist,control_vocabulary,"Yes or blank if no (if yes, permafrost must exist at the site)"
+SIDb,Sierra2017BG,temperature,unit,°C
+SIDb,Sierra2017BG,top,unit,cm
+SIDb,Sierra2017BG,bottom,unit,cm
+SIDb,Sierra2017BG,midDepth,unit,cm
+SIDb,Sierra2017BG,moisture.units,control_vocabulary,"percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace"
+SIDb,Sierra2017BG,replicates.type,control_vocabulary,field or lab
+SIDb,Sierra2017BG,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Sierra2017BG,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Sierra2017BG,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Sierra2017BG,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Sierra2017BG,anaerobic,control_vocabulary,"Yes if headspace flushed with N2 or He, blank if aerobic"
+SIDb,Sierra2017BG,incubationTime,unit,days
+SIDb,Sierra2017BG,MAT,unit,°C
+SIDb,Sierra2017BG,MAP,unit,mm
+SIDb,Sierra2017BG,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Sierra2017BG,latitude,unit,degrees
+SIDb,Sierra2017BG,longitude,unit,degrees
+SIDb,Sierra2017BG,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Sierra2017BG,permafrostExist,control_vocabulary,"Yes or blank if no (if yes, permafrost must exist at the site)"
+SIDb,Sierra2017BG,oxygen,unit,precent
+SIDb,Sierra2017BG,activeLayer,unit,m
+SIDb,Song2010,temperature,unit,°C
+SIDb,Song2010,top,unit,cm
+SIDb,Song2010,bottom,unit,cm
+SIDb,Song2010,midDepth,unit,cm
+SIDb,Song2010,replicates.type,control_vocabulary,field or lab
+SIDb,Song2010,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Song2010,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Song2010,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Song2010,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Song2010,incubationTime,unit,days
+SIDb,Song2010,preincubationTime,unit,days
+SIDb,Song2010,MAT,unit,°C
+SIDb,Song2010,MAP,unit,mm
+SIDb,Song2010,elevation,unit,m
+SIDb,Song2010,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Song2010,latitude,unit,degrees
+SIDb,Song2010,longitude,unit,degrees
+SIDb,Song2010,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Song2010,permafrostExist,control_vocabulary,"Yes or blank if no (if yes, permafrost must exist at the site)"
+SIDb,Stewart2008SBB,gasMeasured,control_vocabulary,"Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc"
+SIDb,Stewart2008SBB,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,Stewart2008SBB,replicates.type,control_vocabulary,field or lab
+SIDb,Stewart2008SBB,temperature,unit,°C
+SIDb,Stewart2008SBB,incubationTime,unit,days
+SIDb,Stewart2008SBB,preincubationTime,unit,days
+SIDb,Stewart2008SBB,MAT,unit,°C
+SIDb,Stewart2008SBB,MAP,unit,mm
+SIDb,Stewart2008SBB,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Stewart2008SBB,latitude,unit,degrees
+SIDb,Stewart2008SBB,longitude,unit,degrees
+SIDb,Stewart2008SBB,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Townsend1997,temperature,unit,°C
+SIDb,Townsend1997,elevation,unit,m
+SIDb,Townsend1997,top,unit,cm
+SIDb,Townsend1997,bottom,unit,cm
+SIDb,Townsend1997,midDepth,unit,cm
+SIDb,Townsend1997,replicates.type,control_vocabulary,field or lab
+SIDb,Townsend1997,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Townsend1997,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Townsend1997,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Townsend1997,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Townsend1997,incubationTime,unit,days
+SIDb,Townsend1997,MAT,unit,°C
+SIDb,Townsend1997,MAP,unit,mm
+SIDb,Townsend1997,latitude,unit,degrees
+SIDb,Townsend1997,longitude,unit,degrees
+SIDb,Townsend1997,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,Wang2010,temperature,unit,°C
+SIDb,Wang2010,replicates.type,control_vocabulary,field or lab
+SIDb,Wang2010,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Wang2010,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Wang2010,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Wang2010,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Wang2010,incubationTime,unit,days
+SIDb,Wang2010,MAT,unit,°C
+SIDb,Wang2010,MAP,unit,mm
+SIDb,Wang2010,elevation,unit,m
+SIDb,Wang2010,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Wang2010,latitude,unit,degrees
+SIDb,Wang2010,longitude,unit,degrees
+SIDb,Wang2010,classificationSystem,unit,"USDA, FAO, and WRB."
+SIDb,Wang2010,activeLayer,unit,m
+SIDb,WicklandNeff2008a,temperature,unit,°C
+SIDb,WicklandNeff2008a,gasMeasured,control_vocabulary,"Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section"
+SIDb,WicklandNeff2008a,statistic,control_vocabulary,"Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)"
+SIDb,WicklandNeff2008a,top,unit,cm
+SIDb,WicklandNeff2008a,bottom,unit,cm
+SIDb,WicklandNeff2008a,midDepth,unit,cm
+SIDb,WicklandNeff2008a,surfaceAtm,control_vocabulary,zero or yes
+SIDb,WicklandNeff2008a,replicates.type,control_vocabulary,field or lab
+SIDb,WicklandNeff2008a,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,WicklandNeff2008a,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,WicklandNeff2008a,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,WicklandNeff2008a,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,WicklandNeff2008a,incubationTime,unit,days
+SIDb,WicklandNeff2008a,elevation,unit,m
+SIDb,WicklandNeff2008a,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,WicklandNeff2008a,latitude,unit,degrees
+SIDb,WicklandNeff2008a,longitude,unit,degrees
+SIDb,WicklandNeff2008a,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+SIDb,WicklandNeff2008a,ID,control_vocabulary,"Yes or blank if no (if yes, permafrost must exist at the site)"
+SIDb,WicklandNeff2008a,activeLayer,unit,m
+SIDb,WicklandNeff2008a,drainage,control_vocabulary,"poorlyDrained, modWellDrained, wellDrained"
+SIDb,Winkler1996,temperature,unit,°C
+SIDb,Winkler1996,replicates.type,control_vocabulary,field or lab
+SIDb,Winkler1996,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Winkler1996,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Winkler1996,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Winkler1996,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Winkler1996,incubationTime,unit,days
+SIDb,Winkler1996,elevation,unit,m
+SIDb,Winkler1996,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Winkler1996,latitude,unit,degrees
+SIDb,Winkler1996,longitude,unit,degrees
+SIDb,Zhang2007,temperature,unit,°C
+SIDb,Zhang2007,replicates.type,control_vocabulary,field or lab
+SIDb,Zhang2007,samplePreparation.intactCore,control_vocabulary,yes or no
+SIDb,Zhang2007,samplePreparation.sieving,control_vocabulary,"no, or mesh size in mm"
+SIDb,Zhang2007,samplePreparation.rootPicking,control_vocabulary,yes or no
+SIDb,Zhang2007,samplePreparation.rockPicking,control_vocabulary,yes or no
+SIDb,Zhang2007,incubationTime,unit,days
+SIDb,Zhang2007,elevation,unit,m
+SIDb,Zhang2007,landCover,control_vocabulary,"bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra"
+SIDb,Zhang2007,latitude,unit,degrees
+SIDb,Zhang2007,longitude,unit,degrees
+SIDb,Zhang2007,classificationSystem,control_vocabulary,"USDA, FAO, and WRB."
+vanGestel,soil C,trt,control_vocabulary,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel,soil C,soilT.depth,unit,°C
+vanGestel,soil C,start.date,unit,month-year
+vanGestel,soil C,measurement.date,unit,month-year
+vanGestel,soil C,duration,unit,years
+vanGestel,soil C,remove,control_vocabulary,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values)."
+vanGestel,soil C,multi.year,control_vocabulary,"Yes or blank. If yes, the data extracted from a paper were data pooled across years."
+vanGestel,soil C,soil.horizon,unit,?
+vanGestel,soil C,bulk.density,unit,?
+vanGestel,Rsoil,trt,control_vocabulary,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel,Rsoil,soilT.depth,unit,°C
+vanGestel,Rsoil,start.date,unit,month-year
+vanGestel,Rsoil,measurement.date,unit,month-year
+vanGestel,Rsoil,duration,unit,years
+vanGestel,Rsoil,remove,control_vocabulary,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values)."
+vanGestel,Rsoil,multi.year,control_vocabulary,"Yes or blank. If yes, the data extracted from a paper were data pooled across years."
+vanGestel,biomass,trt,control_vocabulary,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel,biomass,soilT.depth,unit,°C
+vanGestel,biomass,start.date,unit,month-year
+vanGestel,biomass,measurement.date,unit,month-year
+vanGestel,biomass,duration,unit,years
+vanGestel,biomass,remove,control_vocabulary,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values)."
+vanGestel,biomass,multi.year,control_vocabulary,"Yes or blank. If yes, the data extracted from a paper were data pooled across years."
+vanGestel,biomass,soil.horizon,unit,value_num
+vanGestel,biomass,input,control_vocabulary,"Plant biomass. Options are related to aboveground (a), belowground (b), or whole plant (w)"
+vanGestel,site info,lat,unit,degrees
+vanGestel,site info,lon,unit,degrees
+vanGestel,site info,elevation,unit,m
+vanGestel,site info,mat,unit,°C
+vanGestel,site info,map,unit,mm
+vanGestel,site info,treatments,control_vocabulary,The applied treatments (in a multifactorial study it was indicated by the highest level: e.g. T x H2O x N (fertilization)
+vanGestel,site info,soil.texture.class,control_vocabulary,"Yes or blank. If yes, the data extracted from a paper were data pooled across years."
+vanGestel,site info,perc.sand,unit,percent
+vanGestel,site info,perc.silt,unit,percent
+vanGestel,site info,perc.clay,unit,percent
+vanGestel,site info,start.date,unit,month-year
+vanGestel,site info,C.pool.abg,unit,?
+vanGestel,site info,C.pool.bwg,unit,?
+vanGestel,site info,N.pool.abg,unit,?
+vanGestel,site info,N.pool.bwg,unit,?
+vanGestel,site info,P.pool.bwg,unit,?
+vanGestel,site info,soil.depth.pool,unit,cm
+vanGestel,site info,Ndep.rate,unit,g N m-2 y-1
+vanGestel,site info,bulk.density,unit,?
+vanGestel,site info,percent.om,unit,percent
+vanGestel,soil moisture,trt,control_vocabulary,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel,soil moisture,soilT.depth,unit,°C
+vanGestel,soil moisture,start.date,unit,month-year
+vanGestel,soil moisture,measurement.date,unit,month-year
+vanGestel,soil moisture,soil.horizon,unit,?
+vanGestel,correlation BD-OM,bulk.density,unit,?
+vanGestel,correlation BD-OM,percent.om,unit,percent
+vanGestel,site info,biome,description,Biome that the study was conducted in
+vanGestel,soil C,bulk.density,description,observed bulk density of the soil
+vanGestel,site info,bulk.density,description,observed bulk density of the soil
+vanGestel,correlation BD-OM,bulk.density,description,observed bulk density of the soil
+vanGestel,site info,C.pool.abg,description,cabon pool size above ground
+vanGestel,site info,C.pool.bwg,description,cabon pool size below ground
+vanGestel,soil C,control.mean,description,mean value of the variable of interest (see column 'variable') for the control
+vanGestel,Rsoil,control.mean,description,mean value of the variable of interest (see column 'variable') for the control
+vanGestel,biomass,control.mean,description,mean value of the variable of interest (see column 'variable') for the control
+vanGestel,soil moisture,control.mean,description,mean value of the variable of interest (see column 'variable') for the control
+vanGestel,soil C,control.n,description,number of replicates used for the control
+vanGestel,Rsoil,control.n,description,number of replicates used for the control
+vanGestel,biomass,control.n,description,number of replicates used for the control
+vanGestel,soil moisture,control.n,description,number of replicates used for the control
+vanGestel,soil C,control.se,description,standard error of the mean of the variable of interest for the control
+vanGestel,Rsoil,control.se,description,standard error of the mean of the variable of interest for the control
+vanGestel,biomass,control.se,description,standard error of the mean of the variable of interest for the control
+vanGestel,soil moisture,control.se,description,standard error of the mean of the variable of interest for the control
+vanGestel,soil C,duration,description,Length of the experiment (between start date and measurement date)
+vanGestel,Rsoil,duration,description,Length of the experiment (between start date and measurement date)
+vanGestel,biomass,duration,description,Length of the experiment (between start date and measurement date)
+vanGestel,site info,elevation,description,elevation of the study site
+vanGestel,biomass,input,description,"Plant biomass. Options are related to aboveground (a), belowground (b), or whole plant (w)"
+vanGestel,site info,lat,description,latitude of the study
+vanGestel,site info,lon,description,longitude of the study
+vanGestel,site info,map,description,mean annual precipitation (mm)
+vanGestel,site info,mat,description,mean annual temperature (in C)
+vanGestel,soil C,measurement.date,description,Date of the measurements for which we obtained the data
+vanGestel,Rsoil,measurement.date,description,Date of the measurements for which we obtained the data
+vanGestel,biomass,measurement.date,description,Date of the measurements for which we obtained the data
+vanGestel,soil moisture,measurement.date,description,Date of the measurements for which we obtained the data
+vanGestel,soil C,multi.year,description,"Yes or blank. If yes, the data extracted from a paper were data pooled across years."
+vanGestel,Rsoil,multi.year,description,"Yes or blank. If yes, the data extracted from a paper were data pooled across years."
+vanGestel,biomass,multi.year,description,"Yes or blank. If yes, the data extracted from a paper were data pooled across years."
+vanGestel,site info,N.pool.abg,description,nitrogen pool size above ground
+vanGestel,site info,N.pool.bwg,description,nitrogen pool size below ground
+vanGestel,site info,Ndep.rate,description,nitrogen deposition rate (g N/m2/y)
+vanGestel,soil C,notes,description,"any remarks related to the study, just in case we see something unusual. An example is one of my entries: ""soil samples taken once at peak biomass; n=8 until 2003 (afterwards; fire reduced it to n=6)"""
+vanGestel,Rsoil,notes,description,"any remarks related to the study, just in case we see something unusual. An example is one of my entries: ""soil samples taken once at peak biomass; n=8 until 2003 (afterwards; fire reduced it to n=6)"""
+vanGestel,biomass,notes,description,"any remarks related to the study, just in case we see something unusual. An example is one of my entries: ""soil samples taken once at peak biomass; n=8 until 2003 (afterwards; fire reduced it to n=6)"""
+vanGestel,site info,notes,description,"any remarks related to the study, just in case we see something unusual. An example is one of my entries: ""soil samples taken once at peak biomass; n=8 until 2003 (afterwards; fire reduced it to n=6)"""
+vanGestel,soil moisture,notes,description,"any remarks related to the study, just in case we see something unusual. An example is one of my entries: ""soil samples taken once at peak biomass; n=8 until 2003 (afterwards; fire reduced it to n=6)"""
+vanGestel,correlation BD-OM,notes,description,"any remarks related to the study, just in case we see something unusual. An example is one of my entries: ""soil samples taken once at peak biomass; n=8 until 2003 (afterwards; fire reduced it to n=6)"""
+vanGestel,site info,P.pool.bwg,description,phosporus pool size below ground
+vanGestel,site info,perc.clay,description,% clay
+vanGestel,site info,perc.sand,description,% sand
+vanGestel,site info,perc.silt,description,% silt
+vanGestel,site info,percent.om,description,% soil organic matter
+vanGestel,correlation BD-OM,percent.om,description,% soil organic matter
+vanGestel,site info,pH,description,soil pH
+vanGestel,site info,project,description,"project name (e.g., for Brandbjerg it was CLIMAITE )"
+vanGestel,soil C,reference,description,The published paper from which the data were extracted
+vanGestel,Rsoil,reference,description,The published paper from which the data were extracted
+vanGestel,biomass,reference,description,The published paper from which the data were extracted
+vanGestel,site info,Reference,description,The published paper from which the data were extracted
+vanGestel,soil moisture,reference,description,The published paper from which the data were extracted
+vanGestel,correlation BD-OM,Reference,description,The published paper from which the data were extracted
+vanGestel,soil C,remove,description,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values)."
+vanGestel,Rsoil,remove,description,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values)."
+vanGestel,biomass,remove,description,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values)."
+vanGestel,soil C,season,description,the season in which the study was conducted; yearround is one of the options
+vanGestel,Rsoil,season,description,the season in which the study was conducted; yearround is one of the options
+vanGestel,biomass,season,description,the season in which the study was conducted; yearround is one of the options
+vanGestel,site info,season,description,the season in which the study was conducted; yearround is one of the options
+vanGestel,soil moisture,season,description,the season in which the study was conducted; yearround is one of the options
+vanGestel,site info,site,description,site name (e.g. Brandbjerg which has study.id 'Brand' - see for example biomass data)
+vanGestel,correlation BD-OM,site,description,site.id
+vanGestel,soil C,site.id,description,site identifier
+vanGestel,Rsoil,site.id,description,site identifier
+vanGestel,biomass,site.id,description,site identifier
+vanGestel,site info,site.id,description,site identifier
+vanGestel,soil moisture,site.id,description,site identifier
+vanGestel,site info,soil.depth.pool,description,"soil depth for which the C, N or P belowground pool size were calculated for"
+vanGestel,soil C,soil.horizon,description,"soil horizon sampled, used to determine the value of the variable of interest"
+vanGestel,biomass,soil.horizon,description,"soil horizon sampled, used to determine the value of the variable of interest"
+vanGestel,soil moisture,soil.horizon,description,"soil horizon sampled, used to determine the value of the variable of interest"
+vanGestel,site info,soil.texture.class,description,"Soil texture class (e.g. loamy, sandy, sandy clay loam etc.)"
+vanGestel,site info,soil.type,description,Soil classification - as described in the study (so could be the European classification or WRB)
+vanGestel,soil C,soilT.depth,description,temperature that the soil temperature sensor was at
+vanGestel,Rsoil,soilT.depth,description,temperature that the soil temperature sensor was at
+vanGestel,biomass,soilT.depth,description,temperature that the soil temperature sensor was at
+vanGestel,soil moisture,soilT.depth,description,temperature that the soil temperature sensor was at
+vanGestel,soil C,source,description,"figure or table number, supplemental info etc."
+vanGestel,Rsoil,source,description,"figure or table number, supplemental info etc."
+vanGestel,biomass,source,description,"figure or table number, supplemental info etc."
+vanGestel,site info,source,description,"figure or table number, supplemental info etc."
+vanGestel,soil moisture,source,description,"figure or table number, supplemental info etc."
+vanGestel,correlation BD-OM,source,description,"figure or table number, supplemental info etc."
+vanGestel,biomass,species,description,species of plant
+vanGestel,site info,species,description,"The plant species of focus or present in the study. For example, for the Abisko bog: Sphagnum fuscum; Empetrum nigrum; Betula nana; Rubus chamaemorus; Andromeda polifolia; Calamagrostis lapponica; Vaccinium uliginosum"
+vanGestel,soil C,start.date,description,Date the experiment started
+vanGestel,Rsoil,start.date,description,Date the experiment started
+vanGestel,biomass,start.date,description,Date the experiment started
+vanGestel,site info,start.date,description,start date of experiment
+vanGestel,soil moisture,start.date,description,start date of experiment
+vanGestel,site info,state.country,description,state and/or country
+vanGestel,site info,sub.biome,description,"More specific info about the biome. For example: for grassland, the more specific category could be shortgrass prairie."
+vanGestel,soil C,technique,description,"Description of the technique applied for the treatment effect (e.g. IR heaters, heating cables for temperature, sprinklers or drip tubes for irrigation, FACE or other for elevated CO2)"
+vanGestel,Rsoil,technique,description,"Description of the technique applied for the treatment effect (e.g. IR heaters, heating cables for temperature, sprinklers or drip tubes for irrigation, FACE or other for elevated CO2)"
+vanGestel,biomass,technique,description,"Description of the technique applied for the treatment effect (e.g. IR heaters, heating cables for temperature, sprinklers or drip tubes for irrigation, FACE or other for elevated CO2)"
+vanGestel,site info,technique,description,"Description of the technique applied for the treatment effect (e.g. IR heaters, heating cables for temperature, sprinklers or drip tubes for irrigation, FACE or other for elevated CO2)"
+vanGestel,soil moisture,technique,description,"Description of the technique applied for the treatment effect (e.g. IR heaters, heating cables for temperature, sprinklers or drip tubes for irrigation, FACE or other for elevated CO2)"
+vanGestel,site info,treatments,description,The applied treatments (in a multifactorial study it was indicated by the highest level: e.g. T x H2O x N (fertilization)
+vanGestel,soil C,trt,description,"treatment; for example: T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel,Rsoil,trt,description,"treatment; for example: T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel,biomass,trt,description,"treatment; for example: T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel,soil moisture,trt,description,"treatment; for example: T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
+vanGestel,soil C,trt.mean,description,mean value of the variable of interest (see column 'variable') for the treatment
+vanGestel,Rsoil,trt.mean,description,mean value of the variable of interest (see column 'variable') for the treatment
+vanGestel,biomass,trt.mean,description,mean value of the variable of interest (see column 'variable') for the treatment
+vanGestel,soil moisture,trt.mean,description,mean value of the variable of interest (see column 'variable') for the treatment
+vanGestel,soil C,trt.n,description,number of replicates used for the treatment
+vanGestel,Rsoil,trt.n,description,number of replicates used for the treatment
+vanGestel,biomass,trt.n,description,number of replicates used for the treatment
+vanGestel,soil moisture,trt.n,description,number of replicates used for the treatment
+vanGestel,soil C,trt.se,description,standard error of the mean of the variable of interest for the treatment
+vanGestel,Rsoil,trt.se,description,standard error of the mean of the variable of interest for the treatment
+vanGestel,biomass,trt.se,description,standard error of the mean of the variable of interest for the treatment
+vanGestel,soil moisture,trt.se,description,standard error of the mean of the variable of interest for the treatment
+vanGestel,soil C,trt.size.abg,description,"the treatment effect size aboveground (i.e., in the air or plant canopy above the soil surface)"
+vanGestel,Rsoil,trt.size.abg,description,"the treatment effect size aboveground (i.e., in the air or plant canopy above the soil surface)"
+vanGestel,biomass,trt.size.abg,description,"the treatment effect size aboveground (i.e., in the air or plant canopy above the soil surface)"
+vanGestel,soil moisture,trt.size.abg,description,"the treatment effect size aboveground (i.e., in the air or plant canopy above the soil surface)"
+vanGestel,soil C,trt.size.bg,description,the treatment effect size belowground (e.g. what is the temperature difference at 5 cm (or other depth) in the warmed treatment). The value is the difference between warmed and control plots ('control' being flexibly defined for multifactorial experiments - see Readme)
+vanGestel,Rsoil,trt.size.bg,description,the treatment effect size belowground (e.g. what is the temperature difference at 5 cm (or other depth) in the warmed treatment). The value is the difference between warmed and control plots ('control' being flexibly defined for multifactorial experiments - see Readme)
+vanGestel,biomass,trt.size.bg,description,the treatment effect size belowground (e.g. what is the temperature difference at 5 cm (or other depth) in the warmed treatment). The value is the difference between warmed and control plots ('control' being flexibly defined for multifactorial experiments - see Readme)
+vanGestel,soil moisture,trt.size.bg,description,the treatment effect size belowground (e.g. what is the temperature difference at 5 cm (or other depth) in the warmed treatment). The value is the difference between warmed and control plots ('control' being flexibly defined for multifactorial experiments - see Readme)
+vanGestel,soil C,trt.size.units,description,"Units of the treatment effect. For example, temperature data are in Celsius, CO2 was generally in ppm, fertilizer addition could be in g/m2/y, and for irrigation it was many others, such as % of annual rainfall."
+vanGestel,Rsoil,trt.size.units,description,"Units of the treatment effect. For example, temperature data are in Celsius, CO2 was generally in ppm, fertilizer addition could be in g/m2/y, and for irrigation it was many others, such as % of annual rainfall."
+vanGestel,biomass,trt.size.units,description,"Units of the treatment effect. For example, temperature data are in Celsius, CO2 was generally in ppm, fertilizer addition could be in g/m2/y, and for irrigation it was many others, such as % of annual rainfall."
+vanGestel,soil moisture,trt.size.units,description,"Units of the treatment effect. For example, temperature data are in Celsius, CO2 was generally in ppm, fertilizer addition could be in g/m2/y, and for irrigation it was many others, such as % of annual rainfall."
+vanGestel,soil C,unit,description,unit of the variable of interest
+vanGestel,Rsoil,unit,description,unit of the variable of interest
+vanGestel,biomass,unit,description,unit of the variable of interest
+vanGestel,soil moisture,unit,description,unit of the variable of interest
+vanGestel,soil C,variable,description,variable of interest
+vanGestel,Rsoil,variable,description,variable of interest
+vanGestel,biomass,variable,description,variable of interest
+vanGestel,soil moisture,variable,description,variable of interest

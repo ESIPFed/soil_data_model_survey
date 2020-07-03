@@ -10,13 +10,13 @@
 #  filter(grepl('ISCN', data_product))
 
 
-columnDescription <- readr::read_csv(file=file.path(data.dir, 'data_description.csv')) %>%
+columnDescription <- readr::read_csv(file=file.path(data.dir, 'data_structure.csv')) %>%
   filter(grepl('ISCN', data_product))
 
 datasetMeta <-  readr::read_csv(file=file.path(data.dir,'data_meta.csv')) %>%
   filter(grepl('ISCN', data_product))
 
-controlVocab <- readr::read_csv(file=file.path(data.dir, 'data_description.csv')) %>%
+controlVocab <- readr::read_csv(file=file.path(data.dir, 'control_vocabulary.csv')) %>%
   filter(grepl('ISCN', data_product))
 ```
 
