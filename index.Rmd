@@ -3,7 +3,7 @@ title: 'Soil Data Models: a review'
 author: 
   - name: "K Todd-Brown (ktoddbrown@ufl.edu)"
   - name: "L Heran, K Frederick, M Younger"
-  - name:  "L Nave, N van Gestel, C Scheadel, C Sierra, C Lawrence, A Hoyt, S Stoner, J Beem-Miller, K Heckman, S von Fromm, Á Kuhnen"
+  - name: "L Nave, N van Gestel, C Scheadel, C Sierra, C Lawrence, A Hoyt, S Stoner, J Beem-Miller, K Heckman, S von Fromm, Á Kuhnen, J Holmquist"
 date: "`r format(Sys.Date(), '%Y %B %d')`"
 site: bookdown::bookdown_site
 documentclass: book
