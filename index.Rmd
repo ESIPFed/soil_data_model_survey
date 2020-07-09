@@ -1,6 +1,9 @@
 --- 
 title: 'Soil Data Models: a review'
-author: "K Todd-Brown (ktoddbrown@ufl.edu), L Heran, K Frederick, M Younger, L Nave, N van Gestel, C Scheadel and C Sierra"
+author: 
+  - name: "K Todd-Brown (ktoddbrown@ufl.edu)"
+  - name: "L Heran, K Frederick, M Younger"
+  - name:  "L Nave, N van Gestel, C Scheadel, C Sierra, C Lawrence, A Hoyt, S Stoner, J Beem-Miller, K Heckman, S von Fromm, Á Kuhnen"
 date: "`r format(Sys.Date(), '%Y %B %d')`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -35,6 +38,7 @@ library(DT)
 library(plyr)
 library(tidyverse)
 library(bookdown)
+library(distill)
 
 data.dir <- 'data'
 
