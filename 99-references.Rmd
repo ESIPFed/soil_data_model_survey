@@ -1,3 +1,5 @@
 `r if (knitr::is_html_output()) '
 # References {-}
 '`
+
+The following packages were used in this study: [@R-base, @R-bookdown, @R-datamodelr, @R-distill, @R-dplyr, @R-DT, @R-forcats, @R-ggplot2, @R-knitr, @R-plyr, @R-purrr, @R-readr, @R-rmarkdown, @R-stringr, @R-tibble, @R-tidyr, @R-tidyverse, @bookdown2016, @ggplot22016, @knitr2015, @knitr2014, @plyr2011, @rmarkdown2018, @tidyverse2019]

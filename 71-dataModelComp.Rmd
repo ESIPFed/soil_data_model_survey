@@ -1,5 +1,5 @@
 
-# Comparision of data model structures
+# June Comparision of data model structures
 
 ```{r}
 dataModelDescription <- dataDescription.ls$structure %>%

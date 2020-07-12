@@ -2,13 +2,6 @@
 # ISCN record
 
 ```{r}
-##Working copy
-#readxl::excel_sheets(path='../data/DatasetVariableTable_v3 - Editable.xlsx')
-#columnDescription <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='Thesaurus') %>%
-#  filter(grepl('ISCN', data_product))
-#datasetMeta <- readxl::read_excel(path='../data/DatasetVariableTable_v3 - Editable.xlsx', sheet='meta') %>%
-#  filter(grepl('ISCN', data_product))
-
 
 columnDescription <- readr::read_csv(file=file.path(data.dir, 'data_structure.csv')) %>%
   filter(grepl('ISCN', data_product))
@@ -61,9 +54,7 @@ These are notes from a 4 June 2020 interview with Luke Nave.
     - In terms of interfacing with the broader science community, listening and having workshops were helpful in that they resulted in positive changes to the templates.
     - Allow for map based data retrieval to increase usability by allowing the user to filter by place and by variables. The user would no longer have to deal with large excel tables where most of the columns are empty anyways. 
 
-## ISCN 3 and template specific
-    
-### Festure summary
+## ISCN 3 and template description
 
   - Common features
     + location, elevation, and observation time
@@ -79,8 +70,6 @@ These are notes from a 4 June 2020 interview with Luke Nave.
     + higher then average number of layer-level info
     + fraction table only shared with ISRaD
     
-
-### Data model
 
 ```{r}
 
@@ -142,22 +131,6 @@ dm_render_graph(dm_create_graph(ISCN3_dm, rankdir = "BT", col_attr = c('column')
 dm_render_graph(dm_create_graph(ISCNTemplate_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only', graph_name='ISCN-template data model'))
 ```
 
-```{r}
-
-
-datatable(columnDescription)
-datatable(datasetMeta)
-```
-
-Here is a sample of the data description and meta-data table for both ISCN3 and the ISCN Template. The full data table can be found `data_description.csv` and `data_meta.csv`.
-
-#### Control Vocabulary
-
-```{r}
-datatable(controlVocab)
-```
-
-Here is a sample of the control vocabulary for ISCN3. THe fill data table can be found in `data_controlVocab.csv`
 
 ## Acknowledgements
 
