@@ -1,0 +1,90 @@
+
+# Community Survey
+
+```{r eval=FALSE, echo=FALSE}
+
+rawRead.df <- readxl::read_excel('../data-raw/survey_results/Soil data compilation survey (Responses).xlsx', sheet=1)
+#results.df <- tibble::as_tibble(t(rawRead.df))
+
+#Drop columns with identifying or demigraphic information.
+writeClean <- rawRead.df[,-(10:15)]
+
+write_csv(writeClean, '../data/cleanSurveyResponses.csv')
+```
+
+```{r}
+surveyResponse.df <- read_csv('data/cleanSurveyResponses.csv')
+```
+
+Many of our respondence were looking at questions around global biogeochemical processes, specifically carbon cycling.
+
+Most of the data sources were drawn from the primary scientific literature with several respondences also drawing from direct response from study PI or colleagues. 
+One respondent mentioned online databases  (e.g., USGS NWIS, USGS Geochemical Landscapes, NEON). 
+None of the study respondences mentioned DataOne or PI-driven data repositories for data discovery.
+Identified challenges included QAQC protocols, difficulty getting data upon direct request from collegues, formatting heterogenity, missing or badly identified metadata, template development and stability, project management for aggregation effort in large groups.
+Things that worked well in the process were orchestrated hackatons.
+
+In general many respondants want data paired with a publication and already entired into a universal template. 
+There was frustration with brittle inhouse harmonization pipelines that were not always backwards compatable. 
+Automatic discovery from primary literature made another wishlist.
+General FAIR data principles were recognized as important, though not named as such.
+In general there were no differences in the harmonizatin pipeline process between the providers and aggregators.
+
+Unsurprisingly open public data was well supported by the respondences with interest in broaderening scienific impact and increased visibility.
+Attribution and engagement was a named concern of respondences, in particular collonial science was called out as being partiucalrlly problematic.
+Time investments with unclear rewards.
+Unclear what "data base" was appropreate for a given data set.
+Data permissions issues.
+
+Data is messy and data providers wish that was better understood by data aggregators.
+Both error/uncertainty and the exact methods use things that data providers feel is often overlooked by data aggregators.
+
+## Responses
+
+### Why do you compile data product(s)? What is the question you are looking to answer?
+
+```{r}
+cat(paste0(surveyResponse.df$`Why do you compile data product(s)? What is the question you are looking to answer?`, collapse='\n'))
+```
+
+### How do you find your data sources?
+
+```{r}
+cat(paste0(surveyResponse.df$`How do you find your data sources?`, collapse='\n'))
+```
+
+### What went well with how you compiled the data product or what do you wish gone better?
+
+```{r}
+cat(paste0(surveyResponse.df$`What went well with how you compiled the data product or what do you wish gone better?`, collapse='\n'))
+```
+
+### What is the ideal process for data harmonization? For the purposes of this question, this includes gap-filling, unit conversion, as well as standardizing headers and table structure.
+
+```{r}
+cat(paste0(surveyResponse.df$`What is the ideal process for data harmonization? For the purposes of this question, this includes gap-filling, unit conversion, as well as standardizing headers and table structure.`, collapse='\n'))
+```
+
+### Do you want your data to be compiled in a data product? Why or why not?
+
+```{r}
+cat(paste0(surveyResponse.df$`Do you want your data to be compiled in a data product? Why or why not?`, collapse='\n'))
+```
+
+### What is your main hurdle to contributing to data products and to other people using your data?
+
+```{r}
+cat(paste0(surveyResponse.df$`What is your main hurdle to contributing to data products and to other people using your data?`, collapse='\n'))
+```
+
+### What do you wish was better understood about how your data is collected or should be used?
+
+```{r}
+cat(paste0(surveyResponse.df$`What do you wish was better understood about how your data is collected or should be used?`, collapse='\n'))
+```
+
+### What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.
+
+```{r}
+cat(paste0(surveyResponse.df$`What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.`, collapse='\n'))
+```
