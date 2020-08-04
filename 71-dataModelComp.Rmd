@@ -69,11 +69,11 @@ This also held true for the number of variables in each study. The single PI stu
 ```{r}
 dataDescription.ls$thesaurus %>%
   filter(data_product %in% c("ISCN3", "CCRCN", "Crowther", "vanGestel", "ISRaD" )) %>%
-  select(data_product, data_table, data_column, variable) %>%
+  select(data_product, data_table, provided_variable, variable) %>%
   unique() %>%
   group_by(data_product) %>% summarize(`Table count` = length(unique(data_table)),
                                      `Variable count` =  length(unique(variable)),
-                                     `Column count` = length(unique(data_column))) %>%
+                                     `Column count` = length(unique(provided_variable))) %>%
   rename('Study ID' = data_product) %>%
   arrange(`Column count`) %>%
   mutate('Multi PI?' = case_when(`Study ID` %in% c("ISCN3", "ISRaD", "CCRCN") ~ 'Yes',

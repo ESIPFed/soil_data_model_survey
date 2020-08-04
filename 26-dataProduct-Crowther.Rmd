@@ -1,0 +1,70 @@
+# Crowther
+
+```{r}
+data_structure <- dataDescription.ls$structure
+```
+
+## July 2020 interview record
+
+  1) Why did you start this study?
+      - The more data you collect the more patterns you can identify against the noise.
+Global data is needed to identify global patterns.
+      - This project specifically worked to address soil carbon sensitivity to warming. 
+But in general, the Crowther lab is interested in the living components of the soil, both in categorizing and characterizing these living components. 
+For example, if at two locations with the same climate, topography, and vegetation but different sets of soil organisms the functioning and carbon turn over would be very different.
+  2) Describe your workflow for ingesting data sets?
+      - The data template has only asked for a brief description of the site location (latitude, longitude, ect.), the measurement they are looking for their project, and how the author collected that measurement. This very restricted data model is then much easier (and more satisfying) to collaborate with data products to fill out.
+      - Next, data producers are contacted directly and invited to co-author the resulting manuscript. The resulting manuscript generally has between 50 and 100 co-authors and averages 5,000 to 10,000 samples or locations across the globe.
+      - This simplistic approach is far more productive than having large tables that need computation and large amounts of time to fill. 
+  3) What decisions did you make to arrive at this workflow?
+      - For the inital soil warming study, we wanted to quantify differences in carbon stocks in warmed and ambient plots. Thus %C and bulk density estimates were required, but we expected that the duration and intensity of warming are also likely to have strong effects so we collected that data to try to control for those effects. In addition, we knew that environmental variation would be likely to affect the magnitude of the changes, but this information was difficult to collect from all projects in a standardized way. We were trying to collect all the data possible and would end up with a table of 50 columns that are mostly incomplete. This drove us to infer possible driving varibles from global data map products. In the end, we found that the data is much stronger when the missing data is taken from existing maps where experts have done correct extrapolations. They can then get all the metadata necessary just from knowing the latitude and longitude of the sample.
+      - We got better results with a small easy to fill out data request from the data providers then a large verbose data template in the end.This allowed us to maximize the data volume that we were working with which was a high priority for us. To get the environmental characteristics at each sampling location, we use data from existing maps of climate, soil and topographic characteristics. Those have some uncertainty. But it ensures that we get a complete dataset, and we limit the uncertainty associated with sampling variation between people.
+  4) How would someone get a copy of the data in this study?
+      - After they are published, they are made available in their university library.  
+  5) What would you do differently if you had to start again? What would be the same?
+      - Asking for small targeted data has worked very well.
+      - Managing the large co-author list and people skills remains challenging. Tom spends so much time on managing emails, or dealing with failed communication attempts due to switching of emails or being sent to spam. He believes that managing relationships with the authors of the data is the hardest, because if you miss one person, you could be missing a large opportunity for your project. Recently, he has been using listservs as he finds it reaches more people, is less likely to be filtered out of people’s professional emails, and is easier to keep organized. 
+
+## Feature summary 
+
+- Common features
+    + location, elevation, and observation time
+    + depth of core and layer
+    + bulk density
+    + vegetation
+    + carbon (?organic) percentage and loss on ignition
+    
+ - Unique features
+    + Author updated data (outside sources)
+      - Biome, % Clay, pH, 
+    + Detailed soil warming data
+      - planned temperatures, control temperatures, mean temperatures
+    + Cation exchange capacity reported
+    + % Nitrogen reported
+    + distinguished between total raw carbon and total carbon
+    + Difference between detailed_site_id(New Name) and site_id(Old Name)
+    
+## Data Model
+
+```{r}
+
+Crowther_table <- data_structure %>%
+  filter(data_product == 'Crowther') %>%
+  select(-data_product) %>%
+  rename('table' = 'data_table', 'column' = 'data_column') %>%
+  mutate(key = data_type == 'id',
+         ref = case_when(grepl('^Study$', column) ~ 'Raw',
+                         TRUE ~ as.character(NA)),
+         ref_col = case_when(grepl('^Study$', column) ~ 'Study',
+                         TRUE ~ as.character(NA))) %>%
+  mutate(ref = if_else(table == ref, as.character(NA), ref))
+
+temp_dm <- as.data_model(Crowther_table)
+
+graph <- dm_create_graph(temp_dm, rankdir = "RL", col_attr = c('column'))
+dm_render_graph(graph)
+```
+
+## Acknowledgement
+
+We would like to thank Dr. Tom Crowther (ETH Zürich) for their time and contributions to the June interview.

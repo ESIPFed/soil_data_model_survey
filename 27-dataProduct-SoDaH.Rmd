@@ -1,0 +1,122 @@
+# SoDaH
+
+```{r}
+columnDescription <- dataDescription.ls$structure %>%
+  filter(grepl('SoDaH', data_product) | grepl('LTERWG', data_product))
+thesaurus <- dataDescription.ls$thesaurus %>%
+  filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
+datasetMeta <-  dataDescription.ls$meta %>%
+  filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
+controlVocab <- dataDescription.ls$control_vocabulary %>%
+  filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
+
+```
+
+## July 2020 interview
+
+  1) Why did you start this study?
+      - This study grew out of frustrations with the organization of the Long Term Ecological Research (LTER) data and expanded to include Critical Zone Observatory (CZO) and National Ecological Observation Network (NEON).
+They found that understanding the history of the data and matching dataset variables up with one another was nearly impossible given the published information.
+To solve this, the study brought the researchers familiar with these data sets together with data aggregators.
+  2) Describe your workflow for ingesting data sets? 
+      - In person meetings were critical. 22 person workshops were needed to get the right people in the room with their data in order to learn about the datasets and structure. 
+They used a “key-key” template to harmonize data, where data providers manually map their data set onto a database template (modeled after ISCN via ISRAD) and provide additional site information and metadata.
+These key-key files are used to rename variables & convert units from raw data into harmonized sheets that are concatenated together in a scripted workflow. 
+	    - On the SoDaH GitHub https://lter.github.io/som-website/workflow.html, the workflow is listed as follows: 
+          1)	Harmonizes raw data into a common format using key-key approach in R;
+          2)	Aggregates data into an R object;
+          3)	Data visualization and interpretation tools (Shiny app);
+          4)	Data analysis and summary scripts.
+      - The overall project timeline was not entirely smooth.
+First data was contributed by 22 people during the first meeting, then within the next nine months everything was harmonized using scripts. 
+A second meeting was required to address unanticipated template shortfalls. 
+For example, identifying time series and experimental sites, what the treatments were, and how to identify controls.
+      - The data mostly consists of basic soil data with very little fractionation and radiocarbon data that was considered ISRaD provenance.
+The template had to be expanded to include time series and experimental data. 
+  3) What decisions did you make to arrive at this workflow?
+      - Lead PI had slow and painful experience with manual data transcriptions in previous project. 
+The group then sat in the workshop room for about two days before it began brainstorming a plan.
+After looking at the new ISCN data ingest plan, they decided to attempt a key-key file.
+A key-key file would map the column names to some common vocabulary and give basic meta data like units.
+Data providers would add their data into a Google folder with the key-key file was held.
+An R script would then process the raw data and templates producing a flat-file for each dataset of consistent format.
+This spur of the moment plan worked surprisingly well.
+The biggest challenge was getting people on the same page when filling out the key-key file.
+Many people would add in data that was not asked for or needed.
+Post processing manual QA/QC was still required and very time-consuming. 
+The site-level info was in one key-key file which held variables such as climate data and site characteristics, and layer-level info was held in another file. 
+The key-key file can be seen on the SoDaH GitHub under the database tab. 
+By sticking all the level one data into flat .csv files, they only manipulated units to match with very simple math. 
+They then had to calculate or recalculate things like nitrogen carbon ratios (if they were not provided) to knit the data into level 2.  
+  4) How would someone get a copy of the data in this study?
+      - https://lter.github.io/som-website/index.html Project website with data GUI and workflow outline
+      - Wieder, W.R., D. Pierson, S.R. Earl, K. Lajtha, S. Baer, F. Ballantyne, A.A. Berhe, S. Billings, L.M. Brigham, S.S. Chacon, J. Fraterrigo, S.D. Frey, K. Georgiou, M. de Graaff, A.S. Grandy, M.D. Hartman, S.E. Hobbie, C. Johnson, J. Kaye, E. Snowman, M.E. Litvak, M.C. Mack, A. Malhotra, J.A.M. Moore, K. Nadelhoffer, C. Rasmussen, W.L. Silver, B.N. Sulman, X. Walker, and S. Weintraub. 2020. SOils DAta Harmonization database (SoDaH): an open-source synthesis of soil data from research networks ver 1. Environmental Data Initiative. https://doi.org/10.6073/pasta/9733f6b6d2ffd12bf126dc36a763e0b4 (Accessed 2020-07-16).
+      - Manuscript to ESSD submitted (July 2020)
+  5) What would you do differently if you had to start again? What would be the same?
+      - Orginal key-key template turned out to not be sufficent to harmonize the data and required revision. 
+It would have been a good idea to beta-test the template before they had people in front of them at the workshop.
+This also affected the derivative data model; that would have been better with a cleaner key file.
+      - It would be nice to link the key-key file with the data repository metadata to automate portions of the creation of the key-key file.
+      - Having a dedicated data manager was extremely beneficial.
+It was sometimes hard to get data science and soil science on the same page.
+After having gone through this process, the PI can see the value and need for a control vocabulary and definitions and wishes they had gone through this process before the project began.
+      - Something that went well was the semi-automated sequence for harmonization. 
+Compared to past expereinces with manual transcription, it was way more productive and allowed for a faster timeline with fewer people-hours.
+      - None of the data providers were nervous to share their data; that wasn’t an issue at all. 
+Some people came to get their data published for the first time. 
+      - They did struggle a little bit because the data collection wasn’t focused, just all soil data. 
+They did not exactly know what their research question was or what they wanted to do with it.
+They believe that maybe not having that focus was a detriment.
+    - Additional struggles included finding network data all in one place and not having a strong research question, which made explanation, validation, and funding of the project harder.
+    - To reemphasize, Will stated that originally they only had the money for two meetings. However, they were able to stretch it into three. The group wanted to achieve something similar to the Israd dataset. Will wanted to interpret and organize all this data into a product first, and then they could all brainstorm the way in which they would want to use it. Overall, the money ran out quickly so it has moved on to mostly volunteer work due to the fact that synthesis takes so long. Will spoke about how COVID is making things harder, but eventually he would like to hold another meeting for the project. 
+
+
+```{r echo=FALSE, eval=FALSE}
+
+temp <- read_csv(file = '~/Dropbox (UFL)/Research/Collaborations/SoilDataModels/data-raw/SoDaH/Filtered_SOM_data.csv', n_max = 100)
+names(temp)
+
+Site_Key_location <- readxl::read_excel(path='~/Dropbox (UFL)/Research/Collaborations/SoilDataModels/data-raw/SoDaH/Site_KEY_V2.xlsx', sheet = 1)
+Site_Key_profile <- readxl::read_excel(path='~/Dropbox (UFL)/Research/Collaborations/SoilDataModels/data-raw/SoDaH/Site_KEY_V2.xlsx', sheet = 2)
+Site_Key_controlVocab <- readxl::read_excel(path='~/Dropbox (UFL)/Research/Collaborations/SoilDataModels/data-raw/SoDaH/Site_KEY_V2.xlsx', sheet = 3) %>%
+  pivot_longer(cols = everything(), values_drop_na = TRUE) %>%
+  arrange(name)
+```
+
+## Data model
+
+The SoDaH data product has a single data table with 165 columns.
+
+The SoDaH data key-key has 5 data tables (location, profile, layer, and fraction)  with between 5 and 108 columns.
+
+```{r ccrcn_dm, echo=FALSE, fig.height=10}
+
+# data_table <- columnDescription %>%
+#   rename('table' = 'data_table', 'column' = 'data_column') %>%
+#   mutate(key = data_type == 'id',
+#          ref = case_when(grepl('^study_id$', column) ~ 'Study Information',
+#                          grepl('^site_id$', column) ~ 'Site Level',
+#                          grepl('^core_id$', column) ~ 'Core Level',
+#                          grepl('^sample_id$', column) ~ "Soil Depth Series",
+#                          grepl('^funding_id$', column) ~ "Funding Sources",
+#                          TRUE ~ as.character(NA)),
+#          ref_col = case_when(grepl('^study_id$', column) ~ 'study_id',
+#                          grepl('^site_id$', column) ~ 'site_id',
+#                          grepl('^core_id$', column) ~ 'core_id',
+#                          grepl('^sample_id$', column) ~ "sample_id",
+#                          grepl('^funding_id$', column) ~ "funding_id",
+#                          TRUE ~ as.character(NA))) %>%
+#   mutate(ref = if_else(table == ref, as.character(NA), ref))
+# 
+# CCRCN_dm <- as.data_model(CCRCN_table)
+# 
+# #graph <- dm_create_graph(CCRCN_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only')
+# dm_render_graph(dm_create_graph(CCRCN_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only', graph_name='CC-RCN data model'))
+# 
+# dm_render_graph(dm_create_graph(CCRCN_dm, rankdir = "BT", col_attr = c('column'), view_type = 'all', graph_name='CC-RCN data model'))
+```
+
+
+## Acknowledgements
+
+Special thanks to Dr Will Wieder and Steve Earl for their time to conduct this interview.

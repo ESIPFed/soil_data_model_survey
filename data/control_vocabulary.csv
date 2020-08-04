@@ -233,15 +233,252 @@ ISCN3,state_province,Yap,Federated States of Micronesia
 ISCN3,state_province,Yucatan,Mexico
 ISCN3,state_province,Yukon,Canada
 ISCN3,yes_blank,yes,indicator present
-vanGestel2017,treatments,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)",NA
-vanGestel2017,soil.texture.class,"loamy, sandy, sandy clay loam etc.",NA
-vanGestel2017,trt,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)",NA
-vanGestel2017,remove,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values).",NA
-vanGestel2017,multi.year,"Yes or blank. If yes, the data extracted from a paper were data pooled across years.",NA
-vanGestel2017,plant,"Plant biomass. Options are related to aboveground (a), belowground (b), or whole plant (w)",NA
-vanGestel,trt,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)",NA
-vanGestel,remove,"Yes or No. If yes, the data are duplicated (e.g. if I had raw data versus mean values).",NA
-vanGestel,multi.year,"Yes or blank. If yes, the data extracted from a paper were data pooled across years.",NA
-vanGestel,input,"Plant biomass. Options are related to aboveground (a), belowground (b), or whole plant (w)",NA
+vanGestel2017,treatments,T,temperature (warming)
+vanGestel2017,treatments,H2O,irrigated
+vanGestel2017,treatments,D,Drought
+vanGestel2017,treatments,co2,elevated CO2
+vanGestel2017,treatments,clipping,biomass removal
+vanGestel2017,soil.texture.class,loamy,NA
+vanGestel2017,soil.texture.class,sandy,NA
+vanGestel2017,soil.texture.class,sandy clay loam,NA
+vanGestel2017,trt,T,temperature (warming)
+vanGestel2017,trt,H2O,irrigated
+vanGestel2017,trt,D,Drought
+vanGestel2017,trt,co2,elevated CO2
+vanGestel2017,trt,clipping,biomass removal
+vanGestel2017,remove,Yes,the data are duplicated (e.g. if I had raw data versus mean values)
+vanGestel2017,remove,No,the data are not duplicated
+vanGestel2017,multi.year,Yes,the data extracted from a paper were data pooled across years.
+vanGestel2017,multi.year,blank,the data extracted from a paper were not data pooled across years.
+vanGestel2017,input,a,aboveground
+vanGestel2017,input,b,belowground
+vanGestel2017,input,w,whole plant
+vanGestel,trt,T,temperature (warming)
+vanGestel,trt,H2O,irrigated
+vanGestel,trt,D,Drought
+vanGestel,trt,co2,elevated CO2
+vanGestel,trt,clipping,biomass removal
+vanGestel,remove,Yes,the data are duplicated (e.g. if I had raw data versus mean values)
+vanGestel,remove,No,the data are not duplicated
+vanGestel,multi.year,Yes,the data extracted from a paper were data pooled across years.
+vanGestel,multi.year,blank,the data extracted from a paper were not data pooled across years.
+vanGestel,input,a,aboveground
+vanGestel,input,b,belowground
+vanGestel,input,w,whole plant
 vanGestel,treatments,The applied treatments (in a multifactorial study it was indicated by the highest level: e.g. T x H2O x N (fertilization),NA
-vanGestel,soil.texture.class,"Yes or blank. If yes, the data extracted from a paper were data pooled across years.",NA
+vanGestel,soil.texture.class,loamy,NA
+vanGestel,soil.texture.class,sandy,NA
+vanGestel,soil.texture.class,sandy clay loam,NA
+CCRCN,corresponding_author,TRUE,The author should be contacted with any further questions
+CCRCN,corresponding_author,FALSE,The author should not be contacted with any further questions.
+CCRCN,publication_type,article,Journal article
+CCRCN,publication_type,book,Book
+CCRCN,publication_type,mastersthesis,Master's Thesis
+CCRCN,publication_type,misc,Miscellaneous publications such as online datasets
+CCRCN,publication_type,phdthesis,PhD thesis or dissertation
+CCRCN,publication_type,techreport,Technical report
+CCRCN,publication_type,unpublished,Unpublished source.
+CCRCN,coring_method,cryo core,A technique involving collecting a core by freezing soil using liquid nitrogen to a copper tube
+CCRCN,coring_method,gouge auger,"A half cylinder coring device in which the coring section is open, not sealed off by a fin"
+CCRCN,coring_method,hargas corer,"A large diameter (>10 cm) coring device consisting of a tube, piston, and a cutting head"
+CCRCN,coring_method,mcauley corer,A half cylinder coring device with the coring section sealed off by a fin attached to a rotating pivot point
+CCRCN,coring_method,mccaffrey peat cutter,U-shaped blade that extracts a core by cutting down through peat
+CCRCN,coring_method,none specified,No coring device was specified
+CCRCN,coring_method,other shallow corer,Any other type of coring device typically taking cores shallower than 30 centimeters
+CCRCN,coring_method,piston corer,A device that extrudes core into tube upward with a plunger
+CCRCN,coring_method,push core,Any number of coring types involving driving a tube into the sediment to recover a core
+CCRCN,coring_method,pvc and hammer,PVC pipe was driven into the sediment with a hammer to recover a core
+CCRCN,coring_method,russian corer,A half cylinder coring device with the coring section sealed off by a fin attached to a rotating pivot point
+CCRCN,coring_method,vibracore,"A technique involving collecting a core by sinking a continuous pipe into sediment attaching a source of vibration, then recovering using a winch and pulley"
+CCRCN,coring_method,surface sample,A technique involving collecting a core shallower than ~5 cm using a circular metal cutter.
+CCRCN,roots_flag,roots and rhizomes included,Roots and rhizomes were included in dry bulk density and or organic matter and carbon measurements
+CCRCN,roots_flag,roots and rhizomes separated,Roots and rhizomes were separated from soil before dry bulk density and or organic matter and carbon measurements.
+CCRCN,sediment_sieved_flag,sediment sieved,Sediment was sieved prior to analysis for organics
+CCRCN,sediment_sieved_flag,sediment not sieved,Sediment was not sieved prior to analysis for organics.
+CCRCN,compaction_flag,compaction qualified,Compaction was at least qualified and noted by the authors
+CCRCN,compaction_flag,compaction quantified,Compaction was quantified and corrected for in core based measurements
+CCRCN,compaction_flag,corer limits compaction,Authors specified that the coring device's design minimized compaction
+CCRCN,compaction_flag,no obvious compaction,Authors observed no obvious compaction
+CCRCN,compaction_flag,not specified,Compaction was not specified.
+CCRCN,dry_bulk_density_flag,air dried to constant mass,Methodology specified that samples were air dried to a constant mass
+CCRCN,dry_bulk_density_flag,modeled,"Bulk density was not measured, but was modeled from loss on ignition and assumptions about the particle densities of organic and inorganic matter"
+CCRCN,dry_bulk_density_flag,freeze dried,Bulk density was measured on freeze dried samples
+CCRCN,dry_bulk_density_flag,not specified,No additional details regarding bulk density methodology were provided
+CCRCN,dry_bulk_density_flag,removed non structural water,"Bulk density methodology did not specify drying temperature or length, only that non-strucural water was removed"
+CCRCN,dry_bulk_density_flag,time approximate,Bulk density time recorded herin is an approximate estimate
+CCRCN,dry_bulk_density_flag,to constant mass,"Bulk density methodology did not specify drying temperature or length, only that samples were dried to a constant mass"
+CCRCN,loss_on_ignition_flag,time approximate,Loss on ignition time recorded herein is an approximate estimate
+CCRCN,loss_on_ignition_flag,not specified,No additional details regarding loss on ignition methodology or time were provided
+CCRCN,carbon_measured_or_modeled,measured,Fraction carbon was measured as opposed to modeled
+CCRCN,carbon_measured_or_modeled,modeled,Fraction carbon was modeled as opposed to measured.
+CCRCN,carbonates_removed,FALSE,Carbonates were not removed before measuring organic carbon
+CCRCN,carbonates_removed,TRUE,Carbonates were removed before measuring organic carbon.
+CCRCN,carbonate_removal_method,direct acid treatment,Carbonates were removed using direct application of dilute acid
+CCRCN,carbonate_removal_method,acid fumigation,Carbonates were removed by fumigating with concentrated acid
+CCRCN,carbonate_removal_method,low carbonate soil,Organic carbon fraction was measured without removing carbonates assuming carbonate content of the soil type was minimal
+CCRCN,carbonate_removal_method,carbonates not removed,Carbonates were not removed and low carbonate soil was not specified
+CCRCN,carbonate_removal_method,none specified,Carbonate removal methodology was not specified.
+CCRCN,fraction_carbon_method,Craft regression,"Used regression model from Craft et al., 1991, Estuaries, to predict fraction carbon as a function of fraction organic matter"
+CCRCN,fraction_carbon_method,EA,Each sample presented was measured using Elemental Analysis
+CCRCN,fraction_carbon_method,Fourqurean regression,"Used regression model from Fourqurean et al., 2012, Nature Geoscience, to predict fraction carbon as a function of fraction organic matter"
+CCRCN,fraction_carbon_method,Holmquist regression,"Used regression model from Holmquist et al., 2018, Scientific Reports, to predict fraction carbon as a function of fraction organic matter"
+CCRCN,fraction_carbon_method,kjeldahl digestion,Each sample was measured kjeldahl digestion method
+CCRCN,fraction_carbon_method,local regression,A regression model fit using a subset of measurements was used to predict fraction carbon as a function of fraction organic matter
+CCRCN,fraction_carbon_method,not specified,No additional details were provided regarding fraction carbon methodologies
+CCRCN,fraction_carbon_method,wet oxidation,Each sample was measured using a wet oxidation method.
+CCRCN,fraction_carbon_type,organic carbon,Author specified that fraction carbon measurements were of organic carbon
+CCRCN,fraction_carbon_type,total carbon,Author specified that fraction carbon measurements were of total carbon.
+CCRCN,cs137_counting_method,alpha,Alpha counting method used
+CCRCN,cs137_counting_method,gamma,Gamma counting method used.
+CCRCN,pb210_counting_method,alpha,Alpha counting method used
+CCRCN,pb210_counting_method,gamma,Gamma counting method used.
+CCRCN,excess_pb210_rate,mass accumulation,Excess 210Pb modeled using mass accumulation rate
+CCRCN,excess_pb210_rate,accretion,Excess 210Pb modeled using vertical accretion rate.
+CCRCN,excess_pb210_model,CRS,Constant rate of supply model used
+CCRCN,excess_pb210_model,CIC,Constant initial concentration model used
+CCRCN,excess_pb210_model,CFCS,Constant flux constant sedimentation model used.
+CCRCN,ra226_assumption,each sample,226Ra was measured for each sample
+CCRCN,ra226_assumption,total core,226Ra was measured for the total core
+CCRCN,ra226_assumption,at asymptote,asy
+CCRCN,c14_counting_method,AMS,Accelerator mass spectroscopy used
+CCRCN,c14_counting_method,beta,Beta counting used.
+CCRCN,age_depth_model_reference,YBP,"Year zero is defined as years before present, 1960 CE"
+CCRCN,age_depth_model_reference,CE,Year zero is set according to Common Era and Before Common Era standards
+CCRCN,age_depth_model_reference,core collection date,Year zero is set as the core's collection year.
+CCRCN,salinity_class,brine,>50 ppt
+CCRCN,salinity_class,saline,30-50 ppt
+CCRCN,salinity_class,brackish,0.5-30 ppt
+CCRCN,salinity_class,fresh,<0.5 ppt
+CCRCN,salinity_class,mixoeuhaline,30-40 ppt
+CCRCN,salinity_class,polyhaline,18-30 ppt
+CCRCN,salinity_class,mesohaline,5-18 ppt
+CCRCN,salinity_class,oligohaline,0.5-5 ppt.
+CCRCN,salinity_method,field observation,Salinity inferred by field observation such as vegetation
+CCRCN,salinity_method,measurement,Salinity observed from local instrument.
+CCRCN,vegetation_class,emergent,Describes wetlands dominated by persistent emergent vascular plants
+CCRCN,vegetation_class,scrub shrub,Describes wetlands dominated by woody vegetation < or equal to 5 meters in height
+CCRCN,vegetation_class,forested,Describes wetlands dominated by woody vegetation > 5 meters in height
+CCRCN,vegetation_class,forested to shrub,Dominated by forested to scrub/shrub biomass
+CCRCN,vegetation_class,seagrass,Describes tidal or subtidal communities dominated by rooted vascular plants.
+CCRCN,vegetation_method,field observation,Vegetation inferred by field observation
+CCRCN,vegetation_method,measurement,Vegetation measured by counts or plots.
+CCRCN,inundation_class,high,"Study-specific definition of an elevation relatively high in the tidal frame, typically defined by vegetation type"
+CCRCN,inundation_class,mid,"Study-specific definition of an elevation in the relative middle of the tidal frame, typically defined by vegetation type"
+CCRCN,inundation_class,low,"Study-specific definition of an elevation in relatively low in the tidal frame, typically defined by vegetation type"
+CCRCN,inundation_class,levee,"Study-specific definition of a relatively high elevation zone built up on the edge of a river, creek, or channel"
+CCRCN,inundation_class,back,Study-specific definition of a relatively low elevation zone behind a levee.
+CCRCN,inundation_method,field observation,Inundation inferred by field observation such as vegetation
+CCRCN,inundation_method,measurement,Inundation class assessed from elevation and nearby tide gauge or other similar method.
+CCRCN,core_position_method,RTK-GPS,Real-time kinematic global position system (GPS)
+CCRCN,core_position_method,handheld,Conventional Commercially available hand-held GPS
+CCRCN,core_position_method,other high resolution,Any other technique resulting in positional error < 1 meter
+CCRCN,core_position_method,other moderate resolution,Any other technique resulting in positional error < 30 meters
+CCRCN,core_position_method,other low resolution,Any other technique resulting in positional error > 30 meters.
+CCRCN,core_elevation_datum,NAVD88,"A gravity-based geodetic datum, North American Vertical Datum of 1988"
+CCRCN,core_elevation_datum,MSL,"A tidal datum, Mean Sea Level as measured against a local tide gauge"
+CCRCN,core_elevation_datum,MTL,"A tidal datum, Mean Tidal Level as measured against a local tide gauge"
+CCRCN,core_elevation_datum,MHW,"A tidal datum, Mean High Water as measured against a local tide gauge"
+CCRCN,core_elevation_datum,MHHW,"A tidal datum, Mean Higher High Water as measured against a local tide gauge"
+CCRCN,core_elevation_datum,MHHWS,"A tidal datum, Mean Higher High Water for Spring Tides as measured against a local tide gauge"
+CCRCN,core_elevation_datum,MLW,"A tidal datum, Mean Low Water as measured against a local tide gauge"
+CCRCN,core_elevation_datum,MLLW,"A tidal datum, Mean Lower Low Water as measured against a local tide gauge."
+CCRCN,core_elevation_method,RTK-GPS,Real-time kinematic global position system (GPS)
+CCRCN,core_elevation_method,other high resolution,Any other technique resulting in positional error < 5 cm of random error
+CCRCN,core_elevation_method,LiDAR,Handheld GPS matched to lidar-based digital elevation model
+CCRCN,core_elevation_method,DEM,Handheld GPS matched to another digital elevation model
+CCRCN,core_elevation_method,other low resolution,Any other technique resulting in positional error > 5 cm of random error.
+CCRCN,salinity_class,estuarine C-CAP,5-35 parts per thousand salinity (ppt) according to the coastal change analysis program
+CCRCN,salinity_class,estuarine,0.5-35 ppt according to most definitions
+CCRCN,salinity_class,palustrine C-CAP,< 5 ppt according to the coastal change analysis program
+CCRCN,core_length_flag,core depth limited by length of corer,The total depth of the core was limited by the length of the coring device
+CCRCN,core_length_flag,core depth represents deposit depth,Authors report that the depth of the core represents the depth of the wetland soil deposit
+CCRCN,core_length_flag,not specified,Authors did not specify whether or not the depth of the core represents the depth of the wetland soil deposit.
+CCRCN,marker_type,artificial horizon,"Horizon was added to the surface artificially by using materials such as feldspar, glitter, or rare earth elements"
+CCRCN,marker_type,pollen,"Pollen analysis was used to tie horizon to the timing of vegetation change such as the arrival of invasives, or the beginning of local agriculture"
+CCRCN,marker_type,pollution,Chemical analysis was used to tie the horizon to the timing of a pollution event
+CCRCN,marker_type,tsunami,Sediment analysis was used to tie the horizon to the timing of a tsunami event.
+CCRCN,impact_class,tidally restricted,Tidal flow is muted or blocked by built structures
+CCRCN,impact_class,impounded,"Water level is raised artificially by a tidal restriction, resulting in ponding of water on the wetland and or upland surface"
+CCRCN,impact_class,managed impounded,"Wetland is impounded seasonally, and other times natural or semi natural hydrology occurs"
+CCRCN,impact_class,ditched,Tidal hydrology is altered because artificial ditches have been cut to promote tidal flooding and drainage
+CCRCN,impact_class,diked and drained,"The wetland has been diked and drained, with or without flapper gates, pumping, or other means"
+CCRCN,impact_class,farmed,Managed impoundment or drainage in which wetland has been converted to agricultural land
+CCRCN,impact_class,tidally restored,Tidal flow has been restored by removing an artificial obstruction
+CCRCN,impact_class,revegetated,Wetland vegetation has been reintroduced by replanting on unvegetated surfaces
+CCRCN,impact_class,invasive plants removed,Natural plant communities have been restored by the active removal of invasive plant species
+CCRCN,impact_class,invasive herbivores removed,Tidal wetland vegetation has been managed by the removal of invasive herbivores
+CCRCN,impact_class,sediment added,Elevation has been managed by artificially adding sediment to the site using techniques such as thin layering or sediment diversion
+CCRCN,impact_class,wetlands built,Constructed wetland using sediments such as dredge spoils or other sediment source.
+SIDb_restructured,landCover,bare,NA
+SIDb_restructured,landCover,cultivated,NA
+SIDb_restructured,landCover,forest,NA
+SIDb_restructured,landCover,rangeland/grassland,NA
+SIDb_restructured,landCover,shrubland,NA
+SIDb_restructured,landCover,urban,NA
+SIDb_restructured,landCover,wetlands built,NA
+SIDb_restructured,landCover,tundra,NA
+SIDb_restructured,soilTaxonomy_classificationSystem,USDA,United States Department of Agriculture
+SIDb_restructured,soilTaxonomy_classificationSystem,FAO,The Food and Agriculture Organization of the United Nations
+SIDb_restructured,soilTaxonomy_classificationSystem,WRB,The World Reference Base
+SIDb_restructured,permafrost_permafrostExist,Yes,permafrost must exist at the site
+SIDb_restructured,permafrost_permafrostExist,blank,permafrost does not exist at the site
+SIDb_restructured,soilTaxonomy_surfaceAtm,yes,zero is atmospheric interface
+SIDb_restructured,soilTaxonomy_surfaceAtm,blank,zero is organic/mineral interface
+SIDb_restructured,samplePreparation_intactCore.logical,yes,NA
+SIDb_restructured,samplePreparation_intactCore.logical,no,NA
+SIDb_restructured,samplePreparation_rootPicking,yes,NA
+SIDb_restructured,samplePreparation_rootPicking,no,NA
+SIDb_restructured,depthInfo_surfaceAtm,zero is atmospheric interface,NA
+SIDb_restructured,depthInfo_surfaceAtm,zero is organic/mineral interface,NA
+SIDb_restructured,samplePreparation_sieving,no,NA
+SIDb_restructured,samplePreparation_sieving,mesh size,mesh size in mm
+SIDb_restructured,samplePreparation_rockPicking,yes,NA
+SIDb_restructured,samplePreparation_rockPicking,no,NA
+SIDb_restructured,anaerobic,Yes,headspace flushed with N2 or He
+SIDb_restructured,anaerobic,blank,aerobic
+SIDb_restructured,moisture_units,percentGWC,NA
+SIDb_restructured,moisture_units,percentFieldCapacity,NA
+SIDb_restructured,moisture_units,percentWaterFilledPoreSpace,NA
+SIDb_restructured,replicates_type,field,NA
+SIDb_restructured,replicates_type,lab,NA
+SIDb_restructured,samplePreparation_intactCore.string,yes,NA
+SIDb_restructured,samplePreparation_intactCore.string,no,NA
+SIDb_restructured,moisture_value,blank,"moisture is an experimental treatment with multiple levels, specify in variables section"
+SIDb_restructured,samplePreparation_sieving.num,no,NA
+SIDb_restructured,samplePreparation_sieving.num,mesh size,mesh size in mm
+SIDb_restructured,elevatedCO2,control,NA
+SIDb_restructured,elevatedCO2,elevated,NA
+SIDb_restructured,carbonUnits,percent,NA
+SIDb_restructured,carbonUnits,g gSoil-1,NA
+SIDb_restructured,carbonUnits,mg gSoil-1,NA
+SIDb_restructured,carbonUnits,microg gSoil-1,NA
+SIDb_restructured,nitrogenUnits,percent,NA
+SIDb_restructured,nitrogenUnits,g gSoil-1,NA
+SIDb_restructured,nitrogenUnits,mg gSoil-1,NA
+SIDb_restructured,nitrogenUnits,microg gSoil-1,NA
+SIDb_restructured,fieldWarming,control,NA
+SIDb_restructured,fieldWarming,warming,NA
+SIDb_restructured,burn,burned,NA
+SIDb_restructured,burn,unburned,NA
+SIDb_restructured,acidic,acidic,NA
+SIDb_restructured,acidic,unacidic,NA
+SIDb_restructured,minOrg,mineral soil,NA
+SIDb_restructured,minOrg,organic soil,NA
+SIDb_restructured,drainage,wellDrained,NA
+SIDb_restructured,drainage,modWellDrained,NA
+SIDb_restructured,drainage,poorlyDrained,NA
+SIDb_restructured,gasMeasured,blank,CO2
+SIDb_restructured,gasMeasured,blank,blank if multiple gases measured and specify in variables section
+SIDb_restructured,statistic,blank,mean values
+SIDb_restructured,statistic,SD,standard deviation
+SIDb_restructured,statistic,SE,standard error
+SIDb_restructured,statistic,none,single rep
+LTERWG_Filtered_SOM,control_sample,TRUE,sample is a control sample
+LTERWG_Filtered_SOM,control_sample,FALSE,sample is not a control sample
+LTERWG_Filtered_SOM,veg_note_profile,species names,type of species present at site
+LTERWG_Filtered_SOM,time_series,yes,It is a time series
+LTERWG_Filtered_SOM,time_series,no,it is not a time series
+LTERWG_Filtered_SOM,experiments,no,it is not an experimental study
+LTERWG_Filtered_SOM,experiments,yes,it is an experimental study
+LTERWG_Filtered_SOM,gradient,yes,it is gradient
+LTERWG_Filtered_SOM,gradient,no,it is not gradient
