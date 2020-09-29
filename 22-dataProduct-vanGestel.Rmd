@@ -15,12 +15,12 @@ controlVocab <- dataDescription.ls$control_vocabulary %>%
 These are notes from the June 2020 interview with Dr Natasja van Gestel.
 
 1) Why did you start this study?
-    - There was a DOE funded project during van Gestel's postdoc where it became obvious the modeling project would benifit form a more robust data set for parameterization. This became an ongoing project over the past 5 years.
+    - There was a DOE funded project during van Gestel's postdoc where it became obvious the modeling project would benefit form a more robust data set for parameterization. This became an ongoing project over the past 5 years.
 2) Describe your workflow for ingesting data sets?
-    - Data is extract from the published litterature, generally though transcription of points recovered from figures or published tables.
-    - Studies are selected based on availabilty of soil carbon, and an attempt is made to capture all the data associated with these studies.
+    - Data is extract from the published literature, generally though transcription of points recovered from figures or published tables.
+    - Studies are selected based on availability of soil carbon, and an attempt is made to capture all the data associated with these studies.
     - This data is then entered into an Excel spreadsheet, fed through a series of scripts to automate gap-filling, and then generate data products relevant to modeling studies.
-    - van Gestel and her lab were responsible for everything from the intial design of the spreadsheets, to data recovery and post-processing. 
+    - van Gestel and her lab were responsible for everything from the initial design of the spreadsheets, to data recovery and post-processing. 
     - There are currently over 100 studies in the database.
 3) What decisions did you make to arrive at this workflow?
     - In general the design of the spreadsheet has not changed significantly over the years. To design the spreadsheet van Gestel tried to think mechanistically about the processes that control carbon cycling in soils and create an exhaustive list of variables to capture from the literature. This exhaustive template was then pruned to create more restricted data products as needed.
