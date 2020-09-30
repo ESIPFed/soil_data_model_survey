@@ -1,18 +1,25 @@
 --- 
 title: 'Soil Data Models: a review'
-author: 
-  - name: "K Todd-Brown (ktoddbrown@ufl.edu)"
-  - name: "L Heran, K Frederick, M Younger"
-  - name: "L Nave, N van Gestel, C Scheadel, C Sierra, C Lawrence, A Hoyt, S Stoner, J Beem-Miller, K Heckman, S von Fromm, Á Kuhnen, J Holmquist, W Wieder, S Earl, T Crowther"
+author:
+- name: K Todd-Brown (ktoddbrown@ufl.edu)
+- name: L Heran, K Frederick, M Younger
+- name: L Nave, N van Gestel, C Scheadel, C Sierra, C Lawrence, A Hoyt, S Stoner,
+    J Beem-Miller, K Heckman, S von Fromm, Á Kuhnen, J Holmquist, W Wieder, S Earl,
+    T Crowther
 date: "`r format(Sys.Date(), '%Y %B %d')`"
-site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook
+description: 'This is the compiled report out of the ESIP Labs (2020) project: Survey
+  of data models used in soil meta analysis'
 documentclass: book
-bibliography: [references.bib, packages.bib]
-biblio-style: apalike
+link-citations: yes
 nocite: |
   @Crowther2016, @vanGestel2018, @Lawrence2020
-link-citations: yes
-description: "This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis"
+bibliography:
+- references.bib
+- packages.bib
+site: bookdown::bookdown_site
+biblio-style: apalike
 ---
 
 # Introduction

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>References | Soil Data Models: a review</title>
+  <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="References | Soil Data Models: a review" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="References | Soil Data Models: a review" />
+  
+  <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="orginal-proposal.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="iscn-record.html"><a href="iscn-record.html"><i class="fa fa-check"></i><b>2</b> ISCN record</a><ul>
+<li class="chapter" data-level="2.1" data-path="iscn-record.html"><a href="iscn-record.html#june-interview"><i class="fa fa-check"></i><b>2.1</b> June interview</a></li>
+<li class="chapter" data-level="2.2" data-path="iscn-record.html"><a href="iscn-record.html#iscn-3-and-template-description"><i class="fa fa-check"></i><b>2.2</b> ISCN 3 and template description</a></li>
+<li class="chapter" data-level="2.3" data-path="iscn-record.html"><a href="iscn-record.html#acknowledgements"><i class="fa fa-check"></i><b>2.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="van-gestel-record.html"><a href="van-gestel-record.html"><i class="fa fa-check"></i><b>3</b> van Gestel record</a><ul>
+<li class="chapter" data-level="3.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#june-interview-1"><i class="fa fa-check"></i><b>3.1</b> June Interview</a></li>
+<li class="chapter" data-level="3.2" data-path="van-gestel-record.html"><a href="van-gestel-record.html#vangestel-specific"><i class="fa fa-check"></i><b>3.2</b> vanGestel specific</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#data-model"><i class="fa fa-check"></i><b>3.2.1</b> Data model</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="van-gestel-record.html"><a href="van-gestel-record.html#acknowledgements-1"><i class="fa fa-check"></i><b>3.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sidb-record.html"><a href="sidb-record.html"><i class="fa fa-check"></i><b>4</b> SIDb record</a><ul>
+<li class="chapter" data-level="4.1" data-path="sidb-record.html"><a href="sidb-record.html#june-interview-notes"><i class="fa fa-check"></i><b>4.1</b> June interview notes</a></li>
+<li class="chapter" data-level="4.2" data-path="sidb-record.html"><a href="sidb-record.html#sidb-feature-summary"><i class="fa fa-check"></i><b>4.2</b> SIDb feature summary</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="sidb-record.html"><a href="sidb-record.html#data-model-1"><i class="fa fa-check"></i><b>4.2.1</b> Data model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="sidb-record.html"><a href="sidb-record.html#acknowledgements-2"><i class="fa fa-check"></i><b>4.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="israd.html"><a href="israd.html"><i class="fa fa-check"></i><b>5</b> ISRaD</a><ul>
+<li class="chapter" data-level="5.1" data-path="israd.html"><a href="israd.html#june-2020-interview"><i class="fa fa-check"></i><b>5.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="5.2" data-path="israd.html"><a href="israd.html#israd-data-model"><i class="fa fa-check"></i><b>5.2</b> ISRaD data model</a></li>
+<li class="chapter" data-level="5.3" data-path="israd.html"><a href="israd.html#acknowledgements-3"><i class="fa fa-check"></i><b>5.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cc-rcn.html"><a href="cc-rcn.html"><i class="fa fa-check"></i><b>6</b> CC-RCN</a><ul>
+<li class="chapter" data-level="6.1" data-path="cc-rcn.html"><a href="cc-rcn.html#june-2020-interview-1"><i class="fa fa-check"></i><b>6.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="6.2" data-path="cc-rcn.html"><a href="cc-rcn.html#cc-rcn-specific"><i class="fa fa-check"></i><b>6.2</b> CC-RCN specific</a></li>
+<li class="chapter" data-level="6.3" data-path="cc-rcn.html"><a href="cc-rcn.html#acknowledgement"><i class="fa fa-check"></i><b>6.3</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="crowther.html"><a href="crowther.html"><i class="fa fa-check"></i><b>7</b> Crowther</a><ul>
+<li class="chapter" data-level="7.1" data-path="crowther.html"><a href="crowther.html#july-2020-interview-record"><i class="fa fa-check"></i><b>7.1</b> July 2020 interview record</a></li>
+<li class="chapter" data-level="7.2" data-path="crowther.html"><a href="crowther.html#feature-summary"><i class="fa fa-check"></i><b>7.2</b> Feature summary</a></li>
+<li class="chapter" data-level="7.3" data-path="crowther.html"><a href="crowther.html#data-model-2"><i class="fa fa-check"></i><b>7.3</b> Data Model</a></li>
+<li class="chapter" data-level="7.4" data-path="crowther.html"><a href="crowther.html#acknowledgement-1"><i class="fa fa-check"></i><b>7.4</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sodah.html"><a href="sodah.html"><i class="fa fa-check"></i><b>8</b> SoDaH</a><ul>
+<li class="chapter" data-level="8.1" data-path="sodah.html"><a href="sodah.html#july-2020-interview"><i class="fa fa-check"></i><b>8.1</b> July 2020 interview</a></li>
+<li class="chapter" data-level="8.2" data-path="sodah.html"><a href="sodah.html#data-model-3"><i class="fa fa-check"></i><b>8.2</b> Data model</a></li>
+<li class="chapter" data-level="8.3" data-path="sodah.html"><a href="sodah.html#acknowledgements-4"><i class="fa fa-check"></i><b>8.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="community-survey.html"><a href="community-survey.html"><i class="fa fa-check"></i><b>9</b> Community Survey</a><ul>
+<li class="chapter" data-level="9.1" data-path="community-survey.html"><a href="community-survey.html#responses"><i class="fa fa-check"></i><b>9.1</b> Responses</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="community-survey.html"><a href="community-survey.html#why-do-you-compile-data-products-what-is-the-question-you-are-looking-to-answer"><i class="fa fa-check"></i><b>9.1.1</b> Why do you compile data product(s)? What is the question you are looking to answer?</a></li>
+<li class="chapter" data-level="9.1.2" data-path="community-survey.html"><a href="community-survey.html#how-do-you-find-your-data-sources"><i class="fa fa-check"></i><b>9.1.2</b> How do you find your data sources?</a></li>
+<li class="chapter" data-level="9.1.3" data-path="community-survey.html"><a href="community-survey.html#what-went-well-with-how-you-compiled-the-data-product-or-what-do-you-wish-gone-better"><i class="fa fa-check"></i><b>9.1.3</b> What went well with how you compiled the data product or what do you wish gone better?</a></li>
+<li class="chapter" data-level="9.1.4" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-as-well-as-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>9.1.4</b> What is the ideal process for data harmonization? For the purposes of this question, this includes gap-filling, unit conversion, as well as standardizing headers and table structure.</a></li>
+<li class="chapter" data-level="9.1.5" data-path="community-survey.html"><a href="community-survey.html#do-you-want-your-data-to-be-compiled-in-a-data-product-why-or-why-not"><i class="fa fa-check"></i><b>9.1.5</b> Do you want your data to be compiled in a data product? Why or why not?</a></li>
+<li class="chapter" data-level="9.1.6" data-path="community-survey.html"><a href="community-survey.html#what-is-your-main-hurdle-to-contributing-to-data-products-and-to-other-people-using-your-data"><i class="fa fa-check"></i><b>9.1.6</b> What is your main hurdle to contributing to data products and to other people using your data?</a></li>
+<li class="chapter" data-level="9.1.7" data-path="community-survey.html"><a href="community-survey.html#what-do-you-wish-was-better-understood-about-how-your-data-is-collected-or-should-be-used"><i class="fa fa-check"></i><b>9.1.7</b> What do you wish was better understood about how your data is collected or should be used?</a></li>
+<li class="chapter" data-level="9.1.8" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-from-a-data-provider-prospective-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>9.1.8</b> What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html"><i class="fa fa-check"></i><b>10</b> June Comparision of data model structures</a><ul>
+<li class="chapter" data-level="10.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#introduction-and-goals"><i class="fa fa-check"></i><b>10.1</b> Introduction and goals</a></li>
+<li class="chapter" data-level="10.2" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#individual-pi-studies-were-smaller."><i class="fa fa-check"></i><b>10.2</b> Individual PI studies were smaller.</a></li>
+<li class="chapter" data-level="10.3" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#vocabulary-across-studies-were-not-obviously-harmonizable."><i class="fa fa-check"></i><b>10.3</b> Vocabulary across studies were not obviously harmonizable.</a></li>
+<li class="chapter" data-level="10.4" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#study-feature-summary"><i class="fa fa-check"></i><b>10.4</b> Study feature summary</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#unique-features"><i class="fa fa-check"></i><b>10.4.1</b> Unique features</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#inital-ontology-search-for-relevant-control-vocabulary."><i class="fa fa-check"></i><b>10.5</b> Inital ontology search for relevant control vocabulary.</a></li>
+<li class="chapter" data-level="10.6" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#next-steps"><i class="fa fa-check"></i><b>10.6</b> Next steps</a><ul>
+<li class="chapter" data-level="10.6.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#interview-questions"><i class="fa fa-check"></i><b>10.6.1</b> Interview questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="orginal-proposal.html"><a href="orginal-proposal.html"><i class="fa fa-check"></i><b>11</b> Orginal proposal</a><ul>
+<li class="chapter" data-level="11.1" data-path="orginal-proposal.html"><a href="orginal-proposal.html#summary"><i class="fa fa-check"></i><b>11.1</b> Summary</a></li>
+<li class="chapter" data-level="11.2" data-path="orginal-proposal.html"><a href="orginal-proposal.html#background"><i class="fa fa-check"></i><b>11.2</b> Background</a></li>
+<li class="chapter" data-level="11.3" data-path="orginal-proposal.html"><a href="orginal-proposal.html#method"><i class="fa fa-check"></i><b>11.3</b> Method</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Soil Data Models: a review</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<p>The following packages were used in this study: <span class="citation">(R Core Team <a href="#ref-R-base">2019</a>, <span class="citation">@R-bookdown</span>, <span class="citation">@R-datamodelr</span>, <span class="citation">@R-distill</span>, <span class="citation">@R-dplyr</span>, <span class="citation">@R-DT</span>, <span class="citation">@R-forcats</span>, <span class="citation">@R-ggplot2</span>, <span class="citation">@R-knitr</span>, <span class="citation">@R-plyr</span>, <span class="citation">@R-purrr</span>, <span class="citation">@R-readr</span>, <span class="citation">@R-rmarkdown</span>, <span class="citation">@R-stringr</span>, <span class="citation">@R-tibble</span>, <span class="citation">@R-tidyr</span>, <span class="citation">@R-tidyverse</span>, <span class="citation">@bookdown2016</span>, <span class="citation">@ggplot22016</span>, <span class="citation">@knitr2015</span>, <span class="citation">@knitr2014</span>, <span class="citation">@plyr2011</span>, <span class="citation">@rmarkdown2018</span>, <span class="citation">@tidyverse2019</span>)</span></p>
+
+<div id="refs" class="references">
+<div>
+<p>Allaire, JJ, Rich Iannone, and Yihui Xie. 2020. <em>Distill: ’R Markdown’ Format for Scientific and Technical Writing</em>. <a href="https://CRAN.R-project.org/package=distill">https://CRAN.R-project.org/package=distill</a>.</p>
+</div>
+<div>
+<p>Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2019. <em>Rmarkdown: Dynamic Documents for R</em>. <a href="https://CRAN.R-project.org/package=rmarkdown">https://CRAN.R-project.org/package=rmarkdown</a>.</p>
+</div>
+<div>
+<p>Bergant, Darko. 2017. <em>Datamodelr: Define and Plot Data Model Diagrams</em>. <a href="https://github.com/bergant/datamodelr">https://github.com/bergant/datamodelr</a>.</p>
+</div>
+<div>
+<p>Crowther, T. W., K. E. O. Todd-Brown, C. W. Rowe, W. R. Wieder, J. C. Carey, M. B. Machmuller, B. L. Snoek, et al. 2016. “Quantifying Global Soil Carbon Losses in Response to Warming.” <em>Nature</em> 540 (7631). Springer Science; Business Media LLC: 104–8. <a href="https://doi.org/10.1038/nature20150">https://doi.org/10.1038/nature20150</a>.</p>
+</div>
+<div>
+<p>Henry, Lionel, and Hadley Wickham. 2020. <em>Purrr: Functional Programming Tools</em>. <a href="https://CRAN.R-project.org/package=purrr">https://CRAN.R-project.org/package=purrr</a>.</p>
+</div>
+<div>
+<p>Lawrence, Corey R., Jeffrey Beem-Miller, Alison M. Hoyt, Grey Monroe, Carlos A. Sierra, Shane Stoner, Katherine Heckman, et al. 2020. “An Open-Source Database for the Synthesis of Soil Radiocarbon Data: International Soil Radiocarbon Database (ISRaD) Version 1.0.” <em>Earth System Science Data</em> 12 (1). Copernicus GmbH: 61–76. <a href="https://doi.org/10.5194/essd-12-61-2020">https://doi.org/10.5194/essd-12-61-2020</a>.</p>
+</div>
+<div>
+<p>Müller, Kirill, and Hadley Wickham. 2020. <em>Tibble: Simple Data Frames</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>.</p>
+</div>
+<div>
+<p>R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</p>
+</div>
+<div>
+<p>van Gestel, Natasja, Zheng Shi, Kees Jan van Groenigen, Craig W. Osenberg, Louise C. Andresen, Jeffrey S. Dukes, Mark J. Hovenden, et al. 2018. “Predicting Soil Carbon Loss with Warming.” <em>Nature</em> 554 (7693). Springer Science; Business Media LLC: E4–E5. <a href="https://doi.org/10.1038/nature25745">https://doi.org/10.1038/nature25745</a>.</p>
+</div>
+<div>
+<p>Wickham, Hadley. 2011. “The Split-Apply-Combine Strategy for Data Analysis.” <em>Journal of Statistical Software</em> 40 (1): 1–29. <a href="http://www.jstatsoft.org/v40/i01/">http://www.jstatsoft.org/v40/i01/</a>.</p>
+</div>
+<div>
+<p>———. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.</p>
+</div>
+<div>
+<p>———. 2019a. <em>Forcats: Tools for Working with Categorical Variables (Factors)</em>. <a href="https://CRAN.R-project.org/package=forcats">https://CRAN.R-project.org/package=forcats</a>.</p>
+</div>
+<div>
+<p>———. 2019b. <em>Plyr: Tools for Splitting, Applying and Combining Data</em>. <a href="https://CRAN.R-project.org/package=plyr">https://CRAN.R-project.org/package=plyr</a>.</p>
+</div>
+<div>
+<p>———. 2019c. <em>Stringr: Simple, Consistent Wrappers for Common String Operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.</p>
+</div>
+<div>
+<p>———. 2019d. <em>Tidyverse: Easily Install and Load the ’Tidyverse’</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.</p>
+</div>
+<div>
+<p>Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.</p>
+</div>
+<div>
+<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2020. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.</p>
+</div>
+<div>
+<p>Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2020. <em>Dplyr: A Grammar of Data Manipulation</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.</p>
+</div>
+<div>
+<p>Wickham, Hadley, and Lionel Henry. 2019. <em>Tidyr: Tidy Messy Data</em>. <a href="https://CRAN.R-project.org/package=tidyr">https://CRAN.R-project.org/package=tidyr</a>.</p>
+</div>
+<div>
+<p>Wickham, Hadley, Jim Hester, and Romain Francois. 2018. <em>Readr: Read Rectangular Text Data</em>. <a href="https://CRAN.R-project.org/package=readr">https://CRAN.R-project.org/package=readr</a>.</p>
+</div>
+<div>
+<p>Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In <em>Implementing Reproducible Computational Research</em>, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. <a href="http://www.crcpress.com/product/isbn/9781466561595">http://www.crcpress.com/product/isbn/9781466561595</a>.</p>
+</div>
+<div>
+<p>———. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.name/knitr/">https://yihui.name/knitr/</a>.</p>
+</div>
+<div>
+<p>———. 2016. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.</p>
+</div>
+<div>
+<p>———. 2019. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in R</em>. <a href="https://CRAN.R-project.org/package=knitr">https://CRAN.R-project.org/package=knitr</a>.</p>
+</div>
+<div>
+<p>———. 2020. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.</p>
+</div>
+<div>
+<p>Xie, Yihui, J.J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.</p>
+</div>
+<div>
+<p>Xie, Yihui, Joe Cheng, and Xianying Tan. 2020. <em>DT: A Wrapper of the Javascript Library ’Datatables’</em>. <a href="https://CRAN.R-project.org/package=DT">https://CRAN.R-project.org/package=DT</a>.</p>
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-R-base">
+<p>R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="orginal-proposal.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

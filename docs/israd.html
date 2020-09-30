@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 ISRaD | Soil Data Models: a review</title>
+  <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 ISRaD | Soil Data Models: a review" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 ISRaD | Soil Data Models: a review" />
+  
+  <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sidb-record.html"/>
+<link rel="next" href="cc-rcn.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="iscn-record.html"><a href="iscn-record.html"><i class="fa fa-check"></i><b>2</b> ISCN record</a><ul>
+<li class="chapter" data-level="2.1" data-path="iscn-record.html"><a href="iscn-record.html#june-interview"><i class="fa fa-check"></i><b>2.1</b> June interview</a></li>
+<li class="chapter" data-level="2.2" data-path="iscn-record.html"><a href="iscn-record.html#iscn-3-and-template-description"><i class="fa fa-check"></i><b>2.2</b> ISCN 3 and template description</a></li>
+<li class="chapter" data-level="2.3" data-path="iscn-record.html"><a href="iscn-record.html#acknowledgements"><i class="fa fa-check"></i><b>2.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="van-gestel-record.html"><a href="van-gestel-record.html"><i class="fa fa-check"></i><b>3</b> van Gestel record</a><ul>
+<li class="chapter" data-level="3.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#june-interview-1"><i class="fa fa-check"></i><b>3.1</b> June Interview</a></li>
+<li class="chapter" data-level="3.2" data-path="van-gestel-record.html"><a href="van-gestel-record.html#vangestel-specific"><i class="fa fa-check"></i><b>3.2</b> vanGestel specific</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#data-model"><i class="fa fa-check"></i><b>3.2.1</b> Data model</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="van-gestel-record.html"><a href="van-gestel-record.html#acknowledgements-1"><i class="fa fa-check"></i><b>3.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sidb-record.html"><a href="sidb-record.html"><i class="fa fa-check"></i><b>4</b> SIDb record</a><ul>
+<li class="chapter" data-level="4.1" data-path="sidb-record.html"><a href="sidb-record.html#june-interview-notes"><i class="fa fa-check"></i><b>4.1</b> June interview notes</a></li>
+<li class="chapter" data-level="4.2" data-path="sidb-record.html"><a href="sidb-record.html#sidb-feature-summary"><i class="fa fa-check"></i><b>4.2</b> SIDb feature summary</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="sidb-record.html"><a href="sidb-record.html#data-model-1"><i class="fa fa-check"></i><b>4.2.1</b> Data model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="sidb-record.html"><a href="sidb-record.html#acknowledgements-2"><i class="fa fa-check"></i><b>4.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="israd.html"><a href="israd.html"><i class="fa fa-check"></i><b>5</b> ISRaD</a><ul>
+<li class="chapter" data-level="5.1" data-path="israd.html"><a href="israd.html#june-2020-interview"><i class="fa fa-check"></i><b>5.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="5.2" data-path="israd.html"><a href="israd.html#israd-data-model"><i class="fa fa-check"></i><b>5.2</b> ISRaD data model</a></li>
+<li class="chapter" data-level="5.3" data-path="israd.html"><a href="israd.html#acknowledgements-3"><i class="fa fa-check"></i><b>5.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cc-rcn.html"><a href="cc-rcn.html"><i class="fa fa-check"></i><b>6</b> CC-RCN</a><ul>
+<li class="chapter" data-level="6.1" data-path="cc-rcn.html"><a href="cc-rcn.html#june-2020-interview-1"><i class="fa fa-check"></i><b>6.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="6.2" data-path="cc-rcn.html"><a href="cc-rcn.html#cc-rcn-specific"><i class="fa fa-check"></i><b>6.2</b> CC-RCN specific</a></li>
+<li class="chapter" data-level="6.3" data-path="cc-rcn.html"><a href="cc-rcn.html#acknowledgement"><i class="fa fa-check"></i><b>6.3</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="crowther.html"><a href="crowther.html"><i class="fa fa-check"></i><b>7</b> Crowther</a><ul>
+<li class="chapter" data-level="7.1" data-path="crowther.html"><a href="crowther.html#july-2020-interview-record"><i class="fa fa-check"></i><b>7.1</b> July 2020 interview record</a></li>
+<li class="chapter" data-level="7.2" data-path="crowther.html"><a href="crowther.html#feature-summary"><i class="fa fa-check"></i><b>7.2</b> Feature summary</a></li>
+<li class="chapter" data-level="7.3" data-path="crowther.html"><a href="crowther.html#data-model-2"><i class="fa fa-check"></i><b>7.3</b> Data Model</a></li>
+<li class="chapter" data-level="7.4" data-path="crowther.html"><a href="crowther.html#acknowledgement-1"><i class="fa fa-check"></i><b>7.4</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sodah.html"><a href="sodah.html"><i class="fa fa-check"></i><b>8</b> SoDaH</a><ul>
+<li class="chapter" data-level="8.1" data-path="sodah.html"><a href="sodah.html#july-2020-interview"><i class="fa fa-check"></i><b>8.1</b> July 2020 interview</a></li>
+<li class="chapter" data-level="8.2" data-path="sodah.html"><a href="sodah.html#data-model-3"><i class="fa fa-check"></i><b>8.2</b> Data model</a></li>
+<li class="chapter" data-level="8.3" data-path="sodah.html"><a href="sodah.html#acknowledgements-4"><i class="fa fa-check"></i><b>8.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="community-survey.html"><a href="community-survey.html"><i class="fa fa-check"></i><b>9</b> Community Survey</a><ul>
+<li class="chapter" data-level="9.1" data-path="community-survey.html"><a href="community-survey.html#responses"><i class="fa fa-check"></i><b>9.1</b> Responses</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="community-survey.html"><a href="community-survey.html#why-do-you-compile-data-products-what-is-the-question-you-are-looking-to-answer"><i class="fa fa-check"></i><b>9.1.1</b> Why do you compile data product(s)? What is the question you are looking to answer?</a></li>
+<li class="chapter" data-level="9.1.2" data-path="community-survey.html"><a href="community-survey.html#how-do-you-find-your-data-sources"><i class="fa fa-check"></i><b>9.1.2</b> How do you find your data sources?</a></li>
+<li class="chapter" data-level="9.1.3" data-path="community-survey.html"><a href="community-survey.html#what-went-well-with-how-you-compiled-the-data-product-or-what-do-you-wish-gone-better"><i class="fa fa-check"></i><b>9.1.3</b> What went well with how you compiled the data product or what do you wish gone better?</a></li>
+<li class="chapter" data-level="9.1.4" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-as-well-as-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>9.1.4</b> What is the ideal process for data harmonization? For the purposes of this question, this includes gap-filling, unit conversion, as well as standardizing headers and table structure.</a></li>
+<li class="chapter" data-level="9.1.5" data-path="community-survey.html"><a href="community-survey.html#do-you-want-your-data-to-be-compiled-in-a-data-product-why-or-why-not"><i class="fa fa-check"></i><b>9.1.5</b> Do you want your data to be compiled in a data product? Why or why not?</a></li>
+<li class="chapter" data-level="9.1.6" data-path="community-survey.html"><a href="community-survey.html#what-is-your-main-hurdle-to-contributing-to-data-products-and-to-other-people-using-your-data"><i class="fa fa-check"></i><b>9.1.6</b> What is your main hurdle to contributing to data products and to other people using your data?</a></li>
+<li class="chapter" data-level="9.1.7" data-path="community-survey.html"><a href="community-survey.html#what-do-you-wish-was-better-understood-about-how-your-data-is-collected-or-should-be-used"><i class="fa fa-check"></i><b>9.1.7</b> What do you wish was better understood about how your data is collected or should be used?</a></li>
+<li class="chapter" data-level="9.1.8" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-from-a-data-provider-prospective-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>9.1.8</b> What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html"><i class="fa fa-check"></i><b>10</b> June Comparision of data model structures</a><ul>
+<li class="chapter" data-level="10.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#introduction-and-goals"><i class="fa fa-check"></i><b>10.1</b> Introduction and goals</a></li>
+<li class="chapter" data-level="10.2" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#individual-pi-studies-were-smaller."><i class="fa fa-check"></i><b>10.2</b> Individual PI studies were smaller.</a></li>
+<li class="chapter" data-level="10.3" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#vocabulary-across-studies-were-not-obviously-harmonizable."><i class="fa fa-check"></i><b>10.3</b> Vocabulary across studies were not obviously harmonizable.</a></li>
+<li class="chapter" data-level="10.4" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#study-feature-summary"><i class="fa fa-check"></i><b>10.4</b> Study feature summary</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#unique-features"><i class="fa fa-check"></i><b>10.4.1</b> Unique features</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#inital-ontology-search-for-relevant-control-vocabulary."><i class="fa fa-check"></i><b>10.5</b> Inital ontology search for relevant control vocabulary.</a></li>
+<li class="chapter" data-level="10.6" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#next-steps"><i class="fa fa-check"></i><b>10.6</b> Next steps</a><ul>
+<li class="chapter" data-level="10.6.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#interview-questions"><i class="fa fa-check"></i><b>10.6.1</b> Interview questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="orginal-proposal.html"><a href="orginal-proposal.html"><i class="fa fa-check"></i><b>11</b> Orginal proposal</a><ul>
+<li class="chapter" data-level="11.1" data-path="orginal-proposal.html"><a href="orginal-proposal.html#summary"><i class="fa fa-check"></i><b>11.1</b> Summary</a></li>
+<li class="chapter" data-level="11.2" data-path="orginal-proposal.html"><a href="orginal-proposal.html#background"><i class="fa fa-check"></i><b>11.2</b> Background</a></li>
+<li class="chapter" data-level="11.3" data-path="orginal-proposal.html"><a href="orginal-proposal.html#method"><i class="fa fa-check"></i><b>11.3</b> Method</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Soil Data Models: a review</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="israd" class="section level1">
+<h1><span class="header-section-number">5</span> ISRaD</h1>
+<div id="june-2020-interview" class="section level2">
+<h2><span class="header-section-number">5.1</span> June 2020 interview</h2>
+<ol style="list-style-type: decimal">
+<li>Why did you start this study?
+<ul>
+<li>ISRaD started prior to 2015 as an informal discussion at the AGU Fall Meeting to address several questions around controlling factors of soil carbon stocks.</li>
+<li>This lead to a USGS, Powell Center proposal, focusing particularly on the role of mineralogy and fractionation to control soil carbon stocks. The original workshop intended to explore controls of carbon storage and persistence in soils. Part of the group had a more specific intent of looking at various proxies for mineral or metal stabilized carbon in soils. In the course of these discussions, radiocarbon and other isotope measurements were recognized as being important to address questions of timescales. These mineral and isotope focused questions guided the initial template development. The ISCN template was extended and modified with this in mind.
+<ul>
+<li>The ISCN template required extentions to address
+<ul>
+<li>missing fractionation schemes (template was entirely focused on bulk data)</li>
+<li>sparse mineralogy and exchangeable metal data.</li>
+<li>overly complicated factor fields describing land use and other variables</li>
+<li>overall extremely complicated and difficult to fill out template structure</li>
+</ul></li>
+<li>To address the above concerns, the Powell Center group spent considerable time revising and extending the ISCN template to include fraction information, simplifying land use description schemes, and generally trying to streamline the template.</li>
+<li>Some data sets were ingested using the template, mostly as test cases for template development.</li>
+</ul></li>
+<li>The Max Planck Institute for Biogeochemistry picked up the project in 2018, providing support for larger data ingestion efforts primarily driven by a desire to compare Earth system models to soil radiocarbon data.</li>
+</ul></li>
+<li>Describe your workflow for ingesting data sets?
+<ol style="list-style-type: decimal">
+<li>Enter data into the ISRaD template from (<a href="https://soilradiocarbon.org/contribute/" class="uri">https://soilradiocarbon.org/contribute/</a>)[<a href="https://soilradiocarbon.org/contribute/" class="uri">https://soilradiocarbon.org/contribute/</a>]
+<ul>
+<li>Either done by data provider (with assistant from MPI team)</li>
+<li>Or, if identified as a high value dataset, MPI teams will fill out template.</li>
+</ul></li>
+<li>Once the data is entered into the template, it can be QAQC-ed using scripts available from the R-package or through an online GUI.
+<ul>
+<li>This rscript uses a combination of controlled vocabulary, string matching, limits with quantitative data, and ensuring that the names and the keys match to check the submission.</li>
+</ul></li>
+<li>The data and output from the QAQC script is then sent to the ISRaD data coordinator via contact.</li>
+<li>The data coordinator then forwards the data for expert review to one of the 6 or 7 reviewers who make recommendations and changes. It then goes back and forth a number of times between the data submitter and reviewer.</li>
+<li>Once the data is vetted, it is ingested into the ISRaD data product.</li>
+</ol></li>
+<li>What decisions did you make to arrive at this workflow?
+<ul>
+<li>ISRaD wanted to develop a simpler data template within an open science framework.</li>
+<li>The revised template proved to still be challenging to fill out necessitating the review process.</li>
+</ul></li>
+<li>How would someone get a copy of the data in this study?
+<ul>
+<li>A person who wanted the data could go to the ISRaD website (soilradiocarbon.org) and go to the database tab where the data is available for download</li>
+<li>It is also available directly from the package</li>
+<li>The website is hosted off of the github repository</li>
+</ul></li>
+<li>What would you do differently if you had to start again?
+<ul>
+<li>Data model iteration and development is necessary but extremely challenging, especially as the data product grows</li>
+<li>Data templates are complicated to fill out, requiring time and training. You need both domain and data science skills.</li>
+<li>Make sure to start with the right team. Original project had soil scientists but did not have people who had strength in coding or database structure. There is a clear need for soil scientists with database training.</li>
+<li>Try to think more in advance about the template and its structure
+<ul>
+<li>Template was changed a lot while entering studies so they had to keep going back to old studies that they had already finished to find more information</li>
+<li>Actively identify the 15 studies that they cared most about and be more methodical</li>
+<li>Have a structure to work with ahead of time vs building the thing around the studies</li>
+</ul></li>
+<li>The soil science community needs to establish best practices background information for published students. Studies are occationally missing basic information like lat-lon location of sites.</li>
+<li>Unclear where the next home for the data product is as the current team moves on to their next phase in their careers.</li>
+</ul></li>
+<li>What would be the same?
+<ul>
+<li>One of the strongest aspects of ISRaD is the combination of automated QAQC and expert review</li>
+<li>Another is the transparency of the dataset in that any data that is in the template is very traceable about where it came from and how it got there
+<ul>
+<li>Every data point is documented. Every study that is entered has to have a DOI.</li>
+</ul></li>
+<li>Continue to promote open science. ISRaD is an open source and is available on GitHub which allows for it to have version control.</li>
+<li>The data product had really good scientific output. It got a lot of different groups to use it and answer different questions, which has helped push it forward and keep it relevant by bringing in other groups</li>
+<li>Hackathons worked really well. Get everyone together for a few focused days for dedicated push sessions to get a lot done. It works because everyone commits to a full couple of days and can ask questions and not have to pause to contact someone.</li>
+</ul></li>
+</ol>
+</div>
+<div id="israd-data-model" class="section level2">
+<h2><span class="header-section-number">5.2</span> ISRaD data model</h2>
+<ul>
+<li>Common features
+<ul>
+<li>location, elevation, and observation time</li>
+<li>depth of core and layer</li>
+<li>bulk density</li>
+<li>vegetation</li>
+<li>carbon percentage and loss on ignition</li>
+</ul></li>
+<li>Unique features
+<ul>
+<li>disturbance table</li>
+<li>high level of site details
+<ul>
+<li>frost free days, ponding, runoff</li>
+</ul></li>
+<li>higher then average number of layer-level info</li>
+<li>fraction table only shared with ISRaD</li>
+</ul></li>
+</ul>
+<div id="htmlwidget-e5f392d100a5109c6e6a" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5f392d100a5109c6e6a">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=RL tooltip=\"ISCN data model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"flux\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">flux<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>plot_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>flx_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"fraction\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">fraction<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>lyr_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>frc_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"incubation\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">incubation<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>lyr_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>frc_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>inc_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"interstitial\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">interstitial<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>ist_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"layer\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">layer<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>lyr_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"metadata\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">metadata<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"profile\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">profile<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>plot_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"site\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">site<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"interstitial\"->\"metadata\"\n\"interstitial\"->\"site\"\n\"interstitial\"->\"profile\"\n\"site\"->\"metadata\"\n\"profile\"->\"metadata\"\n\"profile\"->\"site\"\n\"flux\"->\"metadata\"\n\"flux\"->\"site\"\n\"flux\"->\"profile\"\n\"layer\"->\"metadata\"\n\"layer\"->\"site\"\n\"layer\"->\"profile\"\n\"fraction\"->\"metadata\"\n\"fraction\"->\"site\"\n\"fraction\"->\"profile\"\n\"fraction\"->\"layer\"\n\"incubation\"->\"metadata\"\n\"incubation\"->\"site\"\n\"incubation\"->\"profile\"\n\"incubation\"->\"layer\"\n\"incubation\"->\"fraction\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="acknowledgements-3" class="section level2">
+<h2><span class="header-section-number">5.3</span> Acknowledgements</h2>
+<p>We would like to talk Drs Corey Lawerence (USGS), Kate Heckman (US Forest Service), and Alison Hoyt (MPI) as well as Shane Stoner (MPI), Jeffrey Beem-Miller (MPI), Sophie von Fromm (MPI), Ágatha Della Rosa Kuhnen (MPI) for their time and contributions to the June interview.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sidb-record.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cc-rcn.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

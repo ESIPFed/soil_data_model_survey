@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>9 Community Survey | Soil Data Models: a review</title>
+  <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="9 Community Survey | Soil Data Models: a review" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="9 Community Survey | Soil Data Models: a review" />
+  
+  <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sodah.html"/>
+<link rel="next" href="june-comparision-of-data-model-structures.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="iscn-record.html"><a href="iscn-record.html"><i class="fa fa-check"></i><b>2</b> ISCN record</a><ul>
+<li class="chapter" data-level="2.1" data-path="iscn-record.html"><a href="iscn-record.html#june-interview"><i class="fa fa-check"></i><b>2.1</b> June interview</a></li>
+<li class="chapter" data-level="2.2" data-path="iscn-record.html"><a href="iscn-record.html#iscn-3-and-template-description"><i class="fa fa-check"></i><b>2.2</b> ISCN 3 and template description</a></li>
+<li class="chapter" data-level="2.3" data-path="iscn-record.html"><a href="iscn-record.html#acknowledgements"><i class="fa fa-check"></i><b>2.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="van-gestel-record.html"><a href="van-gestel-record.html"><i class="fa fa-check"></i><b>3</b> van Gestel record</a><ul>
+<li class="chapter" data-level="3.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#june-interview-1"><i class="fa fa-check"></i><b>3.1</b> June Interview</a></li>
+<li class="chapter" data-level="3.2" data-path="van-gestel-record.html"><a href="van-gestel-record.html#vangestel-specific"><i class="fa fa-check"></i><b>3.2</b> vanGestel specific</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#data-model"><i class="fa fa-check"></i><b>3.2.1</b> Data model</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="van-gestel-record.html"><a href="van-gestel-record.html#acknowledgements-1"><i class="fa fa-check"></i><b>3.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sidb-record.html"><a href="sidb-record.html"><i class="fa fa-check"></i><b>4</b> SIDb record</a><ul>
+<li class="chapter" data-level="4.1" data-path="sidb-record.html"><a href="sidb-record.html#june-interview-notes"><i class="fa fa-check"></i><b>4.1</b> June interview notes</a></li>
+<li class="chapter" data-level="4.2" data-path="sidb-record.html"><a href="sidb-record.html#sidb-feature-summary"><i class="fa fa-check"></i><b>4.2</b> SIDb feature summary</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="sidb-record.html"><a href="sidb-record.html#data-model-1"><i class="fa fa-check"></i><b>4.2.1</b> Data model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="sidb-record.html"><a href="sidb-record.html#acknowledgements-2"><i class="fa fa-check"></i><b>4.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="israd.html"><a href="israd.html"><i class="fa fa-check"></i><b>5</b> ISRaD</a><ul>
+<li class="chapter" data-level="5.1" data-path="israd.html"><a href="israd.html#june-2020-interview"><i class="fa fa-check"></i><b>5.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="5.2" data-path="israd.html"><a href="israd.html#israd-data-model"><i class="fa fa-check"></i><b>5.2</b> ISRaD data model</a></li>
+<li class="chapter" data-level="5.3" data-path="israd.html"><a href="israd.html#acknowledgements-3"><i class="fa fa-check"></i><b>5.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cc-rcn.html"><a href="cc-rcn.html"><i class="fa fa-check"></i><b>6</b> CC-RCN</a><ul>
+<li class="chapter" data-level="6.1" data-path="cc-rcn.html"><a href="cc-rcn.html#june-2020-interview-1"><i class="fa fa-check"></i><b>6.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="6.2" data-path="cc-rcn.html"><a href="cc-rcn.html#cc-rcn-specific"><i class="fa fa-check"></i><b>6.2</b> CC-RCN specific</a></li>
+<li class="chapter" data-level="6.3" data-path="cc-rcn.html"><a href="cc-rcn.html#acknowledgement"><i class="fa fa-check"></i><b>6.3</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="crowther.html"><a href="crowther.html"><i class="fa fa-check"></i><b>7</b> Crowther</a><ul>
+<li class="chapter" data-level="7.1" data-path="crowther.html"><a href="crowther.html#july-2020-interview-record"><i class="fa fa-check"></i><b>7.1</b> July 2020 interview record</a></li>
+<li class="chapter" data-level="7.2" data-path="crowther.html"><a href="crowther.html#feature-summary"><i class="fa fa-check"></i><b>7.2</b> Feature summary</a></li>
+<li class="chapter" data-level="7.3" data-path="crowther.html"><a href="crowther.html#data-model-2"><i class="fa fa-check"></i><b>7.3</b> Data Model</a></li>
+<li class="chapter" data-level="7.4" data-path="crowther.html"><a href="crowther.html#acknowledgement-1"><i class="fa fa-check"></i><b>7.4</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sodah.html"><a href="sodah.html"><i class="fa fa-check"></i><b>8</b> SoDaH</a><ul>
+<li class="chapter" data-level="8.1" data-path="sodah.html"><a href="sodah.html#july-2020-interview"><i class="fa fa-check"></i><b>8.1</b> July 2020 interview</a></li>
+<li class="chapter" data-level="8.2" data-path="sodah.html"><a href="sodah.html#data-model-3"><i class="fa fa-check"></i><b>8.2</b> Data model</a></li>
+<li class="chapter" data-level="8.3" data-path="sodah.html"><a href="sodah.html#acknowledgements-4"><i class="fa fa-check"></i><b>8.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="community-survey.html"><a href="community-survey.html"><i class="fa fa-check"></i><b>9</b> Community Survey</a><ul>
+<li class="chapter" data-level="9.1" data-path="community-survey.html"><a href="community-survey.html#responses"><i class="fa fa-check"></i><b>9.1</b> Responses</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="community-survey.html"><a href="community-survey.html#why-do-you-compile-data-products-what-is-the-question-you-are-looking-to-answer"><i class="fa fa-check"></i><b>9.1.1</b> Why do you compile data product(s)? What is the question you are looking to answer?</a></li>
+<li class="chapter" data-level="9.1.2" data-path="community-survey.html"><a href="community-survey.html#how-do-you-find-your-data-sources"><i class="fa fa-check"></i><b>9.1.2</b> How do you find your data sources?</a></li>
+<li class="chapter" data-level="9.1.3" data-path="community-survey.html"><a href="community-survey.html#what-went-well-with-how-you-compiled-the-data-product-or-what-do-you-wish-gone-better"><i class="fa fa-check"></i><b>9.1.3</b> What went well with how you compiled the data product or what do you wish gone better?</a></li>
+<li class="chapter" data-level="9.1.4" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-as-well-as-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>9.1.4</b> What is the ideal process for data harmonization? For the purposes of this question, this includes gap-filling, unit conversion, as well as standardizing headers and table structure.</a></li>
+<li class="chapter" data-level="9.1.5" data-path="community-survey.html"><a href="community-survey.html#do-you-want-your-data-to-be-compiled-in-a-data-product-why-or-why-not"><i class="fa fa-check"></i><b>9.1.5</b> Do you want your data to be compiled in a data product? Why or why not?</a></li>
+<li class="chapter" data-level="9.1.6" data-path="community-survey.html"><a href="community-survey.html#what-is-your-main-hurdle-to-contributing-to-data-products-and-to-other-people-using-your-data"><i class="fa fa-check"></i><b>9.1.6</b> What is your main hurdle to contributing to data products and to other people using your data?</a></li>
+<li class="chapter" data-level="9.1.7" data-path="community-survey.html"><a href="community-survey.html#what-do-you-wish-was-better-understood-about-how-your-data-is-collected-or-should-be-used"><i class="fa fa-check"></i><b>9.1.7</b> What do you wish was better understood about how your data is collected or should be used?</a></li>
+<li class="chapter" data-level="9.1.8" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-from-a-data-provider-prospective-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>9.1.8</b> What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html"><i class="fa fa-check"></i><b>10</b> June Comparision of data model structures</a><ul>
+<li class="chapter" data-level="10.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#introduction-and-goals"><i class="fa fa-check"></i><b>10.1</b> Introduction and goals</a></li>
+<li class="chapter" data-level="10.2" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#individual-pi-studies-were-smaller."><i class="fa fa-check"></i><b>10.2</b> Individual PI studies were smaller.</a></li>
+<li class="chapter" data-level="10.3" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#vocabulary-across-studies-were-not-obviously-harmonizable."><i class="fa fa-check"></i><b>10.3</b> Vocabulary across studies were not obviously harmonizable.</a></li>
+<li class="chapter" data-level="10.4" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#study-feature-summary"><i class="fa fa-check"></i><b>10.4</b> Study feature summary</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#unique-features"><i class="fa fa-check"></i><b>10.4.1</b> Unique features</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#inital-ontology-search-for-relevant-control-vocabulary."><i class="fa fa-check"></i><b>10.5</b> Inital ontology search for relevant control vocabulary.</a></li>
+<li class="chapter" data-level="10.6" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#next-steps"><i class="fa fa-check"></i><b>10.6</b> Next steps</a><ul>
+<li class="chapter" data-level="10.6.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#interview-questions"><i class="fa fa-check"></i><b>10.6.1</b> Interview questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="orginal-proposal.html"><a href="orginal-proposal.html"><i class="fa fa-check"></i><b>11</b> Orginal proposal</a><ul>
+<li class="chapter" data-level="11.1" data-path="orginal-proposal.html"><a href="orginal-proposal.html#summary"><i class="fa fa-check"></i><b>11.1</b> Summary</a></li>
+<li class="chapter" data-level="11.2" data-path="orginal-proposal.html"><a href="orginal-proposal.html#background"><i class="fa fa-check"></i><b>11.2</b> Background</a></li>
+<li class="chapter" data-level="11.3" data-path="orginal-proposal.html"><a href="orginal-proposal.html#method"><i class="fa fa-check"></i><b>11.3</b> Method</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Soil Data Models: a review</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="community-survey" class="section level1">
+<h1><span class="header-section-number">9</span> Community Survey</h1>
+<p>Many of our respondence were looking at questions around global biogeochemical processes, specifically carbon cycling.</p>
+<p>Most of the data sources were drawn from the primary scientific literature with several respondences also drawing from direct response from study PI or colleagues.
+One respondent mentioned online databases (e.g., USGS NWIS, USGS Geochemical Landscapes, NEON).
+None of the study respondences mentioned DataOne or PI-driven data repositories for data discovery.
+Identified challenges included QAQC protocols, difficulty getting data upon direct request from collegues, formatting heterogenity, missing or badly identified metadata, template development and stability, project management for aggregation effort in large groups.
+Things that worked well in the process were orchestrated hackatons.</p>
+<p>In general many respondants want data paired with a publication and already entired into a universal template.
+There was frustration with brittle inhouse harmonization pipelines that were not always backwards compatable.
+Automatic discovery from primary literature made another wishlist.
+General FAIR data principles were recognized as important, though not named as such.
+In general there were no differences in the harmonizatin pipeline process between the providers and aggregators.</p>
+<p>Unsurprisingly open public data was well supported by the respondences with interest in broaderening scienific impact and increased visibility.
+Attribution and engagement was a named concern of respondences, in particular collonial science was called out as being partiucalrlly problematic.
+Time investments with unclear rewards.
+Unclear what “data base” was appropreate for a given data set.
+Data permissions issues.</p>
+<p>Data is messy and data providers wish that was better understood by data aggregators.
+Both error/uncertainty and the exact methods use things that data providers feel is often overlooked by data aggregators.</p>
+<div id="responses" class="section level2">
+<h2><span class="header-section-number">9.1</span> Responses</h2>
+<div id="why-do-you-compile-data-products-what-is-the-question-you-are-looking-to-answer" class="section level3">
+<h3><span class="header-section-number">9.1.1</span> Why do you compile data product(s)? What is the question you are looking to answer?</h3>
+<pre><code>## To understand global variability and predictors in carbon fluxes
+## NA
+## Worked on a small compilation for a regional review paper, looking at variation in seagrass soil carbon and sequestration rates.
+## digital soil mapping
+## Provide broader context for local studies; examine trends across multiple biomes
+## NA
+## Global change effects on soil biogeochemical cycling, microorganisms, and SOM persistence. (ps. I am more of a data producer, but my students are working on meta-analyses and so I dabble in data compiling).
+## What are the relative controls on long term soil carbon storage in different biomes, climates, soil types, with depth, etc.
+## USDA-NRCS soil scientist here, it is one of our main objectives
+## NA
+## I compile data products to look for global scale patterns in ecological or biogeochemical processes. Sometimes the objective is to answer a science question, like are above and belowground phenology in sync? Sometimes it is to come up with parameter values or inputs for models, such as root inputs to rhizosphere soil, or sorption capacity at different sites.
+## Soils have been studied for such a long time. Yet, until today it is hard to work with the already existing data since there is no common place were the data get&#39;s stored. So, a lot of people are just compiling data by themselves for their specific question. However, I think it is really important that all the results we have get public available in a way that many people can easily access it. 
+## In particular, I&#39;m involved in building ISRaD - the International Soil Radiocarbon Database. The idea is to collect 14C data from soils all over the globe and to use the data to better understand global soil C dynamics. 
+## 
+## NA
+## Usually we seek to ask a big, broad question, more often in the spatial than the temporal domain.
+## Compiling data products helps us to get new understanding in exploring scientific questions. I am working on combining big soil data with model to find underlying mechanisms in soil carbon cycle.
+## To gain context across scales (soil profile to regional), especially when data is not measured or reported at a given scale.
+## Typically to better understand impact of management practices on soil properties
+## I am primarily interested in the microclimate of near-surface and sub-surface environments, and what geographical/meteorological/biological factors drive microclimate.
+## The primary goal of compiling data in my work is synthesis: trying to leverage the richness of the literature to answer questions about broad scale patterns.
+## I have compiled data products to determine the mean responses of soil organic matter pools to global change and to also determine what is driving variation in these responses. I&#39;ve done this using meta-analysis.
+## Answer specific questions (e.g. are soil-atmosphere gas fluxes changing with climate change); provide products and platforms for the community.
+## I compile data products to help improve decision-support tools for farmers and companies looking to reduce on-farm GHG emissions. My primary research question is how do agriculture best management practices (i.e., cover crops, organic amendments, management-intensive grazing) impact soil C stocks and how does variation in these practices impact SOC response?
+## Can we link agricultural management practices with dynamic soil properties?  What factors drive heterogeneity in dynamic soil properties at field, landscape, and regional scales?
+## crop and ecosystem modeling
+## Mostly to initialize spatial watershed management models at the sub-field scale.</code></pre>
+</div>
+<div id="how-do-you-find-your-data-sources" class="section level3">
+<h3><span class="header-section-number">9.1.2</span> How do you find your data sources?</h3>
+<pre><code>## From the literature
+## NA
+## Since it was a regional review, and we knew everyone that had worked on this topic, we just reached out to each of them personally.
+## public sources of information
+## Primarily online databases (e.g., USGS NWIS, USGS Geochemical Landscapes, NEON) but some literature as well when online databases don&#39;t cover the data
+## NA
+## literature - only because we&#39;re often looking for super specific things (i.e., focus on just the tropics, or in tree soil, etc.)
+## Literature searches, my or collaborators original unpublished data, and ISRaD
+## sift-through our many databases, collect new information in the field, browse tables in scientific publications / books
+## NA
+## I have used several methods, depending on the question. One is a standardized literature search, using either google scholar or web of science. Another is pulling data from more curated databases. A third way is contacting groups that I know do a specific kind of experiment and have the data I&#39;m looking for (a targeted approach, I guess).
+## Colleagues, 
+## For articles: scopus, google scholar, contacting authors
+## NA
+## Web of Science Citation Index, limited keyword search strings
+## Published article and contacting data holders for collaboration
+## Colleagues, google searches, and scientific publications (usually in that order. Searches lead to multiple options, then verifying quality/accuracy via publications)
+## Primary literature, extract from tables &amp; figures
+## A combination of publicly available (e.g. PANGAEA), networked (e.g. Ameriflux, AsiaFlux), or privately shared data. Data is either extracted/scraped/rescued by synthesis team, or submitted by primary authors
+## Literature review, previous syntheses, crowd-sourced data entry efforts
+## I found data sources by searching Web of Science and the ProQuest Agricultural and Environmental Database. In addition I pulled climate data from the WorldClim database.
+## Academic search engines; outreach; networking with e.g. program managers.
+## Published, peer-reviewed literature, long-term datasets, and collaboration with other researchers that collect these data.
+## Peer-reviewed literature search; internet (grey literature) search;  asking researchers/colleagues; asking other partners (government agencies, community organizations).
+## google, google scholar, colleagues
+## Google for those we are not already familiar with</code></pre>
+</div>
+<div id="what-went-well-with-how-you-compiled-the-data-product-or-what-do-you-wish-gone-better" class="section level3">
+<h3><span class="header-section-number">9.1.3</span> What went well with how you compiled the data product or what do you wish gone better?</h3>
+<pre><code>## Everything went fairly well (other than how hard and detailed the work is). I wish I had better automated QAQC protocols.
+## NA
+## It took a while for a few folks to get their data to us. And though we were offering manuscript authorship, we also felt bad knowing they were donating their time when already busy. Would be easier if all data were already in a repository.
+## there are always challenges with multiple methods for data collection and discrepancies between methods or further analysis. I would like to collaborate comparing and testing multiple methods for analyzing discrepancies and uncertainties on multiple soil carbon estimates.
+## Some platforms have really good interfaces for selectively downloading specific data products from specific sites (e.g., NWIS); others do not (e.g., NEON) and require users to compile and sort the data themselves. Many datasets are also focused on one particular measurement (e.g., C and N) and do not provide contextual data (e.g., bulk chemistry),
+## NA
+## Wish would be better - More soil data repos!!!
+## I appended my data to ISRaD compiled data manually - it was a pain and then I have to redo it whenever there is an ISRaD update or I have new data. But I have had trouble with the ISRaD compile function and haven&#39;t put in the time to troubleshoot and/or write my own script.
+## It would be nice if publicly-funded research included an {electronic, tabular, clean} representation available WITH the publication or someplace easy to find.
+## NA
+## When data is provided to me directly by the data provider (a collaboration with experimenters, say, modeling a specific site), I wish I had communicated better the kind of format that is useful to me, so I didn&#39;t have to do so much curation upon receiving the data. For example, sometimes experimenters are not very clear with metadata, so I have to do some extra communication to make sure I know the units, and the conditions under which some measurements were taken. Everyone has their own shorthand. Also, sometimes experimenters (my past self included) tend to use excel spreadsheets in wide format, with extra columns below or to the side of the main dataset containing averages of other columns, graphs, highlights. Which meant that I had to do a lot of cleaning in excel before I could read the data into my analysis program.
+## In general, it takes a long time to develop a spreadshet/template that meets all the criteria to have a smooth and productive data entering process. Our template changed quite often and then one as to go back to all the previous templates to change them accordingly. So, a lot of critical thinking should be done at the beginning to create a good template in order not to change it that often while entering data.
+## We were able to motivate a lot of people to help building the database. Yet, it takes also a lot of time to keep track of everything that is going on. So, a good system on keeping track of who is entering when a study and if and when they managed to finish it and if they did not finish it if somebody else can help with it. Especially when a lot of data get&#39;s entered at the same time it get be hard to keep track of everything. This means you should also have an idea where to store the data before it goes online and so on...
+## Hackathons were always really helpful to motivate people to work on the database (either coding or data entering) and to get a lot of things done in a short amount of time.
+## NA
+## In general we work with the data that fits the criteria we are looking for. I suspect there are papers with data that may be useful but if its too hard to extract that data, then we have to skip it. We always cite the papers we do end up using in a supplementary materials or similar.
+## The availability of data
+## Easy to automate ingestion of data from same source, but extremely time consuming to mix (meta)data formats.
+## NA
+## The standardization of metadata and vocabulary went well, but the author submission process is sometimes tedious: motivating authors to submit data (let alone curate their data to fit synthesis standards) has proven difficult on several projects.
+## The biggest issue faced with compiling data for ISRaD was the lack of adequate documentation in the previous syntheses we relied on to build the foundation of the database. This meant we essentially had to revisit the original sources and start from scratch (although the key benefit was that the sources had already been found).
+## The most difficult part of compiling the data product was trying to determine what authors meant when they reported data. The most common issues I had were (1) trying to determine how soils were fractionated, as we had strict definitions for the pools we were considering; (2) what units the soil carbon data was reported in (i.e. they would report g/kg but not whether that was gC/kg soil or gC/ kg fraction); and (3) unclear reporting on the number of replicates, which is needed information for meta-analytical statistics. On the plus side, the vast majority of authors responded to my questions in a timely fashion and there was a clear trend of newer papers providing more of the data in the paper or supplementary.
+## Early work was hampered by my inexperience (e.g. in data provenance and reproducibility). Later work was must stronger in terms of these factors and software infrastructure. Diagnostics, quality control, automated reports are all critical capabilities that I didn&#39;t appreciate ten years ago.
+## Our search results were comprehensive, but time-consuming to compile. The quality of data reported was a large issue. I also wish we had used a better data extraction tool like Web Plot Digitizer rather than Data Thief. WPD is more user-friendly, more accurate, and easier to share with multiple users. I also think that using Excel to compile this data may not be the most efficient, but Access seemed too time-consuming. It&#39;s hard to find a balance between ease of entry and time to enter/add data.
+## I wish that we had started out with a more specific framework or pipeline for organizing, storing, and cleaning the data we received from various sources.  We did a bunch of data asks at the beginning of the project and dumped it all in a shared folder... now we are in the stage of sifting through that material, identifying where we need more details or metadata, and starting to think about harmonizing the datasets.   Most members of our project time are not familiar with version control systems (git and GitHub) , but this would have been a huge help if we started using it from the beginning.  Our project isn&#39;t huge (focused primarily on the state of  Minnesota), so some of this can be retrospectively imposed, but since this was our first big data compilation project I don&#39;t think we had a good mental model for what the different steps would be.
+## no estimates of uncertainty. I wish there was an API
+## More easily integrate the data into the analysis systems, ESRI, Python, and R.</code></pre>
+</div>
+<div id="what-is-the-ideal-process-for-data-harmonization-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-as-well-as-standardizing-headers-and-table-structure." class="section level3">
+<h3><span class="header-section-number">9.1.4</span> What is the ideal process for data harmonization? For the purposes of this question, this includes gap-filling, unit conversion, as well as standardizing headers and table structure.</h3>
+<pre><code>## This is a big question and quite context dependent. The only general thing to say is that the ideal process should include transparent but lightweight documentation of the harmonization decisions.
+## NA
+## NA
+## thinking louder, it would be a process that recognizes the data source and return to the source an improved outcome, b) one that follows a protocol considering all soil forming and weathering conditions, and c) that uses levels of data processing organized in versions and each version contains a traceable DOI and supporting code for every process (gap filling, units, header and table structure) also with a traceable DOI. The format should be generic (able to be used in both open source or private software)
+## NA
+## NA
+## response ratios were used to compare across studies
+## A simple one that would not break (I have also had trouble with fill functions working in one version and not in a later version, causing us to us to substitute our own for the default ISRaD one - in this case gap-filling missing climate data).
+## Start with a standard, bend data to that standard as far as you can without introducing artifacts. I&#39;d suggest adopting standards from the USDA-NRCS / NCSS whenever possible.
+## 
+## Standardization of names and units shouldn&#39;t isn&#39;t difficult, someone has to suggest a template. Units should all be SI. Gap-filling (data imputation) is an entirely different matter and requires serious, deliberate discussion over each affected data element. This applies to re-sampling techniques (genetic horizons -&gt; depth intervals, EA splines, etc.). Table structure is important, but mostly from an organizational perspective: fully normalized schemas are elegant but can be very annoying to work with (many joins for a simple query). There is a balance that has to be found between data archival purposes (fully normalized, no duplication, coded values) ------- data analysis (usually denormalized, lots of duplication, raw values).
+## NA
+## Oof, I don&#39;t know the answer to this, but I have a lot of opinions. I think if there is gap-filling (for some processes anyway) I would like to know which data are gap-filled and which are original, perhaps with another column as a flag. For units, I prefer SI units, with units clearly labeled in a metadata sheet somewhere that also includes the column name and description of what was measured. For table structure, I like the main data sheet to contain one row of column names, and then data, with any ancillary information in a metadata sheet. I think having lots of headers at the top, especially with merged cells (which I have seen in more than one database) is a headache for me to read in. If data providers are savvy and can use attributes like with netcdf files, that would be fine, especially for global maps. But for other kinds of measurements, an excel or csv file is great as long as it&#39;s in long format with only one row of column names before the data.
+## In general, it helps a lot to have controlled vocabulary to make sure that everything is entered in the same way. This makes analysis much easier and also automated gap-filling and unit conversion. 
+## The headers should be self-explanatory as much as possible and as distinctive as possible in comparison to the other headers. People easily missunderstand headers and enter data at the wrong place. In addition, it seems to be helpful to have some mandatory variables that need to be entered by everyone and additional columns that will only be filled in if the data/information is available. Yet, people tend to try to enter as much as possible (which is good) but sometimes they do not have the data basis and come with somethin up what they think would fit/is right which cannot be checked (e.g. in the original publication).
+## NA
+## I would love someone to write code to data mine: [a] identify papers of potential interest, [2] comb and extract relevant data, [3] place extracted data into a database. I mean isn&#39;t this what hackers and big tech companies do anyway? Why not do the same for science!
+## Standardisation, well structured data table, gap filling
+## A set (but reasonably flexible) unified variable list. Deep thought put into a pointed and specific set of goals for the variables will save a lot of time and heartache. Gap filling with expert knowledge where appropriate, or reasonable calculations given sufficient additional measurements, or filling with spatial products. This should of course be done only by a knowledgeable team. We have required unit conversion to be done prior to ingestion and used controlled vocabulary/drop down lists to specify units. By using a rigid QAQC, table structure is set and maintained throughout to help with backward and forward compatibility.
+## For meta-analysis, converting to e.g. the standardized mean difference
+## Scripted curation, as well as preservation of both original and curated datasets from each submitter, is critical
+## This is a big question! With both ISRaD and SIDb we relied on a template-based data entry process in order to smooth the data harmonization process. With SIDb, both the table structure and headers were originally more flexible, but we quickly realized that we could only allow flexibility with one or the other (i.e. structure or controlled vocabulary and rigid headers) or querying the database would be next to impossible. With ISRaD we went pretty far in the opposite direction, i.e. controlling both structure and headers and including a lot of controlled vocabulary. The downside of the ISRaD approach is that it was (and is) a lot of work to maintain.
+## My system was to record all the data in its original units and then do a calculation step to transfer all data to the same units. I did this all by hand, so writing a script that could perform these functions for me would be quite helpful. The only hurdle here, though, would be the need of bulk density for many calculations. You could use a pedotranfer function but that could introduce some error. You could avoid this problem by working in concentrations but stock is often preferred to represent absolute amounts. If you are working on differences between treatments, as I was, this isn&#39;t a problem, as stock and concentration provide the same response ratio. It is quite difficult to standardize headers for soil fractions, in particular. My method was to initially record one mineral size fraction number (which may have included adding up a number of silt+clay fractions from an aggregate fractionation) and two particulate fraction numbers (usually a light and heavy fraction, which also may have been a sum of fractions in the paper), with their definitions (i.e. density &gt; 1.8 g/cm3). However, the way the ISRAD database handles fractions may have been better - although with very complex fractionations with aggregate, size, and density fractionations, even that method would be difficult. It may be that combining some data in a standardized way before adding it to a database is the best option.
+## Whew, big question. I guess most important is that everything is fully reproducible and reversible–you can always get back to original measured data, warts and all.
+## I&#39;m not sure I entirely understand this question, but, in my experience, it is crucial to think through the types of data you want/need in advance and to be more comprehensive initially to avoid the need to revisit data sources at a later point in time. This involves building out all the headers/structure of the data base in advance, and then entering a few preliminary sources of data to test out the system. Then, you can determine ideal unit conversions and gap-filling options.
+## We&#39;re just getting into the harmonization stage of our project now.  We&#39;ve devoted the most time so far into digging up details about the methods used to collect the various measurements - how was the data collected? Can we find a reference to a standardized method? What are the major permutations (types of extractants, methods of quantification, etc.) of any given method that might be relevant for interpreting the data?
+## all of the above, plus provenance tracing and uncertainty quantification / quality assessment / acknowledgement of limits in data and how it should be used
+## More easily integrate the data into the analysis systems, ESRI, Python, and R.</code></pre>
+</div>
+<div id="do-you-want-your-data-to-be-compiled-in-a-data-product-why-or-why-not" class="section level3">
+<h3><span class="header-section-number">9.1.5</span> Do you want your data to be compiled in a data product? Why or why not?</h3>
+<pre><code>## Yes! Because what is the point of science, otherwise?
+## NA
+## Yes, I always contribute data when I can. The more it can be used by others, the better.
+## yes because it can be used and revised by others
+## Yes, for the same reasons I use such databases.
+## Sure. It will increase the visibility and impact of my research
+## Always! I want more data out there for people to use.
+## Absolutely - I have a lot of unique data and it should be used more widely than in my original research projects!
+## It already is, but I&#39;d like these data to be more widely available. Lets talk.
+## Yes, I am interested in transdisciplinary synthesis of research products.
+## Sure. I haven&#39;t produced my own data for a long time, but I would be happy with those measurements to go into a data product, because I would like them to be useful to a wider range of people.
+## Yes. I personally think, once data is published it should also be compiled in a larger data product so that more people can use it and benefit from it. Those products can also be really helpful for modellers to checke their models against measured data.
+## NA
+## Sure. If it can be helpful to other researchers, then I can only see it as a good thing.
+## NA
+## Yes. I worry that scientists being too precious with data is slowing progress.
+## Yes - amplifies impact of hard-earned data
+## Yes, both for use by the core synthesis team but also to be made readily available to the community
+## Yes. Open data makes science better!
+## Definitely! Field scale data is key for understanding mechanistic processes but to make large scale decisions we need large scale data.
+## Most important is to have my data deposited--i.e., not lost. Second most important, yes, in a standardized data product is great for future scientific research and data re-use. Accelerates science.
+## Definitely! I want this data to be useful to others doing more comprehensive work. I want to take lessons I&#39;ve learned as a data compiler when I write up manuscripts/publish datasets to make these data useful for others (i.e., relevant level of detail, multiple formats - tables and graphs, etc.).
+## Yes - multiple reasons!  From a philosophical perspective, I want my scientific work to be cumulative, building on a body of knowledge that was developed by others before me and contributing to something that will continue growing after I&#39;m gone.  Also, as a student at a public university whose research is funded by public tax dollars, I feel a duty to make my data available in as many ways as possible (including contributing to data compilations and being available in a repository).  In soil science specifically, data compilation is exciting because it allows one to ask questions at a larger scale than is usually logistically / financially feasible for a single study.
+## NA
+## Not necessarily compiled into a product, but available as a subset of a product that aligns with other like products. I can see issues with multiple contributors information getting combined, while having different methods for collection (P test for example).</code></pre>
+</div>
+<div id="what-is-your-main-hurdle-to-contributing-to-data-products-and-to-other-people-using-your-data" class="section level3">
+<h3><span class="header-section-number">9.1.6</span> What is your main hurdle to contributing to data products and to other people using your data?</h3>
+<pre><code>## Time
+## NA
+## Not being sure if data will be credited properly (though I haven&#39;t had any bad experiences so far).
+## none,that is how we can boost science advance. but be aware that we need to recognize and engage science as a community in all moments of a scientific effort, e.g. Minasny, B., Fiantis, D., Mulyanto, B., Sulaeman, Y. and Widyatmanti, W.: Global soil science research collaboration in the 21st century: Time to end helicopter research, Geoderma, 373, 114299, doi:10.1016/j.geoderma.2020.114299, 2020.
+## 
+## ‌
+## Finding the appropriate database and formatting the data according to platform specific requirements.
+## It takes time to go back and organize the data and get the auxiliary information that other people need. There&#39;s also an underlying fear that some mistakes will be found that I had missed previously. I also would like credit for the data, but it&#39;s not always clear how that credit will be given. I understand co-authorship is not always desirable for the compilers, but if we could think of some other type of incentive beyond just a citation that would be nice.
+## (1) experimental data/methods are complex, (2) I haven&#39;t published 75% of the data I generate, (3) don&#39;t know about which repo would be best suited to the data I have, etc.
+## Time - difficult in finding/making time to learn a new process and also making up for poorly organizing data in past projects (I always think I did better than I actually did in putting everything in one place)
+## Long-term maintenance. Multiple representations / versions of the same data can be a nightmare to manage unless there is an authoritative index.
+## It is not always clear what data products, or the form of those products, will be useful to others.
+## The time it takes to format and create metadata. Thankfully, I had some help uploading my data to a data archive (the Harvard Forest LTER curates a data archive, and they require everyone who works on their LTER to upload their data to it). At that time, early in my career, it was a substantial amount of work to get everything organized and metadata written. Now, I think I would have been more organized at the start. I think this is where having some kind of standard data format would be useful, as well as educating PhD students and early careers about best practices for managing data and metadata. I would have appreciated knowing more best practices early on!
+## If I still plan to write a publication with the data. But once is in an article, it should also go in to a larger data product.
+## NA
+## Mainly I don&#39;t think people know that we have the data products even though we list it in the paper.
+## NA
+## If it is published, then it should be available. Otherwise, I am hesitant to include it in a larger study.
+## Getting data sharing agreements in place with private landowners, so we can share the data we collect; getting data sharing agreements in place with those we are giving the data to; in some cases, ensuring our data are in the proper formats with the necessary meta-data included.
+## Time sunk into curation can be a hurdle, but tends to be low if data is well-documented from the start
+## NA
+## I have not generated very much data yet, as I am a graduate student. But I imagine the main hurdles would be storing your data in a place and format that is easy to find and understand.
+## Overly onerous requirements. I think databases need to make it easier, not harder, to contribute.
+## Currently, I would say my main hurdle is knowing which data products to contribute too. It will take some time on my part to figure out where I should contribute my data, which is often something that is easy to put off and forget to do.
+## Making it relatively easy for the data contributor to provide data while still upholding a high level of detail for metadata/ documentation
+## NA
+## Finding a place to contribute it to, though the new USDA PDI program might be trying to accomplish this.</code></pre>
+</div>
+<div id="what-do-you-wish-was-better-understood-about-how-your-data-is-collected-or-should-be-used" class="section level3">
+<h3><span class="header-section-number">9.1.7</span> What do you wish was better understood about how your data is collected or should be used?</h3>
+<pre><code>## Errors vary significantly in the different types of data I have contributed. I wish I could better convey the error of some of these high-variability data types (e.g., fine root biomass).
+## NA
+## Can&#39;t think of anything.
+## the error of measurements
+## Typical problem of compiled datasets; it&#39;s difficult to evaluate all data included in the compilation in a way to make sure that collection methods are comparable. I would hope that metadata are included to communiciate some of that information.
+## Methods of microbial biomass, CUE, fractionation etc. vary and so do the interpretation and cross-comparability of those results!
+## I know how my data is collected, but I think that a lack of standardization for methods limits its use (at the same time, there should not be a one size fits all method for soils - soils do not work that way)
+## I suppose it would be nice if everyone using the data understood the effort involved in collecting and making measurements as not everyone gets the field and lab research experience to see that. This might help in understanding the nuances of how measurements of the &quot;same&quot; variable can be measured (see the next question).
+## Take a soils class or collaborate with a soil scientist if you hope to get the most out of soil characterization / soil survey data.
+## That I can make fairly large changes in how data are collected in analyzed, which may in turn greatly increase their utility to others.  However, finding out what others need is a roadblock.
+## I appreciate how important, confusing, and difficult to summarize the &quot;Notes&quot; section of an experimenters data sheet it. That is, the huge column to the side of your data sheet where you write all the random stuff that may or may not be important (e.g., &quot;spider found in chamber&quot;, &quot;lots of condensation&quot;, &quot;battery went dead right after reading&quot;, &quot;strong wind during reading&quot;). All that stuff that would not get compiled into a database and cannot be condensed into a column (perhaps you could have a Y/N for the presence of a note, so that we know something may have been up with this measurement). In general, I think the benefit of databases is that if you have enough measurements, the messiness inherent in data collection is averaged out, but it&#39;s worth noting on both sides that field conditions can be very messy.
+## NA
+## NA
+## Dunno
+## NA
+## Data products with good understanding of the science and methods (or at least with the flexibility to adapt to methods) makes it easier for us to enter it and users to actually access it.
+## NA
+## The important distinction between primary and secondary authorship, but the critical role of both. Data users should make sure to give credit to both the synthesis authors, as well as the primary authors that collected and submitted their data to the synthesis.
+## Of course adequate documentation of the methods and appropriate attribution of credit to authors is important, but methods documentation can be challenging. For example, ISRaD provides a space for defining bulk density methods, but it is hardly ever used, and that can lead to issues with comparing or averaging the wrong data. I think the keys for making peace with sharing data in a synthesis are: 1) fully transparent and reproducible data (where did the data come from, what changes were made), 2) credit to authors, 3) on the authors&#39; end: providing adequate documentation of what you did!
+## I wish fractionation schemes were better understood. Dispersed and undispersed soils are sometimes viewed equally, when they actually represent very different functional pools.
+## Granular tracking of data use (in analyses) would be great and provide a way for researchers to get &#39;credit&#39; for data that&#39;s subsequently used.
+## NA
+## NA
+## NA
+## Our collections are not mature enough to answer this yet.</code></pre>
+</div>
+<div id="what-is-the-ideal-process-for-data-harmonization-from-a-data-provider-prospective-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-standardizing-headers-and-table-structure." class="section level3">
+<h3><span class="header-section-number">9.1.8</span> What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.</h3>
+<pre><code>## Similar answer as before - traceability and transparency.
+## NA
+## NA
+## having a version of every change in the original dataset, well documented and explained
+## Not sure, but standardized submission is important (and also painful to complete).I don&#39;t think units should be standardized so long as they can be easily identified and readily converted in a database.
+## The fact that journals are requiring the data to be archived now helps. It&#39;s easier to compile it in a more widely interpretable fashion when it&#39;s fresh, rather than getting a request three years after publication and having to dig back through old files. I think the harmonization is on the data compilers, not the providers, but I am a provider. What is the incentive to take the time to convert to someone else&#39;s structure, other than contributing to someone else&#39;s project?
+## a clear way to explain how the soils were sampled, what methods were used, etc.
+## An accurate one - there are so many nuances to many of our measurements including which methods are used that can get lost (e.g. how pH or C content is measured).
+## duplicate question?
+## In a sense, all of the above.  To speak a common language, we need a common vocabulary.
+## I think my answer is the same as on the previous page. I definitely used to do all of the things that I gripe about in the data user answers, but now that I&#39;ve seen both sides, I think it helps both data providers and users to keep a clean, machine-readable format, since data providers usually also need to analyse their data.
+## NA
+## NA
+## Well, what you&#39;ve already listed is what I would want....in addition to a smart piece of computer code.
+## NA
+## Easy, well-documented processes with examples of common hang-ups, plus access to data managers so questions can be responded to reasonably quickly. Gap filling should be well-marked in data products, so there is the implicit trust that real data will be preserved and marked.
+## NA
+## NA
+## There are key parameters for understanding soil data on broader scales that are unfortunately not provided in every source. These include geospatial coordinates (including elevation), climate data (MAT, MAP at minimum), vegetation data (forest, grassland, etc.), and soil taxonomy. Flexible units are also important, e.g. if you provide CO2 fluxes from an incubation, you should provide the data to express the fluxes relative to the amount of carbon in the soil sample or on a mass basis. Of course, every specific type of soil data has special considerations, but the basics (above) should be expected to be provided in every study (note to all of us when reviewing manuscripts!)
+## I imagine this would be a little effort as possible. However, if this process could be a bit more collaborative and folks were willing to add their data to a database in a standardized way, rather than  having the data compiler guess at the methods, I think that could streamline the process.
+## See above.
+## I would say providing data in multiple formats - tables and figures. Data compilers may prefer both or one or the other, so it is ideal to provide multiple options.
+## NA
+## NA
+## Simplicity in submitting the data with correct ontology and semantics.</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sodah.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="june-comparision-of-data-model-structures.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>11 Orginal proposal | Soil Data Models: a review</title>
+  <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="11 Orginal proposal | Soil Data Models: a review" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="11 Orginal proposal | Soil Data Models: a review" />
+  
+  <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="june-comparision-of-data-model-structures.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="iscn-record.html"><a href="iscn-record.html"><i class="fa fa-check"></i><b>2</b> ISCN record</a><ul>
+<li class="chapter" data-level="2.1" data-path="iscn-record.html"><a href="iscn-record.html#june-interview"><i class="fa fa-check"></i><b>2.1</b> June interview</a></li>
+<li class="chapter" data-level="2.2" data-path="iscn-record.html"><a href="iscn-record.html#iscn-3-and-template-description"><i class="fa fa-check"></i><b>2.2</b> ISCN 3 and template description</a></li>
+<li class="chapter" data-level="2.3" data-path="iscn-record.html"><a href="iscn-record.html#acknowledgements"><i class="fa fa-check"></i><b>2.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="van-gestel-record.html"><a href="van-gestel-record.html"><i class="fa fa-check"></i><b>3</b> van Gestel record</a><ul>
+<li class="chapter" data-level="3.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#june-interview-1"><i class="fa fa-check"></i><b>3.1</b> June Interview</a></li>
+<li class="chapter" data-level="3.2" data-path="van-gestel-record.html"><a href="van-gestel-record.html#vangestel-specific"><i class="fa fa-check"></i><b>3.2</b> vanGestel specific</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#data-model"><i class="fa fa-check"></i><b>3.2.1</b> Data model</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="van-gestel-record.html"><a href="van-gestel-record.html#acknowledgements-1"><i class="fa fa-check"></i><b>3.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sidb-record.html"><a href="sidb-record.html"><i class="fa fa-check"></i><b>4</b> SIDb record</a><ul>
+<li class="chapter" data-level="4.1" data-path="sidb-record.html"><a href="sidb-record.html#june-interview-notes"><i class="fa fa-check"></i><b>4.1</b> June interview notes</a></li>
+<li class="chapter" data-level="4.2" data-path="sidb-record.html"><a href="sidb-record.html#sidb-feature-summary"><i class="fa fa-check"></i><b>4.2</b> SIDb feature summary</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="sidb-record.html"><a href="sidb-record.html#data-model-1"><i class="fa fa-check"></i><b>4.2.1</b> Data model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="sidb-record.html"><a href="sidb-record.html#acknowledgements-2"><i class="fa fa-check"></i><b>4.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="israd.html"><a href="israd.html"><i class="fa fa-check"></i><b>5</b> ISRaD</a><ul>
+<li class="chapter" data-level="5.1" data-path="israd.html"><a href="israd.html#june-2020-interview"><i class="fa fa-check"></i><b>5.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="5.2" data-path="israd.html"><a href="israd.html#israd-data-model"><i class="fa fa-check"></i><b>5.2</b> ISRaD data model</a></li>
+<li class="chapter" data-level="5.3" data-path="israd.html"><a href="israd.html#acknowledgements-3"><i class="fa fa-check"></i><b>5.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cc-rcn.html"><a href="cc-rcn.html"><i class="fa fa-check"></i><b>6</b> CC-RCN</a><ul>
+<li class="chapter" data-level="6.1" data-path="cc-rcn.html"><a href="cc-rcn.html#june-2020-interview-1"><i class="fa fa-check"></i><b>6.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="6.2" data-path="cc-rcn.html"><a href="cc-rcn.html#cc-rcn-specific"><i class="fa fa-check"></i><b>6.2</b> CC-RCN specific</a></li>
+<li class="chapter" data-level="6.3" data-path="cc-rcn.html"><a href="cc-rcn.html#acknowledgement"><i class="fa fa-check"></i><b>6.3</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="crowther.html"><a href="crowther.html"><i class="fa fa-check"></i><b>7</b> Crowther</a><ul>
+<li class="chapter" data-level="7.1" data-path="crowther.html"><a href="crowther.html#july-2020-interview-record"><i class="fa fa-check"></i><b>7.1</b> July 2020 interview record</a></li>
+<li class="chapter" data-level="7.2" data-path="crowther.html"><a href="crowther.html#feature-summary"><i class="fa fa-check"></i><b>7.2</b> Feature summary</a></li>
+<li class="chapter" data-level="7.3" data-path="crowther.html"><a href="crowther.html#data-model-2"><i class="fa fa-check"></i><b>7.3</b> Data Model</a></li>
+<li class="chapter" data-level="7.4" data-path="crowther.html"><a href="crowther.html#acknowledgement-1"><i class="fa fa-check"></i><b>7.4</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sodah.html"><a href="sodah.html"><i class="fa fa-check"></i><b>8</b> SoDaH</a><ul>
+<li class="chapter" data-level="8.1" data-path="sodah.html"><a href="sodah.html#july-2020-interview"><i class="fa fa-check"></i><b>8.1</b> July 2020 interview</a></li>
+<li class="chapter" data-level="8.2" data-path="sodah.html"><a href="sodah.html#data-model-3"><i class="fa fa-check"></i><b>8.2</b> Data model</a></li>
+<li class="chapter" data-level="8.3" data-path="sodah.html"><a href="sodah.html#acknowledgements-4"><i class="fa fa-check"></i><b>8.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="community-survey.html"><a href="community-survey.html"><i class="fa fa-check"></i><b>9</b> Community Survey</a><ul>
+<li class="chapter" data-level="9.1" data-path="community-survey.html"><a href="community-survey.html#responses"><i class="fa fa-check"></i><b>9.1</b> Responses</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="community-survey.html"><a href="community-survey.html#why-do-you-compile-data-products-what-is-the-question-you-are-looking-to-answer"><i class="fa fa-check"></i><b>9.1.1</b> Why do you compile data product(s)? What is the question you are looking to answer?</a></li>
+<li class="chapter" data-level="9.1.2" data-path="community-survey.html"><a href="community-survey.html#how-do-you-find-your-data-sources"><i class="fa fa-check"></i><b>9.1.2</b> How do you find your data sources?</a></li>
+<li class="chapter" data-level="9.1.3" data-path="community-survey.html"><a href="community-survey.html#what-went-well-with-how-you-compiled-the-data-product-or-what-do-you-wish-gone-better"><i class="fa fa-check"></i><b>9.1.3</b> What went well with how you compiled the data product or what do you wish gone better?</a></li>
+<li class="chapter" data-level="9.1.4" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-as-well-as-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>9.1.4</b> What is the ideal process for data harmonization? For the purposes of this question, this includes gap-filling, unit conversion, as well as standardizing headers and table structure.</a></li>
+<li class="chapter" data-level="9.1.5" data-path="community-survey.html"><a href="community-survey.html#do-you-want-your-data-to-be-compiled-in-a-data-product-why-or-why-not"><i class="fa fa-check"></i><b>9.1.5</b> Do you want your data to be compiled in a data product? Why or why not?</a></li>
+<li class="chapter" data-level="9.1.6" data-path="community-survey.html"><a href="community-survey.html#what-is-your-main-hurdle-to-contributing-to-data-products-and-to-other-people-using-your-data"><i class="fa fa-check"></i><b>9.1.6</b> What is your main hurdle to contributing to data products and to other people using your data?</a></li>
+<li class="chapter" data-level="9.1.7" data-path="community-survey.html"><a href="community-survey.html#what-do-you-wish-was-better-understood-about-how-your-data-is-collected-or-should-be-used"><i class="fa fa-check"></i><b>9.1.7</b> What do you wish was better understood about how your data is collected or should be used?</a></li>
+<li class="chapter" data-level="9.1.8" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-from-a-data-provider-prospective-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>9.1.8</b> What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html"><i class="fa fa-check"></i><b>10</b> June Comparision of data model structures</a><ul>
+<li class="chapter" data-level="10.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#introduction-and-goals"><i class="fa fa-check"></i><b>10.1</b> Introduction and goals</a></li>
+<li class="chapter" data-level="10.2" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#individual-pi-studies-were-smaller."><i class="fa fa-check"></i><b>10.2</b> Individual PI studies were smaller.</a></li>
+<li class="chapter" data-level="10.3" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#vocabulary-across-studies-were-not-obviously-harmonizable."><i class="fa fa-check"></i><b>10.3</b> Vocabulary across studies were not obviously harmonizable.</a></li>
+<li class="chapter" data-level="10.4" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#study-feature-summary"><i class="fa fa-check"></i><b>10.4</b> Study feature summary</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#unique-features"><i class="fa fa-check"></i><b>10.4.1</b> Unique features</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#inital-ontology-search-for-relevant-control-vocabulary."><i class="fa fa-check"></i><b>10.5</b> Inital ontology search for relevant control vocabulary.</a></li>
+<li class="chapter" data-level="10.6" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#next-steps"><i class="fa fa-check"></i><b>10.6</b> Next steps</a><ul>
+<li class="chapter" data-level="10.6.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#interview-questions"><i class="fa fa-check"></i><b>10.6.1</b> Interview questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="orginal-proposal.html"><a href="orginal-proposal.html"><i class="fa fa-check"></i><b>11</b> Orginal proposal</a><ul>
+<li class="chapter" data-level="11.1" data-path="orginal-proposal.html"><a href="orginal-proposal.html#summary"><i class="fa fa-check"></i><b>11.1</b> Summary</a></li>
+<li class="chapter" data-level="11.2" data-path="orginal-proposal.html"><a href="orginal-proposal.html#background"><i class="fa fa-check"></i><b>11.2</b> Background</a></li>
+<li class="chapter" data-level="11.3" data-path="orginal-proposal.html"><a href="orginal-proposal.html#method"><i class="fa fa-check"></i><b>11.3</b> Method</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Soil Data Models: a review</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="orginal-proposal" class="section level1">
+<h1><span class="header-section-number">11</span> Orginal proposal</h1>
+<p><em>Name of project</em>: Open source data harmonization: beyond data entry</p>
+<div id="summary" class="section level2">
+<h2><span class="header-section-number">11.1</span> Summary</h2>
+<p>In this project, we will develop, implement, and test best practices for compiling transparent, reproducible, harmonized, and extendable data collections for meta-analysis.
+To do this, we will examine six current meta-analysis efforts in the soil community.
+Through one-on-one interviews with the PIs and developers as well as a broader community surveys, we will identify the strengths and weaknesses of the approaches used by the individual projects.
+We will generate a white paper outlining suggested best practices based on our findings.
+We will then use best practices to prioritize ongoing development of the Soil Organic Carbon Data Rescue and Harmonization (SOC-DRaH), an open community project started by the International Soil Carbon Network (ISCN).
+The results from this project would provide a solid basis for seeking future funding to benchmark soil carbon dynamics in Earth system models, generate soil maps, and gap fill missing data using machine learning algorithms.</p>
+</div>
+<div id="background" class="section level2">
+<h2><span class="header-section-number">11.2</span> Background</h2>
+<p>Reanalysis of data from individual projects in a meta-analysis is commonly done by researchers.
+However, aggregating and preparing data for such an analysis is generally difficult and sometimes unreproducible, because the various data sources are not harmonized.
+In this context, harmonization means uniform application of a single control vocabularies and data model.
+In many fields, the main problem is no longer data availability; data can be found in many public online repositories.
+Nor is the difficulty findability; repositories have expanded their data search capacities through efforts like DataOne, and data accessibility is better now than it has ever been historically.
+The main problem is harmonizing the various data sources, a problem that urgently needs community guidance.</p>
+<p>Similar to other research communities, soil scientists have diverse data sets which would benefit from a more global data context.
+Several efforts to provide this global context by harmonizing soil data have emerged over recent years, a subset of which is presented in Table 1.
+These meta-analysis efforts reflect a common increase in complexity, as researchers try to build on other meta-analysis (Crowther 2016 to van Gestel 2018 is one example of this) or broaden data aggregation efforts to expand from a single lab effort (Crowther 2016 and van Gestel 2018) to a mult-lab effort (CC-RCN, ISRaD, LTER-SOM, and ISCN3) requiring more active workflow management practices.
+We also see two aggregation practices emerging, templated vs scripted data ingestion ( See “Method” section).
+Examining the workflow of these meta-analysis efforts could provide valuable insights into the process and be used to generate best practices recommendations.</p>
+<p>Table 1. Selected current meta-analysis efforts to harmonize soil data. Single lab or multi-lab refers to whether the compilation team comprised a single PI or multiple PIs. Templated ingest uses a common template; scripted ingest uses unique templates. Citation number references either a published product or a link to ongoing effort.</p>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="19%" />
+<col width="33%" />
+<col width="31%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type of soil data</th>
+<th>Single lab or multi-lab effort</th>
+<th>Templated or scripted ingest</th>
+<th>Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crowther 2016</td>
+<td>field warming experiments</td>
+<td>single</td>
+<td>template</td>
+<td>[1]</td>
+</tr>
+<tr class="even">
+<td>van Gestel 2018</td>
+<td>field warming experiments</td>
+<td>single</td>
+<td>template</td>
+<td>[2]</td>
+</tr>
+<tr class="odd">
+<td>CC-RCN</td>
+<td>coastal wetland with focus on high resolution core dating</td>
+<td>multi script</td>
+<td>[3]</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ISRaD</td>
+<td>fraction and radiocarbon isotope</td>
+<td>multi</td>
+<td>template</td>
+<td>[4]</td>
+</tr>
+<tr class="odd">
+<td>LTER-SOM</td>
+<td>long term ecological studies</td>
+<td>multi</td>
+<td>script</td>
+<td>[5]</td>
+</tr>
+<tr class="even">
+<td>ISCN3</td>
+<td>regional surveys</td>
+<td>multi</td>
+<td>template</td>
+<td>[6]</td>
+</tr>
+</tbody>
+</table>
+<p>[1] Crowther, T., Todd-Brown, K., Rowe, C. et al. Quantifying global soil carbon losses in response to warming. Nature 540, 104–108 (2016) <a href="doi:10.1038/nature20150" class="uri">doi:10.1038/nature20150</a>. [2] van Gestel, N., Shi, Z., van Groenigen, K. et al. Predicting soil carbon loss with warming. Nature 554, E4–E5 (2018) <a href="doi:10.1038/nature25745" class="uri">doi:10.1038/nature25745</a> [3] Coastal Carbon Research Coordination Network <a href="https://serc.si.edu/coastalcarbon" class="uri">https://serc.si.edu/coastalcarbon</a> [4] Lawrence, C. R., Beem-Miller, J., Hoyt, A. M., et al.: An open-source database for the synthesis of soil radiocarbon data: International Soil Radiocarbon Database (ISRaD) version 1.0, Earth Syst. Sci. Data, 12, 61–76, <a href="https://doi.org/10.5194/essd-12-61-2020" class="uri">https://doi.org/10.5194/essd-12-61-2020</a>, 2020. [5] Longterm ecological research soil organic matter group <a href="https://github.com/lter/lterwg-som" class="uri">https://github.com/lter/lterwg-som</a> [6] International Soil Carbon Network <a href="https://iscn.fluxdata.org/" class="uri">https://iscn.fluxdata.org/</a></p>
+</div>
+<div id="method" class="section level2">
+<h2><span class="header-section-number">11.3</span> Method</h2>
+<p>We will evaluate each of the soil data harmonization efforts listed in Table 1 and implement the resulting best practices to prioritize ongoing development of SOC-DRaH.
+Dr Todd-Brown has been involved in a number of these efforts to varying degrees and is uniquely positioned to carry out this research.
+While the exact outline will change, we expect to find the following trends in these projects.
+To carry out this evaluation, we will (1) review publications within and beyond the soil community, as well as publicly available code and workflows, (2) contact PIs for one-on-one interviews, and (3) conduct a survey of the soil science community to analyse how other meta-analyses are commonly done and solicit more general feedback on how they should be done.</p>
+<p>New projects are immediately confronted with the need to develop a control vocabulary and data model.
+Some groups will expend considerable effort at this stage to include a large diverse group of researchers before aggregating data (ISCN3), while others will extend their data model only as needed (Crowther 2016).
+We expect there is a clear need in the community for a common control vocabulary and mechanism to regularly revise and update this vocabulary to reflect current methods.</p>
+<p>Next, projects need an organized workflow to merge and harmonize data sets from different sources into a common data model.
+Manual entry transcribing the data from source to a common template is expected to be the most common.
+The templated approach is flexible in the sense that the data source could be encoded in a graph, text from a manuscript, or tabular format and manually transcribed with minimal training.
+However, once that data is transcribed, revision to the data model often requires manually revisiting the original data source.
+In addition, the templated approach does not take direct advantage of digitized data tables that are becoming more and more common on online repositories.
+There are a few projects (LTER-SOM and SOC-DRaH) that instead focus on developing a scripted approach where a piece of code is written uniquely for each data set to convert the data automatically.
+This scripted approach requires more technical skill but is more robust to changes in the data model, because the original data format is preserved.
+We expect that, while a scripted approach is more technically robust, it would make it more difficult to recruit community contributions.</p>
+<p>Finally, projects need to extract insight from these diverse data sets.
+Larger richer data sets offer more options for analysis.
+However, the format of the data can also impact usability for final analysis.
+We expect that many of these studies rely heavily on Excel for data storage and may not be aware of better alternative formats.</p>
+<p>All code, data products, and white paper generated by this project will be made available via a repository under the ESIP organization GitHub under an MIT or CC-BY license.
+We anticipate the following deliverables: (1) a general white paper on best practices for data harmonization, supported by (2) survey data and interview transcriptions, and (3) specific recommendations to SOC-DRaH for future feature development to increase usability.
+Scientifically, we are interested in comparing the control vocabularies and data models developed by each group, specifically, what kind of measurements are common across all projects and is there any consensus on vocabulary.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="june-comparision-of-data-model-structures.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
