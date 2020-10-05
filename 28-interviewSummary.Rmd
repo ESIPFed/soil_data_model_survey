@@ -1,0 +1,17 @@
+# Summary of Interviews
+The interview process began during the summer of 2020 and consisted of five main guiding questions. The responses to these questions will guide the writing of the soil best practices paper which will summarize the status of current harmonization efforts and inform the creation of future ones.
+
+## Question 1: Starting study/project
+The first question asked  why the researcher started the study. Most participants stated that whatever knowledge they were specifically looking for was unavailable, unorganized, or nonexistent, so they therefore started the project/dataset out of need or frustration. Most of the data products began with a specific question in mind that was to be answered through the final data product and were developed over a period of five years or longer.
+
+## Question 2: Workflow
+The second question asked the researcher to describe their workflow for ingesting data sets. To this, many answered that they used a template driven model with manual entry and that there was usually some sort of prioritization of the datasets, depending on how well the dataset could be used to answer the posed question, when it was submitted, or how easy it was to ingest. Other common responses were the use of an automated or robust quality control and assurance (QA/QC). 
+
+## Question 3: Decisions
+The researchers were then asked which decisions they made in order to arrive at their specific workflow. Common responses were the use of workshops, which helped get everyone together in one place to work on the project and allowed for important decisions to be made, and the evolution of the templates. The templates were expanded to incorporate more variables as datasets were added and also allowed researchers to provide better documentation.
+
+## Question 4: Attaining copy of project
+Next, the researchers were asked how someone could get a copy of the data in their study. Commonly, they said that the data could be found in a GitHub repository or hosted on their project website. The data was mainly formatted as relational data tables, frequently through Excel.
+
+## Question 5: Painpoints and suggestions
+Finally, the researchers described what they would do differently and keep the same if they had to repeat their project. Common pain points stated by the principal investigators were the generational transfer of the data product, the required skill mix of informatics and soils, and the complex complete data structures which lead to large amounts of unique vocabulary. To combat some of these concerns, the researchers suggested ensuring to start with the correct team, involving both soil scientists and scientists with informatics backgrounds, as well as taking more time to develop the template before its use, so it would not need to be modified later. Positive suggestions included, having the community weigh in on needs and wants for the database and hosting hackathons and workshops to focus on completing tasks. This ensures that the final data product will be completed efficiently and that when completed it will be used. 
