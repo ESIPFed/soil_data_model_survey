@@ -88,3 +88,18 @@ cat(paste0(surveyResponse.df$`What do you wish was better understood about how y
 ```{r}
 cat(paste0(surveyResponse.df$`What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.`, collapse='\n'))
 ```
+
+## Summary of findings
+The survey followed the interviews and had a total of 23 responses. Even though the levels of experience and purposes behind compiling data products varied, there were many commonalities across all respondents. 
+
+### Finding sources
+When asked how they find their data sources, the majority of participants indicated that they used literature, while others used databases, reached out to colleagues that had worked on the topic, or even used a combination of all three. These responses indicate that data accessibility is much less of a problem now than previously with conducting a meta-analysis.
+
+### Painpoints and suggestions
+When asked what went well with compiling the data product or what could have gone better, most people listed difficulties rather than successes. Of the few successes, people reported comprehensive search results and the standardization of metadata and control vocabulary. The difficulties of compiling the data product included trying to determine what authors meant when there was a lack of documentation, and the large amounts of time spent to sort data and create a template. One respondent concluded that it was easy to automate ingestion of data from the same source, but very time consuming to mix data formats due to the need for harmonization. 
+
+### Ideal process
+The participants shared that the ideal process for data harmonization involves gap-filling, standardizing units and table structure, as well as being able to preserve the original data yet build off of it for their own purposes. 
+
+### Main hurdles
+Lastly, the main hurdles to contributing to data products and to other people using data include the time sunk into curating and formatting data products, the complex organization of data, and finding which data products to contribute to. Overall, the difficulty of meta-analysis results from trying to harmonize such complex and diverse data sets.
