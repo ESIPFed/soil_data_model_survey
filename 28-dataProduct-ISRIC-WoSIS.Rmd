@@ -1,0 +1,87 @@
+---
+title: "ISRIC record"
+author: "K Todd-Brown (ktoddbrown@ufl.edu); Niels H. Batjes, Eloi Ribeiro, Kristen Frederick, Marisa Younger"
+date: "9/4/2020"
+output: html_document
+---
+
+## September 2020 interview
+
+  1) What is the history of ISRIC and WoSIS as a database?
+      - ISRIC (International Soil Reference and Information Center), presently known as ISRIC - World Soil Information
+          + ISRIC is an international soil center that was founded in 1966 following the UNESCO council
+              - This council showed the need for an organization that could give examples of typical soil profiles
+          + ISRIC started as an international soil museum, but eventually moved digital to databases
+          + Since 1989 ISRIC has been accredited as world data center for soils by the international science council
+          + It provides standardized data for soils of the world, both global and continental soils
+      - WoSIS (World Soil Information Service)
+          + While ISRIC is the organization, WOSIS is the database
+          + Created around 5 or 6 years ago by compiling databases that ISRIC already had
+              - Many of the initial databases were data compilations so there were a lot of replicates that needed to be condensed
+      - Harmonized World Soil database is a different product from WoSIS, evolved from FAO-UNESCO Soil Map of the World
+          + Combines existing regional and national soil information
+          + FAO classification drove decision rules
+      - SoilGrids
+          + Uses soil profile observations from WoSIS and a stack of environmental co-variates to map the spatial distribution of soil properties
+
+  2) Describe your workflow for ingesting data sets? 
+      - First, look for datasets that contain soil data or people contact us with datasets
+      - Next, get a license to use the data
+          + Finding people/organizations willing to share their data can be difficult
+      - After these steps, we already have data as it arrives to us and a license, so we then generate metadata
+          + We have a server
+          + The metadata follows the European standards
+              - Questions and parameters always the same no matter the standard
+      - In the past, we would process the datasets one by one
+          + Recently, we have run it in a bunch, processing 18 datasets last year and 30 this year
+      - Have a script (python) that reads all the source formats
+      - Then separate the formats into different folders
+          + Turns sheets into tables
+              - Now we have 500 tables which are not really related but you can kind of see what matches up
+      - Another schema that consists of datasets, tables, and columns
+          + Start assigning the columns to our ontologies
+          + Results in a table that has a list of attributes and units and methods
+      - Another script puts everything together
+          + Matching the tables that have related variables
+          + Have two tables, one that describes the sites and one that describes the layer and descriptions
+      - In general, we expect the data to be a certain structure, but not all follow this structure so expert curated manual conversion is needed
+
+  3) What decisions did you make to arrive at this workflow?
+      - There have been a number of versions of WOSIS
+          + As you progress you see some things work well and some don’t so adjustments are made
+      - Inside ISRIC, they did not have one compiled database but there was a need for one that was flexible enough to incorporate all the datasets they had
+          + This is how WoSIS came about. Subsequently, data sets shared by the international community were added to WoSIS for standardisation
+      - Another project started to make derived soil property maps (SoilGrids250m) for the world using digital soil mapping.
+          + Found that they needed more data to do this, but there was already a huge (30) stack in pipeline
+          + Currently processing them in batches. Bottleneck remains sharing (CC BY) of soil profile data for future use by the international community
+
+  4) How would someone get a copy of the data in this study?
+      - Go on data.isric.org to access the Isric Data Hub, search for 'wosis'
+          + Searchable according to keywords or types of databases
+          + Able to download data
+      - Have a central database that they work on (WoSIS) and then extract 'shared data' that has been standardized and validated
+      - Snapshots 2016 and 2019 are frozen from that time
+      - Allow other people to add metadata if they want to be included in the registry
+          + Consist of a doi for consistent citation purposes and metadata
+          + This data is static
+          + In a TSV format that can be downloaded as zip files
+      - WOSIS_latest contains the same variables as Snapshots
+          + Consists of the more recent standardized data from WoSIS
+          + It is a dynamic set due to correcting errors if the occur and adding in new data
+
+  5) What would you do differently if you had to start again? What would be the same?
+      - Avoid data compilations
+          + It brings 'trouble' when one starts to compile compilations because it creates overlap and repeated data
+              - It is difficult to find which data are repeated
+              - Becomes very cumbersome to clean it
+          + Instead of using compilations, use source data
+              - Conversely, if you are using a compilation, make sure to not also include a reference to the source data
+      - Do things in batches
+          + Might not have as much time to go through details, but the time saved is worth it
+      - Try to steer away from excel
+          + people put things with colors, get bad habits
+          + Does not work as well with huge databases where it is difficult to see everything on huge tables
+      - Don't worry about quantity, worry about quality of databases
+      - Stick with open standards and open formats
+          + Open standards help with giving the project a future
+          + Open formats make it more likely that people will use it
