@@ -13,7 +13,7 @@ controlVocab <- readr::read_csv(file=file.path(data.dir, 'control_vocabulary.csv
   filter(grepl('ISCN', data_product))
 ```
 
-## June interview
+## June 2020 interview
 
 These are notes from a 4 June 2020 interview with Luke Nave.
 
@@ -42,8 +42,8 @@ These are notes from a 4 June 2020 interview with Luke Nave.
     - There is a quick-start, intermediate, and advanced user guide. 
 5) What would you do differently if you had to start again?
     - Develop products in parallel with the database itself. The interviewee's great disappointment was overemphasizing consolidating the data for their own sake but not spending enough time turning the data into publications. This could have shown what can be done with the synthesis to spark interests and show what is possible.
-    - Have a small group of people (5 or 6) executing a common set of standard gap fills and decision trees for bulk density, carbon concentrations, and stock computations. They would set rules and create commonly agreed upon couple of scripts that could do some gap filling. This would save time for future users by just getting that done first.
-      + ISCN3 has a complex gapfilling methods that we used to generate soil organic carbon stock estimates and flagged this under a relatively cryptic headers; these were the product of only 2 people and much of the decision making is only documented in a mess of old emails.
+    - Have a small group of people (5 or 6) executing a common set of standard gap fills and decision trees for bulk density, carbon concentrations, and stock computations. They would set rules and create commonly agreed upon couple of scripts that could do some gap-filling. This would save time for future users by just getting that done first.
+      + ISCN3 has complex gap-filling methods that we used to generate soil organic carbon stock estimates and flagged this under a relatively cryptic headers; these were the product of only 2 people and much of the decision making is only documented in a mess of old emails.
     - Put all the code that handles the data that turns it from data into product in a common format and allow people who are interested to get it and edit it. This would make it open access which was not a part of ISCN (the Scientific Steering Group specifically desired to control and document access, in order that data contributors received credit and citations). The current codebase used to generate ISCN3 is cryptic to the point of being black boxed after the retirement of the original programmer.
     - Create a functional way to harvest information about treatments and disturbances, so that the dataset can be used to study treatment effects. The disturbance table was prototyped but never satisfactorily implemented, much less refined through implementation.
     - Change latitude and longitude to profile level rather than site level attributes to create high resolution data.
