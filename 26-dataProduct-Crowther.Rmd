@@ -26,7 +26,24 @@ For example, if at two locations with the same climate, topography, and vegetati
       - Managing the large co-author list and people skills remains challenging. Tom spends so much time on managing emails, or dealing with failed communication attempts due to switching of emails or being sent to spam. He believes that managing relationships with the authors of the data is the hardest, because if you miss one person, you could be missing a large opportunity for your project. Recently, he has been using listservs as he finds it reaches more people, is less likely to be filtered out of people’s professional emails, and is easier to keep organized. 
 
     
-## Data Model
+## Crowther data model
+
+- Common features
+     + location, elevation, and observation time
+     + depth of core and layer
+     + bulk density
+     + vegetation
+     + carbon (?organic) percentage and loss on ignition
+
+  - Unique features
+     + Author updated data (outside sources)
+       - Biome, % Clay, pH, 
+     + Detailed soil warming data
+       - planned temperatures, control temperatures, mean temperatures
+     + Cation exchange capacity reported
+     + % Nitrogen reported
+     + distinguished between total raw carbon and total carbon
+     + Difference between detailed_site_id(New Name) and site_id(Old Name)
 
 ```{r}
 
