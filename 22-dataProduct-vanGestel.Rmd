@@ -10,7 +10,7 @@ controlVocab <- dataDescription.ls$control_vocabulary %>%
 
 ```
 
-## June Interview
+## June 2020 Interview
 
 These are notes from the June 2020 interview with Dr Natasja van Gestel.
 
@@ -38,7 +38,7 @@ These are notes from the June 2020 interview with Dr Natasja van Gestel.
     - Currently using powerpoint to extract data from figures, so using a different type of software could make the process more efficient.  
     - Considering focusing more on collecting data from repositories in the future.
 
-## vanGestel specific
+## vanGestel data model
 
   - Common features
     + location, elevation, and observation time
@@ -50,9 +50,7 @@ These are notes from the June 2020 interview with Dr Natasja van Gestel.
     + carbon, nitrogen, and phosphorus pools above and below ground
     + treatments and information about treatments (mean, standard error, size)
     + 'input' variable
-    + soil horizon and percent soil organic matter
-    
-### Data model
+    + soil horizon and percent soil organic matter    
 
 ```{r eval=FALSE}
 
@@ -89,14 +87,8 @@ vanGestel2017_dm <- as.data_model(vanGestel_table %>% filter(data_product == 'va
 
 ```
 
-#### vs2017
 
-```{r}
-
-dm_render_graph(dm_create_graph(vanGestel2017_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only'))
-```
-
-#### Current version
+### Current version
 
 ```{r fig.height=4}
 dm_render_graph(dm_create_graph(vanGestel_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only'))
