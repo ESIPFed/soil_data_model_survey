@@ -121,6 +121,165 @@ CCRCN,Soil Depth Series,age,unit,year
 CCRCN,Soil Depth Series,age_min,unit,year
 CCRCN,Soil Depth Series,age_max,unit,year
 CCRCN,Soil Depth Series,age_sd,unit,year
+CCRCN,Study Information,one_liner,description,NA
+CCRCN,Study Information,study_code,description,NA
+CCRCN,Study Information,study_start_date,description,NA
+CCRCN,Study Information,study_end_date,description,NA
+CCRCN,Study Information,abstract,description,NA
+CCRCN,Keywords,key_words,description,NA
+CCRCN,Authors,last_name,description,NA
+CCRCN,Authors,given_name,description,NA
+CCRCN,Authors,email,description,NA
+CCRCN,Authors,phone,description,NA
+CCRCN,Authors,corresponding_author,description,NA
+CCRCN,Funding Sources,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
+CCRCN,Funding Sources,funding_agency,description,"Agency name funding the research, spelled out, no acronyms."
+CCRCN,Funding Sources,funding_id,description,Code used by the agency to track the project funding.
+CCRCN,Funding Sources,funding_notes,description,Any other submitter-generated notes about the project funding.
+CCRCN,Associated Publications,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
+CCRCN,Associated Publications,bibtex_citation,description,Submitters can associate multiple BibTeX style citations with the dataset. They can also include the same information by filling out following attributes in tabular form if more convenient than BibTeX formatting.
+CCRCN,Associated Publications,publication_type,description,Code indicating the type of publication the study originates from.
+CCRCN,Associated Publications,author,description,The names of the author separated by “and”.
+CCRCN,Associated Publications,year,description,"The year of publication or, if unpublished, the year of creation."
+CCRCN,Associated Publications,title,description,The title of the work.
+CCRCN,Associated Publications,journal,description,The journal or magazine the work was published in.
+CCRCN,Associated Publications,volume,description,The volume of a journal or multi-volume book.
+CCRCN,Associated Publications,number,description,"The “(issue) number” of a journal, magazine, or tech-report, if applicable. (Most publications have a “volume”, but no “number” field.)."
+CCRCN,Associated Publications,pages,description,"Page numbers, separated either by commas or double-hyphens."
+CCRCN,Associated Publications,url,description,Permanent web address where the work can be located.
+CCRCN,Associated Publications,doi,description,Digital object identifier associated with the work.
+CCRCN,Associated Publications,address,description,"Publisher’s address (usually just the city, but can be the full address for lesser-known publishers)."
+CCRCN,Associated Publications,annote,description,An annotation for annotated bibliography styles (not typical).
+CCRCN,Associated Publications,booktitle,description,"The title of the book, if only part of it is being cited."
+CCRCN,Associated Publications,chapter,description,The chapter number.
+CCRCN,Associated Publications,crossref,description,The key of the cross-referenced entry.
+CCRCN,Associated Publications,edition,description,"The edition of a book, long form (such as “First” or “Second”)."
+CCRCN,Associated Publications,editor,description,The name(s) of the editor(s).
+CCRCN,Associated Publications,howpublished,description,"How it was published, if the publishing method is nonstandard."
+CCRCN,Associated Publications,institution,description,"The institution that was involved in the publishing, but not necessarily the publisher."
+CCRCN,Associated Publications,key,description,A hidden field used for specifying or overriding the alphabetical order of entries (when the “author” and “editor” fields are missing). Note that this is very different from the key (mentioned just after this list) that is used to cite or cross-reference the entry.
+CCRCN,Associated Publications,month,description,"The month of publication (or, if unpublished, the month of creation)."
+CCRCN,Associated Publications,note,description,Miscellaneous extra information.
+CCRCN,Associated Publications,organization,description,The conference sponsor.
+CCRCN,Associated Publications,publisher,description,The publisher’s name.
+CCRCN,Associated Publications,school,description,The school where the thesis was written.
+CCRCN,Associated Publications,series,description,The series of books the book was published in (e.g. “The Hardy Boys” or “Lecture Notes in Computer Science”).
+CCRCN,Associated Publications,type,description,"The field overriding the default type of publication (e.g. “Research Note” for techreport, “{PhD} dissertation” for phdthesis, “Section” for inbook/incollection)."
+CCRCN,Materials and Methods,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
+CCRCN,Materials and Methods,coring_method,description,Code indicating what type of device was used to collect soil depth profiles.
+CCRCN,Materials and Methods,roots_flag,description,Code indicating whether live roots were included or excluded from carbon assessments.
+CCRCN,Materials and Methods,sediment_sieved_flag,description,Code indicating whether or not sediment was sieved prior to carbon measurements.
+CCRCN,Materials and Methods,sediment_sieve_size,description,"If sediment was sieved, the size of sieve used."
+CCRCN,Materials and Methods,compaction_flag,description,Code indicating how the authors qualified or quantified compaction of the core.
+CCRCN,Materials and Methods,dry_bulk_density_temperature,description,Temperature at which samples were dried to measure dry bulk density. This can include either samples that were freeze dried or oven dried.
+CCRCN,Materials and Methods,dry_bulk_density_time,description,Time over which samples were dried to measure dry bulk density.
+CCRCN,Materials and Methods,dry_bulk_density_sample_volume,description,"Sample volume used for bulk density measurements, if held constant."
+CCRCN,Materials and Methods,dry_bulk_density_sample_mass,description,"Sample mass used for bulk density measurements, if held constant."
+CCRCN,Materials and Methods,dry_bulk_density_flag,description,Any notable codes regarding how the authors quantified dry bulk density.
+CCRCN,Materials and Methods,loss_on_ignition_temperature,description,Temperature at which samples were combusted to estimate fraction organic matter.
+CCRCN,Materials and Methods,loss_on_ignition_time,description,Time over which samples were combusted to estimate fraction organic matter.
+CCRCN,Materials and Methods,loss_on_ignition_sample_volume,description,"Sample volume used for loss on ignition, if held constant."
+CCRCN,Materials and Methods,loss_on_ignition_sample_mass,description,"Sample mass used for loss on ignition, if held constant."
+CCRCN,Materials and Methods,loss_on_ignition_flag,description,Common codes regarding loss on ignition methodology.
+CCRCN,Materials and Methods,carbon_measured_or_modeled,description,Code indicating whether fraction carbon was measured or estimated as a function of organic matter.
+CCRCN,Materials and Methods,carbonates_removed,description,Whether or not carbonates were removed prior to calculating fraction organic carbon.
+CCRCN,Materials and Methods,carbonate_removal_method,description,The method used to remove carbonates prior to measuring fraction carbon.
+CCRCN,Materials and Methods,fraction_carbon_method,description,"Code indicating the method for which fraction carbon was measured or modeled (Note: regression based models are permitted, but the use of the Bemmelen factor [0.58 gOC gOM-1] is discouraged)."
+CCRCN,Materials and Methods,fraction_carbon_type,description,Code indicating whether fraction_carbon refers to organic or total carbon.
+CCRCN,Materials and Methods,carbon_profile_notes,description,"Any other submitter defined notes describing methodologies for determining dry bulk density, organic matter fraction, and carbon fraction."
+CCRCN,Materials and Methods,cs137_counting_method,description,Code indicating the method used for determining radiocesium activity.
+CCRCN,Materials and Methods,pb210_counting_method,description,Code indicating the method used for determining lead 210 activity.
+CCRCN,Materials and Methods,excess_pb210_rate,description,Code indicating the mass or accretion rate used in the excess_pb_210_model
+CCRCN,Materials and Methods,excess_pb210_model,description,Code indicating the model used to estimate excess lead 210.
+CCRCN,Materials and Methods,ra226_assumption,description,Code indicating the assumption used to estimate the core's background 226Ra levels.
+CCRCN,Materials and Methods,c14_counting_method,description,Code indicating the method used for determining radiocarbon activity.
+CCRCN,Materials and Methods,dating_notes,description,Any submitter defined notes elaborating on the process of dating the core not yet made clear by the coding.
+CCRCN,Materials and Methods,age_depth_model_reference,description,Code indicating the reference or 0 year of the age depth model.
+CCRCN,Materials and Methods,age_depth_model_notes,description,Any submitter defined notes on how the age depth model was created.
+CCRCN,Site Level,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
+CCRCN,Site Level,site_id,description,Site identification code unique to each study.
+CCRCN,Site Level,site_description,description,Site description including relevant study details and political geographic units. Some of these descriptions can be automated by the ingestion code.
+CCRCN,Site Level,site_latitude_max,description,Maximum latitude defining a bounding box for the site in decimal degree World Geodedic System of 1984 (WGS84). This can also be generated automatically by the ingestion code.
+CCRCN,Site Level,site_latitude_min,description,Minimum latitude defining a bounding box for the site in decimal degree WGS84. This can also be generated automatically by the ingestion code.
+CCRCN,Site Level,site_longitude_max,description,Maximum longitude defining a bounding box for the site in decimal degree WGS84. This can also be generated automatically by the ingestion code.
+CCRCN,Site Level,site_longitude_min,description,Minimum longitude defining a bounding box for the site in decimal degree WGS84. This can also be generated automatically by the ingestion code.
+CCRCN,Site Level,site_boundaries,description,"As an alternative to submitting or automatically generating a bounding box, submitters can include a shapefile (.shp) or keyhole markup language (.kml) documenting the geographic boundaries of the site. This can be converted to and stored in well known text (WTK) format."
+CCRCN,Site Level,salinity_notes,description,Any relevant submitter generated notes on how salinity_class was determined.
+CCRCN,Site Level,vegetation_class,description,Code based on submitter field observations or measurement indicating dominant wetland vegetation type.
+CCRCN,Site Level,inundation_notes,description,Any relevant submitter generated notes on how inundation was determined
+CCRCN,Core Level,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
+CCRCN,Core Level,site_id,description,Site identification code unique to each study.
+CCRCN,Core Level,core_id,description,Core identification code unique to each site.
+CCRCN,Core Level,core_date,description,Date of core collection.
+CCRCN,Core Level,core_notes,description,Any other relevant submitter generated notes on how cores were collected.
+CCRCN,Core Level,core_latitude,description,Positional latitude of the core in decimal degree WGS84.
+CCRCN,Core Level,core_longitude,description,Positional longitude of the core in decimal degree WGS84.
+CCRCN,Core Level,core_position_accuracy,description,"Accuracy of latitude and longitude measurement, if determined and recorded."
+CCRCN,Core Level,core_position_method,description,Code indicating how latitude and longitude were determined.
+CCRCN,Core Level,core_position_notes,description,Any relevant submitter generated notes on how latitude and longitude were determined.
+CCRCN,Core Level,core_elevation,description,Surface elevation of the core relative to defined datum.
+CCRCN,Core Level,core_elevation_datum,description,The datum relative to which the core elevation was measured against (For a complete list of datum names and aliases please refer to the ISO Geodedic Registry https://iso.registry.bespire.eu/register/geodetic/VerticalDatum).
+CCRCN,Core Level,core_elevation_accuracy,description,"Accuracy of elevation measurement, if determined and recorded"
+CCRCN,Core Level,core_elevation_method,description,Code indicating how elevation was determined
+CCRCN,Core Level,core_elevation_notes,description,Any relevant submitter generated notes on how elevation was determined
+CCRCN,Core Level,salinity_class,description,"Code based on submitter field observation or measurement indicating average annual salinity (Note: Palustrine and freshwater should only include tidal wetlands, or wetlands that are potentially/formerly tidal but artificially freshened due to artificial tidal restrictions)."
+CCRCN,Core Level,salinity_method,description,Indicate whether salinity_class was determined using a field observation or a measurement
+CCRCN,Core Level,vegetation_method,description,Indicate whether vegetation_class was determined using a field observation or a measurement
+CCRCN,Core Level,vegetation_notes,description,Any relevant submitter generated notes on how vegetation_class and dominant_species were determined.
+CCRCN,Core Level,inundation_class,description,Code based on submitter field observation or measurement indicating how often the coring location is inundated.
+CCRCN,Core Level,inundation_method,description,Indicate whether inundation_class was determined using a field observation or a measurement
+CCRCN,Core Level,core_length_flag,description,"Indicated whether or not the coring team believes they recovered a full sediment profile, down to bedrock, or other non-marsh interface."
+CCRCN,Soil Depth Series,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
+CCRCN,Soil Depth Series,site_id,description,Site identification code unique to each study.
+CCRCN,Soil Depth Series,core_id,description,Core identification code unique to each site.
+CCRCN,Soil Depth Series,depth_min,description,Minimum depth of a sampling increment.
+CCRCN,Soil Depth Series,depth_max,description,Maximum depth of a sampling increment.
+CCRCN,Soil Depth Series,sample_id,description,"Sample identification unique to the core. This should be used in the case that there are relevant lab specific sample codes, or in the case that there are multiple replicate samples."
+CCRCN,Soil Depth Series,dry_bulk_density,description,Dry mass per unit volume of a soil sample. This does not include ash free bulk density.
+CCRCN,Soil Depth Series,fraction_organic_matter,description,Mass of organic matter relative to sample dry mass. Ash free bulk density should not be used here but should be expressed as a loss on ignition fraction.
+CCRCN,Soil Depth Series,fraction_carbon,description,Mass of carbon relative to sample dry mass.
+CCRCN,Soil Depth Series,compaction_fraction,description,Fraction of the sample depth interval reduced due to compaction.
+CCRCN,Soil Depth Series,compaction_notes,description,Any submitter generated notes on compaction.
+CCRCN,Soil Depth Series,cs137_activity,description,Radioactivity counts per unit dry weight for radiocesium (137Cs).
+CCRCN,Soil Depth Series,cs137_activity_sd,description,1 standard deviation of uncertainty associated with cs137_activity.
+CCRCN,Soil Depth Series,total_pb210_activity,description,Total radioactivity counts per unit dry weight for excess lead 210 (210Pb).
+CCRCN,Soil Depth Series,total_pb210_activity_sd,description,1 standard deviation of uncertainty associated with total_pb210_activity.
+CCRCN,Soil Depth Series,ra226_activity,description,Total radioactivity counts per unit dry weight for Radium 226 (226Ra) if measured as part of the 210Pb dating process.
+CCRCN,Soil Depth Series,ra226_activity_sd,description,1 standard deviation of uncertainty associated with ra226_activity.
+CCRCN,Soil Depth Series,excess_pb210_activity,description,Excess radioactivity counts per unit dry weight for excess lead 210 (210Pb).
+CCRCN,Soil Depth Series,excess_pb210_activity_sd,description,1 standard deviation of uncertainty associated with excess_pb210_activity.
+CCRCN,Soil Depth Series,c14_age,description,Radiocarbon age as estimated from AMS measurements.
+CCRCN,Soil Depth Series,c14_age_sd,description,Estimated uncertainty in c14_age.
+CCRCN,Soil Depth Series,c14_material,description,Description of the material selected for radiocarbon (14C) dating.
+CCRCN,Soil Depth Series,c14_notes,description,Any relevant submitter generated notes on 14C dating process.
+CCRCN,Soil Depth Series,delta_c13,description,The isotopic signature of 13C. This is oftentimes measured along with c14_age and can be useful for analyzing carbon lability and provenance.
+CCRCN,Soil Depth Series,be7_activity,description,Radioactivity counts per unit dry weight for 7Be
+CCRCN,Soil Depth Series,be7_activity_sd,description,Estimated uncertainty in be7_activity.
+CCRCN,Soil Depth Series,am241_activity,description,Radioactivity counts per unit dry weight for 241Am
+CCRCN,Soil Depth Series,am241_activity_sd,description,Estimated uncertainty in am241_activity.
+CCRCN,Soil Depth Series,marker_date,description,"The age of any other dated depth horizon such as an artificial marker, pollen horizon, pollution horizon, etc."
+CCRCN,Soil Depth Series,marker_type,description,Code indicating the type of marker.
+CCRCN,Soil Depth Series,marker_notes,description,Any other submitter generated notes about the origin of the marker.
+CCRCN,Soil Depth Series,age,description,"Most likely, median, or mean age of the depth interval from submitter generated age depth model."
+CCRCN,Soil Depth Series,age_min,description,Minimum age of the depth interval from submitter generated age depth model.
+CCRCN,Soil Depth Series,age_max,description,Maximum age of the depth interval from submitter generated age depth model.
+CCRCN,Soil Depth Series,age_sd,description,Standard deviation of age estimate from submitter generated age depth model.
+CCRCN,Soil Depth Series,depth_interval_notes,description,Any other submitter generated notes specific to the depth interval.
+CCRCN,Dominant Species Present,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
+CCRCN,Dominant Species Present,site_id,description,Site identification code unique to each study.
+CCRCN,Dominant Species Present,core_id,description,Core identification code unique to each site.
+CCRCN,Dominant Species Present,species_code,description,Code associated with a species or a vegetation assemblage.
+CCRCN,Anthropogenic Impacts Present,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
+CCRCN,Anthropogenic Impacts Present,core_id,description,Core identification code unique to each site.
+CCRCN,Anthropogenic Impacts Present,site_id,description,Site identification code unique to each study.
+CCRCN,Anthropogenic Impacts Present,impact_class,description,Code indicating any major anthropogenic impacts historically and currently affecting the coring location.
+CCRCN,Study Level Species Table,genus,description,Genus according to the most up to date classification.
+CCRCN,Study Level Species Table,species,description,Species according to the most up to date classification.
+CCRCN,Study Level Species Table,sub_species,description,Any nomenclature referring to subspecies special cases.
+CCRCN,Study Level Species Table,hybrid,description,Any nomenclature referring to special cases of hybridization.
+CCRCN,Study Level Species Table,common_name,description,"Common name associated with the species, especially if it is referred to in any accompanying text."
+CCRCN,Study Level Species Table,species_notes,description,Any other submitter defined notes regarding the species.
+CCRCN,Study Level Species Table,study_id,description,"Unique identifier for the study made up of the first author's family name, as well as the second author's or 'et al.' if more than three, then publication year spearated by underscores. See worksCited.bib for more detail."
 Crowther,Summary,%C,unit,percent
 Crowther,Summary,Avg. C Control,unit,degree-C
 Crowther,Summary,Avg. C Warming,unit,degree-C
@@ -986,6 +1145,149 @@ SoDaH-Site_KEY_V2,fraction,frc_gibbsite,unit,percent
 SoDaH-Site_KEY_V2,fraction,frc_fe_oxides,unit,percent
 SoDaH-Site_KEY_V2,fraction,frc_imog_alloph,unit,percent
 SoDaH-Site_KEY_V2,fraction,frc_ferrihydrite,unit,percent
+WoSIS_2019,layers_chemical,upper_depth,unit,cm
+WoSIS_2019,layers_chemical,lower_depth,unit,cm
+WoSIS_2019,layers_chemical,tceq_value,unit,g kg-1
+WoSIS_2019,layers_chemical,tceq_value_avg,unit,g kg-1
+WoSIS_2019,layers_chemical,tceq_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,cecph7_value,unit,cmol(c) kg-1
+WoSIS_2019,layers_chemical,cecph7_value_avg,unit,cmol(c) kg-1
+WoSIS_2019,layers_chemical,cecph7_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,cecph8_value,unit,cmol(c) kg-1
+WoSIS_2019,layers_chemical,cecph8_value_avg,unit,cmol(c) kg-1
+WoSIS_2019,layers_chemical,cecph8_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,ecec_value,unit,cmol(c) kg-1
+WoSIS_2019,layers_chemical,ecec_value_avg,unit,cmol(c) kg-1
+WoSIS_2019,layers_chemical,ecec_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,elco20_value,unit,dS m-1
+WoSIS_2019,layers_chemical,elco20_value_avg,unit,dS m-1
+WoSIS_2019,layers_chemical,elco20_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,elco25_value,unit,dS m-1
+WoSIS_2019,layers_chemical,elco25_value_avg,unit,dS m-1
+WoSIS_2019,layers_chemical,elco25_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,elco50_value,unit,dS m-1
+WoSIS_2019,layers_chemical,elco50_value_avg,unit,dS m-1
+WoSIS_2019,layers_chemical,elco50_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,elcosp_value,unit,dS m-1
+WoSIS_2019,layers_chemical,elcosp_value_avg,unit,dS m-1
+WoSIS_2019,layers_chemical,elcosp_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,orgc_value,unit,g kg-1
+WoSIS_2019,layers_chemical,orgc_value_avg,unit,g kg-1
+WoSIS_2019,layers_chemical,orgc_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phca_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phaq_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phkc_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phnf_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phpbyi_value,unit,mg kg-1
+WoSIS_2019,layers_chemical,phpbyi_value_avg,unit,mg kg-1
+WoSIS_2019,layers_chemical,phpbyi_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phpmh3_value,unit,mg kg-1
+WoSIS_2019,layers_chemical,phpmh3_value_avg,unit,mg kg-1
+WoSIS_2019,layers_chemical,phpmh3_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phpols_value,unit,mg kg-1
+WoSIS_2019,layers_chemical,phpols_value_avg,unit,mg kg-1
+WoSIS_2019,layers_chemical,phpols_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phprtn_value,unit,mg kg-1
+WoSIS_2019,layers_chemical,phprtn_value_avg,unit,mg kg-1
+WoSIS_2019,layers_chemical,phprtn_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phptot_value,unit,mg kg-1
+WoSIS_2019,layers_chemical,phptot_value_avg,unit,mg kg-1
+WoSIS_2019,layers_chemical,phptot_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,phpwsl_value,unit,mg kg-1
+WoSIS_2019,layers_chemical,phpwsl_value_avg,unit,mg kg-1
+WoSIS_2019,layers_chemical,phpwsl_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,totc_value,unit,g kg-1
+WoSIS_2019,layers_chemical,totc_value_avg,unit,g kg-1
+WoSIS_2019,layers_chemical,totc_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_chemical,nitkjd_value,unit,g kg-1
+WoSIS_2019,layers_chemical,nitkjd_value_avg,unit,g kg-1
+WoSIS_2019,layers_chemical,nitkjd_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,upper_depth,unit,cm
+WoSIS_2019,layers_physical,lower_depth,unit,cm
+WoSIS_2019,layers_physical,bdfi33_value,unit,kg dm-3
+WoSIS_2019,layers_physical,bdfi33_value_avg,unit,kg dm-3
+WoSIS_2019,layers_physical,bdfi33_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,bdfiad_value,unit,kg dm-3
+WoSIS_2019,layers_physical,bdfiad_value_avg,unit,kg dm-3
+WoSIS_2019,layers_physical,bdfiad_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,bdfifm_value,unit,kg dm-3
+WoSIS_2019,layers_physical,bdfifm_value_avg,unit,kg dm-3
+WoSIS_2019,layers_physical,bdfifm_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,bdfiod_value,unit,kg dm-3
+WoSIS_2019,layers_physical,bdfiod_value_avg,unit,kg dm-3
+WoSIS_2019,layers_physical,bdfiod_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,bdws33_value,unit,kg dm-3
+WoSIS_2019,layers_physical,bdws33_value_avg,unit,kg dm-3
+WoSIS_2019,layers_physical,bdws33_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,bdwsad_value,unit,kg dm-3
+WoSIS_2019,layers_physical,bdwsad_value_avg,unit,kg dm-3
+WoSIS_2019,layers_physical,bdwsad_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,bdwsfm_value,unit,kg dm-3
+WoSIS_2019,layers_physical,bdwsfm_value_avg,unit,kg dm-3
+WoSIS_2019,layers_physical,bdwsfm_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,bdwsod_value,unit,kg dm-3
+WoSIS_2019,layers_physical,bdwsod_value_avg,unit,kg dm-3
+WoSIS_2019,layers_physical,bdwsod_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,clay_value,unit,g 100g-1
+WoSIS_2019,layers_physical,clay_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,clay_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,cfgr_value,unit,g 100g-1
+WoSIS_2019,layers_physical,cfgr_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,cfgr_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,cfvo_value,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,cfvo_value_avg,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,cfvo_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,sand_value,unit,g 100g-1
+WoSIS_2019,layers_physical,sand_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,sand_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,silt_value,unit,g 100g-1
+WoSIS_2019,layers_physical,silt_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,silt_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wg0100_value,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0100_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0100_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wg0010_value,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0010_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0010_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wg1500_value,unit,g 100g-1
+WoSIS_2019,layers_physical,wg1500_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,wg1500_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wg0200_value,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0200_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0200_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wg0033_value,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0033_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0033_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wg0500_value,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0500_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0500_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wg0006_value,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0006_value_avg,unit,g 100g-1
+WoSIS_2019,layers_physical,wg0006_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wv0100_value,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0100_value_avg,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0100_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wv0010_value,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0010_value_avg,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0010_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wv1500_value,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv1500_value_avg,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv1500_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wv0200_value,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0200_value_avg,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0200_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wv0033_value,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0033_value_avg,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0033_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wv0500_value,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0500_value_avg,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0500_date,unit,YYYY-MM-DD
+WoSIS_2019,layers_physical,wv0006_value,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0006_value_avg,unit,cm3 100cm-3
+WoSIS_2019,layers_physical,wv0006_date,unit,YYYY-MM-DD
+WoSIS_2019,profiles,latitude,unit,degrees
+WoSIS_2019,profiles,longitude,unit,degrees
+WoSIS_2019,profiles,dsds,unit,cm
 vanGestel,soil C,trt,control_vocabulary,"T = temperature (warming), H2O = irrigated, D = Drought, co2 = elevated CO2, clipping = biomass removal, etc.)"
 vanGestel,soil C,soilT.depth,unit,°C
 vanGestel,soil C,start.date,unit,month-year
