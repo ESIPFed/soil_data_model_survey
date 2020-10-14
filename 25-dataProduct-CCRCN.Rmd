@@ -60,7 +60,7 @@ CCRCN_controlVocab <- dataDescription.ls$control_vocabulary %>%
     - Start off with having a community weighing in and saying what they need and want from a database. Release a couple different versions of original guidance to receive commentary and feedback
     - A lot of the success is due to the fact that the community was small enough where everyone knows each other, is willing to participate, and is easy to reach, but also big enough to where there were a lot of people who need to work together and are.
 
-## CC-RCN specific
+## CC-RCN data model
 
   - Common features
     + location, elevation, and observation time
@@ -109,7 +109,7 @@ dm_render_graph(dm_create_graph(CCRCN_dm, rankdir = "BT", col_attr = c('column')
 dm_render_graph(dm_create_graph(CCRCN_dm, rankdir = "BT", col_attr = c('column'), view_type = 'all', graph_name='CC-RCN data model'))
 ```
 
-## Acknowledgement
+## Acknowledgements
 
 
-We would like to talk Dr James Holmquist (Smithsonian Institution) for his time and contributions to the June interview.
+We would like to thank Dr James Holmquist (Smithsonian Institution) for his time and contributions to the June interview.
