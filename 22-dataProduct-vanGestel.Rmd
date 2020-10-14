@@ -15,9 +15,9 @@ controlVocab <- dataDescription.ls$control_vocabulary %>%
 These are notes from the June 2020 interview with Dr Natasja van Gestel.
 
 1) Why did you start this study?
-    - There was a DOE funded project during van Gestel's postdoc where it became obvious the modeling project would benefit form a more robust data set for parameterization. This became an ongoing project over the past 5 years.
+    - There was a DOE funded project during van Gestel's postdoc where it became obvious that the modeling project would benefit from a more robust data set for parameterization. This became an ongoing project over the past 5 years.
 2) Describe your workflow for ingesting data sets?
-    - Data is extract from the published literature, generally though transcription of points recovered from figures or published tables.
+    - Data is extracted from the published literature, generally though transcription of points recovered from figures or published tables.
     - Studies are selected based on availability of soil carbon, and an attempt is made to capture all the data associated with these studies.
     - This data is then entered into an Excel spreadsheet, fed through a series of scripts to automate gap-filling, and then generate data products relevant to modeling studies.
     - van Gestel and her lab were responsible for everything from the initial design of the spreadsheets, to data recovery and post-processing. 
@@ -26,10 +26,10 @@ These are notes from the June 2020 interview with Dr Natasja van Gestel.
     - In general the design of the spreadsheet has not changed significantly over the years. To design the spreadsheet van Gestel tried to think mechanistically about the processes that control carbon cycling in soils and create an exhaustive list of variables to capture from the literature. This exhaustive template was then pruned to create more restricted data products as needed.
     - Expanded on factors originally related mostly to carbon as represented by soil carbon models (ie carbon stocks, fluxes, experimental treatments for temperature, nutrients, and moisture). 
     - Simplicity was a core value in developing the data model. 
-    - Tried to preseve as much information from the origial data source as possible.
-      + Needed to record orginal units and then harmonize units in processing scripts.
+    - Tried to preserve as much information from the origial data source as possible.
+      + Needed to record original units and then harmonize units in processing scripts.
       + Key to determine how bulk density was treated in the study
-        * Sometimes there were no bulk density values, some studies only used 1 value for bulk density or a proscribed standard bulk density.
+        * Sometimes there were no bulk density values, some studies only used 1 value for bulk density or a prescribed standard bulk density.
         * Bulk density was frequently gap-filled in the generated data products using imputed bulk density to organic carbon relationships
 4) How would someone get a copy of the data in this study?
     - Contact van Gestel directly, publication is pending.
@@ -38,7 +38,7 @@ These are notes from the June 2020 interview with Dr Natasja van Gestel.
     - Currently using powerpoint to extract data from figures, so using a different type of software could make the process more efficient.  
     - Considering focusing more on collecting data from repositories in the future.
 
-## vanGestel data model
+## van Gestel data model
 
   - Common features
     + location, elevation, and observation time
@@ -97,4 +97,4 @@ dm_render_graph(dm_create_graph(vanGestel_dm, rankdir = "BT", col_attr = c('colu
 
 ## Acknowledgements
 
-Special thanks to Dr Natasja van Gestel (Texas Tech University) for making the meta data for this data product avaible for analysis and making herself available for interview.
+Special thanks to Dr Natasja van Gestel (Texas Tech University) for making the metadata for this data product available for analysis and making herself available for interview.
