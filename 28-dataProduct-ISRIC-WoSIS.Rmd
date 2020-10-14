@@ -85,3 +85,26 @@ output: html_document
       - Stick with open standards and open formats
           + Open standards help with giving the project a future
           + Open formats make it more likely that people will use it
+          
+          
+## Data model
+
+```{r}
+WoSIS_table <- dataDescription.ls$structure %>%
+  filter(grepl('WoSIS_2019', data_product)) %>%
+  mutate(key = data_type == 'id') %>%
+  mutate(ref = case_when(grepl('^profile_id$', data_column) ~ 'profiles',
+                         grepl('^profile_layer_id$', data_column) ~ 'layers_physical',
+                         TRUE ~ as.character(NA)),
+         ref_col = case_when(grepl('^profile_id$', data_column) ~ 'profile_id',
+                             grepl('^profile_layer_id$', data_column) ~ 'profile_layer_id',
+                         TRUE ~ as.character(NA))) %>%
+    mutate(ref = if_else(data_table == ref, as.character(NA), ref))%>%
+   rename('table'='data_table',  'column'='data_column' )
+
+dm_render_graph(dm_create_graph(as.data_model(WoSIS_table), rankdir = "RL", col_attr = c('column'), view_type = 'keys_only', graph_name='ISCN-template data model'))
+```
+
+## Acknowledgements
+
+Thank you to: Niels H. Batjes, Eloi Ribeiro
