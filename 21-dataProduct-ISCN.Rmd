@@ -54,7 +54,7 @@ These are notes from a 4 June 2020 interview with Luke Nave.
     - In terms of interfacing with the broader science community, listening and having workshops were helpful in that they resulted in positive changes to the templates.
     - Allow for map based data retrieval to increase usability by allowing the user to filter by place and by variables. The user would no longer have to deal with large excel tables where most of the columns are empty anyways. 
 
-## ISCN 3 and template description
+## ISCN3 and template data model
 
   - Common features
     + location, elevation, and observation time
