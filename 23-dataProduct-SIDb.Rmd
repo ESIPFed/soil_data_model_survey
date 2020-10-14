@@ -5,7 +5,7 @@ tableDescription <- dataDescription.ls$structure %>%
   filter(data_product == 'SIDb')
 ```
 
-## June interview notes
+## June 2020 interview
 
 These are notes from a 4 June 2020 interview with Carlos Sierra and Christina Scheadel.
 
@@ -45,7 +45,7 @@ Follow up question: How successful were you in getting PIs to give you data?
             * Had a whiteboard
     - There is a lot of disconnect between the informatics researchers and domain scientists. It feels like there should be more cross talk between the two then there currently is.  
 
-## SIDb feature summary
+## SIDb data model
 
   - Common features
     + location, elevation, observation time
@@ -60,8 +60,6 @@ Follow up question: How successful were you in getting PIs to give you data?
     + initial conditions
     + time series
     + experimental information is captured in the column names of the time series
-
-### Data model
 
 
 ```{r eval=FALSE}
