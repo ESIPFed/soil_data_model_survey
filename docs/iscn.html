@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 van Gestel record | Soil Data Models: a review</title>
+  <title>3 ISCN | Soil Data Models: a review</title>
   <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 van Gestel record | Soil Data Models: a review" />
+  <meta property="og:title" content="3 ISCN | Soil Data Models: a review" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 van Gestel record | Soil Data Models: a review" />
+  <meta name="twitter:title" content="3 ISCN | Soil Data Models: a review" />
   
   <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="iscn.html"/>
-<link rel="next" href="sidb-record.html"/>
+<link rel="prev" href="summary-of-interviews.html"/>
+<link rel="next" href="van-gestel-record.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -170,79 +170,108 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="van-gestel-record" class="section level1">
-<h1><span class="header-section-number">4</span> van Gestel record</h1>
+<div id="iscn" class="section level1">
+<h1><span class="header-section-number">3</span> ISCN</h1>
 <div id="june-2020-interview" class="section level2">
-<h2><span class="header-section-number">4.1</span> June 2020 Interview</h2>
-<p>These are notes from the June 2020 interview with Dr Natasja van Gestel.</p>
+<h2><span class="header-section-number">3.1</span> June 2020 interview</h2>
+<p>These are notes from a 4 June 2020 interview with Luke Nave.</p>
 <ol style="list-style-type: decimal">
-<li>Why did you start this study?
+<li>Why did you start this study/project?
 <ul>
-<li>There was a DOE funded project during van Gestel’s postdoc where it became obvious that the modeling project would benefit from a more robust data set for parameterization. This became an ongoing project over the past 5 years.</li>
+<li>The study was motivated by the desire to draw together scattered data into a common place with a common format so that users could apply it to answer outstanding questions in the carbon cycle.</li>
+<li>These scientific questions at the time, 10 years ago, included:
+<ul>
+<li>How much soil carbon is there and where is it?</li>
+<li>Given that we have stocks of X, how are these stocks changing with land use change, climate change, and management?</li>
+</ul></li>
+<li>There were also operational/methodical questions to be answered:
+<ul>
+<li>Can improved coverage of carbon stock data result in better model representation of where carbon soil is?</li>
+<li>Can data on soil fractions and turn over times improve process representation in models?</li>
+</ul></li>
 </ul></li>
 <li>Describe your workflow for ingesting data sets?
 <ul>
-<li>Data is extracted from the published literature, generally though transcription of points recovered from figures or published tables.</li>
-<li>Studies are selected based on availability of soil carbon, and an attempt is made to capture all the data associated with these studies.</li>
-<li>This data is then entered into an Excel spreadsheet, fed through a series of scripts to automate gap-filling, and then generate data products relevant to modeling studies.</li>
-<li>van Gestel and her lab were responsible for everything from the initial design of the spreadsheets, to data recovery and post-processing.</li>
-<li>There are currently over 100 studies in the database.</li>
+<li>Researchers identified which variables in the desired source dataset cross-walked with which variables in the ISCN template as well as identified where new variables needed to be added. Data providers then filled out an Excel template that was then ingested into the ISCN database using SQL commands.</li>
+<li>The greatest efforts were focused on the largest datasets.</li>
+<li>The threshold for adding a new variable to the template was high ~90% of the final variables were in the original.
+<ul>
+<li>Tried to be expansive then so they would not have to add more variables later in order to incorporate relatively common variables</li>
+<li>However, adding new variables was on a case to case basis. For example, carbon and bulk density variables were more likely to be added with new methods, versus cation exchange capacity because carbon stock variables were what the dataset focused on.</li>
+</ul></li>
+<li>The templates evolved with each version but changed less than the data product.
+<ul>
+<li>Started with &lt; 40,000 profiles and ending with &gt; 71,000</li>
+</ul></li>
+<li>The documentation got better with each version.</li>
 </ul></li>
 <li>What decisions did you make to arrive at this workflow?
 <ul>
-<li>In general the design of the spreadsheet has not changed significantly over the years. To design the spreadsheet van Gestel tried to think mechanistically about the processes that control carbon cycling in soils and create an exhaustive list of variables to capture from the literature. This exhaustive template was then pruned to create more restricted data products as needed.</li>
-<li>Expanded on factors originally related mostly to carbon as represented by soil carbon models (ie carbon stocks, fluxes, experimental treatments for temperature, nutrients, and moisture).</li>
-<li>Simplicity was a core value in developing the data model.</li>
-<li>Tried to preserve as much information from the origial data source as possible.
-<ul>
-<li>Needed to record original units and then harmonize units in processing scripts.</li>
-<li>Key to determine how bulk density was treated in the study
-<ul>
-<li>Sometimes there were no bulk density values, some studies only used 1 value for bulk density or a prescribed standard bulk density.</li>
-<li>Bulk density was frequently gap-filled in the generated data products using imputed bulk density to organic carbon relationships</li>
-</ul></li>
-</ul></li>
+<li>Combined two existing data structures from the flux community (Ameriflux) and the soil community (NRCS), because these were the two largest contributors to the data infrastructure.</li>
+<li>There was extensive work (a series of workshops, beginning with an Alaska-focused project) with the soil, carbon cycle, and biochemistry research communities to make sure that the structure worked for single investigator driven soil datasets.</li>
 </ul></li>
 <li>How would someone get a copy of the data in this study?
 <ul>
-<li>Contact van Gestel directly, publication is pending.</li>
+<li>Go to the ISCN website and download a static excel file.</li>
+<li>There is a quick-start, intermediate, and advanced user guide.</li>
 </ul></li>
-<li>What would you do differently if you had to start again? What would be the same?
+<li>What would you do differently if you had to start again?
 <ul>
-<li>Happy with the outcome of the meta analysis and would not change much. Current template and data product pipeline has proven effective.</li>
-<li>Currently using powerpoint to extract data from figures, so using a different type of software could make the process more efficient.<br />
-</li>
-<li>Considering focusing more on collecting data from repositories in the future.</li>
+<li>Develop products in parallel with the database itself. The interviewee’s great disappointment was overemphasizing consolidating the data for their own sake but not spending enough time turning the data into publications. This could have shown what can be done with the synthesis to spark interests and show what is possible.</li>
+<li>Have a small group of people (5 or 6) executing a common set of standard gap fills and decision trees for bulk density, carbon concentrations, and stock computations. They would set rules and create commonly agreed upon couple of scripts that could do some gap-filling. This would save time for future users by just getting that done first.
+<ul>
+<li>ISCN3 has complex gap-filling methods that we used to generate soil organic carbon stock estimates and flagged this under a relatively cryptic headers; these were the product of only 2 people and much of the decision making is only documented in a mess of old emails.</li>
+</ul></li>
+<li>Put all the code that handles the data that turns it from data into product in a common format and allow people who are interested to get it and edit it. This would make it open access which was not a part of ISCN (the Scientific Steering Group specifically desired to control and document access, in order that data contributors received credit and citations). The current codebase used to generate ISCN3 is cryptic to the point of being black boxed after the retirement of the original programmer.</li>
+<li>Create a functional way to harvest information about treatments and disturbances, so that the dataset can be used to study treatment effects. The disturbance table was prototyped but never satisfactorily implemented, much less refined through implementation.</li>
+<li>Change latitude and longitude to profile level rather than site level attributes to create high resolution data.</li>
+<li>Have better documentation about how to cite your data contributors and how to make sense of the data products.</li>
+</ul></li>
+<li>What would be the same?
+<ul>
+<li>The capability of incorporating a lot of different kinds of data.</li>
+<li>The templates were generally adequate for most data needs we encountered.</li>
+<li>In terms of interfacing with the broader science community, listening and having workshops were helpful in that they resulted in positive changes to the templates.</li>
+<li>Allow for map based data retrieval to increase usability by allowing the user to filter by place and by variables. The user would no longer have to deal with large excel tables where most of the columns are empty anyways.</li>
 </ul></li>
 </ol>
 </div>
-<div id="van-gestel-data-model" class="section level2">
-<h2><span class="header-section-number">4.2</span> van Gestel data model</h2>
+<div id="iscn3-and-template-data-model" class="section level2">
+<h2><span class="header-section-number">3.2</span> ISCN3 and template data model</h2>
 <ul>
 <li>Common features
 <ul>
 <li>location, elevation, and observation time</li>
-<li>pH</li>
+<li>depth of sample and layer</li>
 <li>bulk density</li>
+<li>vegetation</li>
+<li>carbon percentage and loss on ignition</li>
 </ul></li>
 <li>Unique features
 <ul>
-<li>mean depth instead of depth of core and layer</li>
-<li>carbon, nitrogen, and phosphorus pools above and below ground</li>
-<li>treatments and information about treatments (mean, standard error, size)</li>
-<li>‘input’ variable</li>
-<li>soil horizon and percent soil organic matter</li>
+<li>disturbance table</li>
+<li>high level of site details
+<ul>
+<li>frost free days, ponding, runoff</li>
+</ul></li>
+<li>higher then average number of layer-level info</li>
+<li>fraction table only shared with ISRaD</li>
 </ul></li>
 </ul>
-<div id="current-version" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Current version</h3>
-<div id="htmlwidget-4658b8e050e435d1bef0" style="width:672px;height:384px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4658b8e050e435d1bef0">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=BT tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"biomass\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">biomass<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"correlation BD-OM\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">correlation BD-OM<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">site<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"Rsoil\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">Rsoil<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"site info\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">site info<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"soil C\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">soil C<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"soil moisture\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">soil moisture<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"soil C\"->\"site info\"\n\"Rsoil\"->\"site info\"\n\"biomass\"->\"site info\"\n\"soil moisture\"->\"site info\"\n\"correlation BD-OM\"->\"site info\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="iscn3" class="section level4">
+<h4><span class="header-section-number">3.2.0.1</span> ISCN3</h4>
+<div id="htmlwidget-51d8ae8cc4989e35b01f" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-51d8ae8cc4989e35b01f">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=BT tooltip=\"ISCN3 data model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"citation\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">citation<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>dataset_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"dataset\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">dataset<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>dataset_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"layer\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">layer<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>dataset_name_sub<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>layer_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"profile\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">profile<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>dataset_name_sub<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"citation\"->\"dataset\"\n\"layer\"->\"profile\"\n\"profile\"->\"layer\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="iscn-template" class="section level4">
+<h4><span class="header-section-number">3.2.0.2</span> ISCN-Template</h4>
+<div id="htmlwidget-2792a73982ea31202962" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2792a73982ea31202962">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=RL tooltip=\"ISCN-template data model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"cluster\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">cluster<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cluster_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"disturbance\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">disturbance<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"fraction\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">fraction<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cluster_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>layer_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>fraction_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"gas\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">gas<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cluster_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>layer_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>gas_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"layer\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">layer<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cluster_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>layer_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"metadata\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">metadata<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>dataset_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"other\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">other<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cluster_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>layer_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>other_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"profile\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">profile<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cluster_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"site\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">site<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"profile\"->\"site\"\n\"profile\"->\"cluster\"\n\"layer\"->\"site\"\n\"layer\"->\"cluster\"\n\"layer\"->\"profile\"\n\"fraction\"->\"site\"\n\"fraction\"->\"cluster\"\n\"fraction\"->\"profile\"\n\"fraction\"->\"layer\"\n\"gas\"->\"site\"\n\"gas\"->\"cluster\"\n\"gas\"->\"profile\"\n\"gas\"->\"layer\"\n\"other\"->\"site\"\n\"other\"->\"cluster\"\n\"other\"->\"profile\"\n\"other\"->\"layer\"\n\"disturbance\"->\"site\"\n\"cluster\"->\"site\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="acknowledgements" class="section level2">
-<h2><span class="header-section-number">4.3</span> Acknowledgements</h2>
-<p>Special thanks to Dr Natasja van Gestel (Texas Tech University) for making the metadata for this data product available for analysis and making herself available for interview.</p>
+<h2><span class="header-section-number">3.3</span> Acknowledgements</h2>
+<p>Special thanks to Dr Luke Nave (University of Michigan) for his help with the interpertation of ISCN.</p>
 
 </div>
 </div>
@@ -251,8 +280,8 @@
           </div>
         </div>
       </div>
-<a href="iscn.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sidb-record.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="summary-of-interviews.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="van-gestel-record.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

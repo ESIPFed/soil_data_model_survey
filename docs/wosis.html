@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>10 WoSIS | Soil Data Models: a review</title>
+  <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="10 WoSIS | Soil Data Models: a review" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="10 WoSIS | Soil Data Models: a review" />
+  
+  <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sodah.html"/>
+<link rel="next" href="community-survey.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="summary-of-interviews.html"><a href="summary-of-interviews.html"><i class="fa fa-check"></i><b>2</b> Summary of Interviews</a><ul>
+<li class="chapter" data-level="2.1" data-path="summary-of-interviews.html"><a href="summary-of-interviews.html#project-motivation"><i class="fa fa-check"></i><b>2.1</b> Project motivation</a></li>
+<li class="chapter" data-level="2.2" data-path="summary-of-interviews.html"><a href="summary-of-interviews.html#workflow"><i class="fa fa-check"></i><b>2.2</b> Workflow</a></li>
+<li class="chapter" data-level="2.3" data-path="summary-of-interviews.html"><a href="summary-of-interviews.html#decisions"><i class="fa fa-check"></i><b>2.3</b> Decisions</a></li>
+<li class="chapter" data-level="2.4" data-path="summary-of-interviews.html"><a href="summary-of-interviews.html#attaining-copy-of-project"><i class="fa fa-check"></i><b>2.4</b> Attaining copy of project</a></li>
+<li class="chapter" data-level="2.5" data-path="summary-of-interviews.html"><a href="summary-of-interviews.html#painpoints-and-suggestions"><i class="fa fa-check"></i><b>2.5</b> Painpoints and suggestions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="iscn.html"><a href="iscn.html"><i class="fa fa-check"></i><b>3</b> ISCN</a><ul>
+<li class="chapter" data-level="3.1" data-path="iscn.html"><a href="iscn.html#june-2020-interview"><i class="fa fa-check"></i><b>3.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="3.2" data-path="iscn.html"><a href="iscn.html#iscn3-and-template-data-model"><i class="fa fa-check"></i><b>3.2</b> ISCN3 and template data model</a></li>
+<li class="chapter" data-level="3.3" data-path="iscn.html"><a href="iscn.html#acknowledgements"><i class="fa fa-check"></i><b>3.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="van-gestel-record.html"><a href="van-gestel-record.html"><i class="fa fa-check"></i><b>4</b> van Gestel record</a><ul>
+<li class="chapter" data-level="4.1" data-path="iscn.html"><a href="iscn.html#june-2020-interview"><i class="fa fa-check"></i><b>4.1</b> June 2020 Interview</a></li>
+<li class="chapter" data-level="4.2" data-path="van-gestel-record.html"><a href="van-gestel-record.html#van-gestel-data-model"><i class="fa fa-check"></i><b>4.2</b> van Gestel data model</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="van-gestel-record.html"><a href="van-gestel-record.html#current-version"><i class="fa fa-check"></i><b>4.2.1</b> Current version</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="iscn.html"><a href="iscn.html#acknowledgements"><i class="fa fa-check"></i><b>4.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sidb-record.html"><a href="sidb-record.html"><i class="fa fa-check"></i><b>5</b> SIDb record</a><ul>
+<li class="chapter" data-level="5.1" data-path="iscn.html"><a href="iscn.html#june-2020-interview"><i class="fa fa-check"></i><b>5.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="5.2" data-path="sidb-record.html"><a href="sidb-record.html#sidb-data-model"><i class="fa fa-check"></i><b>5.2</b> SIDb data model</a></li>
+<li class="chapter" data-level="5.3" data-path="iscn.html"><a href="iscn.html#acknowledgements"><i class="fa fa-check"></i><b>5.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="israd.html"><a href="israd.html"><i class="fa fa-check"></i><b>6</b> ISRaD</a><ul>
+<li class="chapter" data-level="6.1" data-path="iscn.html"><a href="iscn.html#june-2020-interview"><i class="fa fa-check"></i><b>6.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="6.2" data-path="israd.html"><a href="israd.html#israd-data-model"><i class="fa fa-check"></i><b>6.2</b> ISRaD data model</a></li>
+<li class="chapter" data-level="6.3" data-path="iscn.html"><a href="iscn.html#acknowledgements"><i class="fa fa-check"></i><b>6.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cc-rcn.html"><a href="cc-rcn.html"><i class="fa fa-check"></i><b>7</b> CC-RCN</a><ul>
+<li class="chapter" data-level="7.1" data-path="iscn.html"><a href="iscn.html#june-2020-interview"><i class="fa fa-check"></i><b>7.1</b> June 2020 interview</a></li>
+<li class="chapter" data-level="7.2" data-path="cc-rcn.html"><a href="cc-rcn.html#cc-rcn-data-model"><i class="fa fa-check"></i><b>7.2</b> CC-RCN data model</a></li>
+<li class="chapter" data-level="7.3" data-path="iscn.html"><a href="iscn.html#acknowledgements"><i class="fa fa-check"></i><b>7.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="crowther.html"><a href="crowther.html"><i class="fa fa-check"></i><b>8</b> Crowther</a><ul>
+<li class="chapter" data-level="8.1" data-path="crowther.html"><a href="crowther.html#july-2020-interview"><i class="fa fa-check"></i><b>8.1</b> July 2020 interview</a></li>
+<li class="chapter" data-level="8.2" data-path="crowther.html"><a href="crowther.html#crowther-data-model"><i class="fa fa-check"></i><b>8.2</b> Crowther data model</a></li>
+<li class="chapter" data-level="8.3" data-path="iscn.html"><a href="iscn.html#acknowledgements"><i class="fa fa-check"></i><b>8.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="sodah.html"><a href="sodah.html"><i class="fa fa-check"></i><b>9</b> SoDaH</a><ul>
+<li class="chapter" data-level="9.1" data-path="crowther.html"><a href="crowther.html#july-2020-interview"><i class="fa fa-check"></i><b>9.1</b> July 2020 interview</a></li>
+<li class="chapter" data-level="9.2" data-path="sodah.html"><a href="sodah.html#data-model"><i class="fa fa-check"></i><b>9.2</b> Data model</a></li>
+<li class="chapter" data-level="9.3" data-path="iscn.html"><a href="iscn.html#acknowledgements"><i class="fa fa-check"></i><b>9.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="wosis.html"><a href="wosis.html"><i class="fa fa-check"></i><b>10</b> WoSIS</a><ul>
+<li class="chapter" data-level="10.1" data-path="wosis.html"><a href="wosis.html#september-2020-interview"><i class="fa fa-check"></i><b>10.1</b> September 2020 interview</a></li>
+<li class="chapter" data-level="10.2" data-path="sodah.html"><a href="sodah.html#data-model"><i class="fa fa-check"></i><b>10.2</b> Data model</a></li>
+<li class="chapter" data-level="10.3" data-path="iscn.html"><a href="iscn.html#acknowledgements"><i class="fa fa-check"></i><b>10.3</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="community-survey.html"><a href="community-survey.html"><i class="fa fa-check"></i><b>11</b> Community Survey</a><ul>
+<li class="chapter" data-level="11.1" data-path="community-survey.html"><a href="community-survey.html#summary-of-responses"><i class="fa fa-check"></i><b>11.1</b> Summary of responses</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="community-survey.html"><a href="community-survey.html#finding-sources"><i class="fa fa-check"></i><b>11.1.1</b> Finding sources</a></li>
+<li class="chapter" data-level="11.1.2" data-path="summary-of-interviews.html"><a href="summary-of-interviews.html#painpoints-and-suggestions"><i class="fa fa-check"></i><b>11.1.2</b> Painpoints and suggestions</a></li>
+<li class="chapter" data-level="11.1.3" data-path="community-survey.html"><a href="community-survey.html#ideal-process"><i class="fa fa-check"></i><b>11.1.3</b> Ideal process</a></li>
+<li class="chapter" data-level="11.1.4" data-path="community-survey.html"><a href="community-survey.html#main-hurdles"><i class="fa fa-check"></i><b>11.1.4</b> Main hurdles</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="community-survey.html"><a href="community-survey.html#responses"><i class="fa fa-check"></i><b>11.2</b> Responses</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="community-survey.html"><a href="community-survey.html#why-do-you-compile-data-products-what-is-the-question-you-are-looking-to-answer"><i class="fa fa-check"></i><b>11.2.1</b> Why do you compile data product(s)? What is the question you are looking to answer?</a></li>
+<li class="chapter" data-level="11.2.2" data-path="community-survey.html"><a href="community-survey.html#how-do-you-find-your-data-sources"><i class="fa fa-check"></i><b>11.2.2</b> How do you find your data sources?</a></li>
+<li class="chapter" data-level="11.2.3" data-path="community-survey.html"><a href="community-survey.html#what-went-well-with-how-you-compiled-the-data-product-or-what-do-you-wish-gone-better"><i class="fa fa-check"></i><b>11.2.3</b> What went well with how you compiled the data product or what do you wish gone better?</a></li>
+<li class="chapter" data-level="11.2.4" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-as-well-as-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>11.2.4</b> What is the ideal process for data harmonization? For the purposes of this question, this includes gap-filling, unit conversion, as well as standardizing headers and table structure.</a></li>
+<li class="chapter" data-level="11.2.5" data-path="community-survey.html"><a href="community-survey.html#do-you-want-your-data-to-be-compiled-in-a-data-product-why-or-why-not"><i class="fa fa-check"></i><b>11.2.5</b> Do you want your data to be compiled in a data product? Why or why not?</a></li>
+<li class="chapter" data-level="11.2.6" data-path="community-survey.html"><a href="community-survey.html#what-is-your-main-hurdle-to-contributing-to-data-products-and-to-other-people-using-your-data"><i class="fa fa-check"></i><b>11.2.6</b> What is your main hurdle to contributing to data products and to other people using your data?</a></li>
+<li class="chapter" data-level="11.2.7" data-path="community-survey.html"><a href="community-survey.html#what-do-you-wish-was-better-understood-about-how-your-data-is-collected-or-should-be-used"><i class="fa fa-check"></i><b>11.2.7</b> What do you wish was better understood about how your data is collected or should be used?</a></li>
+<li class="chapter" data-level="11.2.8" data-path="community-survey.html"><a href="community-survey.html#what-is-the-ideal-process-for-data-harmonization-from-a-data-provider-prospective-for-the-purposes-of-this-question-this-includes-gap-filling-unit-conversion-standardizing-headers-and-table-structure."><i class="fa fa-check"></i><b>11.2.8</b> What is the ideal process for data harmonization from a data provider prospective? For the purposes of this question, this includes gap-filling, unit conversion, standardizing headers, and table structure.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html"><i class="fa fa-check"></i><b>12</b> June Comparision of data model structures</a><ul>
+<li class="chapter" data-level="12.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#introduction-and-goals"><i class="fa fa-check"></i><b>12.1</b> Introduction and goals</a></li>
+<li class="chapter" data-level="12.2" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#individual-pi-studies-were-smaller."><i class="fa fa-check"></i><b>12.2</b> Individual PI studies were smaller.</a></li>
+<li class="chapter" data-level="12.3" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#vocabulary-across-studies-were-not-obviously-harmonizable."><i class="fa fa-check"></i><b>12.3</b> Vocabulary across studies were not obviously harmonizable.</a></li>
+<li class="chapter" data-level="12.4" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#study-feature-summary"><i class="fa fa-check"></i><b>12.4</b> Study feature summary</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#unique-features"><i class="fa fa-check"></i><b>12.4.1</b> Unique features</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#inital-ontology-search-for-relevant-control-vocabulary."><i class="fa fa-check"></i><b>12.5</b> Inital ontology search for relevant control vocabulary.</a></li>
+<li class="chapter" data-level="12.6" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#next-steps"><i class="fa fa-check"></i><b>12.6</b> Next steps</a><ul>
+<li class="chapter" data-level="12.6.1" data-path="june-comparision-of-data-model-structures.html"><a href="june-comparision-of-data-model-structures.html#interview-questions"><i class="fa fa-check"></i><b>12.6.1</b> Interview questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="orginal-proposal.html"><a href="orginal-proposal.html"><i class="fa fa-check"></i><b>13</b> Orginal proposal</a><ul>
+<li class="chapter" data-level="13.1" data-path="orginal-proposal.html"><a href="orginal-proposal.html#summary"><i class="fa fa-check"></i><b>13.1</b> Summary</a></li>
+<li class="chapter" data-level="13.2" data-path="orginal-proposal.html"><a href="orginal-proposal.html#background"><i class="fa fa-check"></i><b>13.2</b> Background</a></li>
+<li class="chapter" data-level="13.3" data-path="orginal-proposal.html"><a href="orginal-proposal.html#method"><i class="fa fa-check"></i><b>13.3</b> Method</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Soil Data Models: a review</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="wosis" class="section level1">
+<h1><span class="header-section-number">10</span> WoSIS</h1>
+<div id="september-2020-interview" class="section level2">
+<h2><span class="header-section-number">10.1</span> September 2020 interview</h2>
+<ol style="list-style-type: decimal">
+<li>What is the history of ISRIC and WoSIS as a database?
+<ul>
+<li>ISRIC (International Soil Reference and Information Center), presently known as ISRIC - World Soil Information
+<ul>
+<li>ISRIC is an international soil center that was founded in 1966 following the UNESCO council
+<ul>
+<li>This council showed the need for an organization that could give examples of typical soil profiles</li>
+</ul></li>
+<li>ISRIC started as an international soil museum, but eventually moved digital to databases</li>
+<li>Since 1989 ISRIC has been accredited as world data center for soils by the international science council</li>
+<li>It provides standardized data for soils of the world, both global and continental soils</li>
+</ul></li>
+<li>WoSIS (World Soil Information Service)
+<ul>
+<li>While ISRIC is the organization, WOSIS is the database</li>
+<li>Created around 5 or 6 years ago by compiling databases that ISRIC already had
+<ul>
+<li>Many of the initial databases were data compilations so there were a lot of replicates that needed to be condensed</li>
+</ul></li>
+</ul></li>
+<li>Harmonized World Soil database is a different product from WoSIS, evolved from FAO-UNESCO Soil Map of the World
+<ul>
+<li>Combines existing regional and national soil information</li>
+<li>FAO classification drove decision rules</li>
+</ul></li>
+<li>SoilGrids
+<ul>
+<li>Uses soil profile observations from WoSIS and a stack of environmental co-variates to map the spatial distribution of soil properties</li>
+</ul></li>
+</ul></li>
+<li>Describe your workflow for ingesting data sets?
+<ul>
+<li>First, look for datasets that contain soil data or people contact us with datasets</li>
+<li>Next, get a license to use the data
+<ul>
+<li>Finding people/organizations willing to share their data can be difficult</li>
+</ul></li>
+<li>After these steps, we already have data as it arrives to us and a license, so we then generate metadata
+<ul>
+<li>We have a server</li>
+<li>The metadata follows the European standards
+<ul>
+<li>Questions and parameters always the same no matter the standard</li>
+</ul></li>
+</ul></li>
+<li>In the past, we would process the datasets one by one
+<ul>
+<li>Recently, we have run it in a bunch, processing 18 datasets last year and 30 this year</li>
+</ul></li>
+<li>Have a script (python) that reads all the source formats</li>
+<li>Then separate the formats into different folders
+<ul>
+<li>Turns sheets into tables
+<ul>
+<li>Now we have 500 tables which are not really related but you can kind of see what matches up</li>
+</ul></li>
+</ul></li>
+<li>Another schema that consists of datasets, tables, and columns
+<ul>
+<li>Start assigning the columns to our ontologies</li>
+<li>Results in a table that has a list of attributes and units and methods</li>
+</ul></li>
+<li>Another script puts everything together
+<ul>
+<li>Matching the tables that have related variables</li>
+<li>Have two tables, one that describes the sites and one that describes the layer and descriptions</li>
+</ul></li>
+<li>In general, we expect the data to be a certain structure, but not all follow this structure so expert curated manual conversion is needed</li>
+</ul></li>
+<li>What decisions did you make to arrive at this workflow?
+<ul>
+<li>There have been a number of versions of WOSIS
+<ul>
+<li>As you progress you see some things work well and some don’t so adjustments are made</li>
+</ul></li>
+<li>Inside ISRIC, they did not have one compiled database but there was a need for one that was flexible enough to incorporate all the datasets they had
+<ul>
+<li>This is how WoSIS came about. Subsequently, data sets shared by the international community were added to WoSIS for standardisation</li>
+</ul></li>
+<li>Another project started to make derived soil property maps (SoilGrids250m) for the world using digital soil mapping.
+<ul>
+<li>Found that they needed more data to do this, but there was already a huge (30) stack in pipeline</li>
+<li>Currently processing them in batches. Bottleneck remains sharing (CC BY) of soil profile data for future use by the international community</li>
+</ul></li>
+</ul></li>
+<li>How would someone get a copy of the data in this study?
+<ul>
+<li>Go on data.isric.org to access the Isric Data Hub, search for ‘wosis’
+<ul>
+<li>Searchable according to keywords or types of databases</li>
+<li>Able to download data</li>
+</ul></li>
+<li>Have a central database that they work on (WoSIS) and then extract ‘shared data’ that has been standardized and validated</li>
+<li>Snapshots 2016 and 2019 are frozen from that time</li>
+<li>Allow other people to add metadata if they want to be included in the registry
+<ul>
+<li>Consist of a doi for consistent citation purposes and metadata</li>
+<li>This data is static</li>
+<li>In a TSV format that can be downloaded as zip files</li>
+</ul></li>
+<li>WOSIS_latest contains the same variables as Snapshots
+<ul>
+<li>Consists of the more recent standardized data from WoSIS</li>
+<li>It is a dynamic set due to correcting errors if the occur and adding in new data</li>
+</ul></li>
+</ul></li>
+<li>What would you do differently if you had to start again? What would be the same?
+<ul>
+<li>Avoid data compilations
+<ul>
+<li>It brings ‘trouble’ when one starts to compile compilations because it creates overlap and repeated data
+<ul>
+<li>It is difficult to find which data are repeated</li>
+<li>Becomes very cumbersome to clean it</li>
+</ul></li>
+<li>Instead of using compilations, use source data
+<ul>
+<li>Conversely, if you are using a compilation, make sure to not also include a reference to the source data</li>
+</ul></li>
+</ul></li>
+<li>Do things in batches
+<ul>
+<li>Might not have as much time to go through details, but the time saved is worth it</li>
+</ul></li>
+<li>Try to steer away from excel
+<ul>
+<li>people put things with colors, get bad habits</li>
+<li>Does not work as well with huge databases where it is difficult to see everything on huge tables</li>
+</ul></li>
+<li>Don’t worry about quantity, worry about quality of databases</li>
+<li>Stick with open standards and open formats
+<ul>
+<li>Open standards help with giving the project a future</li>
+<li>Open formats make it more likely that people will use it</li>
+</ul></li>
+</ul></li>
+</ol>
+</div>
+<div id="data-model" class="section level2">
+<h2><span class="header-section-number">10.2</span> Data model</h2>
+<div id="htmlwidget-fc8d1e7fb4ba8000365d" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fc8d1e7fb4ba8000365d">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=RL tooltip=\"ISCN-template data model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"attributes\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">attributes<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profiles<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"layers_chemical\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">layers_chemical<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_layer_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>layer_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>tceq_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>tceq_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cecph7_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cecph7_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cecph8_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cecph8_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>ecec_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>ecec_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>elco20_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>elco20_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>elco25_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>elco25_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>elco50_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>elco50_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>elcosp_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>elcosp_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>orgc_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>orgc_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phca_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phca_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phaq_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phaq_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phkc_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phkc_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phnf_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phnf_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phpbyi_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phpbyi_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phpmh3_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phpmh3_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phpols_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phpols_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phprtn_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phprtn_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phptot_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phptot_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phpwsl_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>phpwsl_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>totc_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>totc_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>nitkjd_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>nitkjd_profile_code<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"layers_physical\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">layers_physical<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_layer_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>layer_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdfi33_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdfi33_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdfiad_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdfiad_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdfifm_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdfifm_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdfiod_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdfiod_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdws33_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdws33_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdwsad_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdwsad_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdwsfm_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdwsfm_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdwsod_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>bdwsod_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>clay_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>clay_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cfgr_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cfgr_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cfvo_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>cfvo_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>sand_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>sand_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>silt_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>silt_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0100_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0100_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0010_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0010_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg1500_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg1500_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0200_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0200_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0033_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0033_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0500_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0500_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0006_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wg0006_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0100_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0100_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0010_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0010_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv1500_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv1500_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0200_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0200_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0033_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0033_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0500_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0500_profile_code<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0006_dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>wv0006_profile_code<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"profiles\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">profiles<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>profile_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>dataset_id<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>country_id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"layers_chemical\"->\"profiles\"\n\"layers_chemical\"->\"layers_physical\"\n\"layers_physical\"->\"profiles\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="acknowledgements" class="section level2">
+<h2><span class="header-section-number">10.3</span> Acknowledgements</h2>
+<p>Thank you to Drs Niels H. Batjes (ISRIC) and Eloi Ribeiro (ISRIC) for their time to talk about WoSIS and other ISRIC activities.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sodah.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="community-survey.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

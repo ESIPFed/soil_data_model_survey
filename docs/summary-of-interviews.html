@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 van Gestel record | Soil Data Models: a review</title>
+  <title>2 Summary of Interviews | Soil Data Models: a review</title>
   <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 van Gestel record | Soil Data Models: a review" />
+  <meta property="og:title" content="2 Summary of Interviews | Soil Data Models: a review" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 van Gestel record | Soil Data Models: a review" />
+  <meta name="twitter:title" content="2 Summary of Interviews | Soil Data Models: a review" />
   
   <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="iscn.html"/>
-<link rel="next" href="sidb-record.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="iscn.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -170,79 +170,53 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="van-gestel-record" class="section level1">
-<h1><span class="header-section-number">4</span> van Gestel record</h1>
-<div id="june-2020-interview" class="section level2">
-<h2><span class="header-section-number">4.1</span> June 2020 Interview</h2>
-<p>These are notes from the June 2020 interview with Dr Natasja van Gestel.</p>
-<ol style="list-style-type: decimal">
-<li>Why did you start this study?
-<ul>
-<li>There was a DOE funded project during van Gestel’s postdoc where it became obvious that the modeling project would benefit from a more robust data set for parameterization. This became an ongoing project over the past 5 years.</li>
-</ul></li>
-<li>Describe your workflow for ingesting data sets?
-<ul>
-<li>Data is extracted from the published literature, generally though transcription of points recovered from figures or published tables.</li>
-<li>Studies are selected based on availability of soil carbon, and an attempt is made to capture all the data associated with these studies.</li>
-<li>This data is then entered into an Excel spreadsheet, fed through a series of scripts to automate gap-filling, and then generate data products relevant to modeling studies.</li>
-<li>van Gestel and her lab were responsible for everything from the initial design of the spreadsheets, to data recovery and post-processing.</li>
-<li>There are currently over 100 studies in the database.</li>
-</ul></li>
-<li>What decisions did you make to arrive at this workflow?
-<ul>
-<li>In general the design of the spreadsheet has not changed significantly over the years. To design the spreadsheet van Gestel tried to think mechanistically about the processes that control carbon cycling in soils and create an exhaustive list of variables to capture from the literature. This exhaustive template was then pruned to create more restricted data products as needed.</li>
-<li>Expanded on factors originally related mostly to carbon as represented by soil carbon models (ie carbon stocks, fluxes, experimental treatments for temperature, nutrients, and moisture).</li>
-<li>Simplicity was a core value in developing the data model.</li>
-<li>Tried to preserve as much information from the origial data source as possible.
-<ul>
-<li>Needed to record original units and then harmonize units in processing scripts.</li>
-<li>Key to determine how bulk density was treated in the study
-<ul>
-<li>Sometimes there were no bulk density values, some studies only used 1 value for bulk density or a prescribed standard bulk density.</li>
-<li>Bulk density was frequently gap-filled in the generated data products using imputed bulk density to organic carbon relationships</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>How would someone get a copy of the data in this study?
-<ul>
-<li>Contact van Gestel directly, publication is pending.</li>
-</ul></li>
-<li>What would you do differently if you had to start again? What would be the same?
-<ul>
-<li>Happy with the outcome of the meta analysis and would not change much. Current template and data product pipeline has proven effective.</li>
-<li>Currently using powerpoint to extract data from figures, so using a different type of software could make the process more efficient.<br />
-</li>
-<li>Considering focusing more on collecting data from repositories in the future.</li>
-</ul></li>
-</ol>
+<div id="summary-of-interviews" class="section level1">
+<h1><span class="header-section-number">2</span> Summary of Interviews</h1>
+<p>Our conversations with project teams began in the summer and fall of 2020 and consisted of five main guiding questions covering the general motivation of the project, workflow, decision points, availabilty, and possible improvements.</p>
+<div id="project-motivation" class="section level2">
+<h2><span class="header-section-number">2.1</span> Project motivation</h2>
+<p>Specific project motivation to create these larger data sets were varied but generally centered on a global scale queation that could nto be addressed by a single project movitavating the synthesis of multiple data providers.
+Most participants stated that whatever data they were specifically looking for was unavailable, unorganized, or nonexistent, so they therefore started the project/dataset out of need or frustration to address a specific question.
+This synthesis process was long; most of the data products developed over a period of five years or longer.</p>
 </div>
-<div id="van-gestel-data-model" class="section level2">
-<h2><span class="header-section-number">4.2</span> van Gestel data model</h2>
-<ul>
-<li>Common features
-<ul>
-<li>location, elevation, and observation time</li>
-<li>pH</li>
-<li>bulk density</li>
-</ul></li>
-<li>Unique features
-<ul>
-<li>mean depth instead of depth of core and layer</li>
-<li>carbon, nitrogen, and phosphorus pools above and below ground</li>
-<li>treatments and information about treatments (mean, standard error, size)</li>
-<li>‘input’ variable</li>
-<li>soil horizon and percent soil organic matter</li>
-</ul></li>
-</ul>
-<div id="current-version" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Current version</h3>
-<div id="htmlwidget-4658b8e050e435d1bef0" style="width:672px;height:384px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4658b8e050e435d1bef0">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=BT tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"biomass\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">biomass<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"correlation BD-OM\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">correlation BD-OM<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">site<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"Rsoil\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">Rsoil<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"site info\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">site info<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"soil C\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">soil C<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"soil moisture\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">soil moisture<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site.id<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"soil C\"->\"site info\"\n\"Rsoil\"->\"site info\"\n\"biomass\"->\"site info\"\n\"soil moisture\"->\"site info\"\n\"correlation BD-OM\"->\"site info\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="workflow" class="section level2">
+<h2><span class="header-section-number">2.2</span> Workflow</h2>
+<p>All workflows aggregated data somehow and then put it through an automated quality control and assurance process.
+In general data was prioritized for synthsis based on it’s size (more data was higher priority) and relevancy to the question of the project.</p>
+<p>Much of the diversity in these workflow came from the aggregation process and the degree to which manual data transcription was utlized.
+The most common approach entailed manual data transcription from the orginal format (data table or information enbedded in a figure) to a study specific data template.
+This data transcription was done in some cases primarily by the data provider (ISCN, ISRaD, WoSIS, CC-RCN, and Crowther), or by the data synthesis team themselves (ISRaD, van Gestel, and SIDb).
+SoDaH had a unique key approach where a data thesaurus was developed by the data provider to translate the orginal data model into the common project model.
+In all but one case (SIDb) the data model consisted of a tabular relational database.
+SIDb in contrast had a unique tree structure with embedded rectagular data.</p>
 </div>
+<div id="decisions" class="section level2">
+<h2><span class="header-section-number">2.3</span> Decisions</h2>
+<p>Workflows were a balance between ease of use and robustness.
+Very large (ISRaD) and very small (van Gestel) team projects tended to convert to a data transcription template approach for ease of use and short development time.
+Intermedate projects like SoDaH had the motivation to produce a more robust pipeline and the nibleness to experiment a little more.</p>
+<p>Across all projects communication, both within the synthesis team and between the synthesis team and data providers, was critical.
+Working ‘hackathons’ were identified by ISRaD, SIDb, and SoDaH as being critical for moving the project forward.
+Documentation of the template was critical for teams of more then a single PI.</p>
 </div>
-<div id="acknowledgements" class="section level2">
-<h2><span class="header-section-number">4.3</span> Acknowledgements</h2>
-<p>Special thanks to Dr Natasja van Gestel (Texas Tech University) for making the metadata for this data product available for analysis and making herself available for interview.</p>
+<div id="attaining-copy-of-project" class="section level2">
+<h2><span class="header-section-number">2.4</span> Attaining copy of project</h2>
+<p>Notably online repositories were not the primary access point for synthesis products.
+Data was generally stored in a GitHub repository or hosted on project websites.
+The data was mainly formatted as relational data tables, frequently through Excel.</p>
+</div>
+<div id="painpoints-and-suggestions" class="section level2">
+<h2><span class="header-section-number">2.5</span> Painpoints and suggestions</h2>
+<p>Common pain points stated by the principal investigators were the generational transfer of the data product, the required skill mix of informatics and soils, and the complex complete data structures which lead to large amounts of unique vocabulary.
+Data product systhesis efforts typically take longer then a standard 3-year funding cycle.
+Thus data products are often repurposed to addresss slightly different questions over the course of their lifecycle (ISRaD is a particuarlly good exampel of this).
+Both the inhirent complexity of soils data as well as this repurposing frequently led to changes in the project data template.
+These changes in template structure were frequenctly challenging to impliment, requiring revisiting of the orginal data source to ensure a complete capture of the data with the new template.
+Often these soil data templates ended up being particularly large and diverse, consisting of 100’s of unique columns (ISCN, ISRaD) unless deliberately avoided (Crowther, WoSIS).
+Finally teams frequently identified the unique skill combination of soils science paired with computure programming or database expertise, as being particuarlly difficult to find.</p>
+<p>To combat some of these concerns, the researchers suggested ensuring to start with the correct team, involving both soil scientists and scientists with informatics backgrounds, as well as taking more time to develop the template before its use, so it would not need to be modified later.
+Positive suggestions included, having the community weigh in on needs and wants for the database and hosting hackathons and workshops to focus on completing tasks.
+This ensures that the final data product will be completed efficiently and that when completed it will be used.</p>
 
 </div>
 </div>
@@ -251,8 +225,8 @@
           </div>
         </div>
       </div>
-<a href="iscn.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sidb-record.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="iscn.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
