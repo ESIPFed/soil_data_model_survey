@@ -1,9 +1,4 @@
----
-title: "ISRIC record"
-author: "K Todd-Brown (ktoddbrown@ufl.edu); Niels H. Batjes, Eloi Ribeiro, Kristen Frederick, Marisa Younger"
-date: "9/4/2020"
-output: html_document
----
+# WoSIS
 
 ## September 2020 interview
 
@@ -107,4 +102,4 @@ dm_render_graph(dm_create_graph(as.data_model(WoSIS_table), rankdir = "RL", col_
 
 ## Acknowledgements
 
-Thank you to: Niels H. Batjes, Eloi Ribeiro
+Thank you to Drs Niels H. Batjes (ISRIC) and Eloi Ribeiro (ISRIC) for their time to talk about WoSIS and other ISRIC activities.

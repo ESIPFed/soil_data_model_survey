@@ -5,7 +5,7 @@ author:
 - name: L Heran, K Frederick, M Younger
 - name: L Nave, N van Gestel, C Scheadel, C Sierra, C Lawrence, A Hoyt, S Stoner,
     J Beem-Miller, K Heckman, S von Fromm, Á Kuhnen, J Holmquist, W Wieder, S Earl,
-    T Crowther
+    T Crowther, N Batjes, E Ribeiro
 date: "`r format(Sys.Date(), '%Y %B %d')`"
 output: 
   bookdown::gitbook
@@ -25,11 +25,14 @@ biblio-style: apalike
 # Introduction
 
 The overall goal of the project is to develop, implement, and test best practices for compiling transparent, reproducible, harmonized, and extendable data collections for meta-analysis. 
-For this first portion, we will examine five current meta-analysis efforts in the soil community and compare the ontologies used in these studies to existing ontologies.
-Subsequent sections focus on identifying the strengths and weaknesses of the approaches used by the individual projects through one-on-one interviews with the PIs and developers as well as a broader community survey. 
-We will suggest best practices based on the findings from these interviews. 
-After that, we will use best practices to prioritize ongoing development of the Soil Organic Carbon Data Rescue and Harmonization (SOC-DRaH), an open community project started by the International Soil Carbon Network (ISCN). 
-The results from this project would provide a solid basis for seeking future funding to benchmark soil carbon dynamics in Earth system models, generate soil maps, and gap-fill missing data using machine learning algorithms.
+In this document there is 
+1) an examination of current meta-analysis efforts in the soil community though short reviews developed in collaboration with the research group, 
+2) a general interview to the soils community, and 
+3) a structural summary of the data models available.
+
+The results from this project have spawned an upcoming manuscript and future ESIP Cluster [links pending].
+
+This work is based on materials provided by the ESIP Lab with support from the National Aeronautics and Space Administration (NASA), National Oceanic and Atmospheric Administration (NOAA) and the United States Geologic Survey (USGS).
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo=FALSE,
