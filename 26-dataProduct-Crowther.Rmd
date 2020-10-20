@@ -28,23 +28,6 @@ For example, if at two locations with the same climate, topography, and vegetati
     
 ## Crowther data model
 
-- Common features
-     + location, elevation, and observation time
-     + depth of core and layer
-     + bulk density
-     + vegetation
-     + carbon (?organic) percentage and loss on ignition
-
-  - Unique features
-     + Author updated data (outside sources)
-       - Biome, % Clay, pH, 
-     + Detailed soil warming data
-       - planned temperatures, control temperatures, mean temperatures
-     + Cation exchange capacity reported
-     + % Nitrogen reported
-     + distinguished between total raw carbon and total carbon
-     + Difference between detailed_site_id(New Name) and site_id(Old Name)
-
 ```{r}
 
 Crowther_table <- data_structure %>%
