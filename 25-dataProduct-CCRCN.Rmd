@@ -62,26 +62,6 @@ CCRCN_controlVocab <- dataDescription.ls$control_vocabulary %>%
 
 ## CC-RCN data model
 
-  - Common features
-    + location, elevation, and observation time
-    + depth of core and layer
-    + bulk density
-    + vegetation
-    + carbon (?organic) percentage and loss on ignition
-    
-  - Unique features
-    + min/max latitude
-    + detailed author information
-    + 'one_liner' summary
-    + break out bulk density mass/volume
-    + many specific isotopes listed (Am241, C14, Cs137, Be7, Pb210, Ra226)
-    + X_class is free text or control vocabulary
-    + coastal specific vocabulary
-      * inundation/salinity
-    + anthropogenic impacts
-    + core-level vs site latitude/longitude and elevation
-
-
 ```{r fig.height=10}
 
 CCRCN_table <- columnDescription %>%
