@@ -45,22 +45,8 @@ Follow up question: How successful were you in getting PIs to give you data?
             * Had a whiteboard
     - There is a lot of disconnect between the informatics researchers and domain scientists. It feels like there should be more cross talk between the two then there currently is.  
 
+
 ## SIDb data model
-
-  - Common features
-    + location, elevation, observation time
-    + depth
-    + vegetation
-    
-  - Unique features
-    + anaerobic/aerobic
-    + gasMeasured
-    + samplePreparation
-    + more detailed for permafrost
-    + initial conditions
-    + time series
-    + experimental information is captured in the column names of the time series
-
 
 ```{r eval=FALSE}
 ##Check from orginal data
@@ -454,5 +440,5 @@ dm_render_graph(dm_create_graph(SIDb_dm, rankdir = "RL", col_attr = c('column'),
 
 ## Acknowledgements
 
-Special thanks to Drs Christina Scheadel (Northern Arizona University) and Carlos Sierra (Max Planck Institute for Biogeochemistry) for making the meta data for making themselves available for interview.
+Special thanks to Drs Christina Scheadel (Northern Arizona University) and Carlos Sierra (Max Planck Institute for Biogeochemistry) for making the meta data and for making themselves available for interview.
 
