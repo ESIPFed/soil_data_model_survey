@@ -38,19 +38,8 @@ These are notes from the June 2020 interview with Dr Natasja van Gestel.
     - Currently using powerpoint to extract data from figures, so using a different type of software could make the process more efficient.  
     - Considering focusing more on collecting data from repositories in the future.
 
-## van Gestel data model
 
-  - Common features
-    + location, elevation, and observation time
-    + pH
-    + bulk density
-
-  - Unique features
-    + mean depth instead of depth of core and layer
-    + carbon, nitrogen, and phosphorus pools above and below ground
-    + treatments and information about treatments (mean, standard error, size)
-    + 'input' variable
-    + soil horizon and percent soil organic matter    
+## van Gestel data model  
 
 ```{r eval=FALSE}
 
