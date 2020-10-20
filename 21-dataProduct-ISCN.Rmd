@@ -56,21 +56,6 @@ These are notes from a 4 June 2020 interview with Luke Nave.
 
 ## ISCN3 and template data model
 
-  - Common features
-    + location, elevation, and observation time
-    + depth of sample and layer
-    + bulk density
-    + vegetation
-    + carbon percentage and loss on ignition
-    
-  - Unique features
-    + disturbance table
-    + high level of site details
-      - frost free days, ponding, runoff
-    + higher then average number of layer-level info
-    + fraction table only shared with ISRaD
-    
-
 ```{r}
 
 ISCN3_table <- columnDescription %>%
