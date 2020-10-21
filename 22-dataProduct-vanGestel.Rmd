@@ -26,7 +26,7 @@ These are notes from the June 2020 interview with Dr Natasja van Gestel.
     - In general the design of the spreadsheet has not changed significantly over the years. To design the spreadsheet van Gestel tried to think mechanistically about the processes that control carbon cycling in soils and create an exhaustive list of variables to capture from the literature. This exhaustive template was then pruned to create more restricted data products as needed.
     - Expanded on factors originally related mostly to carbon as represented by soil carbon models (ie carbon stocks, fluxes, experimental treatments for temperature, nutrients, and moisture). 
     - Simplicity was a core value in developing the data model. 
-    - Tried to preserve as much information from the origial data source as possible.
+    - Tried to preserve as much information from the original data source as possible.
       + Needed to record original units and then harmonize units in processing scripts.
       + Key to determine how bulk density was treated in the study
         * Sometimes there were no bulk density values, some studies only used 1 value for bulk density or a prescribed standard bulk density.
@@ -35,7 +35,7 @@ These are notes from the June 2020 interview with Dr Natasja van Gestel.
     - Contact van Gestel directly, publication is pending.
 5) What would you do differently if you had to start again? What would be the same?
     - Happy with the outcome of the meta analysis and would not change much.  Current template and data product pipeline has proven effective. 
-    - Currently using powerpoint to extract data from figures, so using a different type of software could make the process more efficient.  
+    - Currently using PowerPoint to extract data from figures, so using a different type of software could make the process more efficient.  
     - Considering focusing more on collecting data from repositories in the future.
 
 

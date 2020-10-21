@@ -10,14 +10,14 @@ tableDescription <- dataDescription.ls$structure %>%
 These are notes from a 4 June 2020 interview with Carlos Sierra and Christina Scheadel.
 
 1) Why did you start this study?
-    - There is this huge potential to use new innovations with soil incubation data, but people were using it in many different ways, making it hard to demonstrate it's value. Time series incubations are an important aspect of soil incubation that have been under utilized, in contrast to total respired fraction. In particular time series incubation data can tell you about the carbon stock rate and the dynamics. The fact that the environment in these incubations is so tightly contolled is a feature, not a bug, removing confounding variables (in other words, sensitivity functions) from the results. 
+    - There is this huge potential to use new innovations with soil incubation data, but people were using it in many different ways, making it hard to demonstrate it's value. Time series incubations are an important aspect of soil incubation that have been under utilized, in contrast to total respired fraction. In particular time series incubation data can tell you about the carbon stock rate and the dynamics. The fact that the environment in these incubations is so tightly controlled is a feature, not a bug, removing confounding variables (in other words, sensitivity functions) from the results. 
     - This database is a merger of two projects by Carlos and Christina. These two projects were started roughly 5 years ago; once they both became aware of the other's projects, they merged efforts. A week-long workshop in Jena, Germany during March of 2019 accelerated work.
 2) Describe your workflow for ingesting data sets.
     - There are three main elements of a data contribution: the time series, initial conditions, and metadata.
     - The templates have evolved over time, especially in the March-2019 workshop. A complete template is essential to enable consistent information capture from the original manuscripts.
     - Time series are captured from graphs in original manuscripts, and occasionally direct data from the original PIs. 
     - Data was generally not directly contributed from PI unless the PI was directly involved in the data product.
-    - SIDb is NOT a repository and instead a dynamic data product. Data should ideally be archived in a repository seperately.
+    - SIDb is NOT a repository and instead a dynamic data product. Data should ideally be archived in a repository separately.
 Follow up question: How successful were you in getting PIs to give you data?
     - Within the group, there were people with data, so they got data from them instead of contacting PIs for them. Did not ask for data from PIs. the dataset is not complete at all. They were setting up the infrastructure for people to upload their own data. No outside contributions yet. Some people have expressed interest. 
     - Dynamic database, not a repository. Contribution to a product. You are expected to archive your own data.
@@ -33,7 +33,7 @@ Follow up question: How successful were you in getting PIs to give you data?
     - `git clone` a GitHub repository and then interact with it through the associated R-package. 
     - R package reads the data, use simple plotting, and model fitting via the FME R-package that can use both classical gradient and MCMC methods.
 5) What would you do differently if you had to start again? What would be the same?
-    - Having the project be reserach question driven worked well even if it was a bit slow.
+    - Having the project be research question driven worked well even if it was a bit slow.
     - Would have been good to collaborate sooner. That might have moved the project along faster.
     - Excellent group dynamics 
         + >“If you have a group that you feel comfortable with and where everyone is well-coordinated, ideas will flow much better in a good direction.” 

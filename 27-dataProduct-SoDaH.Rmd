@@ -20,7 +20,7 @@ They found that understanding the history of the data and matching dataset varia
 To solve this, the study brought the researchers familiar with these data sets together with data aggregators.
   2) Describe your workflow for ingesting data sets? 
       - In person meetings were critical. 22 person workshops were needed to get the right people in the room with their data in order to learn about the datasets and structure. 
-They used a “key-key” template to harmonize data, where data providers manually map their data set onto a database template (modeled after ISCN via ISRAD) and provide additional site information and metadata.
+They used a “key-key” template to harmonize data, where data providers manually map their data set onto a database template (modeled after ISCN via ISRaD) and provide additional site information and metadata.
 These key-key files are used to rename variables & convert units from raw data into harmonized sheets that are concatenated together in a scripted workflow. 
 	    - On the SoDaH GitHub https://lter.github.io/som-website/workflow.html, the workflow is listed as follows: 
           1)	Harmonizes raw data into a common format using key-key approach in R;
@@ -53,7 +53,7 @@ They then had to calculate or recalculate things like nitrogen carbon ratios (if
       - Wieder, W.R., D. Pierson, S.R. Earl, K. Lajtha, S. Baer, F. Ballantyne, A.A. Berhe, S. Billings, L.M. Brigham, S.S. Chacon, J. Fraterrigo, S.D. Frey, K. Georgiou, M. de Graaff, A.S. Grandy, M.D. Hartman, S.E. Hobbie, C. Johnson, J. Kaye, E. Snowman, M.E. Litvak, M.C. Mack, A. Malhotra, J.A.M. Moore, K. Nadelhoffer, C. Rasmussen, W.L. Silver, B.N. Sulman, X. Walker, and S. Weintraub. 2020. SOils DAta Harmonization database (SoDaH): an open-source synthesis of soil data from research networks ver 1. Environmental Data Initiative. https://doi.org/10.6073/pasta/9733f6b6d2ffd12bf126dc36a763e0b4 (Accessed 2020-07-16).
       - Manuscript to ESSD submitted (July 2020)
   5) What would you do differently if you had to start again? What would be the same?
-      - Orginal key-key template turned out to not be sufficent to harmonize the data and required revision. 
+      - Original key-key template turned out to not be sufficient to harmonize the data and required revision. 
 It would have been a good idea to beta-test the template before they had people in front of them at the workshop.
 This also affected the derivative data model; that would have been better with a cleaner key file.
       - It would be nice to link the key-key file with the data repository metadata to automate portions of the creation of the key-key file.
@@ -61,14 +61,14 @@ This also affected the derivative data model; that would have been better with a
 It was sometimes hard to get data science and soil science on the same page.
 After having gone through this process, the PI can see the value and need for a control vocabulary and definitions and wishes they had gone through this process before the project began.
       - Something that went well was the semi-automated sequence for harmonization. 
-Compared to past expereinces with manual transcription, it was way more productive and allowed for a faster timeline with fewer people-hours.
+Compared to past experiences with manual transcription, it was way more productive and allowed for a faster timeline with fewer people-hours.
       - None of the data providers were nervous to share their data; that wasn’t an issue at all. 
 Some people came to get their data published for the first time. 
       - They did struggle a little bit because the data collection wasn’t focused, just all soil data. 
 They did not exactly know what their research question was or what they wanted to do with it.
 They believe that maybe not having that focus was a detriment.
     - Additional struggles included finding network data all in one place and not having a strong research question, which made explanation, validation, and funding of the project harder.
-    - To reemphasize, Will stated that originally they only had the money for two meetings. However, they were able to stretch it into three. The group wanted to achieve something similar to the Israd dataset. Will wanted to interpret and organize all this data into a product first, and then they could all brainstorm the way in which they would want to use it. Overall, the money ran out quickly so it has moved on to mostly volunteer work due to the fact that synthesis takes so long. Will spoke about how COVID is making things harder, but eventually he would like to hold another meeting for the project. 
+    - To reemphasize, Will stated that originally they only had the money for two meetings. However, they were able to stretch it into three. The group wanted to achieve something similar to the ISRaD dataset. Will wanted to interpret and organize all this data into a product first, and then they could all brainstorm the way in which they would want to use it. Overall, the money ran out quickly so it has moved on to mostly volunteer work due to the fact that synthesis takes so long. Will spoke about how COVID is making things harder, but eventually he would like to hold another meeting for the project. 
 
 
 ```{r echo=FALSE, eval=FALSE}
