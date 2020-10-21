@@ -13,7 +13,7 @@ datasetMeta <- dataDescription.ls$meta %>%
 1) Why did you start this study?
     + ISRaD started prior to 2015 as an informal discussion at the AGU Fall Meeting to address several questions around controlling factors of soil carbon stocks. 
     + This lead to a USGS, Powell Center proposal, focusing particularly on the role of mineralogy and fractionation to control soil carbon stocks. The original workshop intended to explore controls of carbon storage and persistence in soils. Part of the group had a more specific intent of looking at various proxies for mineral or metal stabilized carbon in soils. In the course of these discussions, radiocarbon and other isotope measurements were recognized as being important to address questions of timescales. These mineral and isotope focused questions guided the initial template development. The ISCN template was extended and modified with this in mind.
-      - The ISCN template required extentions to address
+      - The ISCN template required extensions to address
           * missing fractionation schemes (template was entirely focused on bulk data)
           * sparse mineralogy and exchangeable metal data.
           * overly complicated factor fields describing land use and other variables
@@ -26,7 +26,7 @@ datasetMeta <- dataDescription.ls$meta %>%
         - Either done by data provider (with assistant from MPI team)
         - Or, if identified as a high value dataset, MPI teams will fill out template.
     2) Once the data is entered into the template, it can be QAQC-ed using scripts available from the R-package or through an online GUI.
-        - This rscript uses a combination of controlled vocabulary, string matching, limits with quantitative data, and ensuring that the names and the keys match to check the submission.
+        - This R-script uses a combination of controlled vocabulary, string matching, limits with quantitative data, and ensuring that the names and the keys match to check the submission.
     3) The data and output from the QAQC script is then sent to the ISRaD data coordinator via contact.
     4) The data coordinator then forwards the data for expert review to one of the 6 or 7 reviewers who make recommendations and changes. It then goes back and forth a number of times between the data submitter and reviewer.
     5) Once the data is vetted, it is ingested into the ISRaD data product.
@@ -36,7 +36,7 @@ datasetMeta <- dataDescription.ls$meta %>%
 4) How would someone get a copy of the data in this study?
     - A person who wanted the data could go to the ISRaD website (soilradiocarbon.org) and go to the database tab where the data is available for download
     - It is also available directly from the package
-    - The website is hosted off of the github repository
+    - The website is hosted off of the GitHub repository
 5) What would you do differently if you had to start again?
     - Data model iteration and development is necessary but extremely challenging, especially as the data product grows
     - Data templates are complicated to fill out, requiring time and training. You need both domain and data science skills.
@@ -44,8 +44,8 @@ datasetMeta <- dataDescription.ls$meta %>%
     - Try to think more in advance about the template and its structure
       + Template was changed a lot while entering studies so they had to keep going back to old studies that they had already finished to find more information
       + Actively identify the 15 studies that they cared most about and be more methodical
-      + Have a structure to work with ahead of time vs building the thing around the studies
-    - The soil science community needs to establish best practices background information for published students. Studies are occationally missing basic information like lat-lon location of sites.
+      + Have a structure to work with ahead of time versus building the thing around the studies
+    - The soil science community needs to establish best practices background information for published students. Studies are occasionally missing basic information like lat-lon location of sites.
     - Unclear where the next home for the data product is as the current team moves on to their next phase in their careers.
 6) What would be the same?
     - One of the strongest aspects of ISRaD is the combination of automated QAQC and expert review

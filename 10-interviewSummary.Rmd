@@ -1,30 +1,30 @@
 # Summary of Interviews
 
-Our conversations with project teams began in the summer and fall of 2020 and consisted of five main guiding questions covering the general motivation of the project, workflow, decision points, availabilty, and possible improvements.
+Our conversations with project teams began in the Summer of 2020 and consisted of five, guiding questions covering the general motivation of the project, workflow, decision points, availability, and possible improvements.
 
 ## Project motivation
 
-Specific project motivation to create these larger data sets were varied but generally centered on a global scale queation that could nto be addressed by a single project movitavating the synthesis of multiple data providers.
+Specific project motivation to create these larger data sets were varied but generally centered on a global scale question that could not be addressed by a single project motivating the synthesis of multiple data providers.
 Most participants stated that whatever data they were specifically looking for was unavailable, unorganized, or nonexistent, so they therefore started the project/dataset out of need or frustration to address a specific question.
 This synthesis process was long; most of the data products developed over a period of five years or longer.
 
 ## Workflow
 
 All workflows aggregated data somehow and then put it through an automated quality control and assurance process.
-In general data was prioritized for synthsis based on it's size (more data was higher priority) and relevancy to the question of the project.
+In general data was prioritized for synthesis based on its size (more data was higher priority) and relevancy to the question of the project.
 
-Much of the diversity in these workflow came from the aggregation process and the degree to which manual data transcription was utlized.
-The most common approach entailed manual data transcription from the orginal format (data table or information enbedded in a figure) to a study specific data template. 
+Much of the diversity in these workflow came from the aggregation process and the degree to which manual data transcription was utilized.
+The most common approach entailed manual data transcription from the original format (data table or information embedded in a figure) to a study specific data template. 
 This data transcription was done in some cases primarily by the data provider (ISCN, ISRaD, WoSIS, CC-RCN, and Crowther), or by the data synthesis team themselves (ISRaD, van Gestel, and SIDb). 
-SoDaH had a unique key approach where a data thesaurus was developed by the data provider to translate the orginal data model into the common project model.
+SoDaH had a unique key approach where a data thesaurus was developed by the data provider to translate the original data model into the common project model.
 In all but one case (SIDb) the data model consisted of a tabular relational database.
-SIDb in contrast had a unique tree structure with embedded rectagular data.
+SIDb in contrast had a unique tree structure with embedded rectangular data.
  
 ## Decisions
 
 Workflows were a balance between ease of use and robustness. 
 Very large (ISRaD) and very small (van Gestel) team projects tended to convert to a data transcription template approach for ease of use and short development time. 
-Intermedate projects like SoDaH had the motivation to produce a more robust pipeline and the nibleness to experiment a little more.
+Intermediate projects like SoDaH had the motivation to produce a more robust pipeline and the nimbleness to experiment a little more.
 
 Across all projects communication, both within the synthesis team and between the synthesis team and data providers, was critical.
 Working 'hackathons' were identified by ISRaD, SIDb, and SoDaH as being critical for moving the project forward.
@@ -39,13 +39,13 @@ The data was mainly formatted as relational data tables, frequently through Exce
 ## Painpoints and suggestions
 
 Common pain points stated by the principal investigators were the generational transfer of the data product, the required skill mix of informatics and soils, and the complex complete data structures which lead to large amounts of unique vocabulary.
-Data product systhesis efforts typically take longer then a standard 3-year funding cycle. 
-Thus data products are often repurposed to addresss slightly different questions over the course of their lifecycle (ISRaD is a particuarlly good exampel of this).
-Both the inhirent complexity of soils data as well as this repurposing frequently led to changes in the project data template.
-These changes in template structure were frequenctly challenging to impliment, requiring revisiting of the orginal data source to ensure a complete capture of the data with the new template.
+Data product synthesis efforts typically take longer then a standard 3-year funding cycle. 
+Thus data products are often repurposed to address slightly different questions over the course of their lifecycle (ISRaD is a particularly good example of this).
+Both the inherent complexity of soils data as well as this repurposing frequently led to changes in the project data template.
+These changes in template structure were frequently challenging to implement, requiring revisiting of the original data source to ensure a complete capture of the data with the new template.
 Often these soil data templates ended up being particularly large and diverse, consisting of 100's of unique columns (ISCN, ISRaD) unless deliberately avoided (Crowther, WoSIS).
-Finally teams frequently identified the unique skill combination of soils science paired with computure programming or database expertise, as being particuarlly difficult to find.
+Finally teams frequently identified the unique skill combination of soils science paired with computer programming or database expertise, as being particularly difficult to find.
 
 To combat some of these concerns, the researchers suggested ensuring to start with the correct team, involving both soil scientists and scientists with informatics backgrounds, as well as taking more time to develop the template before its use, so it would not need to be modified later.
-Positive suggestions included, having the community weigh in on needs and wants for the database and hosting hackathons and workshops to focus on completing tasks.
+Positive suggestions included (1) having the community weigh in on needs and wants for the database and (2) hosting hackathons and workshops to focus on completing tasks.
 This ensures that the final data product will be completed efficiently and that when completed it will be used. 

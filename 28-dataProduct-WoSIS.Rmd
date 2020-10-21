@@ -17,7 +17,7 @@
           + Combines existing regional and national soil information
           + FAO classification drove decision rules
       - SoilGrids
-          + Uses soil profile observations from WoSIS and a stack of environmental co-variates to map the spatial distribution of soil properties
+          + Uses soil profile observations from WoSIS and a stack of environmental covariates to map the spatial distribution of soil properties
 
   2) Describe your workflow for ingesting data sets? 
       - First, look for datasets that contain soil data or people contact us with datasets
@@ -29,7 +29,7 @@
               - Questions and parameters always the same no matter the standard
       - In the past, we would process the datasets one by one
           + Recently, we have run it in a bunch, processing 18 datasets last year and 30 this year
-      - Have a script (python) that reads all the source formats
+      - Have a script (Python) that reads all the source formats
       - Then separate the formats into different folders
           + Turns sheets into tables
               - Now we have 500 tables which are not really related but you can kind of see what matches up
@@ -45,19 +45,19 @@
       - There have been a number of versions of WOSIS
           + As you progress you see some things work well and some don’t so adjustments are made
       - Inside ISRIC, they did not have one compiled database but there was a need for one that was flexible enough to incorporate all the datasets they had
-          + This is how WoSIS came about. Subsequently, data sets shared by the international community were added to WoSIS for standardisation
+          + This is how WoSIS came about. Subsequently, data sets shared by the international community were added to WoSIS for standardization
       - Another project started to make derived soil property maps (SoilGrids250m) for the world using digital soil mapping.
           + Found that they needed more data to do this, but there was already a huge (30) stack in pipeline
           + Currently processing them in batches. Bottleneck remains sharing (CC BY) of soil profile data for future use by the international community
 
   4) How would someone get a copy of the data in this study?
-      - Go on data.isric.org to access the Isric Data Hub, search for 'wosis'
+      - Go on data.isric.org to access the ISRIC Data Hub, search for 'WoSIS'
           + Searchable according to keywords or types of databases
           + Able to download data
       - Have a central database that they work on (WoSIS) and then extract 'shared data' that has been standardized and validated
       - Snapshots 2016 and 2019 are frozen from that time
       - Allow other people to add metadata if they want to be included in the registry
-          + Consist of a doi for consistent citation purposes and metadata
+          + Contains a DOI for consistent citation purposes and metadata
           + This data is static
           + In a TSV format that can be downloaded as zip files
       - WOSIS_latest contains the same variables as Snapshots
