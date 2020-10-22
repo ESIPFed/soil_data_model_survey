@@ -54,10 +54,10 @@ library(distill)
 
 data.dir <- 'data'
 
-dataDescription.ls <- list(structure = read_csv(file.path(data.dir, 'data_structure.csv')),
-                           meta = read_csv(file.path(data.dir, 'data_meta.csv')),
-                           thesaurus = read_csv(file.path(data.dir, 'thesaurus.csv')),
-                           control_vocabulary = read_csv(file.path(data.dir, 'control_vocabulary.csv')))
+dataDescription.ls <- list(structure = read_csv(file.path(data.dir, 'data_structure.csv'), col_types = strrep('c', 4) ),
+                           meta = read_csv(file.path(data.dir, 'data_meta.csv'), col_types = strrep('c', 5)),
+                           thesaurus = read_csv(file.path(data.dir, 'thesaurus.csv'), col_types = strrep('c', 6)),
+                           control_vocabulary = read_csv(file.path(data.dir, 'control_vocabulary.csv'), col_types = strrep('c', 4)))
 
 ```
 
