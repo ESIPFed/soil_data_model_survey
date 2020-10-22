@@ -1,17 +1,5 @@
 # SoDaH
 
-```{r}
-columnDescription <- dataDescription.ls$structure %>%
-  filter(grepl('SoDaH', data_product) | grepl('LTERWG', data_product))
-thesaurus <- dataDescription.ls$thesaurus %>%
-  filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
-datasetMeta <-  dataDescription.ls$meta %>%
-  filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
-controlVocab <- dataDescription.ls$control_vocabulary %>%
-  filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
-
-```
-
 ## July 2020 interview
 
   1) Why did you start this study?
@@ -71,17 +59,6 @@ They believe that maybe not having that focus was a detriment.
     - To reemphasize, Will stated that originally they only had the money for two meetings. However, they were able to stretch it into three. The group wanted to achieve something similar to the ISRaD dataset. Will wanted to interpret and organize all this data into a product first, and then they could all brainstorm the way in which they would want to use it. Overall, the money ran out quickly so it has moved on to mostly volunteer work due to the fact that synthesis takes so long. Will spoke about how COVID is making things harder, but eventually he would like to hold another meeting for the project. 
 
 
-```{r echo=FALSE, eval=FALSE}
-
-temp <- read_csv(file = '~/Dropbox (UFL)/Research/Collaborations/SoilDataModels/data-raw/SoDaH/Filtered_SOM_data.csv', n_max = 100)
-names(temp)
-
-Site_Key_location <- readxl::read_excel(path='~/Dropbox (UFL)/Research/Collaborations/SoilDataModels/data-raw/SoDaH/Site_KEY_V2.xlsx', sheet = 1)
-Site_Key_profile <- readxl::read_excel(path='~/Dropbox (UFL)/Research/Collaborations/SoilDataModels/data-raw/SoDaH/Site_KEY_V2.xlsx', sheet = 2)
-Site_Key_controlVocab <- readxl::read_excel(path='~/Dropbox (UFL)/Research/Collaborations/SoilDataModels/data-raw/SoDaH/Site_KEY_V2.xlsx', sheet = 3) %>%
-  pivot_longer(cols = everything(), values_drop_na = TRUE) %>%
-  arrange(name)
-```
 
 ## Data model
 
@@ -90,18 +67,28 @@ The SoDaH data product has a single data table with 165 columns.
 The SoDaH data key-key has 5 data tables (location, profile, layer, and fraction)  with between 5 and 108 columns.
 
 ```{r fig.height=10}
-SoDaH_table <- columnDescription %>%
+#columnDescription <- dataDescription.ls$structure %>%
+ # filter(grepl('SoDaH', data_product) | grepl('LTERWG', data_product))
+#thesaurus <- dataDescription.ls$thesaurus %>%
+ # filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
+#datasetMeta <-  dataDescription.ls$meta %>%
+ # filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
+#controlVocab <- dataDescription.ls$control_vocabulary %>%
+ # filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
+ 
+SoDaH_table <- dataDescription.ls$structure %>%
+  filter(grepl('SoDaH', data_product) | grepl('LTERWG', data_product)) %>%
   rename('table' = 'data_table', 'column' = 'data_column') %>%
   mutate(key = data_type == 'id',
          ref = case_when(grepl('^site_code$', column) ~ 'location',
                          grepl('^control_id$', column) ~ 'location',
                          grepl('^site_code$', column) ~ 'Filtered_SOM_data',
                          grepl('^control_id$', column) ~ "Filtered_SOM_data",
+                         grepl('^google_id$', column) ~ "Filtered_SOM_data",
                          TRUE ~ as.character(NA)),
-         ref_col = case_when(grepl('^site_code$', column) ~ 'location',
-                         grepl('^control_id$', column) ~ 'location',
-                         grepl('^site_code$', column) ~ 'Filtered_SOM_data',
-                         grepl('^control_id$', column) ~ "Filtered_SOM_data",
+         ref_col = case_when(grepl('^site_code$', column) ~ 'site_code',
+                         grepl('^control_id$', column) ~ "control_id",
+                         grepl('^google_id$', column) ~ "google_id",
                          TRUE ~ as.character(NA))) %>%
   mutate(ref = if_else(table == ref, as.character(NA), ref))
 
