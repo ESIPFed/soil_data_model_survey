@@ -6,7 +6,7 @@
 rawRead.df <- readxl::read_excel('../data-raw/survey_results/Soil data compilation survey (Responses).xlsx', sheet=1)
 #results.df <- tibble::as_tibble(t(rawRead.df))
 
-#Drop columns with identifying or demigraphic information.
+#Drop columns with identifying or demographic information.
 writeClean <- rawRead.df[,-(10:15)]
 
 write_csv(writeClean, '../data/cleanSurveyResponses.csv')
@@ -16,24 +16,24 @@ write_csv(writeClean, '../data/cleanSurveyResponses.csv')
 surveyResponse.df <- read_csv('data/cleanSurveyResponses.csv')
 ```
 
-Many of our respondence were looking at questions around global biogeochemical processes, specifically carbon cycling.
+Many of our respondents were looking at questions around global biogeochemical processes, specifically carbon cycling.
 
-Most of the data sources were drawn from the primary scientific literature with several respondences also drawing from direct response from study PI or colleagues. 
+Most of the data sources were drawn from the primary scientific literature with several respondents also drawing from direct response from study PI or colleagues. 
 One respondent mentioned online databases  (e.g., USGS NWIS, USGS Geochemical Landscapes, NEON). 
-None of the study respondences mentioned DataOne or PI-driven data repositories for data discovery.
-Identified challenges included QAQC protocols, difficulty getting data upon direct request from collegues, formatting heterogenity, missing or badly identified metadata, template development and stability, project management for aggregation effort in large groups.
-Things that worked well in the process were orchestrated hackatons.
+None of the study respondents mentioned DataOne or PI-driven data repositories for data discovery.
+Identified challenges included QAQC protocols, difficulty getting data upon direct request from colleagues, formatting heterogeneity, missing or badly identified metadata, template development and stability, project management for aggregation effort in large groups.
+Things that worked well in the process were orchestrated hackathons.
 
-In general many respondants want data paired with a publication and already entired into a universal template. 
-There was frustration with brittle inhouse harmonization pipelines that were not always backwards compatable. 
+In general many respondents want data paired with a publication and already entered into a universal template. 
+There was frustration with brittle in-house harmonization pipelines that were not always backwards compatible. 
 Automatic discovery from primary literature made another wishlist.
 General FAIR data principles were recognized as important, though not named as such.
-In general there were no differences in the harmonizatin pipeline process between the providers and aggregators.
+In general there were no differences in the harmonization pipeline process between the providers and aggregators.
 
-Unsurprisingly open public data was well supported by the respondences with interest in broaderening scienific impact and increased visibility.
-Attribution and engagement was a named concern of respondences, in particular collonial science was called out as being partiucalrlly problematic.
+Unsurprisingly open public data was well supported by the respondents with interest in broadening scientific impact and increased visibility.
+Attribution and engagement was a named concern of respondents, in particular collonial science was called out as being particularly problematic.
 Time investments with unclear rewards.
-Unclear what "data base" was appropreate for a given data set.
+Unclear what "data base" was appropriate for a given data set.
 Data permissions issues.
 
 Data is messy and data providers wish that was better understood by data aggregators.
@@ -49,7 +49,7 @@ Even though the levels of experience and purposes behind compiling data products
 When asked how they find their data sources, the majority of participants indicated that they used literature, while others used databases, reached out to colleagues that had worked on the topic, or even used a combination of all three.
 These responses indicate that data accessibility is much less of a problem now than previously with conducting a meta-analysis.
 
-### Painpoints and suggestions
+### Pinpoints and suggestions
 
 When asked what went well with compiling the data product or what could have gone better, most people listed difficulties rather than successes.
 Of the few successes, people reported comprehensive search results and the standardization of metadata and control vocabulary.

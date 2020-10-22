@@ -14,28 +14,30 @@ CCRCN_controlVocab <- dataDescription.ls$control_vocabulary %>%
 
 ## June 2020 interview
 
+With Dr. James Holmquist on the Coastal Carbon Research Coordination Network (CCRCN).
+
 1) Why did you start this study?
-    - On a community level, coastal wetlands are a really big but a really unknown part of the carbon cycle and there is a lot of potential for coastal wetland management to contribute locally and nationally to offsetting greenhouse gas emissions. There is a lot of policy interest in coastal wetland carbon. This started with the 2013 IPCC wetlands supplement where they called for nations to account for coastal wetlands. They put together some first cut estimates of what average emissions are based on pulling values out of papers, but it was not super satisfying to the community just to have those literature values when there is known to be much variability in soils. Everyone realized that there was a need to do a better job at data synthesis.
-    - This came to a head 2 years before the project started (4 or 5 years ago, ~2015). The North American Carbon Program hosted a meeting and invited prominent scientists, managers, and people who had interest in blue carbon and asked “what do you want out of blue carbon synthesis?”. J Holmquist was at the meeting because he had been part of a NASA project with a lot of the synthesis of raw data and gave a speech about what he had learned. This sparked a lot of discussions about who would host the database. Started learning about the small politics of data: how do we share data? Who owns it? and tried to facilitate a data sharing program where everyone wins.
-        + Smithsonian Institute was a logical choice to host the database because it is widely trusted in the community with experience archiving data.
-    - On a personal level, Holmquist really wanted to drive this forward because he had such a hard time putting the NASA synthesis together, but he was also able to answer some really interesting high level questions with it. He felt that a lot of other people could use the dataset to answer more and better questions and wanted to allow for this access. He wanted more people to do the work that he was doing without having to go through the issues of calling everyone in the field.
+    - On a community level, coastal wetlands are a really big but a really unknown part of the carbon cycle and there is a lot of potential for coastal wetland management to contribute locally and nationally to offsetting greenhouse gas emissions. There is a lot of policy interest in coastal wetland carbon. This started with the 2013 Intergovernmental Panel on Climate Change (IPCC) Wetlands Supplement, where they called for nations to account for coastal wetlands. They put together some first cut estimates of what average emissions are based on pulling values out of papers, but it was not super satisfying to the community just to have those literature values when there is known to be much variability in soils. Everyone realized that there was a need to do a better job at data synthesis.
+    - This came to the forefront two years before the project started in 2017 (around 2015). The North American Carbon Program hosted a meeting and invited prominent scientists, managers, and people who had interest in blue carbon and asked, “What do you want out of blue carbon synthesis?”. Holmquist was at the meeting because he had been part of a NASA project with a lot of the synthesis of raw data and gave a speech about what he had learned. This sparked a lot of discussions about who would host the database. He started learning about the small politics of data (How do we share data? Who owns it?) and tried to facilitate a data sharing program where everyone wins.
+        + The Smithsonian Institute was a logical choice to host the database because it is widely trusted in the community with experience archiving data.
+    - On a personal level, Holmquist really wanted to drive this forward because he had such a hard time putting the NASA synthesis together, but he was also able to answer some really interesting high-level questions with it. He felt that many other people could use the dataset to answer more and better questions and wanted to allow for this access. He wanted more people to do the work that he was doing without having to go through the issues of calling everyone in the field.
 2) Describe your workflow for ingesting data sets?
-    - In order to get datasets to ingest, there were a lot of interviews with data providers and one on one phone calls.
-        + Emails are easy to ignore and the contact allows for trust to be built.
+    - In order to get datasets to ingest, there were a lot of interviews with data providers and one-on-one phone calls.
+        + Emails are easy to ignore and the contact allows for trust to build.
         + Just getting people to send you data takes so long, partially because people are busy or they are worried about issues with the data. They can be sensitive or embarrassed at how their data looks.
-    - Project management wise, there is a Google Sheet that ranks the datasets and to-dos on priority, based on how easy and important it is to do
-        + Top shelf cores with good age depth models go straight to the top of the list
+    - Project management-wise, there is a Google Sheet that ranks the datasets and to-dos on priority, based on how easy and important it is to do.
+        + Top shelf cores with good age depth models go straight to the top of the list.
         + There is also a column for when data was submitted. It is only when data is actually submitted that it gets put to the top of the list behind the data that was submitted before it.
-    - The overall process is first going through the interview stage or reading the paper, then coding out the methods metadata, then doing an initial data inspection by going through 1 or 2 drafts of a data release, and finally uploading it to figshare.
-    - Custom R functions and hook scripts are used for preparing the actual data releases. They do things like take quick looks at the range of the datasets to make sure that everything is how it should be, such as fractional units are not above 1 or below 0.
-    - They use a lot of `tidyverse` packages to help keeps things organized and readable. Code organization is important because multiple people work on a script
-    - When preparing data releases, they prepare `EML` style metadata and a package called `EML` down which creates a nice looking html page version
-    - When going back and forth with data submitters at the last stage, a data visualization report is created. It is a markdown document with a lot of plots such as bulk density versus loss on emission
-          + Allows for outliers or mistakes to be spotted
-          + Helps data submitters find mistakes in the data at this point
-   - Primarily done by the equivalent of one full time technician. Data ingest is a lot of work.
+    - The overall process is first going through the interview stage or reading the paper, then coding out the methods metadata, then doing an initial data inspection by going through one or two drafts of a data release, and finally uploading it to Figshare.
+    - Custom R-functions and hook scripts are used for preparing the actual data releases. They do things like take quick looks at the range of the datasets to make sure that everything is how it should be, such as fractional units are not above 1 or below 0.
+    - They use many `tidyverse` packages to help keeps things organized and readable. Code organization is important because multiple people work on a script.
+    - When preparing data releases, they prepare `EML` style metadata and a package called `EML` down which creates a nice looking html page version.
+    - When going back and forth with data submitters at the last stage, a data visualization report is created. It is a markdown document with a lot of plots such as bulk density versus loss on emission.
+          + Allows for outliers or mistakes to be spotted.
+          + Helps data submitters find mistakes in the data at this point.
+   - Primarily done by the equivalent of one full-time technician. Data ingest is a lot of work.
 3) What decisions did you make to arrive at this workflow?
-    - Lessons learned from previous experience constructing a single PI meta-analysis and experience in management led to the current pipeline for CC-RCN.
+    - Lessons learned from previous experience constructing a single PI meta-analysis and experience in management led to the current pipeline for CCRCN.
 4) How would someone get a copy of the data in this study?
     - GitHub repositories
     - For every study ID, there are one or more citation files that get downloaded as BibTeX files to ensure easy citation.
@@ -49,15 +51,15 @@ CCRCN_controlVocab <- dataDescription.ls$control_vocabulary %>%
     + Not everyone is educated on data licenses
 6) What would be the same?
     - Come up with a letter or a memo of data responsibility that describes the project, states where the data is going to be kept, and creates working definitions of the data. It makes it so your data is your data until you say it is public. 
-    - Talking to people on the phone is more efficient than emailing 
-    - Understand the small politics of the data and be sensitive with the people who are trying to participate but are struggling 
-    - Host one data carpentry event a year or more
-        + In order to participate in the synthesis, one has to learn certain tools and work practices
-        + Try as much as possible to use GitHub 
-        + Different GitHub repo for every sub-project (the dataset is in one GitHub repository, the app for visualizing is in another, and different working groups have their own)
-        + Use gitignore files to make sure not to accidentally upload any private files
-    - Have a value statement instead of rules because one comes across things that are unexpected. Value statement is more adaptable to these new situations but keeps integrity
-    - Start off with having a community weighing in and saying what they need and want from a database. Release a couple different versions of original guidance to receive commentary and feedback
+    - Talking to people on the phone is more efficient than emailing. 
+    - Understand the small politics of the data and be sensitive with the people who are trying to participate but are struggling.
+    - Host one data carpentry event a year or more in order to:
+        + Participate in the synthesis, one has to learn certain tools and work practices.
+        + Try as much as possible to use GitHub .
+        + Use different GitHub repoositories for every sub-project (the dataset is in one GitHub repository, the app for visualizing is in another, and different working groups have their own).
+        + Use gitignore files to make sure not to accidentally upload any private files.
+    - Have a value statement instead of rules because one comes across things that are unexpected. Value statement is more adaptable to these new situations but keeps integrity.
+    - Start off with having a community weighing in and saying what they need and want from a database. Release a couple different versions of original guidance to receive commentary and feedback.
     - A lot of the success is due to the fact that the community was small enough where everyone knows each other, is willing to participate, and is easy to reach, but also big enough to where there were a lot of people who need to work together and are.
 
 ## CC-RCN data model
@@ -92,4 +94,4 @@ dm_render_graph(dm_create_graph(CCRCN_dm, rankdir = "BT", col_attr = c('column')
 ## Acknowledgements
 
 
-We would like to thank Dr James Holmquist (Smithsonian Institution) for his time and contributions to the June interview.
+We would like to thank Dr. James Holmquist (Smithsonian Institution) for his time and contributions to the June interview.

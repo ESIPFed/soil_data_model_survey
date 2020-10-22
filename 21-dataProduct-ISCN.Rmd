@@ -15,7 +15,7 @@ controlVocab <- readr::read_csv(file=file.path(data.dir, 'control_vocabulary.csv
 
 ## June 2020 interview
 
-These are notes from a 4 June 2020 interview with Luke Nave.
+These are notes from a 4 June 2020 interview with Dr. Luke Nave on the International Soil Carbon Network (ISCN).
 
 1) Why did you start this study/project?
     - The study was motivated by the desire to draw together scattered data into a common place with a common format so that users could apply it to answer outstanding questions in the carbon cycle.
@@ -119,4 +119,4 @@ dm_render_graph(dm_create_graph(ISCNTemplate_dm, rankdir = "RL", col_attr = c('c
 
 ## Acknowledgements
 
-Special thanks to Dr Luke Nave (University of Michigan) for his help with the interpertation of ISCN.
+Special thanks to Dr. Luke Nave (University of Michigan) for his help with the interpretation of ISCN.

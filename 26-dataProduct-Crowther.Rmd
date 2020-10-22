@@ -6,14 +6,16 @@ data_structure <- dataDescription.ls$structure
 
 ## July 2020 interview
 
+With Dr. Tom Crowther on the Crowther data model.
+
   1) Why did you start this study?
-      - The more data you collect the more patterns you can identify against the noise.
-Global data is needed to identify global patterns.
+      - The more data you collect, the more patterns you can identify against the noise.
+      - Global data is needed to identify global patterns.
       - This project specifically worked to address soil carbon sensitivity to warming. 
-But in general, the Crowther lab is interested in the living components of the soil, both in categorizing and characterizing these living components. 
-For example, if at two locations with the same climate, topography, and vegetation but different sets of soil organisms the functioning and carbon turn over would be very different.
+      - But, in general, the Crowther lab is interested in the living components of the soil, both in categorizing and characterizing these living components. 
+      - For example, if at two locations with the same climate, topography, and vegetation but different sets of soil organisms the functioning and carbon turn over would be very different.
   2) Describe your workflow for ingesting data sets?
-      - The data template has only asked for a brief description of the site location (latitude, longitude, etc.), the measurement they are looking for their project, and how the author collected that measurement. This very restricted data model is then much easier (and more satisfying) to collaborate with data products to fill out.
+      - The data template only asked for a brief description of the site location (latitude, longitude, etc.), the measurement they are looking for their project, and how the author collected that measurement. This very restricted data model is then much easier (and more satisfying) to collaborate with data products to fill out.
       - Next, data producers are contacted directly and invited to co-author the resulting manuscript. The resulting manuscript generally has between 50 and 100 co-authors and averages 5,000 to 10,000 samples or locations across the globe.
       - This simplistic approach is far more productive than having large tables that need computation and large amounts of time to fill. 
   3) What decisions did you make to arrive at this workflow?

@@ -10,49 +10,51 @@ datasetMeta <- dataDescription.ls$meta %>%
 
 ## June 2020 interview
 
+With a group of participants from the International Soil Radiocarbon Database (ISRaD).
+
 1) Why did you start this study?
     + ISRaD started prior to 2015 as an informal discussion at the AGU Fall Meeting to address several questions around controlling factors of soil carbon stocks. 
     + This lead to a USGS, Powell Center proposal, focusing particularly on the role of mineralogy and fractionation to control soil carbon stocks. The original workshop intended to explore controls of carbon storage and persistence in soils. Part of the group had a more specific intent of looking at various proxies for mineral or metal stabilized carbon in soils. In the course of these discussions, radiocarbon and other isotope measurements were recognized as being important to address questions of timescales. These mineral and isotope focused questions guided the initial template development. The ISCN template was extended and modified with this in mind.
-      - The ISCN template required extensions to address
-          * missing fractionation schemes (template was entirely focused on bulk data)
-          * sparse mineralogy and exchangeable metal data.
-          * overly complicated factor fields describing land use and other variables
-          * overall extremely complicated and difficult to fill out template structure
+      - The ISCN template required extensions to address:
+          * Missing fractionation schemes (template was entirely focused on bulk data).
+          * Sparse mineralogy and exchangeable metal data.
+          * Overly complicated factor fields describing land use and other variables.
+          * Overall extremely complicated and difficult to fill out template structure.
       - To address the above concerns, the Powell Center group spent considerable time revising and extending the ISCN template to include fraction information, simplifying land use description schemes, and generally trying to streamline the template.
       - Some data sets were ingested using the template, mostly as test cases for template development.
-    + The Max Planck Institute for Biogeochemistry picked up the project in 2018, providing support for larger data ingestion efforts primarily driven by a desire to compare Earth system models to soil radiocarbon data.
+    + The Max Planck Institute for Biogeochemistry (MPI) picked up the project in 2018, providing support for larger data ingestion efforts primarily driven by a desire to compare Earth system models to soil radiocarbon data.
 2) Describe your workflow for ingesting data sets?
     1) Enter data into the ISRaD template from (https://soilradiocarbon.org/contribute/)[https://soilradiocarbon.org/contribute/]
-        - Either done by data provider (with assistant from MPI team)
+        - Either done by data provider (with assistant from MPI team).
         - Or, if identified as a high value dataset, MPI teams will fill out template.
-    2) Once the data is entered into the template, it can be QAQC-ed using scripts available from the R-package or through an online GUI.
+    2) Once the data is entered into the template, it can be QA/QC using scripts available from the R-package or through an online GUI.
         - This R-script uses a combination of controlled vocabulary, string matching, limits with quantitative data, and ensuring that the names and the keys match to check the submission.
-    3) The data and output from the QAQC script is then sent to the ISRaD data coordinator via contact.
-    4) The data coordinator then forwards the data for expert review to one of the 6 or 7 reviewers who make recommendations and changes. It then goes back and forth a number of times between the data submitter and reviewer.
+    3) The data and output from the QA/QC script is then sent to the ISRaD data coordinator via contact.
+    4) The data coordinator then forwards the data for expert review to one of the six or seven reviewers who make recommendations and changes. It then goes back and forth a number of times between the data submitter and reviewer.
     5) Once the data is vetted, it is ingested into the ISRaD data product.
 3) What decisions did you make to arrive at this workflow?
     - ISRaD wanted to develop a simpler data template within an open science framework.
     - The revised template proved to still be challenging to fill out necessitating the review process.
 4) How would someone get a copy of the data in this study?
-    - A person who wanted the data could go to the ISRaD website (soilradiocarbon.org) and go to the database tab where the data is available for download
-    - It is also available directly from the package
-    - The website is hosted off of the GitHub repository
+    - A person who wanted the data could go to the ISRaD website (soilradiocarbon.org) and go to the database tab where the data is available for download.
+    - It is also available directly from the package.
+    - The website is hosted off of the GitHub repository.
 5) What would you do differently if you had to start again?
     - Data model iteration and development is necessary but extremely challenging, especially as the data product grows
     - Data templates are complicated to fill out, requiring time and training. You need both domain and data science skills.
     - Make sure to start with the right team. Original project had soil scientists but did not have people who had strength in coding or database structure. There is a clear need for soil scientists with database training.
     - Try to think more in advance about the template and its structure
-      + Template was changed a lot while entering studies so they had to keep going back to old studies that they had already finished to find more information
-      + Actively identify the 15 studies that they cared most about and be more methodical
-      + Have a structure to work with ahead of time versus building the thing around the studies
-    - The soil science community needs to establish best practices background information for published students. Studies are occasionally missing basic information like lat-lon location of sites.
+      + Template was changed a lot while entering studies so they had to keep going back to old studies that they had already finished to find more information.
+      + Actively identify the 15 studies that they cared most about and be more methodical.
+      + Have a structure to work with ahead of time versus building the thing around the studies.
+    - The soil science community needs to establish best practices background information for published students. Studies are occasionally missing basic information like lat-long location of sites.
     - Unclear where the next home for the data product is as the current team moves on to their next phase in their careers.
 6) What would be the same?
-    - One of the strongest aspects of ISRaD is the combination of automated QAQC and expert review
-    - Another is the transparency of the dataset in that any data that is in the template is very traceable about where it came from and how it got there
+    - One of the strongest aspects of ISRaD is the combination of automated QA/QC and expert review.
+    - Another is the transparency of the dataset in that any data that is in the template is very traceable about where it came from and how it got there.
         + Every data point is documented. Every study that is entered has to have a DOI.
     - Continue to promote open science. ISRaD is an open source and is available on GitHub which allows for it to have version control. 
-    - The data product had really good scientific output. It got a lot of different groups to use it and answer different questions, which has helped push it forward and keep it relevant by bringing in other groups
+    - The data product had really good scientific output. It got a lot of different groups to use it and answer different questions, which has helped push it forward and keep it relevant by bringing in other groups.
     - Hackathons worked really well. Get everyone together for a few focused days for dedicated push sessions to get a lot done. It works because everyone commits to a full couple of days and can ask questions and not have to pause to contact someone.
     
 
@@ -93,4 +95,4 @@ dm_render_graph(dm_create_graph(ISRaD_dm, rankdir = "RL", col_attr = c('column')
 
 ## Acknowledgements
 
-We would like to talk Drs Corey Lawerence (USGS), Kate Heckman (US Forest Service), and Alison Hoyt (MPI) as well as Shane Stoner (MPI), Jeffrey Beem-Miller (MPI), Sophie von Fromm (MPI), Ágatha Della Rosa Kuhnen (MPI) for their time and contributions to the June interview.
+We would like to talk Drs. Corey Lawerence (USGS), Kate Heckman (US Forest Service), and Alison Hoyt (MPI) as well as Shane Stoner (MPI), Jeffrey Beem-Miller (MPI), Sophie von Fromm (MPI), Ágatha Della Rosa Kuhnen (MPI) for their time and contributions to the June interviews.

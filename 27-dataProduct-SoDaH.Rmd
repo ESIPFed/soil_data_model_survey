@@ -14,6 +14,8 @@ controlVocab <- dataDescription.ls$control_vocabulary %>%
 
 ## July 2020 interview
 
+With Will Wieder and Steve Earl on the Soils Data Harmonization Database (SoDaH).
+
   1) Why did you start this study?
       - This study grew out of frustrations with the organization of the Long Term Ecological Research (LTER) data and expanded to include Critical Zone Observatory (CZO) and National Ecological Observation Network (NEON).
 They found that understanding the history of the data and matching dataset variables up with one another was nearly impossible given the published information.
@@ -51,7 +53,7 @@ They then had to calculate or recalculate things like nitrogen carbon ratios (if
   4) How would someone get a copy of the data in this study?
       - https://lter.github.io/som-website/index.html Project website with data GUI and workflow outline
       - Wieder, W.R., D. Pierson, S.R. Earl, K. Lajtha, S. Baer, F. Ballantyne, A.A. Berhe, S. Billings, L.M. Brigham, S.S. Chacon, J. Fraterrigo, S.D. Frey, K. Georgiou, M. de Graaff, A.S. Grandy, M.D. Hartman, S.E. Hobbie, C. Johnson, J. Kaye, E. Snowman, M.E. Litvak, M.C. Mack, A. Malhotra, J.A.M. Moore, K. Nadelhoffer, C. Rasmussen, W.L. Silver, B.N. Sulman, X. Walker, and S. Weintraub. 2020. SOils DAta Harmonization database (SoDaH): an open-source synthesis of soil data from research networks ver 1. Environmental Data Initiative. https://doi.org/10.6073/pasta/9733f6b6d2ffd12bf126dc36a763e0b4 (Accessed 2020-07-16).
-      - Manuscript to ESSD submitted (July 2020)
+      - Manuscript to Earth System Science Data (ESSD) submitted (July 2020)
   5) What would you do differently if you had to start again? What would be the same?
       - Original key-key template turned out to not be sufficient to harmonize the data and required revision. 
 It would have been a good idea to beta-test the template before they had people in front of them at the workshop.
@@ -87,7 +89,7 @@ Site_Key_controlVocab <- readxl::read_excel(path='~/Dropbox (UFL)/Research/Colla
 
 The SoDaH data product has a single data table with 165 columns.
 
-The SoDaH data key-key has 5 data tables (location, profile, layer, and fraction)  with between 5 and 108 columns.
+The SoDaH data key-key has 5 data tables (location, profile, layer, and fraction) with between 5 and 108 columns.
 
 ```{r fig.height=10}
 SoDaH_table <- columnDescription %>%
@@ -116,4 +118,4 @@ dm_render_graph(dm_create_graph(SoDaH_dm, rankdir = "BT", col_attr = c('column')
 
 ## Acknowledgements
 
-Special thanks to Dr Will Wieder and Steve Earl for their time to conduct this interview.
+Special thanks to Dr. Will Wieder and Steve Earl for their time to conduct this interview.

@@ -1,5 +1,5 @@
 
-# June Comparision of data model structures
+# June Comparison of data model structures
 
 ```{r}
 dataModelDescription <- dataDescription.ls$structure %>%
@@ -109,7 +109,7 @@ dm_render_graph(graph)
 
 Initial efforts to harmonize the vocabulary across studies showed over 580 unique variables out of 924 total variables across all data models. 
 Only 5 variables were commonly shared across all data models. 
-These variables tended to focus on study information, site location, climate, bulk density, organic carbon percentage, sand/silt/clay fractions, pH and cation exchange capasity (see Table 2).
+These variables tended to focus on study information, site location, climate, bulk density, organic carbon percentage, sand/silt/clay fractions, pH and cation exchange capacity (see Table 2).
 
 
 ```{r}
@@ -139,7 +139,7 @@ Bulk density was typically broken into several categories depending on the measu
     + X_class is free text or control vocabulary
     + coastal specific vocabulary
       * inundation/salinity
-    + anthropgenic impacts
+    + anthropogenic impacts
     + core-level vs site latitude/longitude and elevation
   - ISCN3
     + disturbance table
@@ -159,7 +159,7 @@ Bulk density was typically broken into several categories depending on the measu
       - Biome, % Clay, pH, 
     + Detailed soil warming data
       - planned temperatures, control temperatures, mean temperatures
-    + Cation exchange capasity reported
+    + Cation exchange capacity reported
     + % Nitrogen reported
     + distinguished between total raw carbon and total carbon
     + Difference between detailed_site_id(New Name) and site_id(Old Name)
@@ -170,9 +170,9 @@ Bulk density was typically broken into several categories depending on the measu
     + 'input' variable
     + soil horizon and percent soil organic matter
 
-## Inital ontology search for relevant control vocabulary. 
+## Initial ontology search for relevant control vocabulary. 
 
-In general, The Ecosystem Ontology (http://bioportal.bioontology.org/ontologies/ECSO) was the most relevant ontology to this study. However, the control vocabulary was not as method specific as many of the larger data products examined here. We searched http://bioportal.bioontology.org/ for ontologies with four common terms across the studies: ‘soil bulk density’, ‘soil organic carbon’, ‘soil pH’, and ‘soil depth’. None of the data products considered in this study refered to a formalized ontology and instead chose to develop their own or adapt-extend vocabulary from previous data products. We report an inital set of search results for some common terms in the data products considered.
+In general, The Ecosystem Ontology (http://bioportal.bioontology.org/ontologies/ECSO) was the most relevant ontology to this study. However, the control vocabulary was not as method specific as many of the larger data products examined here. We searched http://bioportal.bioontology.org/ for ontologies with four common terms across the studies: ‘soil bulk density’, ‘soil organic carbon’, ‘soil pH’, and ‘soil depth’. None of the data products considered in this study referred to a formalized ontology and instead chose to develop their own or adapt-extend vocabulary from previous data products. We report an initial set of search results for some common terms in the data products considered.
 
 The search term *'soil bulk density’* returned 39 ontology matches (search date: 19 May 2020). Many of these were entries for generalized ‘density’ or ‘bulk density’. The Ecosystem Ontology was the only ontology with a complete match (http://purl.dataone.org/odo/ECSO_00001110), though the definition of this entry was ambiguous. It did not specify if the bulk density was sieved or dry soil, making this challenging to use in a soil study without further specifications.
 
@@ -184,9 +184,9 @@ The search term *‘soil depth’* returned 33 ontology matches (search date: 19
 
 ## Next steps
 
-All groups in this study have been contacted and confirmed interest in particpating.
-We are currently expanding the data products being considered to include the Soil Incubation Database, WoSIS, ISCN-2016-template, the LTER soil organic matter working group, and the Soil Heath Database.
-We have draft the intial questions for the long format interviews below and plan to start conducting interviews in June.
+All groups in this study have been contacted and confirmed interest in participating.
+We are currently expanding the data products being considered to include the Soil Incubation Database (SIDb), World Soil Information Service (WoSIS), ISCN-2016-template, the LTER soil organic matter working group, and the Soil Health Database.
+We have draft the initial questions for the long format interviews below and plan to start conducting interviews in June.
 By the end of July we expect to have a more general community survey targeted more broadly to the soil science community.
 We will continue to explore the developed ontologies.
 
