@@ -31,10 +31,12 @@ General FAIR data principles were recognized as important, though not named as s
 In general there were no differences in the harmonizatin pipeline process between the providers and aggregators.
 
 Unsurprisingly open public data was well supported by the respondences with interest in broaderening scienific impact and increased visibility.
-Attribution and engagement was a named concern of respondences, in particular collonial science was called out as being partiucalrlly problematic.
-Time investments with unclear rewards.
-Unclear what "data base" was appropreate for a given data set.
-Data permissions issues.
+However there were several concerns voiced by data providers including:
+
+  1) Attribution and engagement was a named concern of respondences, in particular collonial science was called out as being partiucalrlly problematic.
+  2) Time investments with unclear rewards.
+  3) Unclear what "data base" was appropreate for a given data set.
+  4) Data permissions issues.
 
 Data is messy and data providers wish that was better understood by data aggregators.
 Both error/uncertainty and the exact methods use things that data providers feel is often overlooked by data aggregators.
