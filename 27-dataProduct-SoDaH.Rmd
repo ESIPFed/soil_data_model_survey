@@ -7,7 +7,7 @@
 They found that understanding the history of the data and matching dataset variables up with one another was nearly impossible given the published information.
 To solve this, the study brought the researchers familiar with these data sets together with data aggregators.
   2) Describe your workflow for ingesting data sets? 
-      - In person meetings were critical. 22 person workshops were needed to get the right people in the room with their data in order to learn about the datasets and structure. 
+      - In-person meetings were critical. 22 person workshops were needed to get the right people in the room with their data in order to learn about the datasets and structure. 
 They used a “key-key” template to harmonize data, where data providers manually map their data set onto a database template (modeled after ISCN via ISRaD) and provide additional site information and metadata.
 These key-key files are used to rename variables & convert units from raw data into harmonized sheets that are concatenated together in a scripted workflow. 
 	    - On the SoDaH GitHub https://lter.github.io/som-website/workflow.html, the workflow is listed as follows: 
@@ -25,7 +25,7 @@ The template had to be expanded to include time series and experimental data.
       - Lead PI had slow and painful experience with manual data transcriptions in previous project. 
 The group then sat in the workshop room for about two days before it began brainstorming a plan.
 After looking at the new ISCN data ingest plan, they decided to attempt a key-key file.
-A key-key file would map the column names to some common vocabulary and give basic meta data like units.
+A key-key file would map the column names to some common vocabulary and give basic metadata like units.
 Data providers would add their data into a Google folder with the key-key file was held.
 An R script would then process the raw data and templates producing a flat-file for each dataset of consistent format.
 This spur of the moment plan worked surprisingly well.
