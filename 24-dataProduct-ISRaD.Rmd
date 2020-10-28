@@ -45,7 +45,7 @@ datasetMeta <- dataDescription.ls$meta %>%
       + Template was changed a lot while entering studies so they had to keep going back to old studies that they had already finished to find more information
       + Actively identify the 15 studies that they cared most about and be more methodical
       + Have a structure to work with ahead of time versus building the thing around the studies
-    - The soil science community needs to establish best practices background information for published students. Studies are occasionally missing basic information like lat-lon location of sites.
+    - The soil science community needs to establish best practices background information for published students. Studies are occasionally missing basic information like lat-long location of sites.
     - Unclear where the next home for the data product is as the current team moves on to their next phase in their careers.
 6) What would be the same?
     - One of the strongest aspects of ISRaD is the combination of automated QAQC and expert review
@@ -93,4 +93,4 @@ dm_render_graph(dm_create_graph(ISRaD_dm, rankdir = "RL", col_attr = c('column')
 
 ## Acknowledgements
 
-We would like to talk Drs Corey Lawerence (USGS), Kate Heckman (US Forest Service), and Alison Hoyt (MPI) as well as Shane Stoner (MPI), Jeffrey Beem-Miller (MPI), Sophie von Fromm (MPI), Ágatha Della Rosa Kuhnen (MPI) for their time and contributions to the June interview.
+We would like to thank Drs Corey Lawerence (USGS), Kate Heckman (US Forest Service), and Alison Hoyt (MPI) as well as Shane Stoner (MPI), Jeffrey Beem-Miller (MPI), Sophie von Fromm (MPI), Ágatha Della Rosa Kuhnen (MPI) for their time and contributions to the June interview.
