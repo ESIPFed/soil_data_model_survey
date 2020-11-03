@@ -1,9 +1,5 @@
 # Crowther
 
-```{r}
-data_structure <- dataDescription.ls$structure
-```
-
 ## July 2020 interview
 
   1) Why did you start this study?
@@ -30,7 +26,7 @@ For example, if at two locations with the same climate, topography, and vegetati
 
 ```{r}
 
-Crowther_table <- data_structure %>%
+Crowther_table <- dataDescription.ls$structure %>%
   filter(data_product == 'Crowther') %>%
   select(-data_product) %>%
   rename('table' = 'data_table', 'column' = 'data_column') %>%

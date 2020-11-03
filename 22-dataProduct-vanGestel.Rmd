@@ -1,14 +1,4 @@
-
 # van Gestel record
-```{r}
-columnDescription <- dataDescription.ls$structure %>%
-  filter(grepl('vanGestel', data_product))
-datasetMeta <- dataDescription.ls$meta %>%
-  filter(grepl('vanGestel', data_product))
-controlVocab <- dataDescription.ls$control_vocabulary %>%
-  filter(grepl('vanGestel', data_product))
-
-```
 
 ## June 2020 Interview
 
@@ -60,7 +50,8 @@ anti_join(given_metadata, columnDescription %>% filter(data_product == 'vanGeste
 
 ```{r}
 
-vanGestel_table <- columnDescription %>%
+vanGestel_table <- dataDescription.ls$structure %>%
+  filter(grepl('vanGestel', data_product)) %>%
   rename('table' = 'data_table', 'column' = 'data_column') %>%
   mutate(key = data_type == 'id',
           ref = case_when(grepl('site.id', column) & data_product == 'vanGestel2017' ~ 'sites',

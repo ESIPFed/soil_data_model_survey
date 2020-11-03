@@ -1,18 +1,6 @@
 
 # ISCN
 
-```{r}
-
-columnDescription <- readr::read_csv(file=file.path(data.dir, 'data_structure.csv')) %>%
-  filter(grepl('ISCN', data_product))
-
-datasetMeta <-  readr::read_csv(file=file.path(data.dir,'data_meta.csv')) %>%
-  filter(grepl('ISCN', data_product))
-
-controlVocab <- readr::read_csv(file=file.path(data.dir, 'control_vocabulary.csv')) %>%
-  filter(grepl('ISCN', data_product))
-```
-
 ## June 2020 interview
 
 These are notes from a 4 June 2020 interview with Luke Nave.
@@ -58,7 +46,8 @@ These are notes from a 4 June 2020 interview with Luke Nave.
 
 ```{r}
 
-ISCN3_table <- columnDescription %>%
+ISCN3_table <- readr::read_csv(file=file.path(data.dir, 'data_structure.csv')) %>%
+  filter(grepl('ISCN', data_product)) %>%
   filter(data_product == 'ISCN3') %>%
   mutate(key = data_type == 'id',
          ref = case_when(
@@ -75,7 +64,8 @@ ISCN3_table <- columnDescription %>%
     mutate(ref = if_else(data_table == ref, as.character(NA), ref))%>%
    rename('table'='data_table',  'column'='data_column' )
 
-ISCNTemplate_table <- columnDescription %>%
+ISCNTemplate_table <- readr::read_csv(file=file.path(data.dir, 'data_structure.csv')) %>%
+  filter(grepl('ISCN', data_product)) %>%
   filter(data_product == 'ISCNTemplate') %>%
   mutate(key = data_type == 'id',
          ref = case_when(grepl('^dataset_name$', data_column) ~ 'metadata',
