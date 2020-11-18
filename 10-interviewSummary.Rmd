@@ -15,7 +15,7 @@ In general data was prioritized for synthesis based on its size (more data was h
 
 Much of the diversity in these workflow came from the aggregation process and the degree to which manual data transcription was utilized.
 The most common approach entailed manual data transcription from the original format (data table or information embedded in a figure) to a study specific data template. 
-This data transcription was done in some cases primarily by the data provider (ISCN, ISRaD, WoSIS, CC-RCN, and Crowther), or by the data synthesis team themselves (ISRaD, van Gestel, and SIDb). 
+This data transcription was done in some cases primarily by the data provider (ISCN, ISRaD, WoSIS, CCRCN, and Crowther), or by the data synthesis team themselves (ISRaD, van Gestel, and SIDb). 
 SoDaH had a unique key approach where a data thesaurus was developed by the data provider to translate the original data model into the common project model.
 In all but one case (SIDb) the data model consisted of a tabular relational database.
 SIDb in contrast had a unique tree structure with embedded rectangular data.
@@ -36,7 +36,7 @@ Notably online repositories were not the primary access point for synthesis prod
 Data was generally stored in a GitHub repository or hosted on project websites.
 The data was mainly formatted as relational data tables, frequently through Excel.
 
-## Painpoints and suggestions
+## Pinpoints and suggestions
 
 Common pain points stated by the principal investigators were the generational transfer of the data product, the required skill mix of informatics and soils, and the complex complete data structures which lead to large amounts of unique vocabulary.
 Data product synthesis efforts typically take longer then a standard 3-year funding cycle. 
@@ -44,7 +44,7 @@ Thus data products are often repurposed to address slightly different questions 
 Both the inherent complexity of soils data as well as this repurposing frequently led to changes in the project data template.
 These changes in template structure were frequently challenging to implement, requiring revisiting of the original data source to ensure a complete capture of the data with the new template.
 Often these soil data templates ended up being particularly large and diverse, consisting of 100's of unique columns (ISCN, ISRaD) unless deliberately avoided (Crowther, WoSIS).
-Finally teams frequently identified the unique skill combination of soils science paired with computer programming or database expertise, as being particularly difficult to find.
+Finally, teams frequently identified the unique skill combination of soils science paired with computer programming or database expertise, as being particularly difficult to find.
 
 To combat some of these concerns, the researchers suggested ensuring to start with the correct team, involving both soil scientists and scientists with informatics backgrounds, as well as taking more time to develop the template before its use, so it would not need to be modified later.
 Positive suggestions included (1) having the community weigh in on needs and wants for the database and (2) hosting hackathons and workshops to focus on completing tasks.

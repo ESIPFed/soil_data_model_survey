@@ -3,23 +3,23 @@
 
 ## June 2020 interview
 
-These are notes from a 4 June 2020 interview with Carlos Sierra and Christina Scheadel.
+These are notes from a 4 June 2020 interview with Carlos Sierra and Christina Scheadel on the Soil Incubation Database (SIDb).
 
 1) Why did you start this study?
-    - There is this huge potential to use new innovations with soil incubation data, but people were using it in many different ways, making it hard to demonstrate it's value. Time series incubations are an important aspect of soil incubation that have been under utilized, in contrast to total respired fraction. In particular time series incubation data can tell you about the carbon stock rate and the dynamics. The fact that the environment in these incubations is so tightly controlled is a feature, not a bug, removing confounding variables (in other words, sensitivity functions) from the results. 
-    - This database is a merger of two projects by Carlos and Christina. These two projects were started roughly 5 years ago; once they both became aware of the other's projects, they merged efforts. A week-long workshop in Jena, Germany during March of 2019 accelerated work.
+    - There is this huge potential to use new innovations with soil incubation data, but people were using it in many different ways, making it hard to demonstrate its value. Time series incubations are important aspects of soil incubations that have been under utilized, in contrast to total respired fraction. In particular, time series incubation data can tell you about the carbon stock rate and the dynamics. The fact that the environment in these incubations is so tightly controlled, it is a feature, not a bug, removing confounding variables (in other words, sensitivity functions) from the results. 
+    - This database is a merger of two projects by Carlos and Christina. These two projects were started roughly 5 years ago; once they both became aware of the other's project, they merged efforts. A week-long workshop in Jena, Germany during March 2019 accelerated work.
 2) Describe your workflow for ingesting data sets.
-    - There are three main elements of a data contribution: the time series, initial conditions, and metadata.
-    - The templates have evolved over time, especially in the March-2019 workshop. A complete template is essential to enable consistent information capture from the original manuscripts.
+    - There are three main elements of a data contribution: Time series, Initial conditions, and Metadata.
+    - The templates evolved over time, especially in the March 2019 workshop. A complete template is essential to enable consistent information capture from the original manuscripts.
     - Time series are captured from graphs in original manuscripts, and occasionally direct data from the original PIs. 
     - Data was generally not directly contributed from PI unless the PI was directly involved in the data product.
     - SIDb is NOT a repository and instead a dynamic data product. Data should ideally be archived in a repository separately.
 Follow up question: How successful were you in getting PIs to give you data?
-    - Within the group, there were people with data, so they got data from them instead of contacting PIs for them. Did not ask for data from PIs. the dataset is not complete at all. They were setting up the infrastructure for people to upload their own data. No outside contributions yet. Some people have expressed interest. 
+    - Within the group, there were people with data, so they got data from them instead of contacting PIs for them. Did not ask for data from PIs. The dataset is not complete at all. They were setting up the infrastructure for people to upload their own data. No outside contributions yet. Some people have expressed interest. 
     - Dynamic database, not a repository. Contribution to a product. You are expected to archive your own data.
-    - Current data product
+    - Current data products
         + There are 31 studies so far.
-        + 684 total time-series
+        + 684 total time-series.
         + The longest time series is 800 to 1,000 days.
 3) What decisions did you make to arrive at this workflow?
     - Driven by research questions, design is mostly trial and error.
@@ -27,7 +27,7 @@ Follow up question: How successful were you in getting PIs to give you data?
     - Going forward, when incorporating additional columns, their thoughts are that it needs to evolve based on the needs of that specific entry.
 4) How would someone get a copy of the data in this study?
     - `git clone` a GitHub repository and then interact with it through the associated R-package. 
-    - R package reads the data, use simple plotting, and model fitting via the FME R-package that can use both classical gradient and MCMC methods.
+    - R package reads the data, uses simple plotting, and models fitting via the FME R-package that can use both classical gradient and MCMC methods.
 5) What would you do differently if you had to start again? What would be the same?
     - Having the project be research question driven worked well even if it was a bit slow.
     - Would have been good to collaborate sooner. That might have moved the project along faster.
@@ -109,8 +109,8 @@ generalTree <- SIDB_structure %>%
   
 ```
 
-The soil incubation data base has a unique tree structure instead of a relational database that, in it's native form, is represented as follows.
-The data base is a list of studies. 
+The soil incubation data base has a unique tree structure instead of a relational database that, in its native form, is represented as follows.
+The database is a list of studies. 
 Each study has a single root with the following struction.
 
 ```{r eval=FALSE}
@@ -156,7 +156,7 @@ render_graph(myGraph)
 
 ```
 
-For the sake of comparison we deconstructed this tree structure and describe the SIDb data product downloaded June-2020 with the following set of relational data tables.
+For the sake of comparison we deconstructed this tree structure and described the SIDb data product downloaded June in 2020 with the following set of relational data tables.
 This is currently pending work.
 
 ```{r eval=FALSE}
@@ -436,5 +436,5 @@ dm_render_graph(dm_create_graph(SIDb_dm, rankdir = "RL", col_attr = c('column'),
 
 ## Acknowledgements
 
-Special thanks to Drs Christina Scheadel (Northern Arizona University) and Carlos Sierra (Max Planck Institute for Biogeochemistry) for making the meta data and for making themselves available for interview.
+Special thanks to Drs Christina Scheadel (Northern Arizona University) and Carlos Sierra (Max Planck Institute for Biogeochemistry) for making the metadata and for making themselves available for interviews.
 
