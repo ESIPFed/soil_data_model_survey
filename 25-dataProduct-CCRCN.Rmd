@@ -1,17 +1,6 @@
 
 # CC-RCN
 
-```{r}
-
-columnDescription <- dataDescription.ls$structure %>%
-  filter(grepl('CCRCN', data_product))
-datasetMeta <-  dataDescription.ls$meta %>%
-  filter(grepl('CCRCN', data_product))
-CCRCN_controlVocab <- dataDescription.ls$control_vocabulary %>%
-  filter(grepl('CCRCN', data_product))
-
-```
-
 ## June 2020 interview
 
 With Dr. James Holmquist on the Coastal Carbon Research Coordination Network (CCRCN).
@@ -66,7 +55,8 @@ With Dr. James Holmquist on the Coastal Carbon Research Coordination Network (CC
 
 ```{r fig.height=10}
 
-CCRCN_table <- columnDescription %>%
+CCRCN_table <- dataDescription.ls$structure %>%
+  filter(grepl('CCRCN', data_product)) %>%
   rename('table' = 'data_table', 'column' = 'data_column') %>%
   mutate(key = data_type == 'id',
          ref = case_when(grepl('^study_id$', column) ~ 'Study Information',

@@ -1,9 +1,5 @@
 
 # SIDb record
-```{r}
-tableDescription <- dataDescription.ls$structure %>%
-  filter(data_product == 'SIDb')
-```
 
 ## June 2020 interview
 

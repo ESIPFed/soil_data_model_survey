@@ -1,9 +1,5 @@
 # Crowther
 
-```{r}
-data_structure <- dataDescription.ls$structure
-```
-
 ## July 2020 interview
 
 With Dr. Tom Crowther on the Crowther data model.
@@ -32,7 +28,7 @@ With Dr. Tom Crowther on the Crowther data model.
 
 ```{r}
 
-Crowther_table <- data_structure %>%
+Crowther_table <- dataDescription.ls$structure %>%
   filter(data_product == 'Crowther') %>%
   select(-data_product) %>%
   rename('table' = 'data_table', 'column' = 'data_column') %>%

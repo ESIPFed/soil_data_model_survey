@@ -96,3 +96,4 @@ dm_render_graph(dm_create_graph(ISRaD_dm, rankdir = "RL", col_attr = c('column')
 ## Acknowledgements
 
 We would like to talk Drs. Corey Lawerence (USGS), Kate Heckman (US Forest Service), and Alison Hoyt (MPI) as well as Shane Stoner (MPI), Jeffrey Beem-Miller (MPI), Sophie von Fromm (MPI), Ágatha Della Rosa Kuhnen (MPI) for their time and contributions to the June interviews.
+
