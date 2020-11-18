@@ -1,51 +1,67 @@
 # Summary of Interviews
 
 Our conversations with project teams began in the Summer of 2020 and consisted of five, guiding questions covering the general motivation of the project, workflow, decision points, availability, and possible improvements.
+From these questions, we hoped to gain a better understanding of the current status of synthesis projects to inform a best practices paper to make suggestions for future efforts.
 
 ## Project motivation
 
-Specific project motivation to create these larger data sets were varied but generally centered on a global scale question that could not be addressed by a single project motivating the synthesis of multiple data providers.
-Most participants stated that whatever data they were specifically looking for was unavailable, unorganized, or nonexistent, so they therefore started the project/dataset out of need or frustration to address a specific question.
-This synthesis process was long; most of the data products developed over a period of five years or longer.
+From our conversations, we found that specific project motivation to create larger datasets varied but generally centered on answering outstanding questions on the carbon cycle that could not be addressed by the data from a single project.
+To answer these questions the researchers needed large scale harmonized datasets but found that they were unavailable, unorganized or nonexistent.
+Therefore the start of these multiple data synthesis projects was motivated by the need for more robust datasets and the frustration of scattered, undocumented data.
+These projects, which were in many cases passion projects, proved to be very long and tedious, typically taking a period of five or more years to be developed. 
 
 ## Workflow
 
-All workflows aggregated data somehow and then put it through an automated quality control and assurance process.
-In general data was prioritized for synthesis based on its size (more data was higher priority) and relevancy to the question of the project.
+Across the projects, workflows focused on efficiently aggregating data and passing it through a vetting process to be harmonized for a final data product.
+The process typically began with data prioritization for synthesis, during which the data was prioritized based on its size (more data was higher priority) and relevancy to the question of the project.
+The next step was the aggregation process where much of the diversity in these workflows arose.
+This diversity stemmed from the degree to which manual data transcription was utilized.
+The most common approach entailed manual data transcription from the original format (data table or information embedded in a figure) to a study specific data template.
+This data transcription was done in some cases primarily by the data provider (ISCN, ISRaD, WoSIS, CC-RCN, and Crowther), or by the data synthesis team themselves (ISRaD, van Gestel, and SIDb). 
+Another unique approach used was keyed transcription as used in the SoDaH project.
+In this project, the data provider developed a data thesaurus to translate the original data model into the common project model.
+The data was then more thoroughly harmonized through a QA/QC procedure which is varied among projects. QA/QC typically consists of gap filling, unifying units, and thoroughly analyzing data. This ensures that the data model is ready for publication. 
+Once the data model is ready, it is released to a GitHub repository or hosted on the project website, typically as a tabular relational database. SIDb was the exception and had a unique tree structure with embedded rectangular data.
 
-Much of the diversity in these workflow came from the aggregation process and the degree to which manual data transcription was utilized.
-The most common approach entailed manual data transcription from the original format (data table or information embedded in a figure) to a study specific data template. 
-This data transcription was done in some cases primarily by the data provider (ISCN, ISRaD, WoSIS, CCRCN, and Crowther), or by the data synthesis team themselves (ISRaD, van Gestel, and SIDb). 
-SoDaH had a unique key approach where a data thesaurus was developed by the data provider to translate the original data model into the common project model.
-In all but one case (SIDb) the data model consisted of a tabular relational database.
-SIDb in contrast had a unique tree structure with embedded rectangular data.
- 
 ## Decisions
 
-Workflows were a balance between ease of use and robustness. 
-Very large (ISRaD) and very small (van Gestel) team projects tended to convert to a data transcription template approach for ease of use and short development time. 
-Intermediate projects like SoDaH had the motivation to produce a more robust pipeline and the nimbleness to experiment a little more.
+Workflows were a balance between ease of use and robustness, causing the need for the dataset creators to make decisions about which was more important to their project.
+Very large (ISRaD) and very small (van Gestel) team projects tended to focus on ease of use and short development time, leading them to convert to a data transcription template approach. Intermediate projects like SoDaH had the motivation to produce a more robust pipeline and the nimbleness to experiment a little more.
 
-Across all projects communication, both within the synthesis team and between the synthesis team and data providers, was critical.
-Working 'hackathons' were identified by ISRaD, SIDb, and SoDaH as being critical for moving the project forward.
-Documentation of the template was critical for teams of more then a single PI.
+Across all projects, communication, both within the synthesis team and between the synthesis team and data providers, was critical.
+One way that projects encouraged communication was hosting working ‘hackathons’, which were identified by ISRaD, SIDb, and SoDaH as being critical for moving the project forward. 
+During these hackathons, the working group was able to commit to focusing on completing tasks, while also having the ability to have questions answered immediately, making them more efficient.
+Additionally, documentation of the template was critical for teams of more than a single PI.
 
-## Attaining copy of project
+## Obtaining copy of project
 
 Notably online repositories were not the primary access point for synthesis products.
 Data was generally stored in a GitHub repository or hosted on project websites.
 The data was mainly formatted as relational data tables, frequently through Excel.
 
-## Pinpoints and suggestions
+## Painpoints and suggestions
 
-Common pain points stated by the principal investigators were the generational transfer of the data product, the required skill mix of informatics and soils, and the complex complete data structures which lead to large amounts of unique vocabulary.
-Data product synthesis efforts typically take longer then a standard 3-year funding cycle. 
+Common pain points stated by those interviewed included the generational transfer of the data product, the required skill mix of informatics and soils, and the complex complete data structures which lead to large amounts of unique vocabulary.
+To begin, data product synthesis efforts typically take longer then a standard 3-year funding cycle. 
 Thus data products are often repurposed to address slightly different questions over the course of their lifecycle (ISRaD is a particularly good example of this).
 Both the inherent complexity of soils data as well as this repurposing frequently led to changes in the project data template.
 These changes in template structure were frequently challenging to implement, requiring revisiting of the original data source to ensure a complete capture of the data with the new template.
-Often these soil data templates ended up being particularly large and diverse, consisting of 100's of unique columns (ISCN, ISRaD) unless deliberately avoided (Crowther, WoSIS).
-Finally, teams frequently identified the unique skill combination of soils science paired with computer programming or database expertise, as being particularly difficult to find.
+
+Soil data templates are also often particularly large and diverse, consisting of 100's of unique columns (ISCN, ISRaD) unless deliberately avoided (Crowther, WoSIS).
+These large datasets therefore frequently identified that a unique skill combination of soils science paired with computer programming or database expertise, was needed in these projects and can be particularly difficult to find.
 
 To combat some of these concerns, the researchers suggested ensuring to start with the correct team, involving both soil scientists and scientists with informatics backgrounds, as well as taking more time to develop the template before its use, so it would not need to be modified later.
 Positive suggestions included (1) having the community weigh in on needs and wants for the database and (2) hosting hackathons and workshops to focus on completing tasks.
-This ensures that the final data product will be completed efficiently and that when completed it will be used. 
+This ensures that the final data product will be completed efficiently and that when completed it will be used.
+
+#Next Steps
+
+Using the findings from these interviews, we are in the process of developing a soil data product best practice manuscript that would aid future efforts.
+We have been hosting meetings to discuss the outline and writing tasks with the coauthors, and will continue with these meetings every other week.
+We plan to have the paper finalized in November and submitted for review in December. 
+
+Additionally, our work has highlighted the need for ontologies, which would allow soil scientists to make their studies more organized and extendable in the future.
+Through the community surveys and the recent ESIP convention, Dr. Todd-Brown was able to gather soil scientists interested in soil ontology meetings.
+These meetings take place once every two weeks and have demonstrated the need to bridge the gap in ontologies across different fields of the soil science community.
+
+Our work with the best practices paper and soil ontology intends to use our findings to change the way that soil data is organized, documented, and stored in order to promote the ease of use and longevity of the data.
