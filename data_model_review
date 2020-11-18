@@ -1,0 +1,14 @@
+#Data Model Review
+Starting with a single table data structure format the team found this to not be robust enough to thoroughly describe the workflow of the data harmonization and moved to a new multi-tab template. 
+Manual transcription and harmonization produced the existing template called DatasetVariableTable_v3.
+The spreadsheet is broken down into 7 tables: README, data_structure, thesaurus, meta, all_units, common_vocabulary, common_units.
+The first section, README, provides a brief overview of the data model similar to this section, and a change log to show the timeline of recent modifications to the document.
+The next 3 sections link the dataset variables from the 8 datasets we dissected in order to harmonize them under a new internal standard of variable names.
+The first of these tables is the data_structure table that provides a description of the data variable and where it is located and how it interacts within its respective data model.
+Within this table the variable’s product name, data table name within the data product, any data variables the variable references, and data type are listed.
+Following this is the thesaurus table which is the heart of our harmonization workflow.
+Within this table, data is converted from product-specific vocabulary (generally column names but can be long-data format variable names) into the internal standard variable names.
+This table lists the variable location with a descriptor such as “column_name” and the table and data product it originates from, as well as its previous product-specific variable name and its new assigned variable name.
+The metadata of the given variable including original location, type, units, and methods is located in the meta table. This table links the product-table-column to the product-level metadata.
+Specific information about value_factors and entries into the data product is found in the common_vocabulary table.
+The table all_units is a compiled and sorted list of all units in the meta, and common_units is a list of common units for data standardization. 
