@@ -30,7 +30,7 @@ In this document there is
 2) a general interview to the soils community, and 
 3) a structural summary of the data models available.
 
-The results from this project have spawned an upcoming manuscript and future ESIP Cluster [links pending].
+The results from this project have spawned an upcoming manuscript and future ESIP Cluster [https://wiki.esipfed.org/Soil_Ontologies_and_Informatics](https://wiki.esipfed.org/Soil_Ontologies_and_Informatics).
 
 This work is based on materials provided by the ESIP Lab with support from the National Aeronautics and Space Administration (NASA), National Oceanic and Atmospheric Administration (NOAA) and the United States Geologic Survey (USGS).
 
