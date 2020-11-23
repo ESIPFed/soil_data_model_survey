@@ -1,4 +1,6 @@
-# WoSIS
+# World Soil Information data base (WoSIS)
+
+The World Soil Information data base is the main soil information repository for the FAO-ISRIC containing 2-level layer information for soil profiles internationally.
 
 ## September 2020 interview
 

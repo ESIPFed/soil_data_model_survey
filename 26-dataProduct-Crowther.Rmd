@@ -1,5 +1,7 @@
 # Crowther
 
+The Crowther dataset specifically looked for published and unpublished data pertaining to near surface soil carbon response to field warming experiments.
+
 ## July 2020 interview
 
 With Dr. Tom Crowther on the Crowther data model.

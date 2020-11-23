@@ -1,11 +1,9 @@
 --- 
 title: 'Soil Data Models: a review'
 author:
-- name: K Todd-Brown (ktoddbrown@ufl.edu)
-- name: L Heran, K Frederick, M Younger
-- name: L Nave, N van Gestel, C Scheadel, C Sierra, C Lawrence, A Hoyt, S Stoner,
-    J Beem-Miller, K Heckman, S von Fromm, Á Kuhnen, J Holmquist, W Wieder, S Earl,
-    T Crowther, N Batjes, E Ribeiro
+- name: "K Todd-Brown (ktoddbrown@ufl.edu)"
+- name: "**UF team:** L Heran, K Frederick, M Younger"
+- name: "**Contributors:** L Nave, N van Gestel,  C Scheadel, C Sierra, C Lawrence, A Hoyt, S Stoner, J Beem-Miller, K Heckman, S von Fromm, Á Kuhnen, J Holmquist, W Wieder, S Earl, T Crowther, N Batjes, E Ribeiro"
 date: "`r format(Sys.Date(), '%Y %B %d')`"
 output: 
   bookdown::gitbook

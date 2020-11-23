@@ -1,20 +1,20 @@
+# Preliminary data product summaries
 
-##Feature Specific Summaries
+## Common Features
 
-#Common Features
 Through our examination of the current meta-analysis efforts, there emerged commonalities across all of the data products. 
 Many studies feature common site level characteristics such as location (consisting of latitude, longitude, and elevation) and observation time. 
-Soil level characteristics are also common across most data products. 
-These include bulk density, depth of sample and layer, organic carbon percentage, loss on ignition, sand, silt, clay, and pH. 
-Further, vegetation class notes are described frequently, but are not directly comparable across studies.
+Soil level characteristics are also common across most data products including bulk density, depth of sample and layer, organic carbon percentage, loss on ignition, sand, silt, clay, and pH. 
+Further, vegetation class notes are described frequently, but often use unique vocabularies that are not directly comparable across studies.
 
-#Unique Features
+## Unique Features
+
 Each data product has unique qualities in how the data was captured and recorded.  
-ISCN and ISRaD, for example, each feature a disturbance table, fraction table, and higher levels of site and layer-level information than other data models. 
-CCRCN includes coastal specific vocabulary (such as inundation and salinity), anthropogenic impacts, specific isotopes (Am241, C14, Cs137, Be7, Pb210, Ra226), 
+*ISCN* and *ISRaD*, for example, each feature a disturbance table, fraction table, and higher levels of site and layer-level information than other data models. 
+*CCRCN* includes coastal specific vocabulary (such as inundation and salinity), anthropogenic impacts, specific isotopes (Am241, C14, Cs137, Be7, Pb210, Ra226), 
 a ‘one_liner’ summary, and both core-level and site characteristics for location. 
-SIDb includes data on time series and initial conditions, as well as unique variables such as anaerobic/aerobic, gasMeasured, and samplePreparation. 
-Crowther and Van Gestel’s data models have unique features amongst their many commonalities. 
-Crowther has detailed soil warming data (planned temperatures, control temperatures, mean temperatures), distinguishes between total raw carbon and total carbon, 
-and features updated data from outside sources (Biome, % Clay, pH). Van Gestel categorizes carbon, nitrogen, and phosphorus pools above and below ground, has detailed treatment information, soil horizon, and percent soil organic matter. 
-Wosis is unique in that it breaks down many of the variables into value, average value, method, date, dataset id, profile code, and licence.
+*SIDb* includes data on time series and initial conditions, as well as unique variables such as anaerobic/aerobic, gasMeasured, and samplePreparation. 
+*Crowther* has detailed soil warming data (planned temperatures, control temperatures, mean temperatures), distinguishes between total raw carbon and total carbon, 
+and features updated data from outside sources (Biome, % Clay, pH). 
+*Van Gestel* categorizes carbon, nitrogen, and phosphorus pools above and below ground, has detailed treatment information, soil horizon, and percent soil organic matter. 
+*Wosis* is unique in that it breaks down many of the variables into value, average value, method, date, dataset id, profile code, and licence.

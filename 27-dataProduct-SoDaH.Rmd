@@ -1,4 +1,6 @@
-# SoDaH
+# Soils Data Harmonization Database (SoDaH)
+
+The Soils Data Harmonization Database (SoDaH) focuses on aggregating long term observations of soil carbon stocks.
 
 ## July 2020 interview
 
@@ -68,18 +70,9 @@ The SoDaH data product has a single data table with 165 columns.
 
 The SoDaH data key-key has 5 data tables (location, profile, layer, and fraction) with between 5 and 108 columns.
 
-```{r eval=FALSE, fig.height=10}
-#columnDescription <- dataDescription.ls$structure %>%
- # filter(grepl('SoDaH', data_product) | grepl('LTERWG', data_product))
-#thesaurus <- dataDescription.ls$thesaurus %>%
- # filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
-#datasetMeta <-  dataDescription.ls$meta %>%
- # filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
-#controlVocab <- dataDescription.ls$control_vocabulary %>%
- # filter(grepl('SoDaH', data_product)| grepl('LTERWG', data_product))
- 
+```{r, eval=FALSE, fig.cap="SoDaH data table"}
 SoDaH_table <- dataDescription.ls$structure %>%
-  filter(grepl('SoDaH', data_product) | grepl('LTERWG', data_product)) %>%
+  filter(grepl('SoDaH', data_product)) %>%
   rename('table' = 'data_table', 'column' = 'data_column') %>%
   mutate(key = data_type == 'id',
          ref = case_when(grepl('^site_code$', column) ~ 'location',
@@ -99,7 +92,7 @@ SoDaH_dm <- as.data_model(SoDaH_table)
 #graph <- dm_create_graph(SoDaH_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only')
 dm_render_graph(dm_create_graph(SoDaH_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only', graph_name='SoDaH data model'))
 
-dm_render_graph(dm_create_graph(SoDaH_dm, rankdir = "BT", col_attr = c('column'), view_type = 'all', graph_name='SoDaH data model'))
+#dm_render_graph(dm_create_graph(SoDaH_dm, rankdir = "BT", col_attr = c('column'), view_type = 'all', graph_name='SoDaH data model'))
 ```
 
 

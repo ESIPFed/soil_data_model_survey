@@ -1,12 +1,7 @@
-# ISRaD
+# Internationl Soil Radiocarbon Database (ISRaD)
 
+The Internationl Soil Radiocarbon Database is focused on aggregating high value radiocarbon measurements.
 
-```{r}
-columnDescription <- dataDescription.ls$structure %>%
-  filter(data_product == 'ISRaD')
-datasetMeta <- dataDescription.ls$meta %>%
-  filter(data_product == 'ISRaD')
-```
 
 ## June 2020 interview
 
@@ -58,11 +53,12 @@ With a group of participants from the International Soil Radiocarbon Database (I
     - Hackathons worked really well. Get everyone together for a few focused days for dedicated push sessions to get a lot done. It works because everyone commits to a full couple of days and can ask questions and not have to pause to contact someone.
     
 
-## ISRaD data model
+## Data model
 
-```{r ISRaD_dm}
+```{r, fig.cap='ISRaD data model'}
 
-ISRaD_table <- columnDescription %>%
+ISRaD_table <- dataDescription.ls$structure %>%
+  filter(data_product == 'ISRaD') %>%
   rename('table' = 'data_table', 'column' = 'data_column') %>%
   mutate(key = data_type == 'id',
          ref = case_when(grepl('^entry_name$', column) ~ 'metadata',
@@ -87,10 +83,7 @@ ISRaD_table <- columnDescription %>%
 
 ISRaD_dm <- as.data_model(ISRaD_table)
 
-graph <- dm_create_graph(ISRaD_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only')
-#dm_render_graph(dm_create_graph(CCRCN_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only', graph_name='CC-RCN data model'))
-
-dm_render_graph(dm_create_graph(ISRaD_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only', graph_name='ISCN data model'))
+dm_render_graph(dm_create_graph(ISRaD_dm, rankdir = "RL", col_attr = c('column'), view_type = 'keys_only', graph_name='ISRaD data model'))
 ```
 
 ## Acknowledgements

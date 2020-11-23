@@ -1,4 +1,6 @@
-# van Gestel record
+# van Gestel
+
+The van Gestel data base was constructed to aggregate soil data from field experiments including warming, nutrient addition, and moisture manipulation. This is an ongoing, unpublished project.
 
 ## June 2020 Interview
 
@@ -29,26 +31,9 @@ These are notes from the June 2020 interview with Dr. Natasja van Gestel on the 
     - Considering focusing more on collecting data from repositories in the future.
 
 
-## van Gestel data model  
+## Data model  
 
-```{r eval=FALSE}
-
-# Check column names
-tableNames <- excel_sheets(path = '../data-raw/vanGestel/20200613_data/Metadata_wExamples.xlsx')[-1]
-given_metadata <- read_excel(path = '../data-raw/vanGestel/20200613_data/Metadata_wExamples.xlsx', sheet = tableNames[1])
-given_columns <- plyr::ddply(tibble(table = tableNames[-1]), 'table', function(xx){
-  return(tibble(columns = names(read_excel(path = '../data-raw/vanGestel/20200613_data/Metadata_wExamples.xlsx', sheet = xx$table))))
-})
-
-anti_join(given_metadata, given_columns, by=c("Spreadsheet"='table', 'column name'='columns'))
-anti_join(given_columns, given_metadata, by=c('table'="Spreadsheet", 'columns'= 'column name'))
-anti_join(columnDescription %>% filter(data_product == 'vanGestel'), 
-          given_metadata, by=c('data_table'="Spreadsheet", 'data_column'= 'column name'))
-anti_join(given_metadata, columnDescription %>% filter(data_product == 'vanGestel'), 
-          by=c("Spreadsheet"='data_table', 'column name'='data_column'))
-```
-
-```{r}
+```{r, fig.cap='vanGestel data model'}
 
 vanGestel_table <- dataDescription.ls$structure %>%
   filter(grepl('vanGestel', data_product)) %>%
@@ -65,14 +50,7 @@ vanGestel_table <- dataDescription.ls$structure %>%
 vanGestel_dm <- as.data_model(vanGestel_table %>% filter(data_product == 'vanGestel'))
 vanGestel2017_dm <- as.data_model(vanGestel_table %>% filter(data_product == 'vanGestel2017'))
 
-```
-
-
-### Current version
-
-```{r fig.height=4}
 dm_render_graph(dm_create_graph(vanGestel_dm, rankdir = "BT", col_attr = c('column'), view_type = 'keys_only'))
-
 ```
 
 ## Acknowledgements
