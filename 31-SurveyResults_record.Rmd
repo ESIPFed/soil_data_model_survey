@@ -20,7 +20,7 @@ Many of our respondents were looking at questions around global biogeochemical p
 
 Most of the data sources were drawn from the primary scientific literature with several respondents also drawing from direct response from study PI or colleagues. 
 One respondent mentioned online databases  (e.g., USGS NWIS, USGS Geochemical Landscapes, NEON). 
-None of the study respondents mentioned DataOne or PI-driven data repositories for data discovery.
+Notably none of the study respondents mentioned DataOne or other data repositories for data discovery.
 Identified challenges included QAQC protocols, difficulty getting data upon direct request from colleagues, formatting heterogeneity, missing or badly identified metadata, template development and stability, project management for aggregation effort in large groups.
 Things that worked well in the process were orchestrated hackathons.
 
