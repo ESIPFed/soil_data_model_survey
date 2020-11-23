@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9 Crowther | Soil Data Models: a review</title>
+  <title>7 Internationl Soil Radiocarbon Database (ISRaD) | Soil Data Models: a review</title>
   <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9 Crowther | Soil Data Models: a review" />
+  <meta property="og:title" content="7 Internationl Soil Radiocarbon Database (ISRaD) | Soil Data Models: a review" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 Crowther | Soil Data Models: a review" />
+  <meta name="twitter:title" content="7 Internationl Soil Radiocarbon Database (ISRaD) | Soil Data Models: a review" />
   
   <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="coastal-carbon-research-coordination-network-cc-rcn.html"/>
-<link rel="next" href="sodah.html"/>
+<link rel="prev" href="soil-incubation-database-sidb.html"/>
+<link rel="next" href="coastal-carbon-research-coordination-network-cc-rcn.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -174,52 +174,96 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="crowther" class="section level1">
-<h1><span class="header-section-number">9</span> Crowther</h1>
-<p>The Crowther dataset specifically looked for published and unpublished data pertaining to near surface soil carbon response to field warming experiments.</p>
-<div id="july-2020-interview" class="section level2">
-<h2><span class="header-section-number">9.1</span> July 2020 interview</h2>
-<p>With Dr. Tom Crowther on the Crowther data model.</p>
+<div id="internationl-soil-radiocarbon-database-israd" class="section level1">
+<h1><span class="header-section-number">7</span> Internationl Soil Radiocarbon Database (ISRaD)</h1>
+<p>The Internationl Soil Radiocarbon Database is focused on aggregating high value radiocarbon measurements.</p>
+<div id="june-2020-interview" class="section level2">
+<h2><span class="header-section-number">7.1</span> June 2020 interview</h2>
+<p>With a group of participants from the International Soil Radiocarbon Database (ISRaD).</p>
 <ol style="list-style-type: decimal">
 <li>Why did you start this study?
 <ul>
-<li>The more data you collect, the more patterns you can identify against the noise.</li>
-<li>Global data is needed to identify global patterns.</li>
-<li>This project specifically worked to address soil carbon sensitivity to warming.</li>
-<li>But, in general, the Crowther lab is interested in the living components of the soil, both in categorizing and characterizing these living components.</li>
-<li>For example, if at two locations with the same climate, topography, and vegetation but different sets of soil organisms the functioning and carbon turn over would be very different.</li>
+<li>ISRaD started prior to 2015 as an informal discussion at the AGU Fall Meeting to address several questions around controlling factors of soil carbon stocks.</li>
+<li>This lead to a USGS, Powell Center proposal, focusing particularly on the role of mineralogy and fractionation to control soil carbon stocks. The original workshop intended to explore controls of carbon storage and persistence in soils. Part of the group had a more specific intent of looking at various proxies for mineral or metal stabilized carbon in soils. In the course of these discussions, radiocarbon and other isotope measurements were recognized as being important to address questions of timescales. These mineral and isotope focused questions guided the initial template development. The ISCN template was extended and modified with this in mind.
+<ul>
+<li>The ISCN template required extensions to address:
+<ul>
+<li>Missing fractionation schemes (template was entirely focused on bulk data).</li>
+<li>Sparse mineralogy and exchangeable metal data.</li>
+<li>Overly complicated factor fields describing land use and other variables.</li>
+<li>Overall extremely complicated and difficult to fill out template structure.</li>
+</ul></li>
+<li>To address the above concerns, the Powell Center group spent considerable time revising and extending the ISCN template to include fraction information, simplifying land use description schemes, and generally trying to streamline the template.</li>
+<li>Some data sets were ingested using the template, mostly as test cases for template development.</li>
+</ul></li>
+<li>The Max Planck Institute for Biogeochemistry (MPI) picked up the project in 2018, providing support for larger data ingestion efforts primarily driven by a desire to compare Earth system models to soil radiocarbon data.</li>
 </ul></li>
 <li>Describe your workflow for ingesting data sets?
+<ol style="list-style-type: decimal">
+<li>Enter data into the ISRaD template from (<a href="https://soilradiocarbon.org/contribute/" class="uri">https://soilradiocarbon.org/contribute/</a>)[<a href="https://soilradiocarbon.org/contribute/" class="uri">https://soilradiocarbon.org/contribute/</a>]
 <ul>
-<li>The data template only asked for a brief description of the site location (latitude, longitude, etc.), the measurement they are looking for their project, and how the author collected that measurement. This very restricted data model is then much easier (and more satisfying) to collaborate with data products to fill out.</li>
-<li>Next, data producers are contacted directly and invited to co-author the resulting manuscript. The resulting manuscript generally has between 50 and 100 co-authors and averages 5,000 to 10,000 samples or locations across the globe.</li>
-<li>This simplistic approach is far more productive than having large tables that need computation and large amounts of time to fill.</li>
+<li>Either done by data provider (with assistant from MPI team).</li>
+<li>Or, if identified as a high value dataset, MPI teams will fill out template.</li>
 </ul></li>
+<li>Once the data is entered into the template, it can be QA/QC using scripts available from the R-package or through an online GUI.
+<ul>
+<li>This R-script uses a combination of controlled vocabulary, string matching, limits with quantitative data, and ensuring that the names and the keys match to check the submission.</li>
+</ul></li>
+<li>The data and output from the QA/QC script is then sent to the ISRaD data coordinator via contact.</li>
+<li>The data coordinator then forwards the data for expert review to one of the six or seven reviewers who make recommendations and changes. It then goes back and forth a number of times between the data submitter and reviewer.</li>
+<li>Once the data is vetted, it is ingested into the ISRaD data product.</li>
+</ol></li>
 <li>What decisions did you make to arrive at this workflow?
 <ul>
-<li>For the initial soil warming study, we wanted to quantify differences in carbon stocks in warmed and ambient plots. Thus %C and bulk density estimates were required, but we expected that the duration and intensity of warming are also likely to have strong effects so we collected that data to try to control for those effects. In addition, we knew that environmental variation would be likely to affect the magnitude of the changes, but this information was difficult to collect from all projects in a standardized way. We were trying to collect all the data possible and would end up with a table of 50 columns that are mostly incomplete. This drove us to infer possible driving variables from global data map products. In the end, we found that the data is much stronger when the missing data is taken from existing maps where experts have done correct extrapolations. They can then get all the metadata necessary just from knowing the latitude and longitude of the sample.</li>
-<li>We got better results with a small, easy to fill out data request from the data providers then a large verbose data template in the end. This allowed us to maximize the data volume that we were working with which was a high priority for us. To get the environmental characteristics at each sampling location, we use data from existing maps of climate, soil and topographic characteristics. Those have some uncertainty. But it ensures that we get a complete dataset, and we limit the uncertainty associated with sampling variation between people.</li>
+<li>ISRaD wanted to develop a simpler data template within an open science framework.</li>
+<li>The revised template proved to still be challenging to fill out necessitating the review process.</li>
 </ul></li>
 <li>How would someone get a copy of the data in this study?
 <ul>
-<li>After they are published, they are made available in their university library.<br />
-</li>
+<li>A person who wanted the data could go to the ISRaD website (soilradiocarbon.org) and go to the database tab where the data is available for download.</li>
+<li>It is also available directly from the package.</li>
+<li>The website is hosted off of the GitHub repository.</li>
 </ul></li>
-<li>What would you do differently if you had to start again? What would be the same?
+<li>What would you do differently if you had to start again?
 <ul>
-<li>Asking for small targeted data has worked very well.</li>
-<li>Managing the large co-author list and people skills remains challenging. Tom spends so much time on managing emails, or dealing with failed communication attempts due to switching of emails or being sent to spam. He believes that managing relationships with the authors of the data is the hardest, because if you miss one person, you could be missing a large opportunity for your project. Recently, he has been using list-servs as he finds it reaches more people, is less likely to be filtered out of people’s professional emails, and is easier to keep organized.</li>
+<li>Data model iteration and development is necessary but extremely challenging, especially as the data product grows</li>
+<li>Data templates are complicated to fill out, requiring time and training. You need both domain and data science skills.</li>
+<li>Make sure to start with the right team. Original project had soil scientists but did not have people who had strength in coding or database structure. There is a clear need for soil scientists with database training.</li>
+<li>Try to think more in advance about the template and its structure
+<ul>
+<li>Template was changed a lot while entering studies so they had to keep going back to old studies that they had already finished to find more information.</li>
+<li>Actively identify the 15 studies that they cared most about and be more methodical.</li>
+<li>Have a structure to work with ahead of time versus building the thing around the studies.</li>
+</ul></li>
+<li>The soil science community needs to establish best practices background information for published students. Studies are occasionally missing basic information like lat-long location of sites.</li>
+<li>Unclear where the next home for the data product is as the current team moves on to their next phase in their careers.</li>
+</ul></li>
+<li>What would be the same?
+<ul>
+<li>One of the strongest aspects of ISRaD is the combination of automated QA/QC and expert review.</li>
+<li>Another is the transparency of the dataset in that any data that is in the template is very traceable about where it came from and how it got there.
+<ul>
+<li>Every data point is documented. Every study that is entered has to have a DOI.</li>
+</ul></li>
+<li>Continue to promote open science. ISRaD is an open source and is available on GitHub which allows for it to have version control.</li>
+<li>The data product had really good scientific output. It got a lot of different groups to use it and answer different questions, which has helped push it forward and keep it relevant by bringing in other groups.</li>
+<li>Hackathons worked really well. Get everyone together for a few focused days for dedicated push sessions to get a lot done. It works because everyone commits to a full couple of days and can ask questions and not have to pause to contact someone.</li>
 </ul></li>
 </ol>
 </div>
-<div id="crowther-data-model" class="section level2">
-<h2><span class="header-section-number">9.2</span> Crowther data model</h2>
-<div id="htmlwidget-a914e46c11d4fd39ff8b" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a914e46c11d4fd39ff8b">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=RL tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"Raw\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">Raw<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>Study<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Author<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Biome<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Ecosystem<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">LAT<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">LONG<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Treatment (W=warming, C=control)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Planned Warming<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Mean delta T<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Lengths of Study<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">%C<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Bulk density<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Bulk Density Avg.<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">total C<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">total raw C<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">%N<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"Study Names\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">Study Names<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>Old Name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>New Name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"Summary\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">Summary<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>Study<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">%C<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Avg. C Control<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Avg. C Warming<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">C Difference (Warming-Control)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Length of Study (years)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Mean delta T<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Difference/Temp./Time<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Precipitation (avg. annual mm)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Temperature (avg. annual degrees C)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Biome<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Author Updated Biome<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">pH (from ISRIC)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Author Updated pH<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">% silt<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">% sand<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">% clay<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Author Updated % clay<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">CEC (cmol/kg)<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"Summary\"->\"Raw\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="data-model" class="section level2">
+<h2><span class="header-section-number">7.2</span> Data model</h2>
+<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<div id="htmlwidget-26cff789a1ca045003fa" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-26cff789a1ca045003fa">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=RL tooltip=\"ISRaD data model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"flux\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">flux<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>plot_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>flx_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"fraction\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">fraction<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>lyr_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>frc_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"incubation\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">incubation<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>lyr_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>frc_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>inc_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"interstitial\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">interstitial<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>ist_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"layer\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">layer<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>lyr_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"metadata\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">metadata<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"profile\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">profile<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>plot_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>pro_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"site\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">site<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>entry_name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>site_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"interstitial\"->\"metadata\"\n\"interstitial\"->\"site\"\n\"interstitial\"->\"profile\"\n\"site\"->\"metadata\"\n\"profile\"->\"metadata\"\n\"profile\"->\"site\"\n\"flux\"->\"metadata\"\n\"flux\"->\"site\"\n\"flux\"->\"profile\"\n\"layer\"->\"metadata\"\n\"layer\"->\"site\"\n\"layer\"->\"profile\"\n\"fraction\"->\"metadata\"\n\"fraction\"->\"site\"\n\"fraction\"->\"profile\"\n\"fraction\"->\"layer\"\n\"incubation\"->\"metadata\"\n\"incubation\"->\"site\"\n\"incubation\"->\"profile\"\n\"incubation\"->\"layer\"\n\"incubation\"->\"fraction\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 7.1: ISRaD data model
+</p>
+</div>
 </div>
 <div id="acknowledgements" class="section level2">
-<h2><span class="header-section-number">9.3</span> Acknowledgements</h2>
-<p>We would like to thank Dr. Tom Crowther (ETH Zürich) for their time and contributions to the June interview.</p>
+<h2><span class="header-section-number">7.3</span> Acknowledgements</h2>
+<p>We would like to talk Drs. Corey Lawerence (USGS), Kate Heckman (US Forest Service), and Alison Hoyt (MPI) as well as Shane Stoner (MPI), Jeffrey Beem-Miller (MPI), Sophie von Fromm (MPI), Ágatha Della Rosa Kuhnen (MPI) for their time and contributions to the June interviews.</p>
 
 </div>
 </div>
@@ -228,8 +272,8 @@
           </div>
         </div>
       </div>
-<a href="coastal-carbon-research-coordination-network-cc-rcn.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sodah.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="soil-incubation-database-sidb.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="coastal-carbon-research-coordination-network-cc-rcn.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

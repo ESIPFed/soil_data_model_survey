@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9 Crowther | Soil Data Models: a review</title>
+  <title>6 Soil Incubation Database (SIDb) | Soil Data Models: a review</title>
   <meta name="description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9 Crowther | Soil Data Models: a review" />
+  <meta property="og:title" content="6 Soil Incubation Database (SIDb) | Soil Data Models: a review" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 Crowther | Soil Data Models: a review" />
+  <meta name="twitter:title" content="6 Soil Incubation Database (SIDb) | Soil Data Models: a review" />
   
   <meta name="twitter:description" content="This is the compiled report out of the ESIP Labs (2020) project: Survey of data models used in soil meta analysis" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="coastal-carbon-research-coordination-network-cc-rcn.html"/>
-<link rel="next" href="sodah.html"/>
+<link rel="prev" href="van-gestel.html"/>
+<link rel="next" href="internationl-soil-radiocarbon-database-israd.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -174,52 +174,82 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="crowther" class="section level1">
-<h1><span class="header-section-number">9</span> Crowther</h1>
-<p>The Crowther dataset specifically looked for published and unpublished data pertaining to near surface soil carbon response to field warming experiments.</p>
-<div id="july-2020-interview" class="section level2">
-<h2><span class="header-section-number">9.1</span> July 2020 interview</h2>
-<p>With Dr. Tom Crowther on the Crowther data model.</p>
+<div id="soil-incubation-database-sidb" class="section level1">
+<h1><span class="header-section-number">6</span> Soil Incubation Database (SIDb)</h1>
+<p>The Soil Incubation Database focuses on aggregating soil labortory incubations under different temperature and moisture conditions for model parameterization.</p>
+<div id="june-2020-interview" class="section level2">
+<h2><span class="header-section-number">6.1</span> June 2020 interview</h2>
+<p>These are notes from a 4 June 2020 interview with Carlos Sierra and Christina Scheadel on the Soil Incubation Database (SIDb).</p>
 <ol style="list-style-type: decimal">
 <li>Why did you start this study?
 <ul>
-<li>The more data you collect, the more patterns you can identify against the noise.</li>
-<li>Global data is needed to identify global patterns.</li>
-<li>This project specifically worked to address soil carbon sensitivity to warming.</li>
-<li>But, in general, the Crowther lab is interested in the living components of the soil, both in categorizing and characterizing these living components.</li>
-<li>For example, if at two locations with the same climate, topography, and vegetation but different sets of soil organisms the functioning and carbon turn over would be very different.</li>
+<li>There is this huge potential to use new innovations with soil incubation data, but people were using it in many different ways, making it hard to demonstrate its value. Time series incubations are important aspects of soil incubations that have been under utilized, in contrast to total respired fraction. In particular, time series incubation data can tell you about the carbon stock rate and the dynamics. The fact that the environment in these incubations is so tightly controlled, it is a feature, not a bug, removing confounding variables (in other words, sensitivity functions) from the results.</li>
+<li>This database is a merger of two projects by Carlos and Christina. These two projects were started roughly 5 years ago; once they both became aware of the other’s project, they merged efforts. A week-long workshop in Jena, Germany during March 2019 accelerated work.</li>
 </ul></li>
-<li>Describe your workflow for ingesting data sets?
+<li>Describe your workflow for ingesting data sets.
 <ul>
-<li>The data template only asked for a brief description of the site location (latitude, longitude, etc.), the measurement they are looking for their project, and how the author collected that measurement. This very restricted data model is then much easier (and more satisfying) to collaborate with data products to fill out.</li>
-<li>Next, data producers are contacted directly and invited to co-author the resulting manuscript. The resulting manuscript generally has between 50 and 100 co-authors and averages 5,000 to 10,000 samples or locations across the globe.</li>
-<li>This simplistic approach is far more productive than having large tables that need computation and large amounts of time to fill.</li>
+<li>There are three main elements of a data contribution: Time series, Initial conditions, and Metadata.</li>
+<li>The templates evolved over time, especially in the March 2019 workshop. A complete template is essential to enable consistent information capture from the original manuscripts.</li>
+<li>Time series are captured from graphs in original manuscripts, and occasionally direct data from the original PIs.</li>
+<li>Data was generally not directly contributed from PI unless the PI was directly involved in the data product.</li>
+<li>SIDb is NOT a repository and instead a dynamic data product. Data should ideally be archived in a repository separately.
+Follow up question: How successful were you in getting PIs to give you data?</li>
+<li>Within the group, there were people with data, so they got data from them instead of contacting PIs for them. Did not ask for data from PIs. The dataset is not complete at all. They were setting up the infrastructure for people to upload their own data. No outside contributions yet. Some people have expressed interest.</li>
+<li>Dynamic database, not a repository. Contribution to a product. You are expected to archive your own data.</li>
+<li>Current data products
+<ul>
+<li>There are 31 studies so far.</li>
+<li>684 total time-series.</li>
+<li>The longest time series is 800 to 1,000 days.</li>
+</ul></li>
 </ul></li>
 <li>What decisions did you make to arrive at this workflow?
 <ul>
-<li>For the initial soil warming study, we wanted to quantify differences in carbon stocks in warmed and ambient plots. Thus %C and bulk density estimates were required, but we expected that the duration and intensity of warming are also likely to have strong effects so we collected that data to try to control for those effects. In addition, we knew that environmental variation would be likely to affect the magnitude of the changes, but this information was difficult to collect from all projects in a standardized way. We were trying to collect all the data possible and would end up with a table of 50 columns that are mostly incomplete. This drove us to infer possible driving variables from global data map products. In the end, we found that the data is much stronger when the missing data is taken from existing maps where experts have done correct extrapolations. They can then get all the metadata necessary just from knowing the latitude and longitude of the sample.</li>
-<li>We got better results with a small, easy to fill out data request from the data providers then a large verbose data template in the end. This allowed us to maximize the data volume that we were working with which was a high priority for us. To get the environmental characteristics at each sampling location, we use data from existing maps of climate, soil and topographic characteristics. Those have some uncertainty. But it ensures that we get a complete dataset, and we limit the uncertainty associated with sampling variation between people.</li>
+<li>Driven by research questions, design is mostly trial and error.</li>
+<li>Reevaluate structure and workflow as they worked, or as needed.</li>
+<li>Going forward, when incorporating additional columns, their thoughts are that it needs to evolve based on the needs of that specific entry.</li>
 </ul></li>
 <li>How would someone get a copy of the data in this study?
 <ul>
-<li>After they are published, they are made available in their university library.<br />
-</li>
+<li><code>git clone</code> a GitHub repository and then interact with it through the associated R-package.</li>
+<li>R package reads the data, uses simple plotting, and models fitting via the FME R-package that can use both classical gradient and MCMC methods.</li>
 </ul></li>
 <li>What would you do differently if you had to start again? What would be the same?
 <ul>
-<li>Asking for small targeted data has worked very well.</li>
-<li>Managing the large co-author list and people skills remains challenging. Tom spends so much time on managing emails, or dealing with failed communication attempts due to switching of emails or being sent to spam. He believes that managing relationships with the authors of the data is the hardest, because if you miss one person, you could be missing a large opportunity for your project. Recently, he has been using list-servs as he finds it reaches more people, is less likely to be filtered out of people’s professional emails, and is easier to keep organized.</li>
+<li>Having the project be research question driven worked well even if it was a bit slow.</li>
+<li>Would have been good to collaborate sooner. That might have moved the project along faster.</li>
+<li>Excellent group dynamics
+<ul>
+<li><blockquote>
+<p>“If you have a group that you feel comfortable with and where everyone is well-coordinated, ideas will flow much better in a good direction.”</p>
+</blockquote></li>
+<li>Christina said the group talked every other week and that everyone was very responsive, making the group great.</li>
+<li>Common research goals united the entire group.</li>
+<li>Small workshop worked exceptionally well (less than 5 people)
+<ul>
+<li>More or less a goal in mind than a structure.<br />
+</li>
+<li>Goal: Have a paper somewhat completed</li>
+<li>Had a whiteboard</li>
+</ul></li>
+</ul></li>
+<li>There is a lot of disconnect between the informatics researchers and domain scientists. It feels like there should be more cross talk between the two then there currently is.</li>
 </ul></li>
 </ol>
 </div>
-<div id="crowther-data-model" class="section level2">
-<h2><span class="header-section-number">9.2</span> Crowther data model</h2>
-<div id="htmlwidget-a914e46c11d4fd39ff8b" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a914e46c11d4fd39ff8b">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=RL tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"Raw\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">Raw<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>Study<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Author<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Biome<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Ecosystem<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">LAT<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">LONG<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Treatment (W=warming, C=control)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Planned Warming<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Mean delta T<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Lengths of Study<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">%C<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Bulk density<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Bulk Density Avg.<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">total C<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">total raw C<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">%N<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"Study Names\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">Study Names<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>Old Name<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>New Name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"Summary\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">Summary<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>Study<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">%C<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Avg. C Control<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Avg. C Warming<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">C Difference (Warming-Control)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Length of Study (years)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Mean delta T<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Difference/Temp./Time<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Precipitation (avg. annual mm)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Temperature (avg. annual degrees C)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Biome<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Author Updated Biome<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">pH (from ISRIC)<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Author Updated pH<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">% silt<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">% sand<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">% clay<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">Author Updated % clay<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">CEC (cmol/kg)<\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"Summary\"->\"Raw\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="data-model" class="section level2">
+<h2><span class="header-section-number">6.2</span> Data model</h2>
+<div class="figure"><span id="fig:unnamed-chunk-8"></span>
+<div id="htmlwidget-74739046606d39b5a0a1" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-74739046606d39b5a0a1">{"x":{"diagram":"#data_model\ndigraph {\ngraph [rankdir=RL tooltip=\"Data Model\" ]\n\nnode [margin=0 fontcolor = \"#444444\" ]\n\nedge [color = \"#555555\", arrowsize = 1, ]\n\n\n  \"incubationInfo\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">incubationInfo<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>level1<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"initConditions\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">initConditions<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>level1<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"siteInfo\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">siteInfo<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>level1<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>siteIndex<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"study\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">study<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>level1<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"timeSeries\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">timeSeries<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>level1<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>column_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n  \"variables\" [label = <<TABLE ALIGN=\"LEFT\" BORDER=\"1\" CELLBORDER=\"0\" CELLSPACING=\"0\" COLOR=\"#555555\">\n    <TR>\n      <TD COLSPAN=\"2\" BGCOLOR=\"#EFEBDD\" BORDER=\"0\"><FONT COLOR=\"#000000\">variables<\/FONT>\n<\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\">~<\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>level1<\/U><\/TD>\n    <\/TR>\n    <TR>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><\/TD>\n      <TD ALIGN=\"LEFT\" BGCOLOR=\"#FFFFFF\"><U>column_name<\/U><\/TD>\n    <\/TR>\n  <\/TABLE>>, shape = \"plaintext\"] \n\n\"siteInfo\"->\"study\"\n\"incubationInfo\"->\"study\"\n\"initConditions\"->\"study\"\n\"timeSeries\"->\"study\"\n\"timeSeries\"->\"variables\"\n\"variables\"->\"study\"\n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 6.1: SIDb data model, Please note that this is a “flattened” approximation of the SIDb tree data structure.
+</p>
+</div>
 </div>
 <div id="acknowledgements" class="section level2">
-<h2><span class="header-section-number">9.3</span> Acknowledgements</h2>
-<p>We would like to thank Dr. Tom Crowther (ETH Zürich) for their time and contributions to the June interview.</p>
+<h2><span class="header-section-number">6.3</span> Acknowledgements</h2>
+<p>Special thanks to Drs Christina Scheadel (Northern Arizona University) and Carlos Sierra (Max Planck Institute for Biogeochemistry) for making the metadata and for making themselves available for interviews.</p>
 
 </div>
 </div>
@@ -228,8 +258,8 @@
           </div>
         </div>
       </div>
-<a href="coastal-carbon-research-coordination-network-cc-rcn.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sodah.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="van-gestel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="internationl-soil-radiocarbon-database-israd.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
